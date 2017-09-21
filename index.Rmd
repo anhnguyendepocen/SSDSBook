@@ -33,6 +33,10 @@ description: "This a companion text for Christopher Prener's research methods co
 
 # Preface {-}
 
+```{r echo=FALSE, fig.align="center", out.width = '100%'}
+knitr::include_graphics("images/SSDSBookBanner.png")
+```
+
 This text is a companion text for both of my research methods courses at [Saint Louis University](https://slu.edu):
 
 * [SOC 4650/5650 - Introduction to Geographic Information Science](https://slu-soc5650.github.io)
