@@ -3,26 +3,6 @@ title: "Sociospatial Data Science"
 author: "Christopher Prener, Ph.D."
 date: "2017-09-21"
 site: bookdown::bookdown_site
-output:
-  bookdown::gitbook:
-    split_by: section
-    config:
-      toc:
-        collapse: section
-        before: |
-          <li><a href="https://chris-prener.github.io/SSDSBook/" target="_blank">Sociospatial Data Science</a></li>
-        after: |
-          <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
-      edit: null
-      download: ["pdf"]
-      sharing:
-        facebook: yes
-        twitter: yes
-        google: no
-        weibo: no
-        instapaper: no
-        vk: no
-        all: null
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -33,7 +13,8 @@ description: "This a companion text for Christopher Prener's research methods co
 
 # Preface {-}
 
-<img src="images/SSDSBookBanner.png" width="40%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.4\linewidth]{images/SSDSBookBanner} \end{center}
 
 This text is a companion text for both of my research methods courses at [Saint Louis University](https://slu.edu):
 
@@ -46,7 +27,7 @@ The goal of the text is to create a reference for the intangible, subtle or disp
 
 While there is nothing particularly new about what I am writing here, and I am certainly not developing a new language for computing, the goal of this text remains similar to Knuth’s experience. By distilling some of key elements for making a successful transition to being a *professional developer* of knowledge rather than a *casual consumer*, I hope to both improve the course experience itself and also create an environment that fosters a successful learning experience for you.
 
-In both classes, the course names are deceptive. We are not only concerned with statistical work or mapping. Rather, we are more fundamentally concerned with research methods. In particular, we are concerned with *high quality* research methods and the *process* of conducting research. We therefore focus on a combination of mental habits and technical practices that make you a successful researcher. Some of the skills and techniques that we will discuss this semester are not taught as often in graduate programs, let along undergraduate program. Instead, they are often the products of "learning the hard way". These "habits of mind and habits of method" are broadly applicable across methodologies and disciplines.
+In both classes, the course names are deceptive. We are not only concerned with statistical work or mapping. Rather, we are more fundamentally concerned with research methods. In particular, we are concerned with *high quality* research methods and the *process* of conducting research. We therefore focus on a combination of mental habits and technical practices that make you a successful researcher. Some of the skills and techniques that we will discuss this semester are not taught as often in graduate programs, let along undergraduate programs. Instead, they are often the products of "learning the hard way". These "habits of mind and habits of method" are broadly applicable across methodologies and disciplines.
 
 [^1]: [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) is the developer of [TeX](https://en.wikipedia.org/wiki/TeX), a computer typesetting system that is widely used today for scientific publishing in the form of [LaTeX](https://en.wikipedia.org/wiki/LaTeX). He also established the concept of [literate programming](https://en.wikipedia.org/wiki/Literate_programming), which forms the basis of some of the practices we follow with `R`.  
 
