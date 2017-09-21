@@ -2,7 +2,7 @@ bookdown::gitbook:
   split_by: section
   config:
     toc:
-      collapse: section
+      collapse: chapter
       before: |
         <li><strong><a href="https://chris-prener.github.io/SSDSBook/">Sociospatial Data Science</a></strong></li>
       after: |
