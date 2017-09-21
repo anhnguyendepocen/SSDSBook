@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script does the required work to set up your personal GitHub Pages
-# repository for deployment using Hugo. Run this script only once -- when the
+# repository for deployment using Bookdown. Run this script only once -- when the
 # setup has been done, run the `deploy.sh` script to deploy changes and update
 # your website. See
 # https://hjdskes.github.io/blog/deploying-hugo-on-personal-github-pages/index.html
@@ -12,8 +12,7 @@
 
 # GitHub username
 USERNAME=chris-prener
-# Name of the branch containing the Hugo source files.
-# Name of the branch containing the Hugo source files.
+# Name of the branch containing the Bookdown source files.
 SOURCE=sources
 
 msg() {
@@ -39,14 +38,14 @@ git push origin master
 msg "Returning to the \`$SOURCE\` branch"
 git checkout -f "$SOURCE"
 
-msg "Removing the \`public\` folder to make room for the \`master\` subtree"
-rm -rf public
+msg "Removing the \`_book\` folder to make room for the \`master\` subtree"
+rm -rf _book
 git add -u
-git commit -m "Remove stale public folder"
+git commit -m "Remove stale book folder"
 
 msg "Adding the new \`master\` branch as a subtree"
-git subtree add --prefix=public \
-    https://github.com/$USERNAME/$USERNAME.github.io.git master --squash
+git subtree add --prefix=_book \
+    ttps://github.com/$USERNAME/SSDSBook.git master --squash
 
 # The following code was in the original file but generates an error:
 # fatal: refusing to merge unrelated histories
