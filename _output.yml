@@ -4,7 +4,7 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li>Sociospatial Data Science</li>
+        <li><strong><a href="https://chris-prener.github.io/SSDSBook/">Sociospatial Data Science</a></strong></li>
       after: |
         <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
     edit: null
