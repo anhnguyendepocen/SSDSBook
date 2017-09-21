@@ -2,3 +2,11 @@ book_filename: "Sociospatial_Data_Science"
 language:
   ui:
     chapter_name: "Chapter "
+new_session: yes
+
+rmd_files: [
+  index.Rmd
+  intro.Rmd
+
+  gettingStarted.Rmd
+]
