@@ -33,7 +33,7 @@ description: "This a companion text for Christopher Prener's research methods co
 
 # Preface {-}
 
-```{r echo=FALSE, fig.align="center", out.width = '100%'}
+```{r echo=FALSE, fig.align="center", out.width = '40%'}
 knitr::include_graphics("images/SSDSBookBanner.png")
 ```
 
