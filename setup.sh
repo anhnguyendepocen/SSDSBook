@@ -45,7 +45,7 @@ git commit -m "Remove stale book folder"
 
 msg "Adding the new \`master\` branch as a subtree"
 git subtree add --prefix=_book \
-    ttps://github.com/$USERNAME/SSDSBook.git master --squash
+    https://github.com/$USERNAME/SSDSBook.git master --squash
 
 # The following code was in the original file but generates an error:
 # fatal: refusing to merge unrelated histories
