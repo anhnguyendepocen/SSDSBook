@@ -9,6 +9,8 @@ output:
     config:
       toc:
         collapse: section
+        before: |
+          <li><a href="https://chris-prener.github.io/SSDSBook/" target="_blank">Sociospatial Data Science</a></li>
         after: |
           <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
       edit: null
