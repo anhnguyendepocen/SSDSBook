@@ -3,12 +3,29 @@ title: "Sociospatial Data Science"
 author: "Christopher Prener, Ph.D."
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output:
+  bookdown::gitbook:
+    split_by: section
+    config:
+      toc:
+        collapse: section
+        after: |
+          <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
+      edit: null
+      download: ["pdf"]
+      sharing:
+        facebook: yes
+        twitter: yes
+        google: no
+        weibo: no
+        instapaper: no
+        vk: no
+        all: null
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: chris-prener/SSDSBook
 description: "This a companion text for Christopher Prener's research methods courses at Saint Louis University."
 ---
 
