@@ -29,38 +29,3 @@ During the second read, try to focus in in the *details* - what are the technica
 During **lectures**, I introduce many of the same topics that your readings cover. This again is intentional - it gives you yet another exposure to concepts and techniques that are central to geospatial science. One mistake students sometimes make is focusing on the details of *how* to do a particular task rather than focusing on *when* a task should be done. If you know when a task is needed but cannot remember how to do it in `R`, you can look this information up. Conversely, detailed notes on executing `R` commands may not be helpful if you are unsure when to use a particular skill. There is no penalty in this course for not knowing how to execute a command from memory; this is what reference materials are for. The most successful students will therefore focus on *when* a particular skill is warranted first before focusing on *how* to execute that skill
 
 Getting experience with executing tasks is the purpose of the **lab exercises**. Time for beginning these exercises is given at the end of each class meeting, and replication files will be posted on GitHub for each lab.
-
-## Typefaces and Examples
-
-### Typefaces and Fonts
-Technical publications that describe scientific computing processes use a `monospaced typewriter style typeface` to refer to commands (inputs) and results (outputs). In some documents, like lecture slides and cheat-sheets, I may highlight a command by using a particular color to increase the visibility of the command name itself.
-
-The `typewriter typeface` is also used to refer to functions (e.g. `library()`), filenames (e.g. `mpg.csv`) or filepaths (e.g. `C:\Users\JSmith\Desktop`). Finally, we will use the `typewriter typeface` to refer to GitHub repositories (e.g. `Core-Documents`, the repository that contains this file).
-
-Technical publications use *italicized text* to refer to text that is meant to be replaced. These references will typically appear in a `typewriter typeface` since they are often part of commands. For example, `str(dataFrame)` (with `dataFrame` *italicized*) indicates that you should replace the text `dataFrame` with the appropriate variable name from your dataset.
-
-These publications also use a sans serif typeface to refer to areas of the user interface, menu items, and buttons. I cannot replicate that here because of the publishing software that I use, but you'll notice this text in course documents. We will therefore use the `typewriter typeface` in the User Guide to identify these same features.
-
-Technical documents also use a sans serif or `typewriter` typeface to refer to keyboard keys (e.g. `Crtl+C`) where the plus sign (`+`) indicates that you should press multiple keys at the same time. A sans serif typeface combined with a right facing triangle-style arrow (`>`) is used to refer to actions that require clicking through a hierarchy of menus or windows (e.g. `File > Save`).
-
-### Examples
-Throughout the semester, I will give you examples both in lecture slides and in an example do-file. Examples in lectures and course documents can be easily identified by their use of the `typewriter typeface`:
-
-```r
-> library(ggplot2)
-> str(mpg)
-Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	234 obs. of  11 variables:
- $ manufacturer: chr  "audi" "audi" "audi" "audi" ...
- $ model       : chr  "a4" "a4" "a4" "a4" ...
- $ displ       : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
- $ year        : int  1999 1999 2008 2008 1999 1999 2008 1999 1999 2008 ...
- $ cyl         : int  4 4 4 4 6 6 6 4 4 4 ...
- $ trans       : chr  "auto(l5)" "manual(m5)" "manual(m6)" "auto(av)" ...
- $ drv         : chr  "f" "f" "f" "f" ...
- $ cty         : int  18 21 20 21 16 18 18 18 16 20 ...
- $ hwy         : int  29 29 31 30 26 26 27 26 25 28 ...
- $ fl          : chr  "p" "p" "p" "p" ...
- $ class       : chr  "compact" "compact" "compact" "compact" ...
-```
-
-Examples will almost always use the dataframe `mpg`, which comes pre-installed with the `ggplot2` package. To open it, simply load the `ggplot2` package using the `library()` function and then start referencing `mpg` anytime you need a dataframe. This allows you to easily recreate examples by minimizing dependencies within your code.
