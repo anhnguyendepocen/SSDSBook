@@ -27,18 +27,4 @@ Visualization is a fundamental aspect of data science work. It is how we make ou
 Separetely, we will discuss the presentation of statistical data in tables using [LaTex](https://en.wikipedia.org/wiki/LaTeX) in [Quantitative Analysis](https://slu-soc5050.github.io) as well as the producing to conference-style presentations to communicate research findings. In [Introduction to GIS](https://slu-soc5650.github.io), we will focus on producing conference-style posters instead. These are different mediums, but they rely on the same design fundamentals that are covered in this text.
 
 ### Substantive Knowledge
-Substantive knowledge covers two tangentially related topics: the ability to work well in groups and the ability to digest and integrate an academic literature into our own research. In both 
-
-## What will I learn?
-
-This book introduces students to 
-
-
-## How is this text organized?
-
-The title of this book, *Sociospatial Data Science*, underscores a particular interest in the application of data science techniques in areas that have typically been the domain of sociologists, demographers, and human geographers. Much of the latter portion of this text deals specifically with techniques for working with spatial data. 
-
-
-## How does this connect to other texts?
-
-## How can I get more help?
+Substantive knowledge covers two tangentially related topics: the ability to work well in groups and the ability to digest and integrate an academic literature into your own research. Each of these topics receive some focus in both [Quantitative Analysis](https://slu-soc5050.github.io) and [Introduction to GIS](https://slu-soc5650.github.io). Each class has some group work associated with the completion with weekly lab assignments. [Introduction to GIS](https://slu-soc5650.github.io) also has a group work component associated with the final project. In each class, students' final projects are focused on a specific content area that requires at least some background research and knowledge. Synthesizing this knowledge and integrating it into your final projects is a key piece of addressing this facet of data science.
