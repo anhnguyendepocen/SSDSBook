@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="protecting-your-work.html">
-<link rel="next" href="creating-a-sustainable-file-system.html">
+<link rel="prev" href="an-apple-a-day.html">
+<link rel="next" href="reading-with-purpose.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -186,27 +186,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-management" class="section level2">
-<h2><span class="header-section-number">4.1</span> Data Management</h2>
-<p>One of the themes in <a href="https://arxiv.org/abs/1609.00037">“Good Enough Practices in Scientific Computing”</a>, referenced in the previous chapter, is an emphasis on data management. One of their core messages is to ``save the raw data’’. In GISc work, the raw data can be expansive - dozens of shapefiles, tabular files, and associated metadata. These files often come from disparate sources - city open data sites, the U.S. Census Bureau, state data repositories, and other federal agencies. Moreover, GIS data are often updated over time to reflect on-the-ground changes. Saving the raw data in GISc work therefore means not only creating a well-organized directory containing <em>all</em> of your original data. It also means logging the source of each file, when it was downloaded, and (if applicable) a permanent web link to your data source. For that reason, we’ll give you not just the course data but a read me file and a metadictionary that lists all of the files we’ve disseminated to you.</p>
-<p>A second message in the paper is to “create the data you wish to see in the world”. The authors encourage readers to “create the dataset you wish you had received.” First and foremost, this means using open and not proprietary data formats. For spatial data, <a href="https://en.wikipedia.org/wiki/Shapefile">ESRI shapefiles</a> are technically proprietary, though their standard is open. This means that other software applications, like <code>R</code>, QGIS, and even Stata can read and in some cases write shapefiles. For sharing spatial data, a better option is the <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a>, which is a plain text file format.</p>
-<p>Tabular data are best stored as <code>CSV</code> files, which is also a plain text file format that can be opened by a wide variety of applications. In contrast, common file formats like Microsoft Excels’s <code>XLS</code> and <code>XLSX</code> are proprietary file packages that cannot be read as plain text and are therefore less desirable for storing data.</p>
-<p>Both tabular and spatial data, in their final forms, should be what we consider “tidy data”<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> Tidy data are defined by a number of common attributes - each column represents a single variable or attribute and each row represents a single, unique observation. This arrangement should produce clear, easy to read datasets that represent a single observational unit.</p>
-<p>Tidy datasets also have other characteristics. Variable names should be short, clear, and self-explanatory (i.e. <code>streetAddress</code> and <code>zipCode</code> are preferable to <code>add1</code> and <code>add2</code>). Missing data should be properly declared in a machine-readable format instead of using a code like <code>-1</code> or <code>9999</code>. Filenames should also be clear and self-explanatory (i.e. <code>stlouisHomes_011717.csv</code> is preferable to <code>final.csv</code>).</p>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="2">
-<li id="fn2"><p>Wickham, H., 2014. Tidy Data. <em>Journal of Statistical Software</em>, 59(i10).<a href="data-management.html#fnref2">↩</a></p></li>
-</ol>
+<div id="keeping-track-of-where-you-are" class="section level2">
+<h2><span class="header-section-number">3.3</span> Keeping Track of Where You Are</h2>
+<p>Doing data science work requires discipline and organization. Similarly, computational coursework can demanding not just because it is complex but because the courses often have a number of moving pieces that you need to keep track of. Keeping up with the work plan suggested in the previous section requires knowing precisely what you have already completed for each week and what you have left to do. Students who have some system for tracking their work and creating to-do lists are often the most successful in this course, not because they have a fundamentally better grasp on the content but because they simply are more organized. You do not need fancy computer software to accomplish this, though there are an array of possibilities if you do like to keep yourself organized. A legal pad or a notebook can be just as effective as a $50 to-do list manager. The point is, do <em>something</em>!</p>
+<p>If you have never thought particularly hard about how you manage tasks, now is an excellent time to start doing so. I am fond of recommending the <a href="http://gettingthingsdone.com"><strong>Getting Things Done</strong></a> methodology to students. The website <a href="https://lifehacker.com">Lifehacker</a> posted an <a href="https://lifehacker.com/productivity-101-a-primer-to-the-getting-things-done-1551880955">excellent introduction to GTD</a> that is a great way to get a sense of how it works and find additional resources for implementing it. The GTD website has a <a href="http://gettingthingsdone.com/common-tools-software/">great list of software</a> for those of you looking for a to-do list application. One that isn’t listed that I use for collaborating with my student research team is <a href="https://trello.com">Trello</a>, a freemium website that allows you to create simple to-do lists.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="protecting-your-work.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="creating-a-sustainable-file-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="an-apple-a-day.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reading-with-purpose.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
