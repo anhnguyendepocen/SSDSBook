@@ -9,4 +9,6 @@ rmd_files: [
   "intro.Rmd",
 
   "gettingStarted.Rmd",
+  "courseApproach.Rmd",
+  "protectingYourWork.Rmd",
 ]
