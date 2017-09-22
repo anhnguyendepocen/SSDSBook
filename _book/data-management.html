@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="intro.html">
-<link rel="next" href="how-is-this-book-organized.html">
+<link rel="prev" href="protecting-your-work.html">
+<link rel="next" href="creating-a-sustainable-file-system.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -184,42 +184,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="what-is-data-science" class="section level2">
-<h2><span class="header-section-number">1.1</span> What is data science?</h2>
-<p>Given data science’s new emergence, its definition remains both contested and often unclear. For me, there are four key aspects to focus on when considering what constitutes data science:</p>
-<ol style="list-style-type: decimal">
-<li>Statistics</li>
-<li>Programming</li>
-<li>Visualization and Communication</li>
-<li>Substantive Knowledge</li>
+<div id="data-management" class="section level2">
+<h2><span class="header-section-number">4.1</span> Data Management</h2>
+<p>One of the themes in <a href="https://arxiv.org/abs/1609.00037">“Good Enough Practices in Scientific Computing”</a>, referenced in the previous chapter, is an emphasis on data management. One of their core messages is to ``save the raw data’’. In GISc work, the raw data can be expansive - dozens of shapefiles, tabular files, and associated metadata. These files often come from disparate sources - city open data sites, the U.S. Census Bureau, state data repositories, and other federal agencies. Moreover, GIS data are often updated over time to reflect on-the-ground changes. Saving the raw data in GISc work therefore means not only creating a well-organized directory containing <em>all</em> of your original data. It also means logging the source of each file, when it was downloaded, and (if applicable) a permanent web link to your data source. For that reason, we’ll give you not just the course data but a read me file and a metadictionary that lists all of the files we’ve disseminated to you.</p>
+<p>A second message in the paper is to “create the data you wish to see in the world”. The authors encourage readers to “create the dataset you wish you had received.” First and foremost, this means using open and not proprietary data formats. For spatial data, <a href="https://en.wikipedia.org/wiki/Shapefile">ESRI shapefiles</a> are technically proprietary, though their standard is open. This means that other software applications, like <code>R</code>, QGIS, and even Stata can read and in some cases write shapefiles. For sharing spatial data, a better option is the <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a>, which is a plain text file format.</p>
+<p>Tabular data are best stored as <code>CSV</code> files, which is also a plain text file format that can be opened by a wide variety of applications. In contrast, common file formats like Microsoft Excels’s <code>XLS</code> and <code>XLSX</code> are proprietary file packages that cannot be read as plain text and are therefore less desirable for storing data.</p>
+<p>Both tabular and spatial data, in their final forms, should be what we consider “tidy data”<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> Tidy data are defined by a number of common attributes - each column represents a single variable or attribute and each row represents a single, unique observation. This arrangement should produce clear, easy to read datasets that represent a single observational unit.</p>
+<p>Tidy datasets also have other characteristics. Variable names should be short, clear, and self-explanatory (i.e. <code>streetAddress</code> and <code>zipCode</code> are preferable to <code>add1</code> and <code>add2</code>). Missing data should be properly declared in a machine-readable format instead of using a code like <code>-1</code> or <code>9999</code>. Filenames should also be clear and self-explanatory (i.e. <code>stlouisHomes_011717.csv</code> is preferable to <code>final.csv</code>).</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>Wickham, H., 2014. Tidy Data. <em>Journal of Statistical Software</em>, 59(i10).<a href="data-management.html#fnref2">↩</a></p></li>
 </ol>
-<p>I think of this as a “full stack” approach to computational research. You want to be well versed not only the techniques for generating and analyzing data, but also substantively in the academic literature about your area of interest as well as ways to communicate your findings with other researchers and the wider public.</p>
-<div id="statistics" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Statistics</h3>
-<p>Statistics covers the mathematical techniques that we use to draw inference from our data. It is the main subject of one my courses, <a href="https://slu-soc5050.github.io">Quantitative Analysis</a>. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we do not explicitly cover much in the way of inferential statistics. However, the course is desinged to prepare you for a next level, Intermediate GIS course that covers spatial statistics.</p>
-</div>
-<div id="programming" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Programming</h3>
-<p>Computer programming is an essential part of data science broadly and computational social science more specifically. Using a programming language means that our work can be easily reproduced. This emphasis on <strong>reproducibility</strong> is a response to a growing fear in many disciplines that results are replicable from study to study, which raises questions about the validity of much of the research work that we do. Our goal in both courses is to produce research that is as reproducible as possible.</p>
-<p>This book introduces two programming languages - <a href="https://en.wikipedia.org/wiki/R_(programming_language)"><code>R</code></a> and <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>. In <a href="https://slu-soc5050.github.io">Quantitative Analysis</a>, we will be focused exclusively on learning <code>R</code> and using it to produce statistical analyses. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we will spend a lot of time in <code>R</code>, but we will also use some Python to help pass data from <code>R</code> to ArcGIS, the mapping application we will use. I will also provide some additional Python lessons to folks who are interested, but these will not be required for the course.</p>
-</div>
-<div id="visualization-communication" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Visualization &amp; Communication</h3>
-<p>Visualization is a fundamental aspect of data science work. It is how we make our results easily digestible and accessible to a wider audience, many of whom may not be able to interpret statistical output but can learn from a well-designed scatter plot. In <a href="https://slu-soc5050.github.io">Quantitative Analysis</a>, we will focus on building plots to communicate information about statistical distributions and the relationships between our variables. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we will use the same fundamental skills to build simple maps in <code>R</code>. We will extend our emphasis on visualization to ArcGIS, where we will focus on producing cartographically rich depictions of our data.</p>
-<p>Separetely, we will discuss the presentation of statistical data in tables using <a href="https://en.wikipedia.org/wiki/LaTeX">LaTex</a> in <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> as well as the producing to conference-style presentations to communicate research findings. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we will focus on producing conference-style posters instead. These are different mediums, but they rely on the same design fundamentals that are covered in this text.</p>
-</div>
-<div id="substantive-knowledge" class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Substantive Knowledge</h3>
-<p>Substantive knowledge covers two tangentially related topics: the ability to work well in groups and the ability to digest and integrate an academic literature into your own research. Each of these topics receive some focus in both <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> and <a href="https://slu-soc5650.github.io">Introduction to GIS</a>. Each class has some group work associated with the completion with weekly lab assignments. <a href="https://slu-soc5650.github.io">Introduction to GIS</a> also has a group work component associated with the final project. In each class, students’ final projects are focused on a specific content area that requires at least some background research and knowledge. Synthesizing this knowledge and integrating it into your final projects is a key piece of addressing this facet of data science.</p>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-is-this-book-organized.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="protecting-your-work.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="creating-a-sustainable-file-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

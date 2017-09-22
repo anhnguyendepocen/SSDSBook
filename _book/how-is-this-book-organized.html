@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="intro.html">
-<link rel="next" href="how-is-this-book-organized.html">
+<link rel="prev" href="what-is-data-science.html">
+<link rel="next" href="gettingStarted.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -184,42 +184,61 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="what-is-data-science" class="section level2">
-<h2><span class="header-section-number">1.1</span> What is data science?</h2>
-<p>Given data science’s new emergence, its definition remains both contested and often unclear. For me, there are four key aspects to focus on when considering what constitutes data science:</p>
-<ol style="list-style-type: decimal">
-<li>Statistics</li>
-<li>Programming</li>
-<li>Visualization and Communication</li>
-<li>Substantive Knowledge</li>
-</ol>
-<p>I think of this as a “full stack” approach to computational research. You want to be well versed not only the techniques for generating and analyzing data, but also substantively in the academic literature about your area of interest as well as ways to communicate your findings with other researchers and the wider public.</p>
-<div id="statistics" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Statistics</h3>
-<p>Statistics covers the mathematical techniques that we use to draw inference from our data. It is the main subject of one my courses, <a href="https://slu-soc5050.github.io">Quantitative Analysis</a>. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we do not explicitly cover much in the way of inferential statistics. However, the course is desinged to prepare you for a next level, Intermediate GIS course that covers spatial statistics.</p>
+<div id="how-is-this-book-organized" class="section level2">
+<h2><span class="header-section-number">1.2</span> How is this book organized?</h2>
+<p>Like many books about data science, this text follows a number of standard conventions related to how it is organized and how examples are given. This section introduces those conventions.</p>
+<div id="typefaces-and-fonts" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Typefaces and Fonts</h3>
+<p>Technical publications that describe scientific computing processes use a <code>monospaced typewriter style typeface</code> to refer to commands (inputs) and results (outputs). In some documents, like lecture slides and cheat-sheets, I may highlight a command by using a particular color to increase the visibility of the command name itself.</p>
+<p>The <code>typewriter typeface</code> is also used to refer to functions (e.g. <code>library()</code>), filenames (e.g. <code>mpg.csv</code>) or filepaths (e.g. <code>C:\Users\JSmith\Desktop</code>). Finally, we will use the <code>typewriter typeface</code> to refer to GitHub repositories (e.g. <code>Core-Documents</code>, the repository that contains this file).</p>
+<p>Technical publications use <em>italicized text</em> to refer to text that is meant to be replaced. These references will typically appear in a <code>typewriter typeface</code> since they are often part of commands. For example, <code>str(dataFrame)</code> (with <code>dataFrame</code> <em>italicized</em>) indicates that you should replace the text <code>dataFrame</code> with the appropriate variable name from your dataset.</p>
+<p>These publications also use a sans serif typeface to refer to areas of the user interface, menu items, and buttons. I cannot replicate that here because of the publishing software that I use, but you’ll notice this text in course documents. We will therefore use the <code>typewriter typeface</code> in the User Guide to identify these same features.</p>
+<p>Technical documents also use a sans serif or <code>typewriter</code> typeface to refer to keyboard keys (e.g. <code>Crtl+C</code>) where the plus sign (<code>+</code>) indicates that you should press multiple keys at the same time. A sans serif typeface combined with a right facing triangle-style arrow (<code>&gt;</code>) is used to refer to actions that require clicking through a hierarchy of menus or windows (e.g. <code>File &gt; Save</code>).</p>
 </div>
-<div id="programming" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Programming</h3>
-<p>Computer programming is an essential part of data science broadly and computational social science more specifically. Using a programming language means that our work can be easily reproduced. This emphasis on <strong>reproducibility</strong> is a response to a growing fear in many disciplines that results are replicable from study to study, which raises questions about the validity of much of the research work that we do. Our goal in both courses is to produce research that is as reproducible as possible.</p>
-<p>This book introduces two programming languages - <a href="https://en.wikipedia.org/wiki/R_(programming_language)"><code>R</code></a> and <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>. In <a href="https://slu-soc5050.github.io">Quantitative Analysis</a>, we will be focused exclusively on learning <code>R</code> and using it to produce statistical analyses. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we will spend a lot of time in <code>R</code>, but we will also use some Python to help pass data from <code>R</code> to ArcGIS, the mapping application we will use. I will also provide some additional Python lessons to folks who are interested, but these will not be required for the course.</p>
+<div id="data" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Data</h3>
+<p>There are two sets of data that are used in this text, and they are also used as part of <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> and <a href="https://slu-soc5650.github.io">Introduction to GIS</a>. Both are available as <code>R</code> packages. The <code>testDriveR</code> package contains some generic data that are particularly well suited for exploring statistical topics. The <code>stlData</code> package contains data that can be mapped at various levels. Both of these packages are currently available on <a href="https://github.com">GitHub</a>, and can be installed using the <code>devtools</code> package:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
+<span class="kw">library</span>(devtools)
+devtools::<span class="kw">install_github</span>(<span class="st">&quot;chris-prener/testDriveR&quot;</span>)
+devtools::<span class="kw">install_github</span>(<span class="st">&quot;chris-prener/stlData&quot;</span>)</code></pre></div>
 </div>
-<div id="visualization-communication" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Visualization &amp; Communication</h3>
-<p>Visualization is a fundamental aspect of data science work. It is how we make our results easily digestible and accessible to a wider audience, many of whom may not be able to interpret statistical output but can learn from a well-designed scatter plot. In <a href="https://slu-soc5050.github.io">Quantitative Analysis</a>, we will focus on building plots to communicate information about statistical distributions and the relationships between our variables. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we will use the same fundamental skills to build simple maps in <code>R</code>. We will extend our emphasis on visualization to ArcGIS, where we will focus on producing cartographically rich depictions of our data.</p>
-<p>Separetely, we will discuss the presentation of statistical data in tables using <a href="https://en.wikipedia.org/wiki/LaTeX">LaTex</a> in <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> as well as the producing to conference-style presentations to communicate research findings. In <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, we will focus on producing conference-style posters instead. These are different mediums, but they rely on the same design fundamentals that are covered in this text.</p>
+<div id="examples" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Examples</h3>
+<p>Throughout the semester, I will give you examples both in lecture slides and in an example do-file. Examples in lectures and course documents can be easily identified by their use of the <code>typewriter typeface</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">library</span>(stlData)
+&gt;<span class="st"> </span><span class="kw">str</span>(stlLead)
+<span class="st">&#39;data.frame&#39;</span>:<span class="st">   </span><span class="dv">106</span> obs. of  <span class="dv">15</span> variables:
+<span class="st"> </span><span class="er">$</span><span class="st"> </span>geoID         :<span class="st"> </span>num  <span class="fl">2.95e+10</span> <span class="fl">2.95e+10</span> <span class="fl">2.95e+10</span> <span class="fl">2.95e+10</span> <span class="fl">2.95e+10</span> ...
+ $<span class="st"> </span>tractCE       :<span class="st"> </span>int  <span class="dv">118100</span> <span class="dv">117400</span> <span class="dv">126700</span> <span class="dv">119102</span> <span class="dv">126800</span> <span class="dv">126900</span> <span class="dv">108100</span> <span class="dv">127000</span> <span class="dv">127400</span> <span class="dv">103700</span> ...
+ $<span class="st"> </span>nameLSAD      :<span class="st"> </span>chr  <span class="st">&quot;Census Tract 1181&quot;</span> <span class="st">&quot;Census Tract 1174&quot;</span> <span class="st">&quot;Census Tract 1267&quot;</span> <span class="st">&quot;Census Tract 1191.02&quot;</span> ...
+ $<span class="st"> </span>countTested   :<span class="st"> </span>int  <span class="dv">345</span> <span class="dv">871</span> <span class="dv">458</span> <span class="dv">182</span> <span class="dv">486</span> <span class="dv">1296</span> <span class="dv">903</span> <span class="dv">585</span> <span class="dv">2116</span> <span class="dv">417</span> ...
+ $<span class="st"> </span>pctElevated   :<span class="st"> </span>num  <span class="fl">9.57</span> <span class="fl">12.06</span> <span class="fl">18.12</span> <span class="fl">2.2</span> <span class="fl">4.73</span> ...
+ $<span class="st"> </span>totalPop      :<span class="st"> </span>int  <span class="dv">1161</span> <span class="dv">4307</span> <span class="dv">1089</span> <span class="dv">3237</span> <span class="dv">3490</span> <span class="dv">4590</span> <span class="dv">3144</span> <span class="dv">2052</span> <span class="dv">5486</span> <span class="dv">2408</span> ...
+ $<span class="st"> </span>totalPop_MOE  :<span class="st"> </span>int  <span class="dv">192</span> <span class="dv">447</span> <span class="dv">199</span> <span class="dv">309</span> <span class="dv">231</span> <span class="dv">826</span> <span class="dv">464</span> <span class="dv">273</span> <span class="dv">516</span> <span class="dv">274</span> ...
+ $<span class="st"> </span>white         :<span class="st"> </span>int  <span class="dv">414</span> <span class="dv">2604</span> <span class="dv">432</span> <span class="dv">2008</span> <span class="dv">3026</span> <span class="dv">148</span> <span class="dv">108</span> <span class="dv">304</span> <span class="dv">1777</span> <span class="dv">2149</span> ...
+ $<span class="st"> </span>white_MOE     :<span class="st"> </span>int  <span class="dv">100</span> <span class="dv">303</span> <span class="dv">116</span> <span class="dv">262</span> <span class="dv">270</span> <span class="dv">217</span> <span class="dv">111</span> <span class="dv">82</span> <span class="dv">391</span> <span class="dv">212</span> ...
+ $<span class="st"> </span>black         :<span class="st"> </span>int  <span class="dv">724</span> <span class="dv">1338</span> <span class="dv">631</span> <span class="dv">646</span> <span class="dv">194</span> <span class="dv">4320</span> <span class="dv">3020</span> <span class="dv">1739</span> <span class="dv">3603</span> <span class="dv">156</span> ...
+ $<span class="st"> </span>black_MOE     :<span class="st"> </span>int  <span class="dv">179</span> <span class="dv">374</span> <span class="dv">187</span> <span class="dv">210</span> <span class="dv">98</span> <span class="dv">760</span> <span class="dv">442</span> <span class="dv">283</span> <span class="dv">621</span> <span class="dv">190</span> ...
+ $<span class="st"> </span>povertyTot    :<span class="st"> </span>int  <span class="dv">324</span> <span class="dv">615</span> <span class="dv">506</span> <span class="dv">958</span> <span class="dv">349</span> <span class="dv">1743</span> <span class="dv">652</span> <span class="dv">331</span> <span class="dv">2524</span> <span class="dv">254</span> ...
+ $<span class="st"> </span>povertyTot_MOE:<span class="st"> </span>int  <span class="dv">140</span> <span class="dv">255</span> <span class="dv">164</span> <span class="dv">234</span> <span class="dv">129</span> <span class="dv">825</span> <span class="dv">305</span> <span class="dv">156</span> <span class="dv">598</span> <span class="dv">88</span> ...
+ $<span class="st"> </span>povertyU18    :<span class="st"> </span>int  <span class="dv">109</span> <span class="dv">169</span> <span class="dv">98</span> <span class="dv">15</span> <span class="dv">35</span> <span class="dv">627</span> <span class="dv">256</span> <span class="dv">47</span> <span class="dv">1110</span> <span class="dv">15</span> ...
+ $<span class="st"> </span>povertyU18_MOE:<span class="st"> </span>int  <span class="dv">105</span> <span class="dv">156</span> <span class="dv">60</span> <span class="dv">25</span> <span class="dv">47</span> <span class="dv">595</span> <span class="dv">136</span> <span class="dv">79</span> <span class="dv">318</span> <span class="dv">23</span> ...</code></pre></div>
+<p>Examples will almost always use the dataframe <code>stlLead</code>, which comes with the <code>stlData</code> package. To open it, simply load the <code>stlData</code> package using the <code>library()</code> function and then start referencing <code>stlLead</code> anytime you need a dataframe. This allows you to easily recreate examples by minimizing dependencies within your code.</p>
+
 </div>
-<div id="substantive-knowledge" class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Substantive Knowledge</h3>
-<p>Substantive knowledge covers two tangentially related topics: the ability to work well in groups and the ability to digest and integrate an academic literature into your own research. Each of these topics receive some focus in both <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> and <a href="https://slu-soc5650.github.io">Introduction to GIS</a>. Each class has some group work associated with the completion with weekly lab assignments. <a href="https://slu-soc5650.github.io">Introduction to GIS</a> also has a group work component associated with the final project. In each class, students’ final projects are focused on a specific content area that requires at least some background research and knowledge. Synthesizing this knowledge and integrating it into your final projects is a key piece of addressing this facet of data science.</p>
 </div>
-</div>
+<!-- </div> -->
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-is-this-book-organized.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="what-is-data-science.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gettingStarted.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
