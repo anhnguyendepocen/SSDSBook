@@ -1,13 +1,11 @@
 # Protecting Your Work
-
 I believe that one of the biggest challenges to with doing computational work is that it requires a high degree of organization. Prior to one of my courses, students' approaches to file management on their computers are often haphazard. I am very used to seeing students' desktops or documents directories in various states of disarray. Perhaps that has worked for them in the past, but that approach (or lack thereof) **will** fail students in [Introduction to Geographic Information Science (SOC 4650/5650)](https://slu-soc5650.github.io) and [Quantitative Analysis: Applied Inferential Statistics (SOC 4930/5050)](https://slu-soc5050.github.io). Moreover, if left un-checked, it will fail students down the road when a hard drive failure or natural disaster renders their data irrevocably inaccessible. This chapter covers what some of those threats are and ways to manage those risks when conducting computational research. 
-
 
 ## Threats To Our Data
 
-Each semester that I teach [Introduction to GIS (SOC 4650/5650)](https://slu-soc5650.github.io) and [Quantitative Analysis (SOC 4930/5050)](https://slu-soc5050.github.io), two things happen. The first thing that happens is that students regularly lose files. The effects of losing files can range from being a minor frustration to a major headache depending on the file in question. Losing files often results in downloading multiple copies of the same data and recreating work. Both of these are wastes of your time. Moreover, files are rarely gone. They are typically just misplaced. This is bad for reproducibility, particularly when you happen across multiple versions of the same file and have to sort out which version is the version you last worked on.
+Each semester that I teach [Introduction to GIS](https://slu-soc5650.github.io) and [Quantitative Analysis](https://slu-soc5050.github.io), several things happen. The first thing that happens is that students regularly lose files. The effects of losing files can range from being a minor frustration to a major headache depending on the file in question. Losing files often results in downloading multiple copies of the same data and recreating work. Both of these are wastes of your time. Moreover, files are rarely gone. They are typically just misplaced. This is bad for reproducibility, particularly when you happen across multiple versions of the same file and have to sort out which version is the version you last worked on.
 
-The second thing that happens is that students lose their thumb drives. Depending on the timing of this loss, this can again range from being a minor frustration (very early in the semester) to being downright anxiety attack producing (last few weeks of the semester). Recreating an entire semester’s worth of work on the final project is both a tremendous waste of your time and a particularly unpleasant experience.
+The second thing that happens is that students who use thumb drives for data storage lose them. Depending on the timing of this loss, this can again range from being a minor frustration (very early in the semester) to being downright anxiety attack producing (last few weeks of the semester). Recreating an entire semester’s worth of work on the final project is both a tremendous waste of your time and a particularly unpleasant experience.
 
 Fortunately, I have never had a student’s computer hard drive die during the course of the semester. However, I assume that if I teach this course long enough a hard drive failure will indeed occur. The backup provider [Backblaze](https://www.backblaze.com/) has [analyzed](https://www.backblaze.com/blog/how-long-do-disk-drives-last/) their own hard drives and found that about 5% of drives fail within the first year. After four years, a quarter (25%) of drives in their data center fail.
 
@@ -15,36 +13,31 @@ Similarly, it is only a matter of time before a student’s computer is stolen a
 
 Despite the likelihood that you will at some-point lose a thumb drive (if not during this semester than sometime down the road) and the near certainty that your computer’s hard drive will eventually fail if a rogue wave does not get it first, few students and faculty take these risks seriously. While you cannot prevent many of these things from happening, I want to suggest to you that you can take some simple steps to sure that *when* (not if) they happen, you are well prepared to get back to work with minimal disruption.
 
-\begin{rmdtip}
-The \texttt{\%/\%} operator does integer division (\texttt{x\ \%/\%\ y}
-is equivalent to \texttt{floor(x/y)}) so the index keeps track of which
-80-line section of text we are counting up negative and positive
-sentiment in.
-\end{rmdtip}
-
 ## Data Management
+One of the themes in ["Good Enough Practices in Scientific Computing"](https://arxiv.org/abs/1609.00037), referenced in the previous chapter, is an emphasis on data management. One of their core messages is to ``save the raw data''. Particularly in GISc work, the raw data can be expansive - dozens of shapefiles, tabular files, and associated metadata. These files often come from disparate sources - city open data sites, the U.S. Census Bureau, state data repositories, and other federal agencies. Moreover, GIS data are often updated over time to reflect on-the-ground changes. Saving the raw data in GISc work therefore means not only creating a well-organized directory containing *all* of your original data. It also means logging the source of each file, when it was downloaded, and (if applicable) a permanent web link to your data source. For that reason, we'll give you not just the course data but a read me file and a metadictionary that lists all of the files we've disseminated to you.
 
-One of the themes in ["Good Enough Practices in Scientific Computing"](https://arxiv.org/abs/1609.00037), referenced in the previous chapter, is an emphasis on data management. One of their core messages is to ``save the raw data''. In GISc work, the raw data can be expansive - dozens of shapefiles, tabular files, and associated metadata. These files often come from disparate sources - city open data sites, the U.S. Census Bureau, state data repositories, and other federal agencies. Moreover, GIS data are often updated over time to reflect on-the-ground changes. Saving the raw data in GISc work therefore means not only creating a well-organized directory containing *all* of your original data. It also means logging the source of each file, when it was downloaded, and (if applicable) a permanent web link to your data source. For that reason, we'll give you not just the course data but a read me file and a metadictionary that lists all of the files we've disseminated to you.
-
-A second message in the paper is to "create the data you wish to see in the world". The authors encourage readers to "create the dataset you wish you had received." First and foremost, this means using open and not proprietary data formats. For spatial data, [ESRI shapefiles](https://en.wikipedia.org/wiki/Shapefile) are technically proprietary, though their standard is open. This means that other software applications, like `R`, QGIS, and even Stata can read and in some cases write shapefiles. For sharing spatial data, a better option is the [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), which is a plain text file format.
+A second message in the paper is to "create the data you wish to see in the world". The authors encourage readers to "create the dataset you wish you had received." First and foremost, this means using open and not proprietary data formats. For spatial data, [ESRI shapefiles](https://en.wikipedia.org/wiki/Shapefile) are technically proprietary, though their standard is open. This means that other software applications, like `R` and QGIS can read and in some cases write shapefiles. For sharing spatial data, a better option is the [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON), which is a plain text file format.
 
 Tabular data are best stored as `CSV` files, which is also a plain text file format that can be opened by a wide variety of applications. In contrast, common file formats like Microsoft Excels's `XLS` and `XLSX` are proprietary file packages that cannot be read as plain text and are therefore less desirable for storing data.
-
-Both tabular and spatial data, in their final forms, should be what we consider "tidy data"^[Wickham, H., 2014. Tidy Data. *Journal of Statistical Software*, 59(i10).] Tidy data are defined by a number of common attributes - each column represents a single variable or attribute and each row represents a single, unique observation. This arrangement should produce clear, easy to read datasets that represent a single observational unit.
-
-Tidy datasets also have other characteristics. Variable names should be short, clear, and self-explanatory (i.e. `streetAddress` and `zipCode` are preferable to `add1` and `add2`). Missing data should be properly declared in a machine-readable format instead of using a code like `-1` or `9999`. Filenames should also be clear and self-explanatory (i.e. `stlouisHomes_011717.csv` is preferable to `final.csv`).
 
 ## Creating a Sustainable File System
 In his excellent document [*The Plain Person’s Guide to Plain Text Social Science*](http://plain-text.co), Kieran Healy describes two important revolutions in computing that are currently taking place. One of them is the advent of mobile touch-screen devices, which he notes
 
 > hide from the user both the workings of the operating system and (especially) the structure of the file system where items are stored and moved around.
 
-For most users, I would argue that this extends to their laptop or desktop computers as well. I would venture to guess that the majority of my students are used to keeping large numbers of files on their desktops or in an (distressingly) disorganized `Documents` folder.
-
-For research, particularly quantitative research, such an approach to file management is unsustainable. It is difficult to produce *any* research, let alone work that is reproducible, without an active approach to file management.
+For most users, I would argue that this extends to their laptop or desktop computers as well. I would venture to guess that the majority of my students are used to keeping large numbers of files on their desktops or in an (distressingly) disorganized `Documents` folder. For research, particularly quantitative research, such an approach to file management is unsustainable. It is difficult to produce *any* research, let alone work that is reproducible, without an active and mindful approach to file management.
 
 ### Create a *Single* Course Directory
-The most successful approach to organizing files is to identify *one and only one* area that you will store course files in. Having files scattered around you hard drive between you `Desktop` directory, `Downloads`, `Documents`, and a half dozen other places is a recipe for lost files. It can also add complexity to the task of backing these files up. I recommend naming this directory simply `SOC4650` or `SOC5650`. This is short, has no punctuation or spaces (which can create conflicts with software), and explicitly connects the directory to this course as opposed to other courses you may take that are also GIS courses (a good reason to avoid naming the directory `GIS`!).
+The most successful approach to organizing files is to identify *one and only one* area that you will store course files in. Having files scattered around you hard drive between you `Desktop` directory, `Downloads`, `Documents`, and a half dozen other places is a recipe for lost files. It can also add complexity to the task of backing these files up. I recommend naming this directory simply based on the course you are enrolled in:
+
+* `SOC4650`
+* `SOC4930`
+* `SOC5050`
+* `SOC5650`
+
+These names are short, have no punctuation or spaces (which can create conflicts with software), and explicitly connects the directory to this course as opposed to other courses you may take that are also statistics or GIS courses (a good reason to avoid naming the directory `Stats` or `GIS`!).
+
+This single course directory should reside in *one and only one* place. Storing it inside a sync'd directory (like Dropbox or Google Drive) may cause conflicts with your Git repositories. I strongly recommend storing your course directory on the computer that you will regularly do work on for the course. For some students, that will be the desktop computer in our lab. For others, it will their laptop computer. If you find yourself having to regularly switch between computers, I'll provide some suggestions later in this chapter.
 
 ### Approach Organizing Systematically
 Within your single course directory, I recommend following much of Long's (2009) advice on organization. Approach this task systematically and mindfully. This approach begins with having a number of dedicated subfolders within your course directory:
@@ -60,18 +53,18 @@ Within your single course directory, I recommend following much of Long's (2009)
   /Notes
   /ProblemSets
   /Readings
-  /Software
   /WeeklyRepos
 ```
+
 Note again how these directories are named - there are no spaces, special characters, and the names are deliberately short but specific. For a directory with two words (`FinalProject` or `ProblemSets`), I use what is known as camelCase to name the file where the second (any any subsequent) words have their first character capitalized. You could also use dash-case (`Core-Documents`) or snake_case (`Core_Documents`) as a naming strategy. Regardless of which of these approaches you take, try to use it consistently.
 
 The course data release is embedded in an otherwise empty folder structure that mirrors this layout. When you download these data and the accompanying directories, un-zip them and move the entire contents to the root of your thumb drive or external hard drive. If you are registered for SOC 4650 and want your directory to match your registration, feel free to rename it `SOC4650`.
 
 ### The `Core-Documents` Directory
-This directory will *not* be included in the folder structure that you download along with the course data release. This directory will be added to your file system during **Lab-03**, when it is **cloned** from GitHub. A cloned directory is one that retains a digital link to the data stored on GitHub, meaning that it can be easily updated if changes are made. This will be explained in greater depth in the next chapter of the User's Guide. **Do not edit the files in these repositories.**
+This directory will *not* be included in the folder structure that you download along with the course data release. This directory will be added to your file system during **Week 03**, when it is **cloned** from GitHub. A cloned directory is one that retains a digital link to the data stored on GitHub, meaning that it can be easily updated if changes are made. This will be explained in greater depth in Introduction to GitHub chapter in this text.
 
-### The `Data` Directory
-The data directory should have copies of all original data and their documentation. Most of these data are included in the initial data release, but you will have to add some additional data to this directory over the course of the semester. The data in this directory should be used as needed but not altered (one of the of the "good enough" research practices from the previous chapter).
+### The `Data` Directory (SOC 4650/5650 *only*)
+The data directory should have copies of any original data and their documentation that are not disseminated to you as `R` packages. Most of these data are included in the initial data release, but you will have to add some additional data to this directory over the course of the semester. The data in this directory should be used as needed but not altered (one of the of the "good enough" research practices from the previous chapter).
 
 ### The `DoeAssignments` Directory
 Like the `Core-Documents` repository, this will not be included in the course data release. You will add it to your file system during **Lab-03**. It will also have a different name - your last name instead of 'Doe'. Once you add it, it will contain a number of subdirectories:
@@ -164,6 +157,16 @@ Cloud backup services like [Backblaze](https://www.backblaze.com) or [Crashplan]
 
 ### A Workflow for Backups
 Just as we need a workflow for approaching file management, it is also important to establish a routine for backups. With backups, the most successful workflows are those that require next to no effort on your part. If you primarily use a desktop, this can be as simple as leaving two external hard drives plugged into your computer since most backup software can be set to run automatically. If you have tasks that require you to manually do something (plug an external hard drive into your computer, for instance), create a reminder for yourself on a paper calendar or a digital calendar or to-do list application.
+
+\begin{rmdtip}
+I gave a presentation on workflows for backing data up as part of the
+\href{https://slu-dss.github.io}{Data Science Seminar} series at
+\href{https://slu.edu}{Saint Louis University}. You can easily view the
+slides from that presentation on
+\href{https://speakerdeck.com/chrisprener/protecting-your-data}{Speaker
+Deck}, and you can download the session's materials from
+\href{https://github.com/slu-dss/protectData}{GitHub}.
+\end{rmdtip}
 
 For this course in particular, it is *imperative* that you backup the data on your flash drive. A number of possibilities exist for accomplishing this:
 
