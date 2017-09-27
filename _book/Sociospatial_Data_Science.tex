@@ -135,6 +135,30 @@
 }
 \makeatother
 
+\newenvironment{rmdblock}[1]
+  {\begin{shaded*}
+  \begin{itemize}
+  \renewcommand{\labelitemi}{
+    \raisebox{-.7\height}[0pt][0pt]{
+      {\setkeys{Gin}{width=3em,keepaspectratio}\includegraphics{images/#1}}
+    }
+  }
+  \item
+  }
+  {
+  \end{itemize}
+  \end{shaded*}
+  }
+\newenvironment{rmdnote}
+  {\begin{rmdblock}{note}}
+  {\end{rmdblock}}
+\newenvironment{rmdtip}
+  {\begin{rmdblock}{tip}}
+  {\end{rmdblock}}
+\newenvironment{rmdwarning}
+  {\begin{rmdblock}{warning}}
+  {\end{rmdblock}}
+
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{lemma}{Lemma}[chapter]
@@ -808,17 +832,36 @@ A sample approach to the class might look something like this:
 
 \chapter{Protecting Your Work}\label{protecting-your-work}
 
-Each semester that I teach this course or
-\href{https://slu-soc5050.github.io}{SOC 5050 (Quantitative Analysis)},
-two things happen. The first thing that happens is that students
-regularly lose files. The effects of losing files can range from being a
-minor frustration to a major headache depending on the file in question.
-Losing files often results in downloading multiple copies of the same
-data and recreating work. Both of these are wastes of your time.
-Moreover, files are rarely gone. They are typically just misplaced. This
-is bad for reproducibility, particularly when you happen across multiple
-versions of the same file and have to sort out which version is the
-version you last worked on.
+I believe that one of the biggest challenges to with doing computational
+work is that it requires a high degree of organization. Prior to one of
+my courses, students' approaches to file management on their computers
+are often haphazard. I am very used to seeing students' desktops or
+documents directories in various states of disarray. Perhaps that has
+worked for them in the past, but that approach (or lack thereof)
+\textbf{will} fail students in
+\href{https://slu-soc5650.github.io}{Introduction to Geographic
+Information Science (SOC 4650/5650)} and
+\href{https://slu-soc5050.github.io}{Quantitative Analysis: Applied
+Inferential Statistics (SOC 4930/5050)}. Moreover, if left un-checked,
+it will fail students down the road when a hard drive failure or natural
+disaster renders their data irrevocably inaccessible. This chapter
+covers what some of those threats are and ways to manage those risks
+when conducting computational research.
+
+\section{Threats To Our Data}\label{threats-to-our-data}
+
+Each semester that I teach
+\href{https://slu-soc5650.github.io}{Introduction to GIS (SOC
+4650/5650)} and \href{https://slu-soc5050.github.io}{Quantitative
+Analysis (SOC 4930/5050)}, two things happen. The first thing that
+happens is that students regularly lose files. The effects of losing
+files can range from being a minor frustration to a major headache
+depending on the file in question. Losing files often results in
+downloading multiple copies of the same data and recreating work. Both
+of these are wastes of your time. Moreover, files are rarely gone. They
+are typically just misplaced. This is bad for reproducibility,
+particularly when you happen across multiple versions of the same file
+and have to sort out which version is the version you last worked on.
 
 The second thing that happens is that students lose their thumb drives.
 Depending on the timing of this loss, this can again range from being a
@@ -850,6 +893,13 @@ risks seriously. While you cannot prevent many of these things from
 happening, I want to suggest to you that you can take some simple steps
 to sure that \emph{when} (not if) they happen, you are well prepared to
 get back to work with minimal disruption.
+
+\begin{rmdtip}
+The \texttt{\%/\%} operator does integer division (\texttt{x\ \%/\%\ y}
+is equivalent to \texttt{floor(x/y)}) so the index keeps track of which
+80-line section of text we are counting up negative and positive
+sentiment in.
+\end{rmdtip}
 
 \section{Data Management}\label{data-management}
 
