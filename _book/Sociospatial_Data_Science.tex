@@ -124,7 +124,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-09-26}
+  \date{2017-09-27}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -994,10 +994,9 @@ provide some suggestions later in this chapter.
 \subsection{Approach Organizing
 Systematically}\label{approach-organizing-systematically}
 
-Within your single course directory, I recommend following much of
-Long's (2009) advice on organization. Approach this task systematically
-and mindfully. This approach begins with having a number of dedicated
-subfolders within your course directory:
+Within your single course directory, I recommend following a mindful,
+purposeful approach to organization. This approach begins with having a
+number of dedicated subfolders within your course directory:
 
 \begin{verbatim}
 /SOC5650
@@ -1010,6 +1009,7 @@ subfolders within your course directory:
   /Notes
   /ProblemSets
   /Readings
+  /WeeklyPreps
   /WeeklyRepos
 \end{verbatim}
 
@@ -1022,26 +1022,47 @@ capitalized. You could also use dash-case (\texttt{Core-Documents}) or
 snake\_case (\texttt{Core\_Documents}) as a naming strategy. Regardless
 of which of these approaches you take, try to use it consistently.
 
-The course data release is embedded in an otherwise empty folder
-structure that mirrors this layout. When you download these data and the
-accompanying directories, un-zip them and move the entire contents to
-the root of your thumb drive or external hard drive. If you are
-registered for SOC 4650 and want your directory to match your
-registration, feel free to rename it \texttt{SOC4650}.
+Once you have these folders set-up, I want you to an agreement with
+yourself: files for the course will \emph{only} be saved within this
+structure. Do not temporarily save files to the \texttt{Desktop}, for
+example, intending to move them later. They will be forgotten.
 
 \subsection{\texorpdfstring{The \texttt{Core-Documents}
 Directory}{The Core-Documents Directory}}\label{the-core-documents-directory}
 
-This directory will \emph{not} be included in the folder structure that
-you download along with the course data release. This directory will be
-added to your file system during \textbf{Week 03}, when it is
-\textbf{cloned} from GitHub. A cloned directory is one that retains a
-digital link to the data stored on GitHub, meaning that it can be easily
-updated if changes are made. This will be explained in greater depth in
-Introduction to GitHub chapter in this text.
+This directory has already been created and will be added to your file
+system during \textbf{Week 03}, when it is \textbf{cloned} from GitHub.
 
-\subsection{\texorpdfstring{The \texttt{Data} Directory (SOC 4650/5650
-\emph{only})}{The Data Directory (SOC 4650/5650 only)}}\label{the-data-directory-soc-46505650-only}
+\begin{rmdnote}
+A cloned directory is one that retains a digital link to the data stored
+on GitHub, meaning that it can be easily updated if changes are made.
+This will be explained in greater depth in Introduction to GitHub
+chapter in this text.
+\end{rmdnote}
+
+\begin{rmdwarning}
+You will not be able to push changes that you make in this directory to
+GitHub, and making other changes could cause conflicts. I suggest not
+making changes inside this repository beyond opening files for reference
+purposes.
+\end{rmdwarning}
+
+The \texttt{Core-Documents} directory is used for storing the course
+syllabus, reading list, and a sample schedule for 3600 Morrissey Hall
+for the semester.
+
+\subsection{\texorpdfstring{The \texttt{Data}
+Directory}{The Data Directory}}\label{the-data-directory}
+
+\begin{rmdwarning}
+This directory is only applicable to students in
+\href{https://slu-soc5650.github.io}{Introduction to GIS}, who will
+receive a data release at the beginning of the semester that should be
+saved here. Students in
+\href{https://slu-soc5050.github.io}{Quantitative Analysis} will receive
+most data through \texttt{R} packages and may reiceve a small amount of
+data through weekly repositories.
+\end{rmdwarning}
 
 The data directory should have copies of any original data and their
 documentation that are not disseminated to you as \texttt{R} packages.
@@ -1066,6 +1087,8 @@ subdirectories:
       /FinalProject
         /Documentation
         /Memo
+        /PaperDraft
+        /PaperFinal
         /PosterDraft
         /PosterFinal
 
@@ -1078,6 +1101,11 @@ subdirectories:
         /PS-01
         ...
         /PS-10
+      
+      /WeeklyPrep
+        /WP-02
+        ...
+        /WP-16
 \end{verbatim}
 
 The \texttt{FinalProject} directory contains submission folders for each
@@ -1086,12 +1114,19 @@ directory will look like what appears above. Students registered for SOC
 5650 will have three additional subfolders for deliverables related to
 the final paper element of the course.
 
-The \texttt{Labs} and \texttt{ProblemSets} directories have subfolders
-dedicated to the 26 individual assignments you'll have to submit over
-the course of the semester. \textbf{These directories are intended to
-store only the deliverables that are requested in each assignment's
-directions.} All other files related to each assignment should be stored
-elsewhere in your folder structure.
+The \texttt{Labs}, \texttt{ProblemSets}, \texttt{WeeklyPrep} directories
+have subfolders dedicated to the individual assignments you'll have to
+submit over the course of the semester. \textbf{These directories are
+intended to store only the deliverables that are requested in each
+assignment's directions.} All other files related to each assignment
+should be stored elsewhere in your folder structure.
+
+\begin{rmdwarning}
+Unlike \texttt{Core-Documents}, you have the ability to push changes
+made here to GitHub.com. Please make sure you understand that changes
+made will be reflected, for better or worse, on the website the next
+time you complete that push.
+\end{rmdwarning}
 
 \subsection{\texorpdfstring{The \texttt{FinalProject}
 Directory}{The FinalProject Directory}}\label{the-finalproject-directory}
@@ -1103,11 +1138,13 @@ final project files have a dedicated, organized home:
 \begin{verbatim}
   /SOC5650
     /FinalProject
+      /AnnotatedBib
       /Data
       /DataAnalysis
       /Documentation
       /Memo
       /Notes
+      /Paper
       /Poster
       /Readings
 \end{verbatim}
@@ -1115,58 +1152,125 @@ final project files have a dedicated, organized home:
 You'll notice that there are a number of new directories dedicated to
 specific aspects of the project.
 
-\emph{SOC 5650 students}: you will want to add directories for the
-\texttt{/AnnotatedBib} and \texttt{/Paper} aspects of the assignment. I
-also recommend using some type of bibliography software.
-(\href{http://endnote.com}{Endnote}, for example, can be obtained for
-free by SLU students). Whatever application you choose, keep its primary
-database for your project in the \texttt{Readings} folder along with
-copies of all \texttt{.pdf} readings.
+\begin{rmdnote}
+You will want to tailor this subdirectory's contents to match the
+specific requirements of the section you are enrolled in. This may
+entail removing certain folders - the \texttt{AnnotatedBib/} for example
+- that do not correspond to deliverables you have to complete.
+\end{rmdnote}
 
-\subsection{\texorpdfstring{The \texttt{Labs}
-Directory}{The Labs Directory}}\label{the-labs-directory}
+\subsection{\texorpdfstring{The \texttt{Labs}, \texttt{ProblemSets}, and
+\texttt{WeeklyPreps}
+Directories}{The Labs, ProblemSets, and WeeklyPreps Directories}}\label{the-labs-problemsets-and-weeklypreps-directories}
 
 This directory contains subfolders for each of the sixteen lab
 assignments for this course. Save \emph{all} of the associated materials
-for each lab assignment here, including text files, documentation, map
-files and output, data tables, and any new data that you are asked to
-create and save.
+for each lab assignment here.
+
+\begin{verbatim}
+  /SOC5650
+    /Labs
+      /Lab-01
+      ...
+      /Lab-16
+      
+    /ProblemSets
+      /PS-01
+      ...
+      /PS-10
+      
+    /WeeklyPreps
+      /Week-01
+      ...
+      /Week-16
+\end{verbatim}
+
+These directories differ from what you save in your
+\texttt{DoeAssignments} repository. Unlike \texttt{DoeAssignments},
+which is \textbf{only} for submission files, these directories can
+contain any number of files you wish. Use each of these assignment
+folders as a place to work and experiment, and the folders under
+\texttt{DoeAssignments} as the place to submit your final versions.
+
+Each of these assignments that utilizes \texttt{R} and RStudio should
+have an R Project associated with it:
+
+\begin{verbatim}
+  /SOC5650
+    /Labs
+      /Lab-01
+        Lab-01.Rproj
+        
+      /Lab-02
+        Lab-02.Rproj
+        
+      /Lab-03
+        Lab-03.Rproj
+\end{verbatim}
+
+Using R Projects will help you keep your work organized by ensuring that
+the working directory for RStudio is correctly set every time and that
+output is always saved to the appropriate assignment directory.
 
 \subsection{\texorpdfstring{The \texttt{Lectures}
 Directory}{The Lectures Directory}}\label{the-lectures-directory}
 
-This directory contains subfolders for each of the sixteen weeks of the
-course. When we create new data files, make maps, or write code during
-lectures, save these documents in the appropriate week's folder.
+This directory should contain subfolders for each of the sixteen weeks
+of the course. When we create new files during lectures, save these
+documents in the appropriate week's folder.
+
+\begin{verbatim}
+  /SOC5650
+    /Lectures
+      /Week-01
+      ...
+      /Week-16
+\end{verbatim}
 
 \subsection{\texorpdfstring{The \texttt{Notes}
 Directory}{The Notes Directory}}\label{the-notes-directory}
 
-Use this as a home for course notes.
-
-\subsection{\texorpdfstring{The \texttt{ProblemSets}
-Directory}{The ProblemSets Directory}}\label{the-problemsets-directory}
-
-This directory contains subfolders for each of the ten problem set
-assignments for this course. Save \emph{all} of the associated materials
-for each problem set here, including text files, documentation, map
-files and output, data tables, and any new data that you are asked to
-create and save.
+Use this as a home for course notes if you decide to take notes
+digitally and do not already use notebook software of some kind that
+organizes notes for you.
 
 \subsection{\texorpdfstring{The \texttt{Readings}
 Directory}{The Readings Directory}}\label{the-readings-directory}
 
-Use this as a home for \texttt{.pdf} copies of course readings.
+Use this as a home for \texttt{.pdf} copies of course readings. I
+suggest creating subdirectories \emph{only} for weeks that have readings
+assigned from outside of the main texts, such as Week 01:
+
+\begin{verbatim}
+  /SOC5650
+    /Readings
+      /Week-01
+\end{verbatim}
 
 \subsection{\texorpdfstring{The \texttt{WeeklyRepos}
 Directory}{The WeeklyRepos Directory}}\label{the-weeklyrepos-directory}
 
 Clone each of the weekly repos to this directory, and sync them when
-updates are made to ensure you have the latest versions of files.
+updates are made to ensure you have the latest versions of files. By the
+end of the course, this directory should have sixteen subfolders like
+this:
 
-\textbf{Do not edit the files in these repositories.} If you want or
-need to work with them, make a copy and save it into the relevant
-assignment directory.
+\begin{verbatim}
+  /SOC5650
+    /WeeklyRepos
+      /Week-01
+      ...
+      /Week-16
+\end{verbatim}
+
+\begin{rmdwarning}
+You will not be able to push changes that you make in these directories
+to GitHub, and making other changes could cause conflicts. I suggest not
+making changes inside this repository beyond opening files for reference
+purposes. If there is something you need to edit, copy it to the
+appropriate subdirectory (\texttt{Labs}, \texttt{WeeklyPreps}, etc.) and
+make local changes there.
+\end{rmdwarning}
 
 \section{Backing Up Your Data}\label{backing-up-your-data}
 
@@ -1286,6 +1390,35 @@ backup. The more often you keep your backup archive updated, the less
 stressful and disruptive losing your drive will be. This will likely be
 a manual task, so follow the guidance above about creating a repeating
 calendar event or to-do list task reminder.
+
+\section{Managing Multiple Devices}\label{managing-multiple-devices}
+
+If you are trying to manage your work across multiple computers, the
+task of staying organized becomes more difficult. One option is to use a
+thumb drive or external hard drive as the primary site where your course
+directory lives. That way you can save everything there and it is
+accessible by as many computers as necessary. If you decide go this
+route, it is \textbf{imperative} that you back-up your work to a
+computer or to another external drive.
+
+\begin{rmdtip}
+macOS users should make sure that the external drive is formatted using
+the ExFat file system specification so that it is readable both by their
+operating system and the Windows operating system in the computer lab.
+If you buy a new drive, you will likely have to re-format it.
+\end{rmdtip}
+
+Another option is to utilize GitHub extensively. You can create repos
+for the some of the key subdirectories referenced above, like
+\texttt{ProblemSets}, \texttt{WeeklyPreps}, and others, and keep you
+work synced between computers using the same process we use for
+submitting work. If you want to do this, make sure you get the
+\href{https://education.github.com/discount_requests/new}{student GitHub
+discount}, which will give you unlimited private repositories. That way,
+your course work will not be public facing. If you pursue this strategy,
+make sure you still have only one place for a specific file typoe - you
+do not want some problem set materials saved outside of your GitHub repo
+and some saved in it.
 
 \bibliography{packages.bib,book.bib}
 

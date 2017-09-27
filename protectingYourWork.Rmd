@@ -40,7 +40,7 @@ These names are short, have no punctuation or spaces (which can create conflicts
 This single course directory should reside in *one and only one* place. Storing it inside a sync'd directory (like Dropbox or Google Drive) may cause conflicts with your Git repositories. I strongly recommend storing your course directory on the computer that you will regularly do work on for the course. For some students, that will be the desktop computer in our lab. For others, it will their laptop computer. If you find yourself having to regularly switch between computers, I'll provide some suggestions later in this chapter.
 
 ### Approach Organizing Systematically
-Within your single course directory, I recommend following much of Long's (2009) advice on organization. Approach this task systematically and mindfully. This approach begins with having a number of dedicated subfolders within your course directory:
+Within your single course directory, I recommend following a mindful, purposeful approach to organization. This approach begins with having a number of dedicated subfolders within your course directory:
 
 ```
 /SOC5650
@@ -53,17 +53,33 @@ Within your single course directory, I recommend following much of Long's (2009)
   /Notes
   /ProblemSets
   /Readings
+  /WeeklyPreps
   /WeeklyRepos
 ```
 
 Note again how these directories are named - there are no spaces, special characters, and the names are deliberately short but specific. For a directory with two words (`FinalProject` or `ProblemSets`), I use what is known as camelCase to name the file where the second (any any subsequent) words have their first character capitalized. You could also use dash-case (`Core-Documents`) or snake_case (`Core_Documents`) as a naming strategy. Regardless of which of these approaches you take, try to use it consistently.
 
-The course data release is embedded in an otherwise empty folder structure that mirrors this layout. When you download these data and the accompanying directories, un-zip them and move the entire contents to the root of your thumb drive or external hard drive. If you are registered for SOC 4650 and want your directory to match your registration, feel free to rename it `SOC4650`.
+Once you have these folders set-up, I want you to an agreement with yourself: files for the course will *only* be saved within this structure. Do not temporarily save files to the `Desktop`, for example, intending to move them later. They will be forgotten.
 
 ### The `Core-Documents` Directory
-This directory will *not* be included in the folder structure that you download along with the course data release. This directory will be added to your file system during **Week 03**, when it is **cloned** from GitHub. A cloned directory is one that retains a digital link to the data stored on GitHub, meaning that it can be easily updated if changes are made. This will be explained in greater depth in Introduction to GitHub chapter in this text.
+This directory has already been created and will be added to your file system during **Week 03**, when it is **cloned** from GitHub. 
 
-### The `Data` Directory (SOC 4650/5650 *only*)
+```{block, type = "rmdnote"}
+A cloned directory is one that retains a digital link to the data stored on GitHub, meaning that it can be easily updated if changes are made. This will be explained in greater depth in Introduction to GitHub chapter in this text. 
+```
+
+```{block, type = "rmdwarning"}
+You will not be able to push changes that you make in this directory to GitHub, and making other changes could cause conflicts. I suggest not making changes inside this repository beyond opening files for reference purposes.
+```
+
+The `Core-Documents` directory is used for storing the course syllabus, reading list, and a sample schedule for 3600 Morrissey Hall for the semester.
+
+### The `Data` Directory
+
+```{block, type = "rmdwarning"}
+This directory is only applicable to students in [Introduction to GIS](https://slu-soc5650.github.io), who will receive a data release at the beginning of the semester that should be saved here. Students in [Quantitative Analysis](https://slu-soc5050.github.io) will receive most data through `R` packages and may reiceve a small amount of data through weekly repositories.
+```
+
 The data directory should have copies of any original data and their documentation that are not disseminated to you as `R` packages. Most of these data are included in the initial data release, but you will have to add some additional data to this directory over the course of the semester. The data in this directory should be used as needed but not altered (one of the of the "good enough" research practices from the previous chapter).
 
 ### The `DoeAssignments` Directory
@@ -75,6 +91,8 @@ Like the `Core-Documents` repository, this will not be included in the course da
       /FinalProject
         /Documentation
         /Memo
+        /PaperDraft
+        /PaperFinal
         /PosterDraft
         /PosterFinal
 
@@ -87,11 +105,20 @@ Like the `Core-Documents` repository, this will not be included in the course da
         /PS-01
         ...
         /PS-10
+      
+      /WeeklyPrep
+        /WP-02
+        ...
+        /WP-16
 ```
 
 The `FinalProject` directory contains submission folders for each component of the final project. If you a registered for SOC 4650, your directory will look like what appears above. Students registered for SOC 5650 will have three additional subfolders for deliverables related to the final paper element of the course.
 
-The `Labs` and `ProblemSets` directories have subfolders dedicated to the 26 individual assignments you'll have to submit over the course of the semester. **These directories are intended to store only the deliverables that are requested in each assignment's directions.** All other files related to each assignment should be stored elsewhere in your folder structure.
+The `Labs`, `ProblemSets`, `WeeklyPrep` directories have subfolders dedicated to the individual assignments you'll have to submit over the course of the semester. **These directories are intended to store only the deliverables that are requested in each assignment's directions.** All other files related to each assignment should be stored elsewhere in your folder structure.
+
+```{block, type = "rmdwarning"}
+Unlike `Core-Documents`, you have the ability to push changes made here to GitHub.com. Please make sure you understand that changes made will be reflected, for better or worse, on the website the next time you complete that push.
+```
 
 ### The `FinalProject` Directory
 The final project directory should be a microcosm of the larger directory structure, with most major directories replicated so that your final project files have a dedicated, organized home:
@@ -99,37 +126,99 @@ The final project directory should be a microcosm of the larger directory struct
 ```
   /SOC5650
     /FinalProject
+      /AnnotatedBib
       /Data
       /DataAnalysis
       /Documentation
       /Memo
       /Notes
+      /Paper
       /Poster
       /Readings
 ```
 You'll notice that there are a number of new directories dedicated to specific aspects of the project.
 
-*SOC 5650 students*: you will want to add directories for the `/AnnotatedBib` and `/Paper` aspects of the assignment. I also recommend using some type of bibliography software. ([Endnote](http://endnote.com), for example, can be obtained for free by SLU students). Whatever application you choose, keep its primary database for your project in the `Readings` folder along with copies of all `.pdf` readings.
+```{block, type = "rmdnote"}
+You will want to tailor this subdirectory's contents to match the specific requirements of the section you are enrolled in. This may entail removing certain folders - the `AnnotatedBib/` for example - that do not correspond to deliverables you have to complete.
+```
 
-### The `Labs` Directory
-This directory contains subfolders for each of the sixteen lab assignments for this course. Save *all* of the associated materials for each lab assignment here, including text files, documentation, map files and output, data tables, and any new data that you are asked to create and save.
+### The `Labs`, `ProblemSets`, and `WeeklyPreps` Directories
+This directory contains subfolders for each of the sixteen lab assignments for this course. Save *all* of the associated materials for each lab assignment here. 
+
+```
+  /SOC5650
+    /Labs
+      /Lab-01
+      ...
+      /Lab-16
+      
+    /ProblemSets
+      /PS-01
+      ...
+      /PS-10
+      
+    /WeeklyPreps
+      /Week-01
+      ...
+      /Week-16
+```
+
+These directories differ from what you save in your `DoeAssignments` repository. Unlike `DoeAssignments`, which is **only** for submission files, these directories can contain any number of files you wish. Use each of these assignment folders as a place to work and experiment, and the folders under `DoeAssignments` as the place to submit your final versions.
+
+Each of these assignments that utilizes `R` and RStudio should have an R Project associated with it:
+
+```
+  /SOC5650
+    /Labs
+      /Lab-01
+        Lab-01.Rproj
+        
+      /Lab-02
+        Lab-02.Rproj
+        
+      /Lab-03
+        Lab-03.Rproj
+```
+
+Using R Projects will help you keep your work organized by ensuring that the working directory for RStudio is correctly set every time and that output is always saved to the appropriate assignment directory.
 
 ### The `Lectures` Directory
-This directory contains subfolders for each of the sixteen weeks of the course. When we create new data files, make maps, or write code during lectures, save these documents in the appropriate week's folder.
+This directory should contain subfolders for each of the sixteen weeks of the course. When we create new files during lectures, save these documents in the appropriate week's folder.
+
+```
+  /SOC5650
+    /Lectures
+      /Week-01
+      ...
+      /Week-16
+```
 
 ### The `Notes` Directory
-Use this as a home for course notes.
-
-### The `ProblemSets` Directory
-This directory contains subfolders for each of the ten problem set assignments for this course. Save *all* of the associated materials for each problem set here, including text files, documentation, map files and output, data tables, and any new data that you are asked to create and save.
+Use this as a home for course notes if you decide to take notes digitally and do not already use notebook software of some kind that organizes notes for you.
 
 ### The `Readings` Directory
-Use this as a home for `.pdf` copies of course readings.
+Use this as a home for `.pdf` copies of course readings. I suggest creating subdirectories *only* for weeks that have readings assigned from outside of the main texts, such as Week 01:
+
+```
+  /SOC5650
+    /Readings
+      /Week-01
+```
 
 ### The `WeeklyRepos` Directory
-Clone each of the weekly repos to this directory, and sync them when updates are made to ensure you have the latest versions of files.
+Clone each of the weekly repos to this directory, and sync them when updates are made to ensure you have the latest versions of files. By the end of the course, this directory should have sixteen subfolders like this:
 
-**Do not edit the files in these repositories.** If you want or need to work with them, make a copy and save it into the relevant assignment directory.
+```
+  /SOC5650
+    /WeeklyRepos
+      /Week-01
+      ...
+      /Week-16
+```
+
+```{block, type = "rmdwarning"}
+You will not be able to push changes that you make in these directories to GitHub, and making other changes could cause conflicts. I suggest not making changes inside this repository beyond opening files for reference purposes. If there is something you need to edit, copy it to the appropriate subdirectory (`Labs`, `WeeklyPreps`, etc.) and make local changes there.
+```
 
 ## Backing Up Your Data
 There are a number of different ways to think about backing up your data. The most successful backup strategies will incorporate all of these elements.
@@ -169,3 +258,12 @@ For this course in particular, it is *imperative* that you backup the data on yo
   - Maintain a second flash drive copies of all of your files.
 
 Whatever solution you select, make sure you regularly update your backup. The more often you keep your backup archive updated, the less stressful and disruptive losing your drive will be. This will likely be a manual task, so follow the guidance above about creating a repeating calendar event or to-do list task reminder.
+
+## Managing Multiple Devices
+If you are trying to manage your work across multiple computers, the task of staying organized becomes more difficult. One option is to use a thumb drive or external hard drive as the primary site where your course directory lives. That way you can save everything there and it is accessible by as many computers as necessary. If you decide go this route, it is **imperative** that you back-up your work to a computer or to another external drive.
+
+```{block, type = "rmdtip"}
+macOS users should make sure that the external drive is formatted using the ExFat file system specification so that it is readable both by their operating system and the Windows operating system in the computer lab. If you buy a new drive, you will likely have to re-format it.
+```
+
+Another option is to utilize GitHub extensively. You can create repos for the some of the key subdirectories referenced above, like `ProblemSets`, `WeeklyPreps`, and others, and keep you work synced between computers using the same process we use for submitting work. If you want to do this, make sure you get the [student GitHub discount](https://education.github.com/discount_requests/new), which will give you unlimited private repositories. That way, your course work will not be public facing. If you pursue this strategy, make sure you still have only one place for a specific file typoe - you do not want some problem set materials saved outside of your GitHub repo and some saved in it. 
