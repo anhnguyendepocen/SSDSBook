@@ -87,6 +87,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -152,7 +153,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3.1" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#create-a-single-course-directory"><i class="fa fa-check"></i><b>4.3.1</b> Create a <em>Single</em> Course Directory</a></li>
 <li class="chapter" data-level="4.3.2" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#approach-organizing-systematically"><i class="fa fa-check"></i><b>4.3.2</b> Approach Organizing Systematically</a></li>
 <li class="chapter" data-level="4.3.3" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#the-core-documents-directory"><i class="fa fa-check"></i><b>4.3.3</b> The <code>Core-Documents</code> Directory</a></li>
-<li class="chapter" data-level="4.3.4" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#the-data-directory"><i class="fa fa-check"></i><b>4.3.4</b> The <code>Data</code> Directory</a></li>
+<li class="chapter" data-level="4.3.4" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#the-data-directory-soc-46505650-only"><i class="fa fa-check"></i><b>4.3.4</b> The <code>Data</code> Directory (SOC 4650/5650 <em>only</em>)</a></li>
 <li class="chapter" data-level="4.3.5" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#the-doeassignments-directory"><i class="fa fa-check"></i><b>4.3.5</b> The <code>DoeAssignments</code> Directory</a></li>
 <li class="chapter" data-level="4.3.6" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#the-finalproject-directory"><i class="fa fa-check"></i><b>4.3.6</b> The <code>FinalProject</code> Directory</a></li>
 <li class="chapter" data-level="4.3.7" data-path="creating-a-sustainable-file-system.html"><a href="creating-a-sustainable-file-system.html#the-labs-directory"><i class="fa fa-check"></i><b>4.3.7</b> The <code>Labs</code> Directory</a></li>
@@ -191,16 +192,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="threats-to-our-data" class="section level2">
 <h2><span class="header-section-number">4.1</span> Threats To Our Data</h2>
-<p>Each semester that I teach <a href="https://slu-soc5650.github.io">Introduction to GIS (SOC 4650/5650)</a> and <a href="https://slu-soc5050.github.io">Quantitative Analysis (SOC 4930/5050)</a>, two things happen. The first thing that happens is that students regularly lose files. The effects of losing files can range from being a minor frustration to a major headache depending on the file in question. Losing files often results in downloading multiple copies of the same data and recreating work. Both of these are wastes of your time. Moreover, files are rarely gone. They are typically just misplaced. This is bad for reproducibility, particularly when you happen across multiple versions of the same file and have to sort out which version is the version you last worked on.</p>
-<p>The second thing that happens is that students lose their thumb drives. Depending on the timing of this loss, this can again range from being a minor frustration (very early in the semester) to being downright anxiety attack producing (last few weeks of the semester). Recreating an entire semester’s worth of work on the final project is both a tremendous waste of your time and a particularly unpleasant experience.</p>
+<p>Each semester that I teach <a href="https://slu-soc5650.github.io">Introduction to GIS</a> and <a href="https://slu-soc5050.github.io">Quantitative Analysis</a>, several things happen. The first thing that happens is that students regularly lose files. The effects of losing files can range from being a minor frustration to a major headache depending on the file in question. Losing files often results in downloading multiple copies of the same data and recreating work. Both of these are wastes of your time. Moreover, files are rarely gone. They are typically just misplaced. This is bad for reproducibility, particularly when you happen across multiple versions of the same file and have to sort out which version is the version you last worked on.</p>
+<p>The second thing that happens is that students who use thumb drives for data storage lose them. Depending on the timing of this loss, this can again range from being a minor frustration (very early in the semester) to being downright anxiety attack producing (last few weeks of the semester). Recreating an entire semester’s worth of work on the final project is both a tremendous waste of your time and a particularly unpleasant experience.</p>
 <p>Fortunately, I have never had a student’s computer hard drive die during the course of the semester. However, I assume that if I teach this course long enough a hard drive failure will indeed occur. The backup provider <a href="https://www.backblaze.com/">Backblaze</a> has <a href="https://www.backblaze.com/blog/how-long-do-disk-drives-last/">analyzed</a> their own hard drives and found that about 5% of drives fail within the first year. After four years, a quarter (25%) of drives in their data center fail.</p>
 <p>Similarly, it is only a matter of time before a student’s computer is stolen along with all of their hard work. A less likely though still very plausible scenario involves the destruction of a student’s belongings (computer and thumb drive included) in a fire, car accident, or natural disaster.</p>
 <p>Despite the likelihood that you will at some-point lose a thumb drive (if not during this semester than sometime down the road) and the near certainty that your computer’s hard drive will eventually fail if a rogue wave does not get it first, few students and faculty take these risks seriously. While you cannot prevent many of these things from happening, I want to suggest to you that you can take some simple steps to sure that <em>when</em> (not if) they happen, you are well prepared to get back to work with minimal disruption.</p>
-<div class="rmdtip">
-<p>
-The <code>%/%</code> operator does integer division (<code>x %/% y</code> is equivalent to <code>floor(x/y)</code>) so the index keeps track of which 80-line section of text we are counting up negative and positive sentiment in.
-</p>
-</div>
 </div>
             </section>
 
