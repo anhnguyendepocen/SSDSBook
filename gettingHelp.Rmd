@@ -1,5 +1,5 @@
 # Getting Help
-One of the biggest challenges for students first learning tools like `R`, ArcGIS, and LaTeX is dealing with the inevitable speedbumps and errors that come along with scientific computing. Remember, first and foremost, that these tools are not consumer software. They do not always "just work", to borrow a turn of phrase from [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs). Learning strategies for navigating issues when the software is most definetly not working is therefore an important part of success. 
+One of the biggest challenges for students first learning tools like `R`, ArcGIS, and LaTeX is dealing with the inevitable speed-bumps and errors that come along with scientific computing. Remember, first and foremost, that these tools are not consumer software. They do not always "just work", to borrow a turn of phrase from [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs). Learning strategies for navigating issues when the software is most definitely not working is therefore an important part of success. 
 
 One misconception that I think is important to confront is that data analysts, software engineers, and others who appear to be experts may indeed be very good at what they do, but they are equally skilled at problem solving. This [xkcd](https://www.xkcd.com) comic illustrates (a bit sarcastically!) the point:
 
@@ -7,12 +7,17 @@ One misconception that I think is important to confront is that data analysts, s
 knitr::include_graphics("https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png")
 ```
 
-Navigating challenges with data science may not be quite as easy following the flowchart above, but there are definetly strategies for working your way through errors and challenges in data science work.
+Navigating challenges with data science may not be quite as easy following the flowchart above, but there are definitely strategies for working your way through errors and challenges in data science work.
 
 ## Helping Yourself
-As I noted in [Zen and the Art of Data Analysis], 
+As I noted in [Zen and the Art of Data Analysis], a key challenge of data science work is mental. One of the traits I see frequently among students who are confronted with errors is that they stop working and wait for office hours or they immediately ask a question on Slack. Both office hours and Slack are excellent options for getting help, but there are a few strategies you should pursue first. Before you doing anything else, however, *take a deep breath* and consider taking a break.
 
-## Reproducible Examples
+### Check Spelling
+With `R`, the number one cause of errors that I see are misspellings. If objects in the global enviornment or variable names within a data frame are not spelled correctly (case matters!), you will get an error that an object cannot be found. The same goes for package and function names - they must be spelled 100% correctly.
+
+
+
+## How to Seek Help
 
 ## Where to Seek Help
 
