@@ -11,4 +11,5 @@ rmd_files: [
   "courseApproach.Rmd",
   "protectingYourWork.Rmd",
   "goodPractices.Rmd",
+  "gettingHelp.Rmd",
 ]
