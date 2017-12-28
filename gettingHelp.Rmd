@@ -10,14 +10,62 @@ knitr::include_graphics("https://imgs.xkcd.com/comics/tech_support_cheat_sheet.p
 Navigating challenges with data science may not be quite as easy following the flowchart above, but there are definitely strategies for working your way through errors and challenges in data science work.
 
 ## Helping Yourself
-As I noted in [Zen and the Art of Data Analysis], a key challenge of data science work is mental. One of the traits I see frequently among students who are confronted with errors is that they stop working and wait for office hours or they immediately ask a question on Slack. Both office hours and Slack are excellent options for getting help, but there are a few strategies you should pursue first. Before you doing anything else, however, *take a deep breath* and consider taking a break.
+As I noted in [Zen and the Art of Data Analysis], a key challenge of data science work is mental. One of the traits I see frequently among students who are confronted with errors is that they stop working and wait for office hours or they immediately ask a question on Slack. Both office hours and Slack are excellent options for getting help, but there are a few strategies you should pursue first. 
+
+Before you doing anything else, however, *take a deep breath* and consider taking a break. When you being trying to fix the issue, check the time. I have spent hours trying to fix some code in `R` or mis-projected data in ArcGIS without success, and I have seen students do the same. Give yourself an hour time limit to try the steps below before you move on to constructing a reproducible example and asking for help from others. 
 
 ### Check Spelling
-With `R`, the number one cause of errors that I see are misspellings. If objects in the global enviornment or variable names within a data frame are not spelled correctly (case matters!), you will get an error that an object cannot be found. The same goes for package and function names - they must be spelled 100% correctly.
+With `R`, the number one cause of errors that I see are misspellings. If objects in the global environment or variable names within a data frame are not spelled correctly (case matters!), you will get an error that an object cannot be found. The same goes for package and function names - they must be spelled 100% correctly.
 
+### Check Course Resources
+If the issue is one other students have come across as well, it is likely to be discussed on Slack in the relevant channel. I may have also updated some of the course handouts or the relevant lecture's course webpage with details for how to address the concern. Check both Slack and the webpage for updates before digging deeper. Check the topic index on the relevant course website ([GIS topic index](https://slu-soc5650.github.io/topic-index/)) for links to different lectures where concepts or processes were covered.
 
+### Check Your Process
+`R` functions and ArcGIS processes often have specific parameters and requirements. If you have double checked your spelling and are sure (100% sure!) that spelling is not an issue, check to make sure that you have followed all of the requirements of the workflow for the skill you are stuck on. There are two different ways to go about doing this:
+
+- Check the course handouts and lecture slides for the relevant processes. If you cannot remember where the concepts were introduced, check the topic index on the relevant course website ([GIS topic index](https://slu-soc5650.github.io/topic-index/)). When I introduce processes, I often skip some (or many!) of the associated arguments and options, so the course materials are often easier to navigate than materials for other sources.
+- Search official documentation sources:
+    - For `R`, check package documentation files on CRAN. These are linked to in the package index on the relevant course website ([GIS package index](https://slu-soc5650.github.io/package-index/)). You can also use [CRAN's website](https://cran.r-project.org) to search for package information.
+    - For ArcGIS, check ESRI's [official documentation files](http://desktop.arcgis.com/en/arcmap/). Make sure that you are looking at the help files for ArcGIS 10.3!
+    - For Git and GitHub, check GitHub's [help website](https://help.github.com).
+    - For LaTeX, [ShareLaTeX](https://www.sharelatex.com/) has an excellent set of documentation files on their [knowledge base](https://www.sharelatex.com/learn/Main_Page). [CTAN](https://ctan.org), the LaTeX package repository, also contains documentation files for all packages that can be searched.
+    
+Use these resources to try and narrow down what might be causing your issue. Be mindful that the root cause of an error may be several steps back in your workflow. Walk back through your process to make sure your initial steps are not the cause of the error.
+
+### Cast a Wider Net
+If none of these resources are sufficient, there are a few other options for seeking out guidance. When you search the following sites, it is often a good idea to search based on the specific error you are getting. Take out any aspects of the error that are specific to you, like a file path in ArcGIS, a file name, or a variable name. One set of options to search are the wealth of web resources that are available for some of the tools we use:
+
+- For `R`, check out [RStudio's cheatsheets](https://www.rstudio.com/resources/cheatsheets/) and [RStudio's community forums](https://community.rstudio.com). If the package is part of the `tidyverse`, check the [website](http://tidyverse.org) as well as [R for Data Science](http://r4ds.had.co.nz). Other packages have their own websites as well. For all of these resources, links are provided in the package index on the relevant course website ([GIS package index](https://slu-soc5650.github.io/package-index/)).
+- For LaTeX, there is a [LaTeX wikibook](https://en.wikibooks.org/wiki/LaTeX) with some excellent resources.
+    
+Another resource is [Stack Exchange](https://stackexchange.com), a network of online communities on a variety of topics including:
+
+- [Stack Overflow](https://stackoverflow.com) for `R`, Git, and GitHub - search using tags like `[r]`, `[ggplot2]`, `[dplyr]`, `[git]`, `[github]`, etc.
+- [Geographic Information Systems](https://gis.stackexchange.com) for GIS - search using the `[arcgis-desktop]` tag
+- [TeX](https://tex.stackexchange.com) for LaTeX
+
+Stack Exchange may have posts that address the issue or question you have. However, the match may only be partial and may require additional modification or tinkering to solve your specific concern. You may spend just as much time trying to get a Stack Exchange solution to work as you would waiting for a response on Slack, so proceed with caution if you decide to go this route.
+
+Finally, if you have exhausted these other options, a Google search may be effective. This may help you identify GitHub issues, blogs, and other online tutorials that can help address whatever roadblock you have run into. Try searching first with double quotes around the main body of the error message's text. If nothing comes up, try searching without the double quotes. Search strings that include `R` package names or specific processes in ArcGIS are sometimes helpful for narrowing down a large amount of search results, especially if those results are not specific to the tool you are using. The same warning for Stack Exchange also exists for Google, however. You may find imperfect matches for your problem that take considerably more tinkering to implement. 
 
 ## How to Seek Help
+If all else fails and the strategies for [Helping Yourself] have not yielded a solution, it is time to ask for help! Before you head to office hours or Slack, you will want to construct a **reproducible example**.
+
+### What is a reproducible example?
+A reproducible example, or reprex, is a term we'll borrow from the `R` ecosystem. It was coined by [Roman François](https://twitter.com/romain_francois/status/530011023743655936) and has been enshrined in the [`reprex` package](http://reprex.tidyverse.org), which I'll describe below. The goal for a reprex is to strip down the process you have used to the minimal number of steps needed to replicate the error. This means using the fewest steps and data sources possible. Cut out anything that does not directly contribute to causing the error when making your reprex. 
+
+I have often found that the process of making a reprex actually helps isolate the cause of the problem. For instance, it may become clear that a specific step is causing an issue. Even if you are not sure how to fix the problem, having narrowed it down can be immensely helpful. If you can use built-in data in `R` to create the reprex, or at least example data from the course, that may also help you identify whether the issue is with the process itself or something that is idiosyncratic to the data you are using.
+
+### Creating a reprex
+#### `R`
+
+#### ArcGIS
+
+#### LaTeX
+
+#### Markdown
+
+#### Git/GitHub
 
 ## Where to Seek Help
 
