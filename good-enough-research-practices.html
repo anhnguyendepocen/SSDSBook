@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="threats-to-our-data.html">
-<link rel="next" href="creating-a-sustainable-file-system.html">
+<link rel="prev" href="managing-multiple-devices.html">
+<link rel="next" href="reproducibility.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -182,19 +182,31 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-management" class="section level2">
-<h2><span class="header-section-number">3.2</span> Data Management</h2>
-<p>One of the themes in <a href="https://arxiv.org/abs/1609.00037">“Good Enough Practices in Scientific Computing”</a>, referenced in the previous chapter, is an emphasis on data management. One of their core messages is to ``save the raw data’’. Particularly in GISc work, the raw data can be expansive - dozens of shapefiles, tabular files, and associated metadata. These files often come from disparate sources - city open data sites, the U.S. Census Bureau, state data repositories, and other federal agencies. Moreover, GIS data are often updated over time to reflect on-the-ground changes. Saving the raw data in GISc work therefore means not only creating a well-organized directory containing <em>all</em> of your original data. It also means logging the source of each file, when it was downloaded, and (if applicable) a permanent web link to your data source. For that reason, we’ll give you not just the course data but a read me file and a metadictionary that lists all of the files we’ve disseminated to you.</p>
-<p>A second message in the paper is to “create the data you wish to see in the world”. The authors encourage readers to “create the dataset you wish you had received.” First and foremost, this means using open and not proprietary data formats. For spatial data, <a href="https://en.wikipedia.org/wiki/Shapefile">ESRI shapefiles</a> are technically proprietary, though their standard is open. This means that other software applications, like <code>R</code> and QGIS can read and in some cases write shapefiles. For sharing spatial data, a better option is the <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a>, which is a plain text file format.</p>
-<p>Tabular data are best stored as <code>CSV</code> files, which is also a plain text file format that can be opened by a wide variety of applications. In contrast, common file formats like Microsoft Excels’s <code>XLS</code> and <code>XLSX</code> are proprietary file packages that cannot be read as plain text and are therefore less desirable for storing data.</p>
+<div id="good-enough-research-practices" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> “Good Enough” Research Practices</h1>
+<p>This section introduces some of the core concepts that we will emphasize in this course throughout the semester. The title takes inspiration from a recent article titled <a href="https://arxiv.org/abs/1609.00037">“Good Enough Practices in Scientific Computing”</a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. The authors note in their introduction that scientific computing advice can sometimes be both overwhelming and focused on tools that are inaccessible to many analysts. Their goal, and the goal of this course, is to de-mystify the simplist tools that enable researchers to streamline their workflows:</p>
+<blockquote>
+<p>Our intended audience is researchers who are working alone or with a handful of collaborators on projects lasting a few days to a few months, and who are ready to move beyond emailing themselves a spreadsheet named <code>results-updated-3-revised.xlsx</code> at the end of the workday…Many of our recommendations are for the benefit of the collaborator every researcher cares about most: their future self.</p>
+</blockquote>
+<p>I would argue that the skills they describe are useful beyond just a few months. Indeed, most of the skills here can dramatically improve students’ dissertation experiences:</p>
+<blockquote>
+<p>Most importantly, these practices make researchers more productive individually by enabling them to get more done in less time and with less pain. They also accelerate research as a whole by making computational work (which increasingly means all work) more reproducible. But progress will not happen by itself. Universities and funding agencies need to support training for researchers in the use of these tools. Such investment will improve confidence in the results of computational work and allow us to make more rapid progress on important research questions.</p>
+</blockquote>
+<p>While much of what we will talk about in this course is aimed at supporting your work, there are benefits that extend beyond your dissertation or your research projects. These benefits, which include developing sustainable workflows and structuring the way you interact with your own computer, can make everyday computing practices like checking email or organizing files an easier, more structured process.</p> 
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L. and Teal, T.K., 2016. Good Enough Practices in Scientific Computing. <em>arXiv preprint arXiv:1609.00037.</em><a href="good-enough-research-practices.html#fnref2">↩</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="threats-to-our-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="creating-a-sustainable-file-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="managing-multiple-devices.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reproducibility.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

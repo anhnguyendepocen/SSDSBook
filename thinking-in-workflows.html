@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="threats-to-our-data.html">
-<link rel="next" href="creating-a-sustainable-file-system.html">
+<link rel="prev" href="reproducibility.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -182,19 +182,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-management" class="section level2">
-<h2><span class="header-section-number">3.2</span> Data Management</h2>
-<p>One of the themes in <a href="https://arxiv.org/abs/1609.00037">“Good Enough Practices in Scientific Computing”</a>, referenced in the previous chapter, is an emphasis on data management. One of their core messages is to ``save the raw data’’. Particularly in GISc work, the raw data can be expansive - dozens of shapefiles, tabular files, and associated metadata. These files often come from disparate sources - city open data sites, the U.S. Census Bureau, state data repositories, and other federal agencies. Moreover, GIS data are often updated over time to reflect on-the-ground changes. Saving the raw data in GISc work therefore means not only creating a well-organized directory containing <em>all</em> of your original data. It also means logging the source of each file, when it was downloaded, and (if applicable) a permanent web link to your data source. For that reason, we’ll give you not just the course data but a read me file and a metadictionary that lists all of the files we’ve disseminated to you.</p>
-<p>A second message in the paper is to “create the data you wish to see in the world”. The authors encourage readers to “create the dataset you wish you had received.” First and foremost, this means using open and not proprietary data formats. For spatial data, <a href="https://en.wikipedia.org/wiki/Shapefile">ESRI shapefiles</a> are technically proprietary, though their standard is open. This means that other software applications, like <code>R</code> and QGIS can read and in some cases write shapefiles. For sharing spatial data, a better option is the <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a>, which is a plain text file format.</p>
-<p>Tabular data are best stored as <code>CSV</code> files, which is also a plain text file format that can be opened by a wide variety of applications. In contrast, common file formats like Microsoft Excels’s <code>XLS</code> and <code>XLSX</code> are proprietary file packages that cannot be read as plain text and are therefore less desirable for storing data.</p>
+<div id="thinking-in-workflows" class="section level2">
+<h2><span class="header-section-number">4.2</span> Thinking in Workflows</h2>
+<p>One way to increase the reproducibility of a project is to approach each and every task with purposeful organization and thoughtfulness. <strong>Workflows</strong> are the processes that we use to approach a given task. Think of checking your email. You (hopefully!) follow a series of steps when you check your email that help you organize your inbox. In our reading for the first week of classes, <a href="http://www.indiana.edu/~jslsoc/">Scott Long</a><a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> describes a structured strategy for approaching statistical research. In Long’s model, a data analysis project consists of four steps: (a) data cleaning, (b) analysis, (c) presenting results, and (d) protecting files. This is a useful model to build upon, and one that we will discuss over the course of the semester.</p>
+<p>Even more useful, not just for statistical work but for any process, are the tasks Long lays out for each step in the data analysis workflow:</p>
+<ol style="list-style-type: decimal">
+<li>Planning</li>
+<li>Organization</li>
+<li>Documentation</li>
+<li>Execution</li>
+</ol>
+<p>A good example of the utility of extending this logic to other workflows is with the problem sets. The “typical” approach students take with homework assignments is to sit down, open up their software, and start with question 1. Using Long’s four task approach, a workflow-based strategy to the assignment would involve beginning by reading the assignment through in its entirety to develop a <strong>plan</strong> for approaching it - think about what techniques and skills are needed for each step. With a plan in place, you can proceed to <strong>organizing</strong> yourself for the assignment - identifying and obtaining files that you will need, creating dedicated directories for saving assignment data, and getting any necessary software documentation. After pulling together all of these materials, you are ready to move on to <strong>documentation</strong> - setting up your assignment code and output files, and (later in the course) your research log and meta-dictionary. Once you are set-up, you would then begin to address individual assignment questions as part of the <strong>execution</strong> task.</p>
+<p>The goal here is to approach everything you do for research or work with an element of mindfulness and structure about your process. This mental model for approaching research supports the creation of <strong>reproducible</strong> research products because we approach our work in a routinized, predictable, organized, and efficient manner. Thinking in terms of workflows also encourages a greater awareness of the complexity of tasks, which also helps you plan more accurately for how long a particular task or project will take.</p>
+<p>In reality, there will be multiple workflows that you find yourself navigating. You will want a structured process not just for approaching a large research project like the final project, but also a process for maintaining notes related to a specific assignment, a process for documenting code, a process for approaching assignments, and even a process for backing your data up. As you go through the course, think about how to best integrate these ideas into your work habits.</p>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>Long, J.S., 2009. <em>The workflow of data analysis using Stata.</em> College Station, TX: Stata Press.<a href="thinking-in-workflows.html#fnref5">↩</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="threats-to-our-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="creating-a-sustainable-file-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reproducibility.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
