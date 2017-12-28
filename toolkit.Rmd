@@ -49,4 +49,42 @@ A good example of the utility of extending this logic to other workflows is with
 
 The goal here is to approach everything you do for research or work with an element of mindfulness and structure about your process. This mental model for approaching research supports the creation of **reproducible** research products because we approach our work in a routinized, predictable, organized, and efficient manner. Thinking in terms of workflows also encourages a greater awareness of the complexity of tasks, which also helps you plan more accurately for how long a particular task or project will take.
 
-In reality, there will be multiple workflows that you find yourself navigating. You will want a structured process not just for approaching a large research project like the final project, but also a process for maintaining notes related to a specific assignment, a process for documenting code, a process for approaching assignments, and even a process for backing your data up. As you go through the course, think about how to best integrate these ideas into your work habits.
+In reality, there will be multiple workflows that you find yourself navigating. You will want a structured process not just for approaching a large spatial research project like the final project, but also a process for maintaining notes related to a specific assignment, a process for documenting code, a process for approaching assignments, and even a process for backing your data up. As you go through the course, think about how to best integrate these ideas into your work habits.
+
+## Course Tools
+
+This course relies on a number of major tools to help us accomplish the work that we need to do. This makes for a complex learning curve, particularly at the beginning of the semester. The tools we've selected for this class have been picked not necessarily because they are the *easiest* tools to learn, but because they *increase* our ability to conduct reproducible research.
+
+### `R` and RStudio
+`R` is actually a programming language that was originally intended to support statistical computing and graphics. In recent years, it has become a multi-purpose language capable of producing not only statistical output but sophistical data visualizations, maps, and even qualitative and textual analyses. To show you how flexible and powerful `R` can be, the [website](https://slu-soc5050.github.io) for this class and even this book were both written entirely with `R`! This flexiblity is enabled by *packages*, which are user-written programs that build upon `R`'s base code to create new *functions*. Functions are the building blocks `R`'s syntax that allow us to work with our data.
+
+RStudio is what is known as an integrated development environment, or "IDE". It provides a suite of tools for interacting with the `R` programming language, many of which will make our work easier and more reproducible. For that reason, we won't be using `R` directly this semester, but rather working with it through RStudio.
+
+### Atom
+While RStudio does have a built-in do-file editor, and you could easily use it to author code for `R`, writing in an external text editor has a number of advantages. Atom is a free, highly extensible, and easy to use text editor. Unlike RStudio's do-file editor, it is not tied to a single application or programming language. Atom, on the other hand, offers a large number of user-written packages that dramatically extend its base capabilities. One of those, `language-r`, gives Atom support for working with Stata's do-file format. 
+
+As we progress through the semester, we'll also use a number of packages for writing and previewing Markdown text files. These are particularly important because RStudio does not have a spell checking function. So, while using Atom means adding an additional tool to your workflow, it also offers a number of improvements over what RStudio comes built in with. We'll describe all of this further in the chapters on "Introducing Atom", "Introducing Markdown", and "Reproducible Notebooks".
+
+### GitHub
+The final tool we'll use, GitHub and its desktop application GitHub Desktop, is an exceptionally powerful tool for conducting version control on an entire directory. This allows you to track changes in individual files as well as changes that impact an entire sub-folder or entire project directory. GitHub is increasingly recognized as one of the key tools available for making research reproducible because it allows users to maintain logs of every change they make on a project. It also offers other tools that support project management, including to-do lists, issue tracking, and even website maintenance. GitHub, and the software that powers it called Git, are both described further in the "Introduction to GitHub".
+
+## Course Workflow
+One of the largest learning curves with this course is keeping track of how all of these tools fit together. As we said above, it is important for you to being thinking in workflows. We've mapped out the major aspects of our course workflow to help aid that process:
+
+```{r echo=FALSE, out.width = '100%'}
+knitr::include_graphics("images/gisFlow1.png")
+```
+
+This workflow is premised on a common GISc situation: you have data stored in some type of database in a **tabular** or spreadsheet-like format that have a **spatial reference** like an address, which would allow them to be mapped. This main dataset of interest needs cleaning, as real world data often do, before it can be mapped. We'll use code written in Atom and executed by Stata to accomplish this task. We'll also use Atom to maintain and edit documentation that helps you increase the reproducibility of your work.
+
+Once the data are cleaned, we'll want to start working on mapping them. This cannot occur in a vacuum. Rather, you will need to seek out data sources that describe the physical or human geography in the area of interest. These may come as **shapefiles** or **geodatabases**, and they may also require some sort of data cleaning. Often the spatial data we have access to cover a larger area than what we need, or they cover too small an area and have to be merged with other files to capture the extent we require.
+
+Once both our tabular and spatial data are cleaned, we can bring our tabular data in ArcGIS so that we can further clean it, if necessary, and map it. When we have maps ready for export, we often combine them into deliverables like presentations or printed booklets. This is best accomplished outside of ArcGIS in an application like PowerPoint or Word, or a more advanced publishing tool.
+
+Finally, as we noted above, we will capture and track *almost* all of these files using GitHub:
+
+```{r echo=FALSE, out.width = '100%'}
+knitr::include_graphics("images/gisFlow2.png")
+```
+
+This workflow captures every aspect of a project from the bright idea that launches it to data acquisition, data cleaning, mapping, dissemination, and archiving.
