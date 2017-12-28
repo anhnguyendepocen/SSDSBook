@@ -64,33 +64,21 @@ Once you have these folders set-up, I want you to an agreement with yourself: fi
 ### The `Core-Documents` Directory
 This directory has already been created and will be added to your file system during **Week 03**, when it is **cloned** from GitHub. 
 
-\begin{rmdnote}
-A cloned directory is one that retains a digital link to the data stored
-on GitHub, meaning that it can be easily updated if changes are made.
-This will be explained in greater depth in Introduction to GitHub
-chapter in this text.
-\end{rmdnote}
+<div class="rmdnote">
+<p>A cloned directory is one that retains a digital link to the data stored on GitHub, meaning that it can be easily updated if changes are made. This will be explained in greater depth in Introduction to GitHub chapter in this text.</p>
+</div>
 
-\begin{rmdwarning}
-You will not be able to push changes that you make in this directory to
-GitHub, and making other changes could cause conflicts. I suggest not
-making changes inside this repository beyond opening files for reference
-purposes.
-\end{rmdwarning}
+<div class="rmdwarning">
+<p>You will not be able to push changes that you make in this directory to GitHub, and making other changes could cause conflicts. I suggest not making changes inside this repository beyond opening files for reference purposes.</p>
+</div>
 
 The `Core-Documents` directory is used for storing the course syllabus, reading list, and a sample schedule for 3600 Morrissey Hall for the semester.
 
 ### The `Data` Directory
 
-\begin{rmdwarning}
-This directory is only applicable to students in
-\href{https://slu-soc5650.github.io}{Introduction to GIS}, who will
-receive a data release at the beginning of the semester that should be
-saved here. Students in
-\href{https://slu-soc5050.github.io}{Quantitative Analysis} will receive
-most data through \texttt{R} packages and may reiceve a small amount of
-data through weekly repositories.
-\end{rmdwarning}
+<div class="rmdwarning">
+<p>This directory is only applicable to students in <a href="https://slu-soc5650.github.io">Introduction to GIS</a>, who will receive a data release at the beginning of the semester that should be saved here. Students in <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> will receive most data through <code>R</code> packages and may reiceve a small amount of data through weekly repositories.</p>
+</div>
 
 The data directory should have copies of any original data and their documentation that are not disseminated to you as `R` packages. Most of these data are included in the initial data release, but you will have to add some additional data to this directory over the course of the semester. The data in this directory should be used as needed but not altered (one of the of the "good enough" research practices from the previous chapter).
 
@@ -128,12 +116,9 @@ The `FinalProject` directory contains submission folders for each component of t
 
 The `Labs`, `ProblemSets`, `WeeklyPrep` directories have subfolders dedicated to the individual assignments you'll have to submit over the course of the semester. **These directories are intended to store only the deliverables that are requested in each assignment's directions.** All other files related to each assignment should be stored elsewhere in your folder structure.
 
-\begin{rmdwarning}
-Unlike \texttt{Core-Documents}, you have the ability to push changes
-made here to GitHub.com. Please make sure you understand that changes
-made will be reflected, for better or worse, on the website the next
-time you complete that push.
-\end{rmdwarning}
+<div class="rmdwarning">
+<p>Unlike <code>Core-Documents</code>, you have the ability to push changes made here to GitHub.com. Please make sure you understand that changes made will be reflected, for better or worse, on the website the next time you complete that push.</p>
+</div>
 
 ### The `FinalProject` Directory
 The final project directory should be a microcosm of the larger directory structure, with most major directories replicated so that your final project files have a dedicated, organized home:
@@ -153,12 +138,9 @@ The final project directory should be a microcosm of the larger directory struct
 ```
 You'll notice that there are a number of new directories dedicated to specific aspects of the project.
 
-\begin{rmdnote}
-You will want to tailor this subdirectory's contents to match the
-specific requirements of the section you are enrolled in. This may
-entail removing certain folders - the \texttt{AnnotatedBib/} for example
-- that do not correspond to deliverables you have to complete.
-\end{rmdnote}
+<div class="rmdnote">
+<p>You will want to tailor this subdirectory's contents to match the specific requirements of the section you are enrolled in. This may entail removing certain folders - the <code>AnnotatedBib/</code> for example - that do not correspond to deliverables you have to complete.</p>
+</div>
 
 ### The `Labs`, `ProblemSets`, and `WeeklyPreps` Directories
 This directory contains subfolders for each of the sixteen lab assignments for this course. Save *all* of the associated materials for each lab assignment here. 
@@ -234,14 +216,9 @@ Clone each of the weekly repos to this directory, and sync them when updates are
       /Week-16
 ```
 
-\begin{rmdwarning}
-You will not be able to push changes that you make in these directories
-to GitHub, and making other changes could cause conflicts. I suggest not
-making changes inside this repository beyond opening files for reference
-purposes. If there is something you need to edit, copy it to the
-appropriate subdirectory (\texttt{Labs}, \texttt{WeeklyPreps}, etc.) and
-make local changes there.
-\end{rmdwarning}
+<div class="rmdwarning">
+<p>You will not be able to push changes that you make in these directories to GitHub, and making other changes could cause conflicts. I suggest not making changes inside this repository beyond opening files for reference purposes. If there is something you need to edit, copy it to the appropriate subdirectory (<code>Labs</code>, <code>WeeklyPreps</code>, etc.) and make local changes there.</p>
+</div>
 
 ## Backing Up Your Data
 There are a number of different ways to think about backing up your data. The most successful backup strategies will incorporate all of these elements.
@@ -270,15 +247,9 @@ Cloud backup services like [Backblaze](https://www.backblaze.com) or [Crashplan]
 ### A Workflow for Backups
 Just as we need a workflow for approaching file management, it is also important to establish a routine for backups. With backups, the most successful workflows are those that require next to no effort on your part. If you primarily use a desktop, this can be as simple as leaving two external hard drives plugged into your computer since most backup software can be set to run automatically. If you have tasks that require you to manually do something (plug an external hard drive into your computer, for instance), create a reminder for yourself on a paper calendar or a digital calendar or to-do list application.
 
-\begin{rmdtip}
-I gave a presentation on workflows for backing data up as part of the
-\href{https://slu-dss.github.io}{Data Science Seminar} series at
-\href{https://slu.edu}{Saint Louis University}. You can easily view the
-slides from that presentation on
-\href{https://speakerdeck.com/chrisprener/protecting-your-data}{Speaker
-Deck}, and you can download the session's materials from
-\href{https://github.com/slu-dss/protectData}{GitHub}.
-\end{rmdtip}
+<div class="rmdtip">
+<p>I gave a presentation on workflows for backing data up as part of the <a href="https://slu-dss.github.io">Data Science Seminar</a> series at <a href="https://slu.edu">Saint Louis University</a>. You can easily view the slides from that presentation on <a href="https://speakerdeck.com/chrisprener/protecting-your-data">Speaker Deck</a>, and you can download the session's materials from <a href="https://github.com/slu-dss/protectData">GitHub</a>.</p>
+</div>
 
 For this course in particular, it is *imperative* that you backup the data on your flash drive. A number of possibilities exist for accomplishing this:
 
@@ -291,11 +262,8 @@ Whatever solution you select, make sure you regularly update your backup. The mo
 ## Managing Multiple Devices
 If you are trying to manage your work across multiple computers, the task of staying organized becomes more difficult. One option is to use a thumb drive or external hard drive as the primary site where your course directory lives. That way you can save everything there and it is accessible by as many computers as necessary. If you decide go this route, it is **imperative** that you back-up your work to a computer or to another external drive.
 
-\begin{rmdtip}
-macOS users should make sure that the external drive is formatted using
-the ExFat file system specification so that it is readable both by their
-operating system and the Windows operating system in the computer lab.
-If you buy a new drive, you will likely have to re-format it.
-\end{rmdtip}
+<div class="rmdtip">
+<p>macOS users should make sure that the external drive is formatted using the ExFat file system specification so that it is readable both by their operating system and the Windows operating system in the computer lab. If you buy a new drive, you will likely have to re-format it.</p>
+</div>
 
 Another option is to utilize GitHub extensively. You can create repos for the some of the key subdirectories referenced above, like `ProblemSets`, `WeeklyPreps`, and others, and keep you work synced between computers using the same process we use for submitting work. If you want to do this, make sure you get the [student GitHub discount](https://education.github.com/discount_requests/new), which will give you unlimited private repositories. That way, your course work will not be public facing. If you pursue this strategy, make sure you still have only one place for a specific file typoe - you do not want some problem set materials saved outside of your GitHub repo and some saved in it. 

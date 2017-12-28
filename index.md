@@ -1,7 +1,7 @@
 --- 
 title: "Sociospatial Data Science"
 author: "Christopher Prener, Ph.D."
-date: "2017-09-27"
+date: "2017-12-28"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -13,8 +13,7 @@ description: "This a companion text for Christopher Prener's research methods co
 
 # Preface {-}
 
-
-\begin{center}\includegraphics[width=0.4\linewidth]{images/SSDSBookBanner} \end{center}
+<img src="images/SSDSBookBanner.png" width="40%" style="display: block; margin: auto;" />
 
 This text is a companion text for both of my research methods courses at [Saint Louis University](https://slu.edu):
 
@@ -32,7 +31,7 @@ In both classes, the course names are deceptive. We are not only concerned with 
 [^1]: [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) is the developer of [TeX](https://en.wikipedia.org/wiki/TeX), a computer typesetting system that is widely used today for scientific publishing in the form of [LaTeX](https://en.wikipedia.org/wiki/LaTeX). He also established the concept of [literate programming](https://en.wikipedia.org/wiki/Literate_programming), which forms the basis of some of the practices we follow with `R`.  
 
 ## License {-}
-Copyright © 2016-2017 [Christopher G. Prener](https://chris-prener.github.io)
+Copyright © 2016-2018 [Christopher G. Prener](https://chris-prener.github.io)
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
