@@ -57,15 +57,23 @@ A reproducible example, or reprex, is a term we'll borrow from the `R` ecosystem
 I have often found that the process of making a reprex actually helps isolate the cause of the problem. For instance, it may become clear that a specific step is causing an issue. Even if you are not sure how to fix the problem, having narrowed it down can be immensely helpful. If you can use built-in data in `R` to create the reprex, or at least example data from the course, that may also help you identify whether the issue is with the process itself or something that is idiosyncratic to the data you are using.
 
 ### Creating a reprex
+Creating reproducible examples will differ slightly based on what you are trying to get help on.
+
 #### `R`
+To create a reprex in `R`, you will need to install the [`reprex` package](http://reprex.tidyverse.org/). It is part of the [tidyverse](https://www.tidyverse.org) but it is not installed when the `tidyverse` package is installed, so you will need to install it separately:
+
+```r
+install.packages("reprex")
+```
+
+Once you have it loaded (use the `library()` function), add the 
 
 #### ArcGIS
 
 #### LaTeX
 
-#### Markdown
+#### Other Tools
 
-#### Git/GitHub
 
 ## Where to Seek Help
 
