@@ -25,7 +25,7 @@
 <meta name="author" content="Christopher Prener, Ph.D.">
 
 
-<meta name="date" content="2017-12-28">
+<meta name="date" content="2017-12-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -170,8 +170,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.1.4" data-path="helping-yourself.html"><a href="helping-yourself.html#cast-a-wider-net"><i class="fa fa-check"></i><b>5.1.4</b> Cast a Wider Net</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html"><i class="fa fa-check"></i><b>5.2</b> How to Seek Help</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#what-is-a-reproducible-example"><i class="fa fa-check"></i><b>5.2.1</b> What is a reproducible example?</a></li>
-<li class="chapter" data-level="5.2.2" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#creating-a-reprex"><i class="fa fa-check"></i><b>5.2.2</b> Creating a reprex</a></li>
+<li class="chapter" data-level="5.2.1" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#what-is-your-question"><i class="fa fa-check"></i><b>5.2.1</b> What is your question?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#what-is-a-reproducible-example"><i class="fa fa-check"></i><b>5.2.2</b> What is a reproducible example?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#creating-a-reprex"><i class="fa fa-check"></i><b>5.2.3</b> Creating a reprex</a></li>
+<li class="chapter" data-level="5.2.4" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#i-dont-think-i-can-make-a-reprex"><i class="fa fa-check"></i><b>5.2.4</b> “I don’t think I can make a reprex!”</a></li>
+<li class="chapter" data-level="5.2.5" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#isnt-this-a-lot-of-work"><i class="fa fa-check"></i><b>5.2.5</b> “Isn’t this a lot of work?”</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="where-to-seek-help.html"><a href="where-to-seek-help.html"><i class="fa fa-check"></i><b>5.3</b> Where to Seek Help</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="where-to-seek-help.html"><a href="where-to-seek-help.html#internal-venues"><i class="fa fa-check"></i><b>5.3.1</b> Internal Venues</a></li>
@@ -200,25 +203,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="where-to-seek-help" class="section level2">
 <h2><span class="header-section-number">5.3</span> Where to Seek Help</h2>
+<p>Once you have tried <a href="helping-yourself.html#helping-yourself">Helping Yourself</a> and have gone through the steps outlined in <a href="how-to-seek-help.html#how-to-seek-help">How to Seek Help</a> (i.e. made a reprex), it is time to ask your question. There are a number of different places that you can pose questions. The sections below outline these and suggest some ways to make your question most effective.</p>
 <div id="internal-venues" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Internal Venues</h3>
+<p>Within the confines of the course, the two best places to ask questions are on Slack and during office hours. When asking a question on Slack, please consider doing so in a public channel. This helps others learn from the question that you have. The only course-related questions that are not appropriate for Slack are those that reference specific parts of a problem set or the final project. However, if you are creating reproducible examples, your questions should not be that specific even if they ultimately are about a homework assignment. If you are not sure whether the question is appropirate or not for a public channel, or just would prefer not to ask your question out in the open, feel free to send me a <a href="https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs">direct message on Slack</a>.</p>
+<p>When you pose a question on Slack, it should contain three or four pieces of information:</p>
+<ol style="list-style-type: decimal">
+<li>The question itself - what are you hoping to get help with?</li>
+<li>A reproducible example - give as many details as you need to clearly illustrate the question</li>
+<li>A <a href="https://www.take-a-screenshot.org">screenshot</a> or image output that illustrates your reprex</li>
+<li>What you’ve tried - lay out the steps you took to quickly (“I’ve checked the spelling, gone through the Lecture 03 documents, looked at the <code>dplyr</code> website, and have done a quick Google search.”)</li>
+</ol>
+<p>Post your reprex as a <a href="https://get.slack.help/hc/en-us/articles/204145658-Create-a-snippet">snippet</a> in Slack by:</p>
+<ol style="list-style-type: decimal">
+<li>Clicking the plus sign on the left side of the message box</li>
+<li>Selecting <strong>Code or text snippet</strong></li>
+<li>Filling out the pop-up window</li>
+</ol>
+<p>If you are posting a reprex from <code>R</code>, remove the three backticks and the letter <code>r</code> from the first line as well as the three backticks from the bottom line. If you are including an image hyperlink created by the <code>reprex</code> package, remove that from the code snippet and paste it into Slack separately. A good question on Slack should look like this:</p>
+<p><img src="images/slackQuestion.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>This same general process holds for asking questions in person - come ready with a solid question, a reproducible example, and be ready to pull it up on your computer or a lab computer.</p>
 </div>
 <div id="external-venues" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> External Venues</h3>
+<p>There are two good places to ask questions external to the course as well. For questions related to RStudio, R Markdown, and the <a href="http://tidyverse.org">tidyverse</a>, RStudio maintains a web forumn called <a href="https://community.rstudio.com">RStudio Community</a>. If you are posting there, you can use <code>reprex()</code> to generate Markdown formatted reprexs.</p>
+<p>Another place to post questions in on one of the relevant <a href="https://stackexchange.com">Stack Exchange</a> communities:</p>
+<ul>
+<li><a href="https://stackoverflow.com">Stack Overflow</a> for <code>R</code>, Git, and GitHub - post using tags like <code>[r]</code>, <code>[ggplot2]</code>, <code>[dplyr]</code>, <code>[git]</code>, <code>[github]</code>, etc.</li>
+<li><a href="https://gis.stackexchange.com">Geographic Information Systems</a> for GIS - post using the <code>[arcgis-desktop]</code> tag</li>
+<li><a href="https://tex.stackexchange.com">TeX</a> for LaTeX</li>
+</ul>
+<p>Before you post, search thoroughly to make sure that your question has not already been answered. Stack Exchange has strong norms about how to post appropriately. You can descriptions of what makes a good post <a href="https://codereview.stackexchange.com/help/how-to-ask">here</a> and <a href="https://stackoverflow.com/help/how-to-ask">here</a>. You can also find a description of <a href="https://stackoverflow.com/help/dont-ask">what not to ask</a>. If you are going to post on Stack Overflow, the <code>reprex()</code> function can be modified to produce well-formatted output specific to that site by adding the <code>venue</code> argument, as in <code>reprex(venue = &quot;so&quot;)</code>.</p>
+<p>Of the two sites, I find <a href="https://community.rstudio.com">RStudio Community</a> to be a friendlier place that is more relaxed thatn Stack Overflow and its cousins. However, Stack Exchange communities have much larger user bases to draw from.</p>
 
 </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
             </section>
 
           </div>
