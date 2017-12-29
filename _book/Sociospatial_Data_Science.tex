@@ -124,7 +124,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-09-27}
+  \date{2017-12-29}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -180,7 +180,7 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter*{Preface}\label{preface}
+\hypertarget{preface}{\chapter*{Preface}\label{preface}}
 \addcontentsline{toc}{chapter}{Preface}
 
 \begin{center}\includegraphics[width=0.4\linewidth]{images/SSDSBookBanner} \end{center}
@@ -244,7 +244,7 @@ are broadly applicable across methodologies and disciplines.
 \section*{License}\label{license}
 \addcontentsline{toc}{section}{License}
 
-Copyright © 2016-2017 \href{https://chris-prener.github.io}{Christopher
+Copyright © 2016-2018 \href{https://chris-prener.github.io}{Christopher
 G. Prener}
 
 This work is licensed under a Creative Commons Attribution 4.0
@@ -468,180 +468,7 @@ your code.
 
 \part{First Steps}\label{part-first-steps}
 
-\chapter{Getting Started}\label{gettingStarted}
-
-Before you begin the semester, there are a number of things that I
-recommend that you do to help set yourself up for success. Before you do
-\emph{anything} else, you should read through the
-\href{https://cdn.rawgit.com/slu-soc5050/Core-Documents/bdcce556/syllabus.pdf}{\textbf{Syllabus}}
-and the
-\href{https://cdn.rawgit.com/slu-soc5050/Core-Documents/bdcce556/reading-list.pdf}{\textbf{Reading
-List}}. Make sure you have a good sense of what is \emph{required} for
-the course. If you have questions, bring them to the first day of class!
-
-\section{Account Signups}\label{account-signups}
-
-\subsection{Get Started with Slack}\label{get-started-with-slack}
-
-We'll be using the messaging platform \href{https://slack.com}{Slack} as
-a space for ``virtual office hours''. Slack is a messaging system used
-by teams of all kinds. If you can text, you can use Slack. You will need
-to sign-up for the SOC 5050 Slack organization
-\href{https://join.slack.com/t/slu-soc5050/signup}{here}. You will need
-to complete the signup process even if you use Slack for other purposes.
-Consider installing either the desktop or the mobile apps for Slack to
-keep in touch and receive push alerts!
-
-\subsection{Get Started with GitHub}\label{get-started-with-github}
-
-The website that is hosting this wiki is called
-\href{https://github.com/}{GitHub}. GitHub is used by programmers, data
-scientists, and researchers for hosting computer code, data, and project
-materials. We will be using GitHub extensively this semester. You will
-need a free account, which you can sign up for one from GitHub's
-\href{https://github.com/}{homepage}. If you already have a GitHub
-account, you do not need a new one. \emph{Once you have a GitHub user
-name, send Chris a Direct Message via Slack with it so that you can be
-added to the SOC 5050 organization.}
-
-\subsection{Get Started with LaTeX}\label{get-started-with-latex}
-
-We'll be doing a little bit of writing using LaTeX, which is a markup
-language that makes technical writing easier. We'll be using
-\href{https://www.sharelatex.com}{ShareLaTeX} this semester for this
-purpose. ShareLaTeX is a bit like Google Docs, but for LaTeX. It is a
-``freemium'' service - please don't pay for any additional features -
-you won't need them! You can sign-up for ShareLaTeX on their
-\href{https://www.sharelatex.com}{website}.
-
-\section{Get Started with Software}\label{get-started-with-software}
-
-If you will be using your own computer in class, you'll want to install
-a number of applications. If you aren't using your own computer, you can
-skip this section! All of these applications are available in our
-classroom, and - lucky you - you get 24-hour access to Morrissey Hall
-for the semester.
-
-\subsection{Computer Prep}\label{computer-prep}
-
-Before you install your software, you should do the following:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Make sure your operating system is up-to-date. If you are able, I
-  would also recommend upgrading your computer to the most recent
-  release of its operating system that the computer can run.
-\item
-  We'll be sharing computer files throughout the semester, so you should
-  ensure that you have functioning anti-virus software and that it is
-  up-to-date. You can get anti-virus software for free from SLU. Go to
-  \texttt{ITS\ Software\ Downloads} under \texttt{Tools} on
-  \href{https://myslu.slu.edu/tools}{mySLU}.
-\item
-  You'll also need to download files, so you'll need to make sure you
-  have some free space on your hard drive. If you have less than 10GB of
-  free space, you should de-clutter!
-\item
-  Make sure you know how to access your computer's file management
-  system.
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  On macOS, this means being comfortable with Finder.app.
-\item
-  On Windows, this means being comfortable with Windows Explorer.
-\end{itemize}
-
-\subsection{Software Installation}\label{software-installation}
-
-Now that your computer is up-to-date
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The computing language \texttt{R} needs to be downloaded and
-  installed. You can download it from the
-  \href{https://cran.cnr.berkeley.edu}{University of
-  California-Berkeley}. Choose ``Download R for (Mac) OS X'' or
-  ``Download R for Windows''.
-\item
-  RStudio is a graphical user interface for \texttt{R} that will make
-  learning the language and using it much, much easier. You should
-  download the \emph{free} version of RStudio from
-  \href{https://www.rstudio.com/products/rstudio/download/\#download}{their
-  website}. Choose the installer for your platform, and ping me on Slack
-  if you have any questions.
-\item
-  GitHub Desktop is a client for interacting with GitHub that makes
-  downloading and uploading files a breeze. You can download it from the
-  developer's \href{http://desktop.github.com}{website}.
-\item
-  Atom is a text editor that is produced by the same folks who operate
-  GitHub. Download Atom from the developer's
-  \href{http://atom.io}{website}.
-\end{enumerate}
-
-\section{Get Access to Books and
-Readings}\label{get-access-to-books-and-readings}
-
-\subsection{Books}\label{books}
-
-There are three books required for this course. Each book has been
-selected to correspond with one or more of the course objectives. The
-books are:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Freedman, David, Robert Pisani, and Roger Purves. 2007.
-  \emph{Statistics}. 4th edition. New York, NY: W.W. Norton and Company.
-\item
-  Wheelan, Charles. 2014. \emph{Naked Statistics: Stripping the Dread
-  from the Data}. New York, NY: W.W. Norton and Company.
-\item
-  Wickham, Hadley and Garrett Grolemund. 2016. \emph{R for data
-  science}. Sebastopol, CA: O'Reilly.
-  \href{http://r4ds.had.co.nz}{Webbook Available}.
-\end{enumerate}
-
-All of the books are available in the bookstore. They can also be
-ordered online. If you would rather use ebooks, those are acceptable for
-this course as well.
-
-\subsection{Check Out the Readings for Week
-01}\label{check-out-the-readings-for-week-01}
-
-All but one of the Week 01 readings are available on our course's
-\href{http://eres.slu.edu/eres/coursepass.aspx?cid=4487}{electronic
-reserves site}, and the password is posted in Slack on the
-\texttt{\#helpdesk-coursework} channel. The initial section of Wickham
-and Grolemund can be found via the
-\href{http://r4ds.had.co.nz}{webbook}.
-
-\section{Administrative Tasks}\label{administrative-tasks}
-
-There are two forms that all students must fill out by Tuesday,
-September 5th:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  the \href{https://goo.gl/forms/HddqLWd00qz6Qs903}{Student Information
-  Sheet}, which gives me some info about you and gives you the chance to
-  let me know about any initial concerns you might have.
-\item
-  the un-graded \href{https://goo.gl/forms/EgVGaUWu8mys2yBr2}{Diagnostic
-  Assessment}, which is designed to get a sense of where each student's
-  math skills are currently. Please don't consult outside materials as
-  you do this - if you are not sure how to answer, make the most
-  educated guess you can and move on. If you look answers up it defeats
-  the purpose of this exercise!
-\end{enumerate}
-
-\chapter{Approaching this Course}\label{approaching-this-course}
+\chapter{Approaching These Courses}\label{approaching-these-courses}
 
 Students have varying experiences learning computational techniques. For
 some, the math and programming that are the foundation for modern data
@@ -654,12 +481,12 @@ to the courses (\href{https://slu-soc5650.github.io}{Introduction to
 Geographic Information Science (SOC 4650/5650)} and
 \href{https://slu-soc5050.github.io}{Quantitative Analysis: Applied
 Inferential Statistics (SOC 4930/5050)}) I teach at
-\href{https://slu.edu}{Saint Louis University}, the general outlook on
-approaching data science work that I describe below is hopefully
+\href{https://www.slu.edu}{Saint Louis University}, the general outlook
+on approaching data science work that I describe below is hopefully
 applicable in a far wider arena.
 
-\section{Zen and the Art of Data
-Analysis}\label{zen-and-the-art-of-data-analysis}
+\hypertarget{zen-and-the-art-of-data-analysis}{\section{Zen and the Art
+of Data Analysis}\label{zen-and-the-art-of-data-analysis}}
 
 One of the biggest challenges with this course can be controlling the
 anxiety that comes along with learning new skills. \texttt{R} synatx,
@@ -680,34 +507,109 @@ starting to spin your wheels and taking either ten minutes, an hour or
 two, or a day away from computational coursework is often a much better
 approach than trying to power through problems.
 
-\section{Keeping Track of Where You
+Data analysis therefore requires a certain mindfulness. I mentioned in
+the \protect\hyperlink{preface}{Preface} that much of what this book
+covers are ``habits of mind and habits of method''. These mental habits
+extend past being able to recognize that frustration is setting in. They
+also include the mental habits needed for
+\protect\hyperlink{getting-and-staying-organized}{Getting and Staying
+Organized} and strategies for \protect\hyperlink{getting-help}{Getting
+Help} as you navigate the inevitable errors that come with learning new
+analytical skills.
+
+\hypertarget{getting-and-staying-organized}{\section{Getting and Staying
+Organized}\label{getting-and-staying-organized}}
+
+Doing data science work, and having the space to step away for a day as
+the last section suggests, requires discipline and organization.
+Similarly, computational coursework can demanding not just because it is
+complex but because the courses often have a number of moving pieces
+that you need to keep track of. Being mindful of this challenege from
+the beginning, and taking steps to plan for it, is an important part of
+this course.
+
+\subsection{Keeping Track of Where You
 Are}\label{keeping-track-of-where-you-are}
 
-Doing data science work requires discipline and organization. Similarly,
-computational coursework can demanding not just because it is complex
-but because the courses often have a number of moving pieces that you
-need to keep track of. Students who have some system for tracking their
-work and creating to-do lists are often the most successful in this
-course, not because they have a fundamentally better grasp on the
-content but because they simply are more organized. You do not need
-fancy computer software to accomplish this, though there are an array of
-possibilities if you do like to keep yourself organized. A legal pad or
-a notebook can be just as effective as a \$50 to-do list manager. The
-point is, do \emph{something}!
+Students who have some system for tracking their work and creating to-do
+lists are often the most successful in this course, not because they
+have a fundamentally better grasp on the content but because they simply
+are more organized. If you have never thought particularly hard about
+how you manage tasks, now is an excellent time to start doing so. You do
+not need fancy computer software to accomplish this, though there are an
+array of possibilities if you do want to use software to keep yourself
+organized. A legal pad or a notebook can be just as effective as a \$50
+to-do list manager. The point is, do \emph{something}!
 
-If you have never thought particularly hard about how you manage tasks,
-now is an excellent time to start doing so. I am fond of recommending
-the \href{http://gettingthingsdone.com}{\textbf{Getting Things Done}}
-methodology to students. The website
-\href{https://lifehacker.com}{Lifehacker} posted an
+I am fond of recommending the
+\href{http://gettingthingsdone.com}{\textbf{Getting Things Done}}
+methodology to students as part of thinking more wholistically about
+staying organized. The website \href{https://lifehacker.com}{Lifehacker}
+posted an
 \href{https://lifehacker.com/productivity-101-a-primer-to-the-getting-things-done-1551880955}{excellent
 introduction to GTD} that is a great way to get a sense of how it works
-and find additional resources for implementing it. The GTD website has a
+and find additional resources for implementing it.
+
+The GTD website has a
 \href{http://gettingthingsdone.com/common-tools-software/}{great list of
 software} for those of you looking for a to-do list application. One
 that isn't listed that I use for collaborating with my student research
 team is \href{https://trello.com}{Trello}, a freemium website that
-allows you to create simple to-do lists.
+allows you to create simple to-do lists. It isn't sophisticated enough
+for implementing GTD, but it is more than sufficient for managing to-do
+lists related to this course.
+
+\subsection{Managing Course Materials}\label{managing-course-materials}
+
+For both courses covered by this book, materials will be disseminated in
+physical and digitial form. The topic of keeping digitial materials
+organized is the subject of the next chapter. The physical handouts and
+materials that we'll give out will all come three hole punched, and you
+are expected to purchase a three-ring binder for this course. I give out
+enough handouts that, without a binder, it becomes difficult to keep
+track of where handouts are located. I have watched students spend more
+time looking for the handout than it takes to find the answer to their
+question once they have the handout itself.
+
+There are two recommended ways to keep your binder tidy. One is to
+organize by lecture. There are sixteen lectures worth of handouts in
+both courses (not including the course preview and the final research
+conference session), so two sets of dividers (which often come in packs
+of eight) should be sufficient. The other way to organize handouts is by
+topic. We hand out a number of different types of documents that could
+be organized thematically like so:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Syllabus and reading list
+\item
+  Workflow diagrams
+\item
+  \texttt{R} function sheets
+\item
+  ArcGIS process sheets (SOC 4650/5650 only)
+\item
+  LaTeX command sheets (SOC 4930/5050 only)
+\item
+  Sample outputs
+\item
+  Exercise handouts
+\item
+  Lab handouts
+\item
+  Problem set handouts
+\end{enumerate}
+
+Since there are approximately eight different types of handouts in each
+class, a single package of dividers should be sufficient.
+
+I don't think that one way of organization, thematically or temporally,
+is inherently better or worse than the other. In large part it comes
+down to how \emph{you} like to organize information. After all, learning
+how to process and organize information in a way that works for you is
+the most important takeaway here.
 
 \section{Course Flow}\label{course-flow}
 
@@ -741,16 +643,17 @@ during lectures because it is their third time being exposed to the
 course material. They are also in a much stronger position to ask
 questions.
 
-\subsection{Weekly Preps}\label{weekly-preps}
+\subsection{Lecture Preps}\label{lecture-preps}
 
 Once you've completed the readings for the week, tackle the
-\textbf{weekly prep}. These short assignments are designed to help
+\textbf{lecture prep}. These short assignments are designed to help
 prepare you for the upcoming lecture by reviewing some of the concepts
-from the reading. I will post replication videos on YouTube that show
-how to solve each problem and provide some explanation for that process.
-Use this as an early indication of how well you understood the readings
-and what questions you might have. Bringing these questions to class is
-a great way to build your knowledge of the course material.
+from the reading. For many of the preps, I will post replication videos
+on YouTube that show how to solve each problem and provide some
+explanation for that process. Use this as an early indication of how
+well you understood the readings and what questions you might have.
+Bringing these questions to class is a great way to build your knowledge
+of the course material.
 
 \subsection{Active Lectures and Labs}\label{active-lectures-and-labs}
 
@@ -794,23 +697,23 @@ assignments.
 
 \subsection{An Apple a Day}\label{an-apple-a-day}
 
-As I noted above, some degree of frustration with this course is to be
+As I noted above, some degree of frustration with these courses is to be
 expected - funtions in \texttt{R} will not work as intended, for
 example, and the ambiguity of error messages can be excruicating. I
 suggested above that you build into your approach to the course time to
 walk away from assignments if you hit a wall. Being able to walk away
 from an assignment for a day requires excellent time management. If you
 are waiting until the night before or the day of an assignment's due day
-to begin it, you give yourself little room for errors. I recommend
-approaching this course in bite size chunks - a little each day. The
-most successful students do not do all of their reading, homework, and
-studying in a single sitting. I find that this approach not only creates
-unnecessary anxiety around assignments, it also dramatically limits the
-amount of course material you can absorb. Keep in mind that I expect the
-\emph{median} student to spend approximately six hours on work for this
-class each week (twice the amount of in-class time).
+to begin it, you give yourself little room for errors.
 
-A sample approach to the class might look something like this:
+I recommend approaching this course in bite size chunks - a little each
+day. The most successful students do not do all of their reading,
+homework, and studying in a single sitting. I find that this approach
+not only creates unnecessary anxiety around assignments, it also
+dramatically limits the amount of course material you can absorb. Keep
+in mind that I expect the \emph{median} student to spend approximately
+six hours on work for this class each week (twice the amount of in-class
+time). A sample approach to the class might look something like this:
 
 \begin{itemize}
 \tightlist
@@ -827,8 +730,106 @@ A sample approach to the class might look something like this:
 \item
   Saturday: Second reading
 \item
-  Sunday: Weekly prep for next class
+  Sunday: Lecture prep for next class
 \end{itemize}
+
+The single biggest failure point in both courses for students is
+thinking that the few hours before class are sufficient for doing
+\emph{all} of the work required for a particular week. It is the rare
+student who can do this successfully (not only in terms of meeting the
+required deadlines but also in terms of actually learning the material).
+Err on the side of giving yourself too much time to complete work rather
+than just enough!
+
+\section{Staying Current}\label{staying-current}
+
+Course content is maintained both on the respective course websites
+(\href{https://slu-soc5050.github.io}{Quantitative Analysis} and
+\href{https://slu-soc5650.github.io}{GIS}) and GitHub organizations
+(\href{https://github.com/slu-soc5050}{Quantitative Analysis} and
+\href{https://github.com/slu-soc5650}{GIS}). Course materials are
+available throughout the semester and after the course is done. This
+creates two challenges. First, for all students, attention must be paid
+to when updates are pushed to GitHub and the course website. This is
+particularly true for content updated \emph{after} a lecture. Second,
+for students who like to work ahead, care must be taken to ensure that
+you are working off of materials for the current semester and not the
+last semester the course was taught. There are two ways in which I help
+communicate the status of course content - badges and Slack.
+
+\subsection{Badges}\label{badges}
+
+I use badges on both the GitHub \texttt{README.md} files in individual
+lecture repositories and on individual lecture webpages to signal which
+semester the content is current for and what stage of development the
+content is in. These badges are used not just because they are effective
+but as part of a more general socialization into data science software
+development, where badges are used to signal development status on
+\texttt{R} package GitHub repositories. For example, the
+\href{https://github.com/tidyverse/ggplot2}{\texttt{ggplot2}}
+\texttt{README.md} file looks like this:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/ggplot2Readme} \end{center}
+
+We can see from the first two badges that
+\href{https://en.wikipedia.org/wiki/Continuous_integration}{continuous
+integration services} are used, and that \texttt{ggplot2} is only
+passing its tests on one of them. The third badge indicates that the
+built-in tests of \texttt{ggplot2} test 74\% of the package's code. We
+can also see from the fourth badge that the current version of the
+software on CRAN is version 2.2.1 (as of December, 2017). Details like
+this are not critical when you are first learning to use \texttt{R}, but
+they grow more important as your data science skills progress.
+
+We use the following badges for our course repositories and on the
+course websites:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/readmeBadges} \end{center}
+
+Here is an example of how the badges look on a course repository. As of
+December 2017, the \texttt{README.md} associated with the
+\href{https://github.com/slu-soc5050/Core-Documents}{\texttt{Core-Documents}
+repository} for \href{https://slu-soc5050.github.io}{Quantitative
+Analysis} looked like this:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/readmeBadgesEx} \end{center}
+
+We can see from the \texttt{README.md} that the contents are current for
+the Fall 2017 semester from the first badge. The second badge indicates
+that the contents have been updated since they were first released to
+students. Finally, we can also see that the last commit was made today
+(the day this screenshot was taken).
+
+Here is an example of how the badges look on a course website. As of
+December 2017, the
+\href{https://slu-soc5650.github.io/course-preview}{Course Preview page}
+for \href{https://slu-soc5650.github.io/}{GIS} looked like this:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/webpageBadgesEx} \end{center}
+
+From these two badges, we can see that the webpage is current for the
+Spring 2018 semester and that it is the full release - no updates
+additional are planned before the content is covered by students.
+
+\subsection{Slack}\label{slack}
+
+The \texttt{\#\_news} channel in each course's Slack organization will
+be automatically updated with a list of commit messages for each lecture
+repository. The updates will look like this:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/slackNews} \end{center}
+
+You will be able to scan through commit messages for updates that might
+be relevant for you. From these messages, we can see that changes were
+made to the \texttt{LICENSE} (one of the meta documents) in the
+\href{https://github.com/slu-soc5650/Core-Documents}{\texttt{Core-Documents}
+repository} for \href{https://slu-soc5650.github.io/}{GIS}. We can also
+see that a change was made to the Syllabus's content for the course.
+
+I recommend scanning through all new messages in \texttt{\#\_news} each
+time you check in with the course on Slack. If you see changes, sync
+your repository (if you are keeping local copies) or download the
+updated document.
 
 \chapter{Protecting Your Work}\label{protecting-your-work}
 
@@ -1420,7 +1421,806 @@ make sure you still have only one place for a specific file typoe - you
 do not want some problem set materials saved outside of your GitHub repo
 and some saved in it.
 
-\bibliography{packages.bib,book.bib}
+\chapter{\texorpdfstring{``Good Enough'' Research
+Practices}{Good Enough Research Practices}}\label{good-enough-research-practices}
+
+This section introduces some of the core concepts that we will emphasize
+in this course throughout the semester. The title takes inspiration from
+a recent article titled \href{https://arxiv.org/abs/1609.00037}{``Good
+Enough Practices in Scientific Computing''}\footnote{Wilson, G., Bryan,
+  J., Cranston, K., Kitzes, J., Nederbragt, L. and Teal, T.K., 2016.
+  Good Enough Practices in Scientific Computing. \emph{arXiv preprint
+  arXiv:1609.00037.}}. The authors note in their introduction that
+scientific computing advice can sometimes be both overwhelming and
+focused on tools that are inaccessible to many analysts. Their goal, and
+the goal of this course, is to de-mystify the simplist tools that enable
+researchers to streamline their workflows:
+
+\begin{quote}
+Our intended audience is researchers who are working alone or with a
+handful of collaborators on projects lasting a few days to a few months,
+and who are ready to move beyond emailing themselves a spreadsheet named
+\texttt{results-updated-3-revised.xlsx} at the end of the
+workday\ldots{}Many of our recommendations are for the benefit of the
+collaborator every researcher cares about most: their future self.
+\end{quote}
+
+I would argue that the skills they describe are useful beyond just a few
+months. Indeed, most of the skills here can dramatically improve
+students' dissertation experiences:
+
+\begin{quote}
+Most importantly, these practices make researchers more productive
+individually by enabling them to get more done in less time and with
+less pain. They also accelerate research as a whole by making
+computational work (which increasingly means all work) more
+reproducible. But progress will not happen by itself. Universities and
+funding agencies need to support training for researchers in the use of
+these tools. Such investment will improve confidence in the results of
+computational work and allow us to make more rapid progress on important
+research questions.
+\end{quote}
+
+While much of what we will talk about in this course is aimed at
+supporting your work, there are benefits that extend beyond your
+dissertation or your research projects. These benefits, which include
+developing sustainable workflows and structuring the way you interact
+with your own computer, can make everyday computing practices like
+checking email or organizing files an easier, more structured process.
+
+\section{Reproducibility}\label{reproducibility}
+
+One of the mantras of this course is our emphasis on reproducibility.
+The unifying feature of all of the ``good enough'' research practices
+discussed below is that they contribute to a more reproducible research
+product.
+
+Reproducibility is very much in vogue right now for number of reasons.
+\href{http://science.sciencemag.org/content/349/6251/aac4716}{Assessments
+of studies in psychology}\footnote{Open Science Collaboration, 2015.
+  Estimating the reproducibility of psychological science.
+  \emph{Science}, 349(6251), p.aac4716.}, for example, have found weaker
+on average effect sizes and far fewer statistically significant results
+than the initial studies reported. There have also been high profile
+instances of falsified research, including
+\href{http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html}{research
+by a graduate student at UCLA}. This particular instance of fraud was
+identified by graduate students intent on replicating the original
+study.
+
+At the same time, there is a recognition that the skills necessary for
+producing reproducible research are not being fostered in academic
+disciplines and graduate programs. Thus one of the goals of this course,
+and this \textbf{User's Guide} in particular, is to help develop a
+working knowledge of many of these skills.
+
+One challenge, however, is that reproducibility does not have a
+consistent definition. Some researchers use the term to narrowly refer
+to code that can execute without alteration on a person's computer.
+Others use it to refer to research designs that can be replicated by
+other researchers. Still others discuss reproducibility as the ability
+to obtain a similar set of results or draw similar inferences from
+identical research designs.
+
+When we talk about reproducibility in this class. We'll be primarily
+concerned with \textbf{methods reproducibility}:
+
+\begin{quote}
+the ability to implement, as exactly as possible, the experimental and
+computational procedures, with the same data and tools, to obtain the
+same results.\footnote{Goodman, S.N., Fanelli, D. and Ioannidis, J.P.,
+  2016. What does research reproducibility mean?. \emph{Science
+  translational medicine}, 8(341), pp.341ps12-341ps12.}
+\end{quote}
+
+Methods reproducibility in statistics means that other analysts have
+full access to both the original data and the steps used to render those
+original data into a final research product, such as a set of regression
+models This is increasingly seen not just a matter of good research
+methodology, but as a matter of research ethics as well. Being able to
+be transparent with research decreases the potential for cases like the
+\href{http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html}{fraudulent
+dissertation research conducted by a UCLA graduate student named Michael
+LaCour}. It was the efforts of
+\href{https://fivethirtyeight.com/features/how-two-grad-students-uncovered-michael-lacour-fraud-and-a-way-to-change-opinions-on-transgender-rights/}{two
+Stanford graduate students who wanted to reproduce LaCour's findings}
+that ultimately led to the identification of problematic work.
+
+For statistics, methods reproducibility is derived from a number of
+sources. The first source is the use of \textbf{computer code} for
+working with data. Rather than making manual changes to tabular data in
+a spreadsheet application like Microsoft Excel, computer code provides
+detailed records of each individual alterations. Code can be used
+execute tasks repeatedly, meaning that errors can be easily fixed if
+they are discovered an hour, a day, a week, or a month later. During
+this semester, we'll use \texttt{R}'s programming language to execute
+reproducible data cleaning processes.
+
+The second source of reproducibility in statistics is therefore derived
+from the \textbf{documentation} that we create to accompany our research
+products. These documents outline where our data originated, what
+specific variables mean (a codebook), what steps were taken to create
+specific maps (a research log), and how our data files are organized (a
+metadictionary).
+
+Our code can also be used as documentation if it is written using
+\href{https://en.wikipedia.org/wiki/Literate_programming}{literate
+programming} techniques. In \texttt{R}, these techniques produce well
+annotated output that ``weaves'' together code, output, and narrative
+text that describes the function of the code and the results of the
+output.
+
+The third and final primary source of reproducibility in statistics is
+derived from our \textbf{organizational approach} to our work.
+Statistics projects can require many megabyes of data spread across
+dozens of data files, scripts, and output files. A disorganized file
+system can make replicating your work difficult if not impossible. Much
+of the research practices discussed in the remainder of this section are
+aimed at supporting one or more of these three major sources of
+reproducibility.
+
+\section{Thinking in Workflows}\label{thinking-in-workflows}
+
+One way to increase the reproducibility of a project is to approach each
+and every task with purposeful organization and thoughtfulness.
+\textbf{Workflows} are the processes that we use to approach a given
+task. Think of checking your email. You (hopefully!) follow a series of
+steps when you check your email that help you organize your inbox. In
+our reading for the first week of classes,
+\href{http://www.indiana.edu/~jslsoc/}{Scott Long}\footnote{Long, J.S.,
+  2009. \emph{The workflow of data analysis using Stata.} College
+  Station, TX: Stata Press.} describes a structured strategy for
+approaching statistical research. In Long's model, a data analysis
+project consists of four steps: (a) data cleaning, (b) analysis, (c)
+presenting results, and (d) protecting files. This is a useful model to
+build upon, and one that we will discuss over the course of the
+semester.
+
+Even more useful, not just for statistical work but for any process, are
+the tasks Long lays out for each step in the data analysis workflow:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Planning
+\item
+  Organization
+\item
+  Documentation
+\item
+  Execution
+\end{enumerate}
+
+A good example of the utility of extending this logic to other workflows
+is with the problem sets. The ``typical'' approach students take with
+homework assignments is to sit down, open up their software, and start
+with question 1. Using Long's four task approach, a workflow-based
+strategy to the assignment would involve beginning by reading the
+assignment through in its entirety to develop a \textbf{plan} for
+approaching it - think about what techniques and skills are needed for
+each step. With a plan in place, you can proceed to \textbf{organizing}
+yourself for the assignment - identifying and obtaining files that you
+will need, creating dedicated directories for saving assignment data,
+and getting any necessary software documentation. After pulling together
+all of these materials, you are ready to move on to
+\textbf{documentation} - setting up your assignment code and output
+files, and (later in the course) your research log and meta-dictionary.
+Once you are set-up, you would then begin to address individual
+assignment questions as part of the \textbf{execution} task.
+
+The goal here is to approach everything you do for research or work with
+an element of mindfulness and structure about your process. This mental
+model for approaching research supports the creation of
+\textbf{reproducible} research products because we approach our work in
+a routinized, predictable, organized, and efficient manner. Thinking in
+terms of workflows also encourages a greater awareness of the complexity
+of tasks, which also helps you plan more accurately for how long a
+particular task or project will take.
+
+In reality, there will be multiple workflows that you find yourself
+navigating. You will want a structured process not just for approaching
+a large research project like the final project, but also a process for
+maintaining notes related to a specific assignment, a process for
+documenting code, a process for approaching assignments, and even a
+process for backing your data up. As you go through the course, think
+about how to best integrate these ideas into your work habits.
+
+\hypertarget{getting-help}{\chapter{Getting Help}\label{getting-help}}
+
+One of the biggest challenges for students first learning tools like
+\texttt{R}, ArcGIS, and LaTeX is dealing with the inevitable speed-bumps
+and errors that come along with scientific computing. Remember, first
+and foremost, that these tools are not consumer software. They do not
+always ``just work'', to borrow a turn of phrase from
+\href{https://en.wikipedia.org/wiki/Steve_Jobs}{Steve Jobs}. Learning
+strategies for navigating issues when the software is most definitely
+not working is therefore an important part of success.
+
+One misconception that I think is important to confront is that data
+analysts, software engineers, and others who appear to be experts may
+indeed be very good at what they do, but they are equally skilled at
+problem solving. This \href{https://www.xkcd.com}{xkcd} comic
+illustrates (a bit sarcastically!) the point:
+
+Navigating challenges with data science may not be quite as easy
+following the flowchart above, but there are definitely strategies for
+working your way through errors and challenges in data science work.
+
+\hypertarget{helping-yourself}{\section{Helping
+Yourself}\label{helping-yourself}}
+
+As I noted in \protect\hyperlink{zen-and-the-art-of-data-analysis}{Zen
+and the Art of Data Analysis}, a key challenge of data science work is
+mental. One of the traits I see frequently among students who are
+confronted with errors is that they stop working and wait for office
+hours or they immediately ask a question on Slack. Both office hours and
+Slack are excellent options for getting help, but there are a few
+strategies you should pursue first.
+
+Before you doing anything else, however, \emph{take a deep breath} and
+consider taking a break. When you being trying to fix the issue, check
+the time. I have spent hours trying to fix some code in \texttt{R} or
+mis-projected data in ArcGIS without success, and I have seen students
+do the same. Give yourself an hour time limit to try the steps below
+before you move on to constructing a reproducible example and asking for
+help from others.
+
+\subsection{Check Spelling}\label{check-spelling}
+
+With \texttt{R}, the number one cause of errors that I see are
+misspellings. If objects in the global environment or variable names
+within a data frame are not spelled correctly (case matters!), you will
+get an error that an object cannot be found. The same goes for package
+and function names - they must be spelled 100\% correctly.
+
+\subsection{Check Course Resources}\label{check-course-resources}
+
+If the issue is one other students have come across as well, it is
+likely to be discussed on Slack in the relevant channel. I may have also
+updated some of the course handouts or the relevant lecture's course
+webpage with details for how to address the concern. Check both Slack
+and the webpage for updates before digging deeper. Check the topic index
+on the relevant course website
+(\href{https://slu-soc5650.github.io/topic-index/}{GIS topic index}) for
+links to different lectures where concepts or processes were covered.
+
+\subsection{Check Your Process}\label{check-your-process}
+
+\texttt{R} functions and ArcGIS processes often have specific parameters
+and requirements. If you have double checked your spelling and are sure
+(100\% sure!) that spelling is not an issue, check to make sure that you
+have followed all of the requirements of the workflow for the skill you
+are stuck on. There are two different ways to go about doing this:
+
+\begin{itemize}
+\tightlist
+\item
+  Check the course handouts and lecture slides for the relevant
+  processes. If you cannot remember where the concepts were introduced,
+  check the topic index on the relevant course website
+  (\href{https://slu-soc5650.github.io/topic-index/}{GIS topic index}).
+  When I introduce processes, I often skip some (or many!) of the
+  associated arguments and options, so the course materials are often
+  easier to navigate than materials for other sources.
+\item
+  Search official documentation sources:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For \texttt{R}, check package documentation files on CRAN. These are
+    linked to in the package index on the relevant course website
+    (\href{https://slu-soc5650.github.io/package-index/}{GIS package
+    index}). You can also use \href{https://cran.r-project.org}{CRAN's
+    website} to search for package information.
+  \item
+    For ArcGIS, check ESRI's
+    \href{http://desktop.arcgis.com/en/arcmap/}{official documentation
+    files}. Make sure that you are looking at the help files for ArcGIS
+    10.3!
+  \item
+    For Git and GitHub, check GitHub's
+    \href{https://help.github.com}{help website}.
+  \item
+    For LaTeX, \href{https://www.sharelatex.com/}{ShareLaTeX} has an
+    excellent set of documentation files on their
+    \href{https://www.sharelatex.com/learn/Main_Page}{knowledge base}.
+    \href{https://ctan.org}{CTAN}, the LaTeX package repository, also
+    contains documentation files for all packages that can be searched.
+  \end{itemize}
+\end{itemize}
+
+Use these resources to try and narrow down what might be causing your
+issue. Be mindful that the root cause of an error may be several steps
+back in your workflow. Walk back through your process to make sure your
+initial steps are not the cause of the error.
+
+\subsection{Cast a Wider Net}\label{cast-a-wider-net}
+
+If none of these resources are sufficient, there are a few other options
+for seeking out guidance. When you search the following sites, it is
+often a good idea to search based on the specific error you are getting.
+Take out any aspects of the error that are specific to you, like a file
+path in ArcGIS, a file name, or a variable name. One set of options to
+search are the wealth of web resources that are available for some of
+the tools we use:
+
+\begin{itemize}
+\tightlist
+\item
+  For \texttt{R}, check out
+  \href{https://www.rstudio.com/resources/cheatsheets/}{RStudio's
+  cheatsheets} and \href{https://community.rstudio.com}{RStudio's
+  community forums}. If the package is part of the \texttt{tidyverse},
+  check the \href{http://tidyverse.org}{website} as well as
+  \href{http://r4ds.had.co.nz}{R for Data Science}. Other packages have
+  their own websites as well. For all of these resources, links are
+  provided in the package index on the relevant course website
+  (\href{https://slu-soc5650.github.io/package-index/}{GIS package
+  index}).
+\item
+  For LaTeX, there is a \href{https://en.wikibooks.org/wiki/LaTeX}{LaTeX
+  wikibook} with some excellent resources.
+\end{itemize}
+
+Another resource is \href{https://stackexchange.com}{Stack Exchange}, a
+network of online communities on a variety of topics including:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://stackoverflow.com}{Stack Overflow} for \texttt{R}, Git,
+  and GitHub - search using tags like \texttt{{[}r{]}},
+  \texttt{{[}ggplot2{]}}, \texttt{{[}dplyr{]}}, \texttt{{[}git{]}},
+  \texttt{{[}github{]}}, etc.
+\item
+  \href{https://gis.stackexchange.com}{Geographic Information Systems}
+  for GIS - search using the \texttt{{[}arcgis-desktop{]}} tag
+\item
+  \href{https://tex.stackexchange.com}{TeX} for LaTeX
+\end{itemize}
+
+Stack Exchange may have posts that address the issue or question you
+have. However, the match may only be partial and may require additional
+modification or tinkering to solve your specific concern. You may spend
+just as much time trying to get a Stack Exchange solution to work as you
+would waiting for a response on Slack, so proceed with caution if you
+decide to go this route.
+
+Finally, if you have exhausted these other options, a Google search may
+be effective. This may help you identify GitHub issues, blogs, and other
+online tutorials that can help address whatever roadblock you have run
+into. Try searching first with double quotes around the main body of the
+error message's text. If nothing comes up, try searching without the
+double quotes. Search strings that include \texttt{R} package names or
+specific processes in ArcGIS are sometimes helpful for narrowing down a
+large amount of search results, especially if those results are not
+specific to the tool you are using. The same warning for Stack Exchange
+also exists for Google, however. You may find imperfect matches for your
+problem that take considerably more tinkering to implement.
+
+\hypertarget{how-to-seek-help}{\section{How to Seek
+Help}\label{how-to-seek-help}}
+
+If all else fails and the strategies for
+\protect\hyperlink{helping-yourself}{Helping Yourself} have not yielded
+a solution, it is time to ask for help! Before you head to office hours
+or Slack, you will want to construct a \textbf{reproducible example}.
+
+\subsection{What is your question?}\label{what-is-your-question}
+
+Start with a basic step - narrow down what your question is. Neither ``I
+am getting an error'' or ``This isn't working'' are effective questions.
+What exactly is causing the error? What context does it appear in? To
+borrow from the examples below, a good question might be:
+
+\begin{quote}
+I am trying to calculate descriptive statistics for an entire data frame
+using the \texttt{mean()} function but am getting and error. What might
+be the cause of the error?
+\end{quote}
+
+\begin{quote}
+I am trying to create a thematic choropleth map in ArcGIS, but when I
+try and select my variable from the dropdown menu in the symbology tab
+under layer properties, the menu is empty. Why are all of the variables
+missing?
+\end{quote}
+
+\begin{quote}
+I am trying to make my text bold in LaTeX, but the text is not rendering
+with bold font. I am also getting an error that says ``Undefined control
+sequence.'' What is missing from my document to create bold font?
+\end{quote}
+
+Be specific about what your issue is, and then provide a reproducible
+example that illustrates what you are asking about.
+
+\subsection{What is a reproducible
+example?}\label{what-is-a-reproducible-example}
+
+A reproducible example, or reprex, is a term we'll borrow from the
+\texttt{R} ecosystem. It was coined by
+\href{https://twitter.com/romain_francois/status/530011023743655936}{Roman
+François} and has been enshrined in the
+\href{http://reprex.tidyverse.org}{\texttt{reprex} package}, which I'll
+describe below. The goal for a reprex is to strip down the process you
+have used to the minimal number of steps needed to replicate the error.
+This means using the fewest steps and data sources possible. Cut out
+anything that does not directly contribute to causing the error when
+making your reprex.
+
+I have often found that the process of making a reprex actually helps
+isolate the cause of the problem. For instance, it may become clear that
+a specific step is causing an issue. Even if you are not sure how to fix
+the problem, having narrowed it down can be immensely helpful. If you
+can use built-in data in \texttt{R} to create the reprex, or at least
+example data from the course, that may also help you identify whether
+the issue is with the process itself or something that is idiosyncratic
+to the data you are using. Using built-in data from \texttt{R} should be
+the default for any reprex you create, \emph{unless assignment data are
+the cause of your issue}.
+
+\subsection{Creating a reprex}\label{creating-a-reprex}
+
+Creating reproducible examples will differ slightly based on what you
+are trying to get help on.
+
+\subsubsection{\texorpdfstring{\texttt{R}}{R}}\label{r}
+
+To create a reprex in \texttt{R}, you will need to install the
+\href{http://reprex.tidyverse.org/}{\texttt{reprex} package}. It is part
+of the \href{https://www.tidyverse.org}{tidyverse} but it is not
+installed when the \texttt{tidyverse} package is installed, so you will
+need to install it separately:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"reprex"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Once you have it loaded (use the \texttt{library()} function), create a
+minimal example of the necessary functions that get to you to the error
+you are confronting. Make sure to include the \texttt{library()}
+functions for all packages your example depends on (except for
+\texttt{reprex}). Write the example in a \texttt{.R} script file
+(\texttt{File\ \textgreater{}\ New\ File\ \textgreater{}\ R\ Script}).
+For example, one might be struggling with calculating the mean of each
+variable in a data frame:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(ggplot2)}
+
+\CommentTok{# assign data to data frame}
+\NormalTok{data <-}\StringTok{ }\NormalTok{mpg}
+
+\CommentTok{# attempt to calculate mean}
+\KeywordTok{mean}\NormalTok{(data)}
+\end{Highlighting}
+\end{Shaded}
+
+The last of the three functions above will return this error in your
+\texttt{R} session:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{>}\StringTok{ }\KeywordTok{mean}\NormalTok{(data)}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\OtherTok{NA}
+\NormalTok{Warning message}\OperatorTok{:}
+\NormalTok{In }\KeywordTok{mean.default}\NormalTok{(data) }\OperatorTok{:}\StringTok{ }\NormalTok{argument is not numeric or logical}\OperatorTok{:}\StringTok{ }\NormalTok{returning }\OtherTok{NA}
+\end{Highlighting}
+\end{Shaded}
+
+With the three functions written in a \texttt{.R} script, highligh all
+seven lines of code (the three functions, both comments, and both
+whitespace lines) and copy them to your clipboard
+(\texttt{Edit\ \textgreater{}\ Copy}). Then call the \texttt{reprex()}
+function. Markdown formatted text that weaves both the functions and
+their output together will appear in the viewer tab:
+
+\begin{center}\includegraphics[width=0.5\linewidth]{images/reprex} \end{center}
+
+It will also be available on your clipboard so that you can copy and
+paste it into Slack or another venue that accepts Markdown syntax (like
+GitHub). If your reprex contains image output, such as a plot or a map,
+it will be automatically uploaded to imgur and a link will be embedded
+in your Markdown syntax. For example, say we had a question about the
+following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(ggplot2)}
+
+\CommentTok{# assign data to data frame}
+\NormalTok{data <-}\StringTok{ }\NormalTok{mpg}
+
+\CommentTok{# plot highway mpg}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ data, }\DataTypeTok{mapping =} \KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hwy)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_histogram}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Once we copy the above code and render it using \texttt{reprex()}, it
+will return the following output:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(ggplot2)}
+
+\CommentTok{# assign data to data frame}
+\NormalTok{data <-}\StringTok{ }\NormalTok{mpg}
+
+\CommentTok{# plot highway mpg}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ data, }\DataTypeTok{mapping =} \KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ hwy)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_histogram}\NormalTok{()}
+\CommentTok{#> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.}
+
+\OperatorTok{!}\NormalTok{[](https}\OperatorTok{:}\ErrorTok{//}\NormalTok{i.imgur.com}\OperatorTok{/}\NormalTok{8hiC7od.png)}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{!{[}{]}(hyperlink)} syntax will allow an image of your plot
+to appear below the code.
+
+The \href{http://reprex.tidyverse.org}{\texttt{reprex} package website}
+has some great resources, including a
+\href{http://reprex.tidyverse.org}{basic overview}, some
+\href{http://reprex.tidyverse.org/articles/reprex-dos-and-donts.html}{reprex
+do's and don'ts}, and a
+\href{http://reprex.tidyverse.org/articles/articles/magic-reprex.html}{detailed
+article} introducing the package's functionality.
+
+\subsubsection{ArcGIS}\label{arcgis}
+
+Creating a reprex in ArcGIS is not as straightforward since there is not
+a dedicated tool for doing so like there is in \texttt{R}. Reprex
+creation is complicated by the fact that many steps you will be taking
+are manual. Nevertheless, it is possible to create a repex. Follow these
+steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In a new map document, load the minimum number of shapefiles needed to
+  illustrate the issue you are having. Note where the shapefiles are
+  available (in the course data release?) and what their names are.
+\item
+  Note what the coordinate system of the data frame is set to.
+\item
+  Provide notes for each step that gets you to your question or error.
+\item
+  Take a \href{https://www.take-a-screenshot.org}{screenshot} of the
+  error or the window you have a question about.
+\end{enumerate}
+
+For example, a reprex of a question in ArcGIS could look like the
+following:
+
+\begin{verbatim}
+1. I have a single map shapefile open in a new map document. The shapefile is the St. Louis census tracts shapefile from the example data in the course data release.
+2. The coordinate system is Missouri State Plane East (Feet)
+3. When I right click on the shapefile, I click on Properties and then the Symbology tab
+4. Attached is a screenshot of what the symbology tab looks like for these data.
+\end{verbatim}
+
+\subsubsection{LaTeX}\label{latex}
+
+Like ArcGIS, there is no specific tool for creating a reprex using
+LaTeX. The LaTeX community does have, however, a long tradition of
+creating ``minimal working examples'', which are similar to reprexs.
+Follow these general steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a new LaTeX project. Use the
+  \texttt{\textbackslash{}documentclass\{article\}} if you are using
+  something different.
+\item
+  Only include packages in the preamble that are \textbf{directly}
+  related to the question or issue you have.
+\item
+  Skip creating a title block
+\item
+  Provide just enough body text in your LaTeX document to illustrate the
+  issue.
+\end{enumerate}
+
+A repex for LaTeX might look something like this:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{\textbackslash{}documentclass}\NormalTok{\{}\ExtensionTok{article}\NormalTok{\}}
+
+\KeywordTok{\textbackslash{}begin}\NormalTok{\{}\ExtensionTok{document}\NormalTok{\}}
+
+\FunctionTok{\textbackslash{}textbold}\NormalTok{\{Foo bar.\} Spam and eggs.}
+
+\KeywordTok{\textbackslash{}end}\NormalTok{\{}\ExtensionTok{document}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Also provide a written description of what is wrong (such as ``the text
+is not being rendered as bold'') and, if helpful, a
+\href{https://www.take-a-screenshot.org}{screenshot} of your output.
+There is a great
+\href{https://tex.meta.stackexchange.com/questions/228/ive-just-been-asked-to-write-a-minimal-example-what-is-that}{overview
+on Stack Exchange} of how to write a reprex for LaTeX. If you are using
+ShareLaTeX, also take a look at the error log and take a
+\href{https://www.take-a-screenshot.org}{screenshot} of the relevant
+error message. If you are using another LaTeX application, provide the
+text of your error message instead.
+
+\subsubsection{Other Tools}\label{other-tools}
+
+For other tools we learn, such as Markdown and GitHub, you want to
+follow the spirit of the reprex file. Try to recreate your issue outside
+of the context of your assignment (this may not be possible for GitHub),
+and provide a detailed walk-through of the steps that you took to get
+where you are. For Markdown syntax, provide an example of the syntax you
+are using that recreates the issue or question. For GitHub, provide a
+\href{https://www.take-a-screenshot.org}{screenshot} of the relevant
+error message.
+
+\subsection{\texorpdfstring{``I don't think I can make a
+reprex!''}{I don't think I can make a reprex!}}\label{i-dont-think-i-can-make-a-reprex}
+
+I am 99\% sure that you can! In nearly every situation I have seen
+students in, creating a reprex is possible. Even if the error is
+idiosyncratic to your computer or your data, you can absolutely clarify
+the context within which the error appears and minimize the amount of
+data, code, and other information in your \texttt{R} code or your map
+document. For the less than 1\% of scenarios where a reprex is not
+possible, the process of writing a question, clarifying the context and
+steps you took to get there, and producing an example of the error will
+still make it easier for me to help you.
+
+\subsection{\texorpdfstring{``Isn't this a lot of
+work?''}{Isn't this a lot of work?}}\label{isnt-this-a-lot-of-work}
+
+Well, yes, it does require some extra effort. This effort is almost
+always worth it, however. In some cases, the time it takes you to
+produce the repex leads you to the answer on your own, which is part of
+the problem solving process that this class is designed to foster. Even
+when this does not happen, making reprex informed inquries is a
+technique that you will be able to take with you at the end of the
+semester. Even if you are not working in a technical setting, being able
+to structure clear, concise questions about a process is a valuable
+skill!
+
+Finally, creating a reprex saves you time in the long run. When I get
+vague questions, it often takes some experimenting on my part to
+reproduce the error. If you send me a question with a reproducible
+error, you cut out that experimentation time on my end and I can get
+right to answering your question. Likewise, students often come to
+office hours without an example of their issue ready to go and hope that
+I can conjure in my mind the scenario they are describing. Despite my
+best efforts, I am usually unable to do so and ask students to reproduce
+the error during office hours. If you come to office hours with a
+reprex, we can get to answering your question right away!
+
+\section{Where to Seek Help}\label{where-to-seek-help}
+
+Once you have tried \protect\hyperlink{helping-yourself}{Helping
+Yourself} and have gone through the steps outlined in
+\protect\hyperlink{how-to-seek-help}{How to Seek Help} (i.e.~made a
+reprex), it is time to ask your question. There are a number of
+different places that you can pose questions. The sections below outline
+these and suggest some ways to make your question most effective.
+
+\subsection{Internal Venues}\label{internal-venues}
+
+Within the confines of the course, the two best places to ask questions
+are on Slack and during office hours. When asking a question on Slack,
+please consider doing so in a public channel. This helps others learn
+from the question that you have. The only course-related questions that
+are not appropriate for Slack are those that reference specific parts of
+a problem set or the final project. However, if you are creating
+reproducible examples, your questions should not be that specific even
+if they ultimately are about a homework assignment. If you are not sure
+whether the question is appropirate or not for a public channel, or just
+would prefer not to ask your question out in the open, feel free to send
+me a
+\href{https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs}{direct
+message on Slack}.
+
+When you pose a question on Slack, it should contain three or four
+pieces of information:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The question itself - what are you hoping to get help with?
+\item
+  A reproducible example - give as many details as you need to clearly
+  illustrate the question
+\item
+  A \href{https://www.take-a-screenshot.org}{screenshot} or image output
+  that illustrates your reprex
+\item
+  What you've tried - lay out the steps you took to quickly (``I've
+  checked the spelling, gone through the Lecture 03 documents, looked at
+  the \texttt{dplyr} website, and have done a quick Google search.'')
+\end{enumerate}
+
+Post your reprex as a
+\href{https://get.slack.help/hc/en-us/articles/204145658-Create-a-snippet}{snippet}
+in Slack by:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Clicking the plus sign on the left side of the message box
+\item
+  Selecting \textbf{Code or text snippet}
+\item
+  Filling out the pop-up window
+\end{enumerate}
+
+If you are posting a reprex from \texttt{R}, remove the three backticks
+and the letter \texttt{r} from the first line as well as the three
+backticks from the bottom line. If you are including an image hyperlink
+created by the \texttt{reprex} package, remove that from the code
+snippet and paste it into Slack separately. A good question on Slack
+should look like this:
+
+\begin{center}\includegraphics[width=0.9\linewidth]{images/slackQuestion} \end{center}
+
+This same general process holds for asking questions in person - come
+ready with a solid question, a reproducible example, and be ready to
+pull it up on your computer or a lab computer.
+
+\subsection{External Venues}\label{external-venues}
+
+There are two good places to ask questions external to the course as
+well. For questions related to RStudio, R Markdown, and the
+\href{http://tidyverse.org}{tidyverse}, RStudio maintains a web forumn
+called \href{https://community.rstudio.com}{RStudio Community}. If you
+are posting there, you can use \texttt{reprex()} to generate Markdown
+formatted reprexs.
+
+Another place to post questions in on one of the relevant
+\href{https://stackexchange.com}{Stack Exchange} communities:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://stackoverflow.com}{Stack Overflow} for \texttt{R}, Git,
+  and GitHub - post using tags like \texttt{{[}r{]}},
+  \texttt{{[}ggplot2{]}}, \texttt{{[}dplyr{]}}, \texttt{{[}git{]}},
+  \texttt{{[}github{]}}, etc.
+\item
+  \href{https://gis.stackexchange.com}{Geographic Information Systems}
+  for GIS - post using the \texttt{{[}arcgis-desktop{]}} tag
+\item
+  \href{https://tex.stackexchange.com}{TeX} for LaTeX
+\end{itemize}
+
+Before you post, search thoroughly to make sure that your question has
+not already been answered. Stack Exchange has strong norms about how to
+post appropriately. You can descriptions of what makes a good post
+\href{https://codereview.stackexchange.com/help/how-to-ask}{here} and
+\href{https://stackoverflow.com/help/how-to-ask}{here}. You can also
+find a description of
+\href{https://stackoverflow.com/help/dont-ask}{what not to ask}. If you
+are going to post on Stack Overflow, the \texttt{reprex()} function can
+be modified to produce well-formatted output specific to that site by
+adding the \texttt{venue} argument, as in
+\texttt{reprex(venue\ =\ "so")}.
+
+Of the two sites, I find \href{https://community.rstudio.com}{RStudio
+Community} to be a friendlier place that is more relaxed thatn Stack
+Overflow and its cousins. However, Stack Exchange communities have much
+larger user bases to draw from.
+
+\bibliography{book.bib,packages.bib}
 
 
 \end{document}

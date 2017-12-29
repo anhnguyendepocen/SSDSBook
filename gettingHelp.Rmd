@@ -3,9 +3,7 @@ One of the biggest challenges for students first learning tools like `R`, ArcGIS
 
 One misconception that I think is important to confront is that data analysts, software engineers, and others who appear to be experts may indeed be very good at what they do, but they are equally skilled at problem solving. This [xkcd](https://www.xkcd.com) comic illustrates (a bit sarcastically!) the point:
 
-```{r echo=FALSE, fig.align="center", out.width = '75%'}
-knitr::include_graphics("https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png")
-```
+
 
 Navigating challenges with data science may not be quite as easy following the flowchart above, but there are definitely strategies for working your way through errors and challenges in data science work.
 

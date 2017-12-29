@@ -13,7 +13,8 @@ description: "This a companion text for Christopher Prener's research methods co
 
 # Preface {-}
 
-<img src="images/SSDSBookBanner.png" width="40%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.4\linewidth]{images/SSDSBookBanner} \end{center}
 
 This text is a companion text for both of my research methods courses at [Saint Louis University](https://slu.edu):
 

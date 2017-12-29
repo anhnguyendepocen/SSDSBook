@@ -96,7 +96,10 @@
 <li class="chapter" data-level="2.3.4" data-path="course-flow.html"><a href="course-flow.html#problem-sets"><i class="fa fa-check"></i><b>2.3.4</b> Problem Sets</a></li>
 <li class="chapter" data-level="2.3.5" data-path="course-flow.html"><a href="course-flow.html#an-apple-a-day"><i class="fa fa-check"></i><b>2.3.5</b> An Apple a Day</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="staying-current.html"><a href="staying-current.html"><i class="fa fa-check"></i><b>2.4</b> Staying Current</a></li>
+<li class="chapter" data-level="2.4" data-path="staying-current.html"><a href="staying-current.html"><i class="fa fa-check"></i><b>2.4</b> Staying Current</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="staying-current.html"><a href="staying-current.html#badges"><i class="fa fa-check"></i><b>2.4.1</b> Badges</a></li>
+<li class="chapter" data-level="2.4.2" data-path="staying-current.html"><a href="staying-current.html#slack"><i class="fa fa-check"></i><b>2.4.2</b> Slack</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="protecting-your-work.html"><a href="protecting-your-work.html"><i class="fa fa-check"></i><b>3</b> Protecting Your Work</a><ul>
 <li class="chapter" data-level="3.1" data-path="threats-to-our-data.html"><a href="threats-to-our-data.html"><i class="fa fa-check"></i><b>3.1</b> Threats To Our Data</a></li>
@@ -167,20 +170,29 @@
             <section class="normal" id="section-">
 <div id="staying-current" class="section level2">
 <h2><span class="header-section-number">2.4</span> Staying Current</h2>
-<p>Course content is maintained both on the respective course websites (<a href="https://slu-soc5050.github.io">Quantitative Analysis</a> and <a href="https://slu-soc5650.github.io">GIS</a>) and GitHub organizations (<a href="https://github.com/slu-soc5050">Quantitative Analysis</a> and <a href="https://github.com/slu-soc5650">GIS</a>). Course materials are available throughout the semester and after the course is done. This creates two challenges. First, for all students, attention must be paid to when updates are pushed to GitHub and the course website. This is particularly true for content updated <em>after</em> a lecture. Second, for students who like to work ahead, care must be taken to ensure that you are working off of materials for the current semester and not the last semester the course was taught.</p>
-<p>There are two ways in which I help communicate the status of course content. First, I use badges on both the GitHub <code>README.md</code> files in individual lecture repositories and on individual lecture webpages to signal which semester the content is current for and what stage of development the content is in. These badges are used not just because they are effective but as part of a more general socialization into data science software development, where badges are used to signal development status on <code>R</code> package GitHub repositories (see, for example, <a href="https://github.com/tidyverse/ggplot2"><code>ggplot2</code></a>).</p>
-<p>Badges that indicate the semester that the content is current for are blue and look like this:</p>
-<div class="figure">
-<img src="https://img.shields.io/badge/semester-Spring%2C%202018-blue.svg" />
+<p>Course content is maintained both on the respective course websites (<a href="https://slu-soc5050.github.io">Quantitative Analysis</a> and <a href="https://slu-soc5650.github.io">GIS</a>) and GitHub organizations (<a href="https://github.com/slu-soc5050">Quantitative Analysis</a> and <a href="https://github.com/slu-soc5650">GIS</a>). Course materials are available throughout the semester and after the course is done. This creates two challenges. First, for all students, attention must be paid to when updates are pushed to GitHub and the course website. This is particularly true for content updated <em>after</em> a lecture. Second, for students who like to work ahead, care must be taken to ensure that you are working off of materials for the current semester and not the last semester the course was taught. There are two ways in which I help communicate the status of course content - badges and Slack.</p>
+<div id="badges" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Badges</h3>
+<p>I use badges on both the GitHub <code>README.md</code> files in individual lecture repositories and on individual lecture webpages to signal which semester the content is current for and what stage of development the content is in. These badges are used not just because they are effective but as part of a more general socialization into data science software development, where badges are used to signal development status on <code>R</code> package GitHub repositories. For example, the <a href="https://github.com/tidyverse/ggplot2"><code>ggplot2</code></a> <code>README.md</code> file looks like this:</p>
+<p><img src="images/ggplot2Readme.png" width="95%" style="display: block; margin: auto;" /></p>
+<p>We can see from the first two badges that <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration services</a> are used, and that <code>ggplot2</code> is only passing its tests on one of them. The third badge indicates that the built-in tests of <code>ggplot2</code> test 74% of the package’s code. We can also see from the fourth badge that the current version of the software on CRAN is version 2.2.1 (as of December, 2017). Details like this are not critical when you are first learning to use <code>R</code>, but they grow more important as your data science skills progress.</p>
+<p>We use the following badges for our course repositories and on the course websites:</p>
+<p><img src="images/readmeBadges.png" width="95%" style="display: block; margin: auto;" /></p>
+<p>Here is an example of how the badges look on a course repository. As of December 2017, the <code>README.md</code> associated with the <a href="https://github.com/slu-soc5050/Core-Documents"><code>Core-Documents</code> repository</a> for <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> looked like this:</p>
+<p><img src="images/readmeBadgesEx.png" width="95%" style="display: block; margin: auto;" /></p>
+<p>We can see from the <code>README.md</code> that the contents are current for the Fall 2017 semester from the first badge. The second badge indicates that the contents have been updated since they were first released to students. Finally, we can also see that the last commit was made today (the day this screenshot was taken).</p>
+<p>Here is an example of how the badges look on a course website. As of December 2017, the <a href="https://slu-soc5650.github.io/course-preview">Course Preview page</a> for <a href="https://slu-soc5650.github.io/">GIS</a> looked like this:</p>
+<p><img src="images/webpageBadgesEx.png" width="95%" style="display: block; margin: auto;" /></p>
+<p>From these two badges, we can see that the webpage is current for the Spring 2018 semester and that it is the full release - no updates additional are planned before the content is covered by students.</p>
+</div>
+<div id="slack" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Slack</h3>
+<p>The <code>#_news</code> channel in each course’s Slack organization will be automatically updated with a list of commit messages for each lecture repository. The updates will look like this:</p>
+<p><img src="images/slackNews.png" width="95%" style="display: block; margin: auto;" /></p>
+<p>You will be able to scan through commit messages for updates that might be relevant for you. From these messages, we can see that changes were made to the <code>LICENSE</code> (one of the meta documents) in the <a href="https://github.com/slu-soc5650/Core-Documents"><code>Core-Documents</code> repository</a> for <a href="https://slu-soc5650.github.io/">GIS</a>. We can also see that a change was made to the Syllabus’s content for the course.</p>
+<p>I recommend scanning through all new messages in <code>#_news</code> each time you check in with the course on Slack. If you see changes, sync your repository (if you are keeping local copies) or download the updated document.</p>
 
 </div>
-<p>Badges that indicate the development status of content are either red, orange, or green. Here are the badges and their meaning:</p>
-<p><img src="https://img.shields.io/badge/release-LP%20only-red.svg" /> - only the Lecture Prep has been updated from previous semester</p>
-<p><img src="https://img.shields.io/badge/release-draft-red.svg" /> - some content updates from previous semester are in draft form</p>
-<p><img src="https://img.shields.io/badge/release-lecture-orange.svg" /> - lecture content has been updated but problem set has not been updated from previous semester</p>
-<p><img src="https://img.shields.io/badge/release-full-brightgreen.svg" /> - all content has been updated from the previous semester</p>
-<p><img src="https://img.shields.io/badge/release-updated-brightgreen.svg" /> - additional updates have been made to this semester’s content</p>
-
 </div>
 <!-- </div> -->
             </section>
