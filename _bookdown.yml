@@ -13,4 +13,7 @@ rmd_files: [
   "protectingYourWork.Rmd",
   "goodPractices.Rmd",
   "gettingHelp.Rmd",
+
+  "toolkitOverview.Rmd",
+  "git.Rmd",
 ]

@@ -98,8 +98,7 @@ In mean.default(data) : argument is not numeric or logical: returning NA
 
 With the three functions written in a `.R` script, highligh all seven lines of code (the three functions, both comments, and both whitespace lines)  and copy them to your clipboard (`Edit > Copy`). Then call the `reprex()` function. Markdown formatted text that weaves both the functions and their output together will appear in the viewer tab:
 
-
-\begin{center}\includegraphics[width=0.5\linewidth]{images/reprex} \end{center}
+<img src="images/reprex.png" width="50%" style="display: block; margin: auto;" />
 
 It will also be available on your clipboard so that you can copy and paste it into Slack or another venue that accepts Markdown syntax (like GitHub). If your reprex contains image output, such as a plot or a map, it will be automatically uploaded to imgur and a link will be embedded in your Markdown syntax. For example, say we had a question about the following code:
 
@@ -205,8 +204,7 @@ Post your reprex as a [snippet](https://get.slack.help/hc/en-us/articles/2041456
 
 If you are posting a reprex from `R`, remove the three backticks and the letter `r` from the first line as well as the three backticks from the bottom line. If you are including an image hyperlink created by the `reprex` package, remove that from the code snippet and paste it into Slack separately. A good question on Slack should look like this:
 
-
-\begin{center}\includegraphics[width=0.9\linewidth]{images/slackQuestion} \end{center}
+<img src="images/slackQuestion.png" width="90%" style="display: block; margin: auto;" />
 
 This same general process holds for asking questions in person - come ready with a solid question, a reproducible example, and be ready to pull it up on your computer or a lab computer.
 
