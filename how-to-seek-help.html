@@ -25,7 +25,7 @@
 <meta name="author" content="Christopher Prener, Ph.D.">
 
 
-<meta name="date" content="2017-12-28">
+<meta name="date" content="2017-12-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -170,8 +170,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.1.4" data-path="helping-yourself.html"><a href="helping-yourself.html#cast-a-wider-net"><i class="fa fa-check"></i><b>5.1.4</b> Cast a Wider Net</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html"><i class="fa fa-check"></i><b>5.2</b> How to Seek Help</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#what-is-a-reproducible-example"><i class="fa fa-check"></i><b>5.2.1</b> What is a reproducible example?</a></li>
-<li class="chapter" data-level="5.2.2" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#creating-a-reprex"><i class="fa fa-check"></i><b>5.2.2</b> Creating a reprex</a></li>
+<li class="chapter" data-level="5.2.1" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#what-is-your-question"><i class="fa fa-check"></i><b>5.2.1</b> What is your question?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#what-is-a-reproducible-example"><i class="fa fa-check"></i><b>5.2.2</b> What is a reproducible example?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#creating-a-reprex"><i class="fa fa-check"></i><b>5.2.3</b> Creating a reprex</a></li>
+<li class="chapter" data-level="5.2.4" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#i-dont-think-i-can-make-a-reprex"><i class="fa fa-check"></i><b>5.2.4</b> “I don’t think I can make a reprex!”</a></li>
+<li class="chapter" data-level="5.2.5" data-path="how-to-seek-help.html"><a href="how-to-seek-help.html#isnt-this-a-lot-of-work"><i class="fa fa-check"></i><b>5.2.5</b> “Isn’t this a lot of work?”</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="where-to-seek-help.html"><a href="where-to-seek-help.html"><i class="fa fa-check"></i><b>5.3</b> Where to Seek Help</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="where-to-seek-help.html"><a href="where-to-seek-help.html#internal-venues"><i class="fa fa-check"></i><b>5.3.1</b> Internal Venues</a></li>
@@ -201,28 +204,118 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="how-to-seek-help" class="section level2">
 <h2><span class="header-section-number">5.2</span> How to Seek Help</h2>
 <p>If all else fails and the strategies for <a href="helping-yourself.html#helping-yourself">Helping Yourself</a> have not yielded a solution, it is time to ask for help! Before you head to office hours or Slack, you will want to construct a <strong>reproducible example</strong>.</p>
+<div id="what-is-your-question" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> What is your question?</h3>
+<p>Start with a basic step - narrow down what your question is. Neither “I am getting an error” or “This isn’t working” are effective questions. What exactly is causing the error? What context does it appear in? To borrow from the examples below, a good question might be:</p>
+<blockquote>
+<p>I am trying to calculate descriptive statistics for an entire data frame using the <code>mean()</code> function but am getting and error. What might be the cause of the error?</p>
+</blockquote>
+<blockquote>
+<p>I am trying to create a thematic choropleth map in ArcGIS, but when I try and select my variable from the dropdown menu in the symbology tab under layer properties, the menu is empty. Why are all of the variables missing?</p>
+</blockquote>
+<blockquote>
+<p>I am trying to make my text bold in LaTeX, but the text is not rendering with bold font. I am also getting an error that says “Undefined control sequence.” What is missing from my document to create bold font?</p>
+</blockquote>
+<p>Be specific about what your issue is, and then provide a reproducible example that illustrates what you are asking about.</p>
+</div>
 <div id="what-is-a-reproducible-example" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> What is a reproducible example?</h3>
+<h3><span class="header-section-number">5.2.2</span> What is a reproducible example?</h3>
 <p>A reproducible example, or reprex, is a term we’ll borrow from the <code>R</code> ecosystem. It was coined by <a href="https://twitter.com/romain_francois/status/530011023743655936">Roman François</a> and has been enshrined in the <a href="http://reprex.tidyverse.org"><code>reprex</code> package</a>, which I’ll describe below. The goal for a reprex is to strip down the process you have used to the minimal number of steps needed to replicate the error. This means using the fewest steps and data sources possible. Cut out anything that does not directly contribute to causing the error when making your reprex.</p>
-<p>I have often found that the process of making a reprex actually helps isolate the cause of the problem. For instance, it may become clear that a specific step is causing an issue. Even if you are not sure how to fix the problem, having narrowed it down can be immensely helpful. If you can use built-in data in <code>R</code> to create the reprex, or at least example data from the course, that may also help you identify whether the issue is with the process itself or something that is idiosyncratic to the data you are using.</p>
+<p>I have often found that the process of making a reprex actually helps isolate the cause of the problem. For instance, it may become clear that a specific step is causing an issue. Even if you are not sure how to fix the problem, having narrowed it down can be immensely helpful. If you can use built-in data in <code>R</code> to create the reprex, or at least example data from the course, that may also help you identify whether the issue is with the process itself or something that is idiosyncratic to the data you are using. Using built-in data from <code>R</code> should be the default for any reprex you create, <em>unless assignment data are the cause of your issue</em>.</p>
 </div>
 <div id="creating-a-reprex" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Creating a reprex</h3>
+<h3><span class="header-section-number">5.2.3</span> Creating a reprex</h3>
+<p>Creating reproducible examples will differ slightly based on what you are trying to get help on.</p>
 <div id="r" class="section level4">
-<h4><span class="header-section-number">5.2.2.1</span> <code>R</code></h4>
+<h4><span class="header-section-number">5.2.3.1</span> <code>R</code></h4>
+<p>To create a reprex in <code>R</code>, you will need to install the <a href="http://reprex.tidyverse.org/"><code>reprex</code> package</a>. It is part of the <a href="https://www.tidyverse.org">tidyverse</a> but it is not installed when the <code>tidyverse</code> package is installed, so you will need to install it separately:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;reprex&quot;</span>)</code></pre></div>
+<p>Once you have it loaded (use the <code>library()</code> function), create a minimal example of the necessary functions that get to you to the error you are confronting. Make sure to include the <code>library()</code> functions for all packages your example depends on (except for <code>reprex</code>). Write the example in a <code>.R</code> script file (<code>File &gt; New File &gt; R Script</code>). For example, one might be struggling with calculating the mean of each variable in a data frame:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+<span class="co"># assign data to data frame</span>
+data &lt;-<span class="st"> </span>mpg
+
+<span class="co"># attempt to calculate mean</span>
+<span class="kw">mean</span>(data)</code></pre></div>
+<p>The last of the three functions above will return this error in your <code>R</code> session:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">mean</span>(data)
+[<span class="dv">1</span>] <span class="ot">NA</span>
+Warning message<span class="op">:</span>
+In <span class="kw">mean.default</span>(data) <span class="op">:</span><span class="st"> </span>argument is not numeric or logical<span class="op">:</span><span class="st"> </span>returning <span class="ot">NA</span></code></pre></div>
+<p>With the three functions written in a <code>.R</code> script, highligh all seven lines of code (the three functions, both comments, and both whitespace lines) and copy them to your clipboard (<code>Edit &gt; Copy</code>). Then call the <code>reprex()</code> function. Markdown formatted text that weaves both the functions and their output together will appear in the viewer tab:</p>
+<p><img src="images/reprex.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>It will also be available on your clipboard so that you can copy and paste it into Slack or another venue that accepts Markdown syntax (like GitHub). If your reprex contains image output, such as a plot or a map, it will be automatically uploaded to imgur and a link will be embedded in your Markdown syntax. For example, say we had a question about the following code:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+<span class="co"># assign data to data frame</span>
+data &lt;-<span class="st"> </span>mpg
+
+<span class="co"># plot highway mpg</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> hwy)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_histogram</span>()</code></pre></div>
+<p>Once we copy the above code and render it using <code>reprex()</code>, it will return the following output:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+<span class="co"># assign data to data frame</span>
+data &lt;-<span class="st"> </span>mpg
+
+<span class="co"># plot highway mpg</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> hwy)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_histogram</span>()
+<span class="co">#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span>
+
+<span class="op">!</span>[](https<span class="op">:</span><span class="er">//</span>i.imgur.com<span class="op">/</span>8hiC7od.png)</code></pre></div>
+<p>The <code>![](hyperlink)</code> syntax will allow an image of your plot to appear below the code.</p>
+<p>The <a href="http://reprex.tidyverse.org"><code>reprex</code> package website</a> has some great resources, including a <a href="http://reprex.tidyverse.org">basic overview</a>, some <a href="http://reprex.tidyverse.org/articles/reprex-dos-and-donts.html">reprex do’s and don’ts</a>, and a <a href="http://reprex.tidyverse.org/articles/articles/magic-reprex.html">detailed article</a> introducing the package’s functionality.</p>
 </div>
 <div id="arcgis" class="section level4">
-<h4><span class="header-section-number">5.2.2.2</span> ArcGIS</h4>
+<h4><span class="header-section-number">5.2.3.2</span> ArcGIS</h4>
+<p>Creating a reprex in ArcGIS is not as straightforward since there is not a dedicated tool for doing so like there is in <code>R</code>. Reprex creation is complicated by the fact that many steps you will be taking are manual. Nevertheless, it is possible to create a repex. Follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li>In a new map document, load the minimum number of shapefiles needed to illustrate the issue you are having. Note where the shapefiles are available (in the course data release?) and what their names are.</li>
+<li>Note what the coordinate system of the data frame is set to.</li>
+<li>Provide notes for each step that gets you to your question or error.</li>
+<li>Take a <a href="https://www.take-a-screenshot.org">screenshot</a> of the error or the window you have a question about.</li>
+</ol>
+<p>For example, a reprex of a question in ArcGIS could look like the following:</p>
+<pre><code>1. I have a single map shapefile open in a new map document. The shapefile is the St. Louis census tracts shapefile from the example data in the course data release.
+2. The coordinate system is Missouri State Plane East (Feet)
+3. When I right click on the shapefile, I click on Properties and then the Symbology tab
+4. Attached is a screenshot of what the symbology tab looks like for these data.</code></pre>
 </div>
 <div id="latex" class="section level4">
-<h4><span class="header-section-number">5.2.2.3</span> LaTeX</h4>
+<h4><span class="header-section-number">5.2.3.3</span> LaTeX</h4>
+<p>Like ArcGIS, there is no specific tool for creating a reprex using LaTeX. The LaTeX community does have, however, a long tradition of creating “minimal working examples”, which are similar to reprexs. Follow these general steps:</p>
+<ol style="list-style-type: decimal">
+<li>Create a new LaTeX project. Use the <code>\documentclass{article}</code> if you are using something different.</li>
+<li>Only include packages in the preamble that are <strong>directly</strong> related to the question or issue you have.</li>
+<li>Skip creating a title block</li>
+<li>Provide just enough body text in your LaTeX document to illustrate the issue.</li>
+</ol>
+<p>A repex for LaTeX might look something like this:</p>
+<div class="sourceCode"><pre class="sourceCode latex"><code class="sourceCode latex"><span class="bu">\documentclass</span>{<span class="ex">article</span>}
+
+<span class="kw">\begin</span>{<span class="ex">document</span>}
+
+<span class="fu">\textbold</span>{Foo bar.} Spam and eggs.
+
+<span class="kw">\end</span>{<span class="ex">document</span>}</code></pre></div>
+<p>Also provide a written description of what is wrong (such as “the text is not being rendered as bold”) and, if helpful, a <a href="https://www.take-a-screenshot.org">screenshot</a> of your output. There is a great <a href="https://tex.meta.stackexchange.com/questions/228/ive-just-been-asked-to-write-a-minimal-example-what-is-that">overview on Stack Exchange</a> of how to write a reprex for LaTeX. If you are using ShareLaTeX, also take a look at the error log and take a <a href="https://www.take-a-screenshot.org">screenshot</a> of the relevant error message. If you are using another LaTeX application, provide the text of your error message instead.</p>
 </div>
-<div id="markdown" class="section level4">
-<h4><span class="header-section-number">5.2.2.4</span> Markdown</h4>
+<div id="other-tools" class="section level4">
+<h4><span class="header-section-number">5.2.3.4</span> Other Tools</h4>
+<p>For other tools we learn, such as Markdown and GitHub, you want to follow the spirit of the reprex file. Try to recreate your issue outside of the context of your assignment (this may not be possible for GitHub), and provide a detailed walk-through of the steps that you took to get where you are. For Markdown syntax, provide an example of the syntax you are using that recreates the issue or question. For GitHub, provide a <a href="https://www.take-a-screenshot.org">screenshot</a> of the relevant error message.</p>
 </div>
-<div id="gitgithub" class="section level4">
-<h4><span class="header-section-number">5.2.2.5</span> Git/GitHub</h4>
 </div>
+<div id="i-dont-think-i-can-make-a-reprex" class="section level3">
+<h3><span class="header-section-number">5.2.4</span> “I don’t think I can make a reprex!”</h3>
+<p>I am 99% sure that you can! In nearly every situation I have seen students in, creating a reprex is possible. Even if the error is idiosyncratic to your computer or your data, you can absolutely clarify the context within which the error appears and minimize the amount of data, code, and other information in your <code>R</code> code or your map document. For the less than 1% of scenarios where a reprex is not possible, the process of writing a question, clarifying the context and steps you took to get there, and producing an example of the error will still make it easier for me to help you.</p>
+</div>
+<div id="isnt-this-a-lot-of-work" class="section level3">
+<h3><span class="header-section-number">5.2.5</span> “Isn’t this a lot of work?”</h3>
+<p>Well, yes, it does require some extra effort. This effort is almost always worth it, however. In some cases, the time it takes you to produce the repex leads you to the answer on your own, which is part of the problem solving process that this class is designed to foster. Even when this does not happen, making reprex informed inquries is a technique that you will be able to take with you at the end of the semester. Even if you are not working in a technical setting, being able to structure clear, concise questions about a process is a valuable skill!</p>
+<p>Finally, creating a reprex saves you time in the long run. When I get vague questions, it often takes some experimenting on my part to reproduce the error. If you send me a question with a reproducible error, you cut out that experimentation time on my end and I can get right to answering your question. Likewise, students often come to office hours without an example of their issue ready to go and hope that I can conjure in my mind the scenario they are describing. Despite my best efforts, I am usually unable to do so and ask students to reproduce the error during office hours. If you come to office hours with a reprex, we can get to answering your question right away!</p>
 </div>
 </div>
             </section>
