@@ -77,3 +77,28 @@ I recommend approaching this course in bite size chunks - a little each day. The
   - Sunday: Lecture prep for next class
 
 The single biggest failure point in both courses for students is thinking that the few hours before class are sufficient for doing *all* of the work required for a particular week. It is the rare student who can do this successfully (not only in terms of meeting the required deadlines but also in terms of actually learning the material). Err on the side of giving yourself too much time to complete work rather than just enough!
+
+## Staying Current
+Course content is maintained both on the respective course websites ([Quantitative Analysis](https://slu-soc5050.github.io) and [GIS](https://slu-soc5650.github.io)) and GitHub organizations ([Quantitative Analysis](https://github.com/slu-soc5050) and [GIS](https://github.com/slu-soc5650)). Course materials are available throughout the semester and after the course is done. This creates two challenges. First, for all students, attention must be paid to when updates are pushed to GitHub and the course website. This is particularly true for content updated *after* a lecture. Second, for students who like to work ahead, care must be taken to ensure that you are working off of materials for the current semester and not the last semester the course was taught. 
+
+There are two ways in which I help communicate the status of course content. First, I use badges on both the GitHub `README.md` files in individual lecture repositories and on individual lecture webpages to signal which semester the content is current for and what stage of development the content is in. These badges are used not just because they are effective but as part of a more general socialization into data science software development, where badges are used to signal development status on `R` package GitHub repositories (see, for example, [`ggplot2`](https://github.com/tidyverse/ggplot2)). 
+
+Badges that indicate the semester that the content is current for are blue and look like this:
+
+![](https://img.shields.io/badge/semester-Spring%2C%202018-blue.svg)
+
+Badges that indicate the development status of content are either red, orange, or green. Here are the badges and their meaning:
+
+![](https://img.shields.io/badge/release-LP%20only-red.svg) - only the Lecture Prep has been updated from previous semester
+
+![](https://img.shields.io/badge/release-draft-red.svg) - some content updates from previous semester are in draft form
+
+![](https://img.shields.io/badge/release-lecture-orange.svg) - lecture content has been updated but problem set has not been updated from previous semester
+
+![](https://img.shields.io/badge/release-full-brightgreen.svg) - all content has been updated from the previous semester
+
+![](https://img.shields.io/badge/release-updated-brightgreen.svg) - additional updates have been made to this semester's content
+
+
+
+
