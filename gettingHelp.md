@@ -1,9 +1,9 @@
 # Getting Help
 One of the biggest challenges for students first learning tools like `R`, ArcGIS, and LaTeX is dealing with the inevitable speed-bumps and errors that come along with scientific computing. Remember, first and foremost, that these tools are not consumer software. They do not always "just work", to borrow a turn of phrase from [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs). Learning strategies for navigating issues when the software is most definitely not working is therefore an important part of success. 
 
-One misconception that I think is important to confront is that data analysts, software engineers, and others who appear to be experts may indeed be very good at what they do, but they are equally skilled at problem solving. This [xkcd](https://www.xkcd.com) comic illustrates (a bit sarcastically!) the point:
+One misconception that I think is important to confront is that data analysts, software engineers, and others who appear to be experts may indeed be very good at what they do, but they are equally skilled at problem solving. This [xkcd comic](https://www.xkcd.com/627/)  illustrates (a bit sarcastically!) the point:
 
-
+<img src="images/tech_support_cheat_sheet.png" width="75%" style="display: block; margin: auto;" />
 
 Navigating challenges with data science may not be quite as easy following the flowchart above, but there are definitely strategies for working your way through errors and challenges in data science work.
 
