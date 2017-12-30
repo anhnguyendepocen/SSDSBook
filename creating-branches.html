@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="zen-and-the-art-of-data-analysis.html">
-<link rel="next" href="course-flow.html">
+<link rel="prev" href="even-more-git-lingo.html">
+<link rel="next" href="git-terminal.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -243,32 +243,43 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="getting-and-staying-organized" class="section level2">
-<h2><span class="header-section-number">2.2</span> Getting and Staying Organized</h2>
-<p>Doing data science work, and having the space to step away for a day as the last section suggests, requires discipline and organization. Similarly, computational coursework can demanding not just because it is complex but because the courses often have a number of moving pieces that you need to keep track of. Being mindful of this challenege from the beginning, and taking steps to plan for it, is an important part of this course.</p>
-<div id="keeping-track-of-where-you-are" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Keeping Track of Where You Are</h3>
-<p>Students who have some system for tracking their work and creating to-do lists are often the most successful in this course, not because they have a fundamentally better grasp on the content but because they simply are more organized. If you have never thought particularly hard about how you manage tasks, now is an excellent time to start doing so. You do not need fancy computer software to accomplish this, though there are an array of possibilities if you do want to use software to keep yourself organized. A legal pad or a notebook can be just as effective as a $50 to-do list manager. The point is, do <em>something</em>!</p>
-<p>I am fond of recommending the <a href="http://gettingthingsdone.com"><strong>Getting Things Done</strong></a> methodology to students as part of thinking more wholistically about staying organized. The website <a href="https://lifehacker.com">Lifehacker</a> posted an <a href="https://lifehacker.com/productivity-101-a-primer-to-the-getting-things-done-1551880955">excellent introduction to GTD</a> that is a great way to get a sense of how it works and find additional resources for implementing it.</p>
-<p>The GTD website has a <a href="http://gettingthingsdone.com/common-tools-software/">great list of software</a> for those of you looking for a to-do list application. One that isn’t listed that I use for collaborating with my student research team is <a href="https://trello.com">Trello</a>, a freemium website that allows you to create simple to-do lists. It isn’t sophisticated enough for implementing GTD, but it is more than sufficient for managing to-do lists related to this course.</p>
+<div id="creating-branches" class="section level2">
+<h2><span class="header-section-number">9.2</span> Creating Branches</h2>
+<p>The logic behind branches is that they allow you to make modifications to the content of the repository without impacting the content that is on the <code>master</code> branch. Think of the <code>master</code> branch is your production data - this is what you know is good and in working order. If you need to experiment, say by adding new code or data sources, you can do this on a branch without worrying about breaking something in the production part of the repository.</p>
+<p>To create a new branch, navigate to the repository in question on GitHub.com. Just above the list of the repository’s contents on the lefthand side of the winodw is a button that will read “Branch: master”. If you pull the associated menu down, you have the ability to create a new branch (by typing a name into the text field) or switch between branches:</p>
+<p><img src="images/branch1.png" width="100%" /></p>
+<p>The image above shows this menu pulled down with the ficticious user John Snow creating a new branch on his assignments repository named <code>snowBranch</code>. Once the branch is created, you will automatically be directed to the new branch’s contents. These should look identical to the <code>master</code> branch at this point because the branch creation process generates a mirror image of <code>master</code>.</p>
+<p>You can use the same pulldown menu to switch back to the <code>master</code> branch if needed:</p>
+<p><img src="images/branch2.png" width="100%" /></p>
+<div id="working-with-branches" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Working with Branches</h3>
+<p>Once your branch is created, you need to open up GitHub desktop and, if you haven’t already, clone the repository you created the branch in. If you have already cloned the repository, you just need to <code>Sync</code> it so that the branch information is downloaded to your local copy of the repository.</p>
+<p>Once you have updated or cloned your repository, it is time to <strong>checkout</strong> the branch. This means to switch from the current branch (by default, the <code>master</code> branch, to your new branch). In GitHub Desktop, there is a button on the top toolbar that will say the current branch name (by default, <code>master</code>). You can click on this button to open a pulldown menu that will list all available branches:</p>
+<p><img src="images/branch3.png" width="100%" /></p>
+<p>Click on a branch to check it out. Once checked out, the files available to your operating system will change to reflect the contents of that branch!</p>
+<p>It is important that you ensure that you are always intentionally working on the correct branch. Any time you return to your computer to continue working on a branch, open up GitHub Desktop and ensure that the proper branch remains checked out.</p>
+<p>Branches are used just like regular repos in Git. You can commit changes to them and sync them with GitHub.com. I recommend commiting changes to branches regularly and syncing them with the remote version of the repository to ensure that your work is not lost.</p>
 </div>
-<div id="managing-course-materials" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Managing Course Materials</h3>
-<p>For both courses covered by this book, materials will be disseminated in physical and digitial form. The topic of keeping digitial materials organized is the subject of the next chapter. The physical handouts and materials that we’ll give out will all come three hole punched, and you are expected to purchase a three-ring binder for this course. I give out enough handouts that, without a binder, it becomes difficult to keep track of where handouts are located. I have watched students spend more time looking for the handout than it takes to find the answer to their question once they have the handout itself.</p>
-<p>There are two recommended ways to keep your binder tidy. One is to organize by lecture. There are sixteen lectures worth of handouts in both courses (not including the course preview and the final research conference session), so two sets of dividers (which often come in packs of eight) should be sufficient. The other way to organize handouts is by topic. We hand out a number of different types of documents that could be organized thematically like so:</p>
-<ol style="list-style-type: decimal">
-<li>Syllabus and reading list</li>
-<li>Workflow diagrams</li>
-<li><code>R</code> function sheets</li>
-<li>ArcGIS process sheets (SOC 4650/5650 only)</li>
-<li>LaTeX command sheets (SOC 4930/5050 only)</li>
-<li>Sample outputs</li>
-<li>Exercise handouts</li>
-<li>Lab handouts</li>
-<li>Problem set handouts</li>
-</ol>
-<p>Since there are approximately eight different types of handouts in each class, a single package of dividers should be sufficient.</p>
-<p>I don’t think that one way of organization, thematically or temporally, is inherently better or worse than the other. In large part it comes down to how <em>you</em> like to organize information. After all, learning how to process and organize information in a way that works for you is the most important takeaway here.</p>
+<div id="opening-pull-requests" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Opening Pull Requests</h3>
+<p>When you have made changes to your branch and want to integrate them into the <code>master</code>, production part of your repository, it is time to open a <strong>pull request</strong>. Below, you will see that a directory named <code>ExtraWork</code> has been added to the <code>SnowAssignments</code> repository’s <code>snowBranch</code>:</p>
+<p><img src="images/branch4.png" width="100%" /></p>
+<p>We have verified that the file is complete and ready for integration into the <code>master</code> branch. To do this, we need to click on the <code>New pull request</code> button just to the right of the <code>Branch</code> button above your repository contents. Make sure that you are opening the pull request on your branch and not on the <code>master</code>!</p>
+<p><img src="images/branch5.png" width="100%" /></p>
+<p>The <strong>pull request</strong> page looks very similar to GitHub’s <strong>Issue</strong> feature - there is a place for a title (which will be autofilled for you) and for describing the contents and signifiance of your changes. You can optionally assign individual reviewers (such as your final project team members). Once you are done, click the green <code>Create pull request</code> button.</p>
+</div>
+<div id="evaluating-pull-requests" class="section level3">
+<h3><span class="header-section-number">9.2.3</span> Evaluating Pull Requests</h3>
+<p>When a team member opens a <strong>pull request</strong>, you should see a notification in your news feed on the main landing page when you log into GitHub.com:</p>
+<p><img src="images/branch6.png" width="100%" /></p>
+<p>Clicking on that message (or, alternatively, selecting the <code>Pull Requests</code> tab in any repository) will take you to a page where you can evaluate changes that were made on your colleague’s branch:</p>
+<p><img src="images/branch7.png" width="100%" /></p>
+<p>Here you can: * view files that have been changed or added, * respond to the pull request with a comment if you have follow-up questions, * view the results of GitHub’s conflict check, * and choose an outcome (either merging - i.e. accepting - the pull request or closing - i.e. rejecting - the pull request)</p>
+<p>This is an integral step. It is part of the peer review process that drives open-source software and is conducted in the same spirit of peer review that academics use to evaluate publications. The goal here is provide constructive feedback about proposed additions or changes. If you choose to close (i.e. reject) a pull request, give a detailed explanation as to why you are doing so.</p>
+<p>If you see that there are conflicts with the base (i.e. <code>master</code>) branch, please let Chris know immediately to problem solve before any pull requests are accepted.</p>
+<p>If you want to accept the changes, select the green <code>Merge pull request</code> button. Chosing this button will open up a space for you to add a commit message that corresponds with accepting the pull request:</p>
+<p><img src="images/branch8.png" width="100%" /></p>
+<p>After filling out your commit message and selecting <code>Confirm merge</code>, you have one final opportunity to either roll back the changes (by chosing <code>Revert</code>) or make them permanent by chosing <code>Delete branch</code>.</p>
 </div>
 </div>
             </section>
@@ -276,8 +287,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="zen-and-the-art-of-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="course-flow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="even-more-git-lingo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git-terminal.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
