@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="github-issues.html">
-<link rel="next" href="learning-more.html">
+<link rel="prev" href="git-github.html">
+<link rel="next" href="the-workflow-of-git-and-github.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -183,17 +183,38 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="github-desktop-application" class="section level2">
-<h2><span class="header-section-number">7.4</span> GitHub Desktop Application</h2>
-<p><a href="https://desktop.github.com">GitHub Desktop</a> is a tool that allows you to easily clone repositories hosted on GitHub, commit changes to them, and then sync those changes up to the website. You can also create new repositories, however this is not task you will have to do this semester. GitHub Desktop is not a fully functional desktop version of GitHub. For our purposes, it is important to note that the Desktop application will not let you easily identify when repositories have been updated by other users, view Wikis associated with repositories, or view Issues.</p>
+<div id="git-basics" class="section level2">
+<h2><span class="header-section-number">7.1</span> Git Basics</h2>
+<div id="git" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Git</h3>
+<p>GitHub is a web application that utilizes <a href="https://git-scm.com">Git</a>:</p>
+<blockquote>
+<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+</blockquote>
+<p>Essentially, Git is a project-wide system for tracking changes to files. Think of it as Microsoft office’s track changes feature on steroids - every change to every file in a directory is tracked. A directory that has tracking enabled with Git is called a <strong>repository</strong> or “repo” in Git-lingo.</p>
+<p>You do no need to host files online to use Git. If you have a project saved locally (say, a doctoral thesis), you could utilize Git to version control that project without ever uploading it to the Internet. However, Git integrates seemlessly with <strong>remote</strong> repositories. The most well-known host of remote repos is <a href="git-basics.html#github.com">GitHub.com</a>.</p>
+<p>Beyond “repositories”, there are a few additional terms that are specific to Git and that are helpful to know:</p>
+<ul>
+<li><strong>Clone</strong>: Make an identical copy of a repository on your local hard drive.</li>
+<li><strong>Commit</strong>: Approve any changes you have made to a repository.</li>
+<li><strong>Sync</strong>: For cloned repositories, files that have been changed need to be synced or <strong>pushed</strong> to GitHub.com after they are committed.</li>
+</ul>
+<p>For our purposes, this is just about all you need to know about Git. If you want to learn more, <a href="https://git-scm.com/about">Git’s ‘About’ page</a> is a great place to start.</p>
+</div>
+<div id="github.com" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> GitHub.com</h3>
+<p>GitHub is a web service that can host projects using Git’s version tracking. It is widely used by programmers, software developers, data scientists, and academics to host and collaborate projects.</p>
+<p>GitHub is an excellent way to backup files for a project since you can “sync” changes made to a repository up to GitHub’s servers. It is also an excellent way to collaborate on files with colleagues while also using Git’s version tracking. Repositories can be either public (like all of the repos for our seminar) or private, which means that only people who have been given access to can view the contents of the repo. Private repos require an upgraded account, which retails for $7/month.</p>
+<p>Students can get access to GitHub’s paid services for free, however, by signing up for a <a href="https://education.github.com">free student account</a>. This will give you access to private repositories for as long as you are a student. GitHub also provides this free upgrade service to educators, which is how our classes have private repositories.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="github-issues.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="learning-more.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="git-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-workflow-of-git-and-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
