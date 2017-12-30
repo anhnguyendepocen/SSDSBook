@@ -15,5 +15,7 @@ rmd_files: [
   "gettingHelp.Rmd",
 
   "toolkitOverview.Rmd",
+  "markdown.Rmd",
   "git.Rmd",
+  "advancedGit.Rmd",
 ]

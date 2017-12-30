@@ -1,4 +1,4 @@
-# Advanced GitHub
+# Advanced Git
 
 GitHub has a number of tools available for managing multiple contributors' work simultaneously. These tools will be useful for collaborating with your teammates on the final project.
 
@@ -88,3 +88,6 @@ knitr::include_graphics("images/branch8.png")
 ```
 
 After filling out your commit message and selecting `Confirm merge`, you have one final opportunity to either roll back the changes (by chosing `Revert`) or make them permanent by chosing `Delete branch`.
+
+## Git Terminal
+T
