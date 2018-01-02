@@ -36,7 +36,7 @@ There are two recommended ways to keep your binder tidy. One is to organize by l
 8. Lab handouts
 9. Problem set handouts
 
-Since there are approximately eight different types of handouts in each class, a single package of dividers should be sufficient.
+Since there are approximately eight different types of handouts in each class, a single package of dividers should be sufficient for this approach to organizing them.
 
 I don't think that one way of organization, thematically or temporally, is inherently better or worse than the other. In large part it comes down to how *you* like to organize information. After all, learning how to process and organize information in a way that works for you is the most important takeaway here.
 

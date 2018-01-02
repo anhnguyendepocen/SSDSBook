@@ -220,6 +220,8 @@ Clone each of the weekly repos to this directory, and sync them when updates are
 <p>You will not be able to push changes that you make in these directories to GitHub, and making other changes could cause conflicts. I suggest not making changes inside this repository beyond opening files for reference purposes. If there is something you need to edit, copy it to the appropriate subdirectory (<code>Labs</code>, <code>WeeklyPreps</code>, etc.) and make local changes there.</p>
 </div>
 
+## Organizing Projects
+
 ## Backing Up Your Data
 There are a number of different ways to think about backing up your data. The most successful backup strategies will incorporate all of these elements.
 
