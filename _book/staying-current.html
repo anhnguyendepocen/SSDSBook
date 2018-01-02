@@ -25,7 +25,7 @@
 <meta name="author" content="Christopher Prener, Ph.D.">
 
 
-<meta name="date" content="2018-01-01">
+<meta name="date" content="2018-01-02">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -228,7 +228,7 @@
 <p><img src="images/readmeBadges.png" width="95%" style="display: block; margin: auto;" /></p>
 <p>Here is an example of how the badges look on a course repository. As of January 2018, the <code>README.md</code> associated with the <a href="https://github.com/slu-soc5050/Core-Documents"><code>Core-Documents</code> repository</a> for <a href="https://slu-soc5050.github.io">Quantitative Analysis</a> looked like this:</p>
 <p><img src="images/readmeBadgesEx.png" width="95%" style="display: block; margin: auto;" /></p>
-<p>The <code>README.md</code> badges, from left to right, indicate:</p>
+<p>The <code>README.md</code> badges, from left to right, represent the following:</p>
 <ol style="list-style-type: decimal">
 <li><strong>semester</strong>: the contents are current for the Fall 2017 semester</li>
 <li><strong>release</strong>: the contents have been updated since they were first released to students</li>
@@ -247,8 +247,9 @@
 <p>The package’s developers use the release system to document what has changed. We will emulate this with the <code>Core-Documents</code>, lecture, and <code>finalProject</code> repositories. For example, here is the release documentation for <a href="https://github.com/slu-soc5650/Core-Documents">SOC 4650/5650 <code>Core-Documents</code> repository</a>:</p>
 <p><img src="images/releaseEx.png" width="95%" style="display: block; margin: auto;" /></p>
 <p>If you want to see what has changed over the course of the semester in a course’s repositories, you can use the release notes to compare different versions. These notes are also stored in the <code>NEWS.md</code> file for each repository. The use of both releases and a <code>NEWS.md</code> file is a common way to document changes on GitHub. For example, you can see look at the <a href="https://github.com/tidyverse/ggplot2/blob/master/NEWS.md"><code>NEWS.md</code> file for <code>ggplot2</code></a>, which will mirror the <a href="https://github.com/tidyverse/ggplot2/releases">release notes</a> for the package.</p>
-<p>The version numbers themselves have three parts. From left to right, the first pair of digits represents the year of the current course offering, the second pair represents whether it the development status is (1) draft, (2) lecture, (3) full, and (4) updated, and the final number represents incramental changes that do not rise to a change in the development status. For example, <code>v18.1.1</code> would represent the initial incremental release for the 2018 version of a course that is in the draft development stage.</p>
-<p>If you see a version number like <code>v18.1.1.9000</code> in <code>NEWS.md</code>, the notes will be tracking changes that have not been incorporated into an official release yet.</p>
+<p>In software development, <a href="https://en.wikipedia.org/wiki/Software_versioning">version numbers</a> are used along with releases to make it easy for end users to keep track of how releases have progressed. In the picture above of the <code>ggplot2</code> package’s <code>README.md</code> (see <a href="staying-current.html#badges">Badges</a>), one of the badges indicated the version of the software that was available via CRAN - <code>2.2.1</code>. The initial <code>2</code> is what is known as the major release number. Major releases typically represent large changes to the software. The second number, also a <code>2</code> in this case, represents the minor release number. Minor releases introduce fewer changes and may be aimed more at fixing issues. Finally, the <code>1</code> represents the patch release number. Patch (or maintenance) releases are aimed exclusively at fixing bugs and issues.</p>
+<p>For the course, version numbers will also have three parts. From left to right, the first pair of digits represents the year of the current course offering, the second pair represents whether it the development status is (<code>1</code>) draft, (<code>2</code>) lecture, (<code>3</code>) full, and (<code>4</code>) updated, and the final number represents maintenance changes that do not rise to a change in the development status. For example, <code>v18.1.1</code> would represent the initial maintenance release for the 2018 version of a course that is in the draft development stage.</p>
+<p>If you see a version number like <code>v18.1.1.9000</code> in <code>NEWS.md</code>, the notes will be tracking changes that have not been incorporated into an official release yet. The use of the <code>9000</code> designation follows <a href="http://r-pkgs.had.co.nz/release.html">common practice in the <code>R</code> community</a>.</p>
 </div>
 <div id="slack" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Slack</h3>
