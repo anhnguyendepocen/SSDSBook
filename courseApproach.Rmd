@@ -88,7 +88,7 @@ I use badges on both the GitHub `README.md` files in individual lecture reposito
 knitr::include_graphics("images/ggplot2Readme.png")
 ```
 
-We can see from the first two badges that [continuous integration services](https://en.wikipedia.org/wiki/Continuous_integration) are used, and that `ggplot2` is only passing its tests on one of them. The third badge indicates that the built-in tests of `ggplot2` test 74% of the package's code. We can also see from the fourth badge that the current version of the software on CRAN is version 2.2.1 (as of December, 2017). Details like this are not critical when you are first learning to use `R`, but they grow more important as your data science skills progress.
+We can see from the first two badges that [continuous integration services](https://en.wikipedia.org/wiki/Continuous_integration) are used, and that `ggplot2` is only passing its tests on one of them. The third badge indicates that the built-in tests of `ggplot2` test 74% of the package's code. We can also see from the fourth badge that the current version of the software on CRAN is version 2.2.1 (as of December, 2017). Details like these are not critical when you are first learning to use `R`, but they grow more important as your data science skills progress.
 
 We use the following badges for our course repositories and on the course websites:
 
@@ -96,13 +96,19 @@ We use the following badges for our course repositories and on the course websit
 knitr::include_graphics("images/readmeBadges.png")
 ```
 
-Here is an example of how the badges look on a course repository. As of December 2017, the `README.md` associated with the [`Core-Documents` repository](https://github.com/slu-soc5050/Core-Documents) for [Quantitative Analysis](https://slu-soc5050.github.io) looked like this:
+Here is an example of how the badges look on a course repository. As of January 2018, the `README.md` associated with the [`Core-Documents` repository](https://github.com/slu-soc5050/Core-Documents) for [Quantitative Analysis](https://slu-soc5050.github.io) looked like this:
 
 ```{r echo=FALSE, fig.align="center", out.width = '95%'}
 knitr::include_graphics("images/readmeBadgesEx.png")
 ```
 
-We can see from the `README.md` that the contents are current for the Fall 2017 semester from the first badge. The second badge indicates that the contents have been updated since they were first released to students. Finally, we can also see that the last commit was made today (the day this screenshot was taken).
+The `README.md` badges, from left to right, indicate:
+
+1. **semester**: the contents are current for the Fall 2017 semester 
+2. **release**: the contents have been updated since they were first released to students
+3. **version**: the version number of the repository (see [Versioning] below) is `v17.4.2`
+4. **last commit**: the last time the repository was edited was the day the screenshot was taken
+5. **repo size**: the repository size is 2.46 megabytes (MB, see [this article](https://www.computerhope.com/issues/chspace.htm) for details on what computer disk drive size measurements mean)
 
 Here is an example of how the badges look on a course website. As of December 2017, the [Course Preview page](https://slu-soc5650.github.io/course-preview) for [GIS](https://slu-soc5650.github.io/) looked like this:
 
@@ -110,7 +116,26 @@ Here is an example of how the badges look on a course website. As of December 20
 knitr::include_graphics("images/webpageBadgesEx.png")
 ```
 
-From these two badges, we can see that the webpage is current for the Spring 2018 semester and that it is the full release - no updates additional are planned before the content is covered by students.
+From these two badges, we can see that the webpage is current for the Spring 2018 semester and that it is the full release - no additional updates are planned.
+
+### Versioning
+The versioning system used on course repositories is meant to emulate the release system used for data science software. Software development increasingly takes place on a website called [GitHub.com]. GitHub includes tools for packaging a repository at particular points in time. The release system allows developers to identify how an `R` package, for instance, has changed over time. This is important for reproducibility. For instance, you can see this example of the [release history for `ggplot2`](https://github.com/tidyverse/ggplot2/releases/tag/v2.2.0):
+
+```{r echo=FALSE, fig.align="center", out.width = '95%'}
+knitr::include_graphics("images/release.png")
+```
+
+The package's developers use the release system to document what has changed. We will emulate this with the `Core-Documents`, lecture, and `finalProject` repositories. For example, here is the release documentation for [SOC 4650/5650 `Core-Documents` repository](https://github.com/slu-soc5650/Core-Documents): 
+
+```{r echo=FALSE, fig.align="center", out.width = '95%'}
+knitr::include_graphics("images/releaseEx.png")
+```
+
+If you want to see what has changed over the course of the semester in a course's repositories, you can use the release notes to compare different versions. These notes are also stored in the `NEWS.md` file for each repository. The use of both releases and a `NEWS.md` file is a common way to document changes on GitHub. For example, you can see look at the [`NEWS.md` file for `ggplot2`](https://github.com/tidyverse/ggplot2/blob/master/NEWS.md), which will mirror the [release notes](https://github.com/tidyverse/ggplot2/releases) for the package. 
+
+The version numbers themselves have three parts. From left to right, the first pair of digits represents the year of the current course offering, the second pair represents whether it the development status is (1) draft, (2) lecture, (3) full, and (4) updated, and the final number represents incramental changes that do not rise to a change in the development status. For example, `v18.1.1` would represent the initial incremental release for the 2018 version of a course that is in the draft development stage.
+
+If you see a version number like `v18.1.1.9000` in `NEWS.md`, the notes will be tracking changes that have not been incorporated into an official release yet.
 
 ### Slack
 The `#_news` channel in each course's Slack organization will be automatically updated with a list of commit messages for each lecture repository. The updates will look like this:
@@ -119,6 +144,6 @@ The `#_news` channel in each course's Slack organization will be automatically u
 knitr::include_graphics("images/slackNews.png")
 ```
 
-You will be able to scan through commit messages for updates that might be relevant for you. From these messages, we can see that changes were made to the `LICENSE` (one of the meta documents) in the [`Core-Documents` repository](https://github.com/slu-soc5650/Core-Documents) for [GIS](https://slu-soc5650.github.io/). We can also see that a change was made to the Syllabus's content for the course.
+You will be able to scan through commit messages for updates that might be relevant for you. Commit messages are a core part of using Git, and are discussed in the [Basic Git] chapter. From these messages, we can see that changes were made to the `LICENSE` (one of the meta documents) in the [`Core-Documents` repository](https://github.com/slu-soc5650/Core-Documents) for [GIS](https://slu-soc5650.github.io/). We can also see that a change was made to the Syllabus's content for the course.
 
 I recommend scanning through all new messages in `#_news` each time you check in with the course on Slack. If you see changes, sync your repository (if you are keeping local copies) or download the updated document.
