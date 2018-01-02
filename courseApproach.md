@@ -22,7 +22,7 @@ I am fond of recommending the [**Getting Things Done**](http://gettingthingsdone
 The GTD website has a [great list of software](http://gettingthingsdone.com/common-tools-software/) for those of you looking for a to-do list application. One that isn't listed that I use for collaborating with my student research team is [Trello](https://trello.com), a freemium website that allows you to create simple to-do lists. It isn't sophisticated enough for implementing GTD, but it is more than sufficient for managing to-do lists related to this course.
 
 ### Managing Course Materials
-For both courses covered by this book, materials will be disseminated in physical and digital form. The topic of keeping digital materials organized is the subject of the next chapter. The physical handouts and materials that we'll give out will all come three hole punched, and you are expected to purchase a three-ring binder for this course. I give out enough handouts that, without a binder, it becomes difficult to keep track of where handouts are located. I have watched students spend more time looking for the handout than it takes to find the answer to their question once they have the handout itself.
+For both courses covered by this book, materials will be disseminated in physical and digital form. The topic of keeping digital materials organized is the subject of the next chapter [Protecting Your Work]. The physical handouts and materials that we'll give out will all come three hole punched, and you are expected to purchase a three-ring binder for this course. I give out enough handouts that, without a binder, it becomes difficult to keep track of where handouts are located. I have watched students spend more time looking for the handout than it takes to find the answer to their question once they have the handout itself.
 
 There are two recommended ways to keep your binder tidy. One is to organize by lecture. There are sixteen lectures worth of handouts in both courses (not including the course preview and the final research conference session), so two sets of dividers (which often come in packs of eight) should be sufficient. The other way to organize handouts is by topic. We hand out a number of different types of documents that could be organized thematically like so:
 
@@ -84,7 +84,7 @@ I use badges on both the GitHub `README.md` files in individual lecture reposito
 
 <img src="images/ggplot2Readme.png" width="95%" style="display: block; margin: auto;" />
 
-We can see from the first two badges that [continuous integration services](https://en.wikipedia.org/wiki/Continuous_integration) are used, and that `ggplot2` is only passing its tests on one of them. The third badge indicates that the built-in tests of `ggplot2` test 74% of the package's code. We can also see from the fourth badge that the current version of the software on CRAN is version 2.2.1 (as of December, 2017). Details like these are not critical when you are first learning to use `R`, but they grow more important as your data science skills progress.
+There are four badges in total, all of which sit under the `ggplot2` package name. We can see from the first two badges that [continuous integration services](https://en.wikipedia.org/wiki/Continuous_integration) are used, and that `ggplot2` is only passing its tests on one of them. The third badge indicates that the built-in tests for `ggplot2` test 74% of the package's code. We can also see from the fourth badge that the current version of the software on CRAN is version `2.2.1` (as of December, 2017). Details like these are not critical when you are first learning to use `R`, but they grow more important as your data science skills progress.
 
 We use the following badges for our course repositories and on the course websites:
 
@@ -102,11 +102,11 @@ The `README.md` badges, from left to right, represent the following:
 4. **last commit**: the last time the repository was edited was the day the screenshot was taken
 5. **repo size**: the repository size is 2.46 megabytes (MB, see [this article](https://www.computerhope.com/issues/chspace.htm) for details on what computer disk drive size measurements mean)
 
-Here is an example of how the badges look on a course website. As of December 2017, the [Course Preview page](https://slu-soc5650.github.io/course-preview) for [GIS](https://slu-soc5650.github.io/) looked like this:
+Here is an example of how the badges look on a course website. As of January 2018, the [Course Preview page](https://slu-soc5650.github.io/course-preview) for [GIS](https://slu-soc5650.github.io/) looked like this:
 
 <img src="images/webpageBadgesEx.png" width="95%" style="display: block; margin: auto;" />
 
-From these two badges, we can see that the webpage is current for the Spring 2018 semester and that it is the full release - no additional updates are planned.
+From these three badges, we can see that the webpage is current for the Spring 2018 semester and that it is the full release - no additional updates to the site are planned. Finally, we can see the date on which the page was last updated - December 29, 2017.
 
 ### Versioning
 The versioning system used on course repositories is meant to emulate the release system used for data science software. Software development increasingly takes place on a website called [GitHub.com]. GitHub includes tools for packaging a repository at particular points in time. The release system allows developers to identify how an `R` package, for instance, has changed over time. This is important for reproducibility. For instance, you can see this example of the [release history for `ggplot2`](https://github.com/tidyverse/ggplot2/releases/tag/v2.2.0):
