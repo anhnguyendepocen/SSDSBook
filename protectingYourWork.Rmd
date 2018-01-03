@@ -113,6 +113,19 @@ Use this as a home for `.pdf` copies of course readings. I suggest creating subd
 
 ## Organizing Projects
 
+```
+  /projectName
+    /data
+    /doc
+      notebook.md
+    /results
+      map1.png
+    /src
+    .gitignore
+    LICENSE.md
+    README.md
+```
+
 ## Backing Up Your Data
 There are a number of different ways to think about backing up your data. The most successful backup strategies will incorporate all of these elements.
 
