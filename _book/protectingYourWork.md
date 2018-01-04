@@ -34,7 +34,6 @@ Storing this directory inside a sync'd directory (like Dropbox or Google Drive) 
 
 macOS users should make sure that the external drive is formatted using the ExFat file system specification so that it is readable both by their operating system and the Windows operating system in the computer lab. If you buy a new drive, you will likely have to re-format it. Directions for doing so are [available from Apple](https://support.apple.com/kb/PH22241?locale=en_US).
 
-
 ### Approach Organizing Systematically
 Within your single course directory, I recommend following a mindful, purposeful approach to organization. This approach begins with having a number of dedicated subfolders within your course directory:
 
@@ -112,19 +111,46 @@ Use this as a home for `.pdf` copies of course readings. I suggest creating subd
 ```
 
 ## Organizing Projects
+Following the excellent article [*Good enough practices in scientific computing*](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510) (Wilson et al. 2017), I suggest data science projects should be organized in a specific, standardized way. Much as I suggested above that course files reside in one and only one place, projects should be organized similarly (with one important caveat below). What follows is a sample project and then descriptions of each element. 
+
+### A Sample Project
+The project below contains all of key elements of a small geospatial research project:
 
 ```
   /projectName
     /data
+      rawData.csv
+      rawTracts.shp
+      joinedTracts.shp
     /doc
-      notebook.md
+      joinedTracts.md
+      notebook.Rmd
+      researchLog.md
+    /maps
+      map.mxd
     /results
-      map1.png
+      map.png
     /src
-    .gitignore
+      script.R
     LICENSE.md
     README.md
 ```
+
+### Top-Level Files
+At least two files should be present in each project directory - a 
+
+### The `data` Subdirectory
+
+### The `doc` Subdirectory
+
+### The `maps` Subdirectory
+
+### The `results` Subdirectory
+
+### The `src` Subdirectory
+
+### Organizing Coursework
+For [Introduction to Geographic Information Science (SOC 4650/5650)](https://slu-soc5650.github.io) and [Quantitative Analysis: Applied Inferential Statistics (SOC 4930/5050)](https://slu-soc5050.github.io), problem sets and the final project should both be organized following the general template above.
 
 ## Backing Up Your Data
 There are a number of different ways to think about backing up your data. The most successful backup strategies will incorporate all of these elements.
