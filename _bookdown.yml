@@ -10,8 +10,8 @@ rmd_files: [
   "intro.Rmd",
 
   "courseApproach.Rmd",
-  "protectingYourWork.Rmd",
   "goodPractices.Rmd",
+  "protectingYourWork.Rmd",
   "gettingHelp.Rmd",
 
   "toolkitOverview.Rmd",
