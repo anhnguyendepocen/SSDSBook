@@ -29,7 +29,8 @@ Markdown contains six heading levels. Headings are identified with `#` symbols a
 ```
 
 **Output:**
-<img src="images/markdownHead.png" width="50%" style="display: block; margin: auto auto auto 0;" />
+
+\begin{flushleft}\includegraphics[width=0.5\linewidth]{images/markdownHead} \end{flushleft}
 
 ### New Paragraphs
 Leave a blank line between two paragraphs to create a break.
