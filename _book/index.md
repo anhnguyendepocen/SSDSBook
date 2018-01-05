@@ -1,7 +1,7 @@
 --- 
 title: "Sociospatial Data Science"
 author: "Christopher Prener, Ph.D."
-date: "2018-01-04"
+date: "2018-01-05"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
