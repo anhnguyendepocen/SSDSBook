@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="good-enough-research-practices.html">
-<link rel="next" href="thinking-in-workflows.html">
+<link rel="prev" href="data-1.html">
+<link rel="next" href="version-control.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -230,36 +230,17 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reproducibility" class="section level2">
-<h2><span class="header-section-number">3.1</span> Reproducibility</h2>
-<p>One of the mantras of this text is an emphasis on reproducibility. The unifying feature of all of the “good enough” research practices discussed below is that they contribute to a more reproducible research product.</p>
-<p>Reproducibility is very much in vogue right now for number of reasons. <a href="http://science.sciencemag.org/content/349/6251/aac4716">Assessments of studies in psychology</a><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, for example, have found weaker on average effect sizes and far fewer statistically significant results than the initial studies reported. There have also been high profile instances of falsified research, including <a href="http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html">research by a graduate student at UCLA</a>. This particular instance of fraud was identified by graduate students intent on replicating the original study.</p>
-<p>At the same time, there is a recognition that the skills necessary for producing reproducible research are not being fostered in academic disciplines and graduate programs. Thus one of the goals of this course, and this <strong>User’s Guide</strong> in particular, is to help develop a working knowledge of many of these skills.</p>
-<p>One challenge, however, is that reproducibility does not have a consistent definition. Some researchers use the term to narrowly refer to code that can execute without alteration on a person’s computer. Others use it to refer to research designs that can be replicated by other researchers. Still others discuss reproducibility as the ability to obtain a similar set of results or draw similar inferences from identical research designs.</p>
-<p>When we talk about reproducibility in this class. We’ll be primarily concerned with <strong>methods reproducibility</strong>:</p>
-<blockquote>
-<p>the ability to implement, as exactly as possible, the experimental and computational procedures, with the same data and tools, to obtain the same results.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
-</blockquote>
-<p>Methods reproducibility in statistics means that other analysts have full access to both the original data and the steps used to render those original data into a final research product, such as a set of regression models This is increasingly seen not just a matter of good research methodology, but as a matter of research ethics as well. Being able to be transparent with research decreases the potential for cases like the <a href="http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html">fraudulent dissertation research conducted by a UCLA graduate student named Michael LaCour</a>. It was the efforts of <a href="https://fivethirtyeight.com/features/how-two-grad-students-uncovered-michael-lacour-fraud-and-a-way-to-change-opinions-on-transgender-rights/">two Stanford graduate students who wanted to reproduce LaCour’s findings</a> that ultimately led to the identification of problematic work.</p>
-<p>For statistics, methods reproducibility is derived from a number of sources. The first source is the use of <strong>computer code</strong> for working with data. Rather than making manual changes to tabular data in a spreadsheet application like Microsoft Excel, computer code provides detailed records of each individual alterations. Code can be used execute tasks repeatedly, meaning that errors can be easily fixed if they are discovered an hour, a day, a week, or a month later. During this semester, we’ll use <code>R</code>’s programming language to execute reproducible data cleaning processes.</p>
-<p>The second source of reproducibility in statistics is therefore derived from the <strong>documentation</strong> that we create to accompany our research products. These documents outline where our data originated, what specific variables mean (a codebook), what steps were taken to create specific maps (a research log), and how our data files are organized (a metadictionary).</p>
-<p>Our code can also be used as documentation if it is written using <a href="https://en.wikipedia.org/wiki/Literate_programming">literate programming</a> techniques. In <code>R</code>, these techniques produce well annotated output that “weaves” together code, output, and narrative text that describes the function of the code and the results of the output.</p>
-<p>The third and final primary source of reproducibility in statistics is derived from our <strong>organizational approach</strong> to our work. Statistics projects can require many megabytes of data spread across dozens of data files, scripts, and output files. A disorganized file system can make replicating your work difficult if not impossible. Much of the research practices discussed in the remainder of this section are aimed at supporting one or more of these three major sources of reproducibility.</p>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Open Science Collaboration, 2015. Estimating the reproducibility of psychological science. <em>Science</em>, 349(6251), p.aac4716.<a href="reproducibility.html#fnref1">↩</a></p></li>
-<li id="fn2"><p>Goodman, S.N., Fanelli, D. and Ioannidis, J.P., 2016. What does research reproducibility mean?. <em>Science translational medicine</em>, 8(341), pp.341ps12-341ps12.<a href="reproducibility.html#fnref2">↩</a></p></li>
-</ol>
+<div id="plain-text" class="section level2">
+<h2><span class="header-section-number">3.4</span> Plain Text</h2>
+<p>Along with creating the data we wish to see, <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510"><em>Good enough practices in scientific computing</em></a> (Wilson et al. 2017) repeatedly emphasizes the importance of using plain text files for writing as well as for data. Using plain text file formats, like <code>.txt</code> and <code>.md</code> files, frees us from reliance on proprietary applications that we cannot be sure will exist in ten or twenty years (and are thus threats to reproducible research). They can also be opened on virtually any computer across a variety of operating systems. The authors of the article reference <a href="markdown.html#markdown">Markdown</a> files, which a really just plain-text files containing special characters that can be rendered by websites and other applications. <a href="markdown.html#markdown">Markdown</a>, which is discussed later in this text, provides us with the best of both worlds. We can produce outputs with rich text like styling but that is saved in a plain text file container. Writing in a markup language can seem daunting at first, but within a few weeks I have found that most people can start to feel comfortable inserting markup syntax without significant cognitive burden.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="good-enough-research-practices.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="thinking-in-workflows.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="version-control.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
