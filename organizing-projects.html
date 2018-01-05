@@ -49,6 +49,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -110,6 +147,8 @@
 <li class="chapter" data-level="3.1" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>3.1</b> Reproducibility</a></li>
 <li class="chapter" data-level="3.2" data-path="thinking-in-workflows.html"><a href="thinking-in-workflows.html"><i class="fa fa-check"></i><b>3.2</b> Thinking in Workflows</a></li>
 <li class="chapter" data-level="3.3" data-path="data-1.html"><a href="data-1.html"><i class="fa fa-check"></i><b>3.3</b> Data</a></li>
+<li class="chapter" data-level="3.4" data-path="plain-text.html"><a href="plain-text.html"><i class="fa fa-check"></i><b>3.4</b> Plain Text</a></li>
+<li class="chapter" data-level="3.5" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3.5</b> Version Control</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="protecting-your-work.html"><a href="protecting-your-work.html"><i class="fa fa-check"></i><b>4</b> Protecting Your Work</a><ul>
 <li class="chapter" data-level="4.1" data-path="threats-to-our-data.html"><a href="threats-to-our-data.html"><i class="fa fa-check"></i><b>4.1</b> Threats To Our Data</a></li>
@@ -166,24 +205,21 @@
 <li class="chapter" data-level="7" data-path="markdown.html"><a href="markdown.html"><i class="fa fa-check"></i><b>7</b> Markdown</a><ul>
 <li class="chapter" data-level="7.1" data-path="document-organization.html"><a href="document-organization.html"><i class="fa fa-check"></i><b>7.1</b> Document Organization</a><ul>
 <li class="chapter" data-level="7.1.1" data-path="document-organization.html"><a href="document-organization.html#headings"><i class="fa fa-check"></i><b>7.1.1</b> Headings</a></li>
+<li class="chapter" data-level="7.1.2" data-path="document-organization.html"><a href="document-organization.html#new-paragraphs"><i class="fa fa-check"></i><b>7.1.2</b> New Paragraphs</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="this-is-the-second-largest-heading.html"><a href="this-is-the-second-largest-heading.html"><i class="fa fa-check"></i><b>7.2</b> This is the second largest heading</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="this-is-the-second-largest-heading.html"><a href="this-is-the-second-largest-heading.html#this-is-the-third-largest-heading"><i class="fa fa-check"></i><b>7.2.1</b> This is the third largest heading</a></li>
-<li class="chapter" data-level="7.2.2" data-path="this-is-the-second-largest-heading.html"><a href="this-is-the-second-largest-heading.html#new-paragraphs"><i class="fa fa-check"></i><b>7.2.2</b> New Paragraphs</a></li>
+<li class="chapter" data-level="7.2" data-path="working-with-text.html"><a href="working-with-text.html"><i class="fa fa-check"></i><b>7.2</b> Working with Text</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="working-with-text.html"><a href="working-with-text.html#styling-text"><i class="fa fa-check"></i><b>7.2.1</b> Styling Text</a></li>
+<li class="chapter" data-level="7.2.2" data-path="working-with-text.html"><a href="working-with-text.html#quoting-text"><i class="fa fa-check"></i><b>7.2.2</b> Quoting Text</a></li>
+<li class="chapter" data-level="7.2.3" data-path="working-with-text.html"><a href="working-with-text.html#quoting-code"><i class="fa fa-check"></i><b>7.2.3</b> Quoting Code</a></li>
+<li class="chapter" data-level="7.2.4" data-path="working-with-text.html"><a href="working-with-text.html#links"><i class="fa fa-check"></i><b>7.2.4</b> Links</a></li>
+<li class="chapter" data-level="7.2.5" data-path="working-with-text.html"><a href="working-with-text.html#embedding-images"><i class="fa fa-check"></i><b>7.2.5</b> Embedding Images</a></li>
+<li class="chapter" data-level="7.2.6" data-path="working-with-text.html"><a href="working-with-text.html#simple-lists"><i class="fa fa-check"></i><b>7.2.6</b> Simple Lists</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="working-with-text.html"><a href="working-with-text.html"><i class="fa fa-check"></i><b>7.3</b> Working with Text</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="working-with-text.html"><a href="working-with-text.html#styling-text"><i class="fa fa-check"></i><b>7.3.1</b> Styling Text</a></li>
-<li class="chapter" data-level="7.3.2" data-path="working-with-text.html"><a href="working-with-text.html#quoting-text"><i class="fa fa-check"></i><b>7.3.2</b> Quoting Text</a></li>
-<li class="chapter" data-level="7.3.3" data-path="working-with-text.html"><a href="working-with-text.html#quoting-code"><i class="fa fa-check"></i><b>7.3.3</b> Quoting Code</a></li>
-<li class="chapter" data-level="7.3.4" data-path="working-with-text.html"><a href="working-with-text.html#links"><i class="fa fa-check"></i><b>7.3.4</b> Links</a></li>
-<li class="chapter" data-level="7.3.5" data-path="working-with-text.html"><a href="working-with-text.html#embedding-images"><i class="fa fa-check"></i><b>7.3.5</b> Embedding Images</a></li>
-<li class="chapter" data-level="7.3.6" data-path="working-with-text.html"><a href="working-with-text.html#simple-lists"><i class="fa fa-check"></i><b>7.3.6</b> Simple Lists</a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="github-markdown.html"><a href="github-markdown.html"><i class="fa fa-check"></i><b>7.4</b> GitHub Markdown</a><ul>
-<li class="chapter" data-level="7.4.1" data-path="github-markdown.html"><a href="github-markdown.html#styling-text-1"><i class="fa fa-check"></i><b>7.4.1</b> Styling Text</a></li>
-<li class="chapter" data-level="7.4.2" data-path="github-markdown.html"><a href="github-markdown.html#tables"><i class="fa fa-check"></i><b>7.4.2</b> Tables</a></li>
-<li class="chapter" data-level="7.4.3" data-path="github-markdown.html"><a href="github-markdown.html#task-lists"><i class="fa fa-check"></i><b>7.4.3</b> Task Lists</a></li>
-<li class="chapter" data-level="7.4.4" data-path="github-markdown.html"><a href="github-markdown.html#mentioning-other-github-users"><i class="fa fa-check"></i><b>7.4.4</b> Mentioning Other GitHub Users</a></li>
+<li class="chapter" data-level="7.3" data-path="github-markdown.html"><a href="github-markdown.html"><i class="fa fa-check"></i><b>7.3</b> GitHub Markdown</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="github-markdown.html"><a href="github-markdown.html#styling-text-1"><i class="fa fa-check"></i><b>7.3.1</b> Styling Text</a></li>
+<li class="chapter" data-level="7.3.2" data-path="github-markdown.html"><a href="github-markdown.html#tables"><i class="fa fa-check"></i><b>7.3.2</b> Tables</a></li>
+<li class="chapter" data-level="7.3.3" data-path="github-markdown.html"><a href="github-markdown.html#task-lists"><i class="fa fa-check"></i><b>7.3.3</b> Task Lists</a></li>
+<li class="chapter" data-level="7.3.4" data-path="github-markdown.html"><a href="github-markdown.html#mentioning-other-github-users"><i class="fa fa-check"></i><b>7.3.4</b> Mentioning Other GitHub Users</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="basic-git.html"><a href="basic-git.html"><i class="fa fa-check"></i><b>8</b> Basic Git</a><ul>
