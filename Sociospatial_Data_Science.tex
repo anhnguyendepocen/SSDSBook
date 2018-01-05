@@ -81,6 +81,9 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
@@ -124,7 +127,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-12-29}
+  \date{2018-01-05}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -247,10 +250,10 @@ are broadly applicable across methodologies and disciplines.
 Copyright © 2016-2018 \href{https://chris-prener.github.io}{Christopher
 G. Prener}
 
-This work is licensed under a Creative Commons Attribution 4.0
-International License.
+This work is licensed under a Creative Commons Attribution-ShareAlike
+4.0 International License.
 
-\chapter{Introduction}\label{intro}
+\hypertarget{intro}{\chapter{Introduction}\label{intro}}
 
 The first part of this text is designed to help get you oriented to
 coursework in computational social science. Both
@@ -265,6 +268,90 @@ disciplines both inside and outside of the social sciences has come to
 be known as data science. Both courses are taught from this perspective,
 so that while we focus on social science data, the tools and techniques
 are broadly applicable across disciplines.
+
+\section{Opinionated Processes}\label{opinionated-processes}
+
+This text, and both of the courses it is written with an eye towards, is
+meant to be ``opinionated''. We'll introduce a high level definition of
+opinionated process here, and discuss how these ideas might fit into
+previous coursework you've taken.
+
+\subsection{Opinionated Analysis
+Development}\label{opinionated-analysis-development}
+
+The idea of research being opinionated is something we borrow from
+\href{https://twitter.com/hspter}{Hiliary Parker}, who has been
+developing the idea of
+\href{https://peerj.com/preprints/3210/}{``opinionated analysis
+development''} over the last several years. Parker (2017) argues that
+opinionated analysis development is a guard against human errors in data
+analysis that are common but preventable. She emphasizes process
+repeatedly because, in her view, errors in data analysis are often the
+result of poor process (and not the individual failures of an analyst).
+
+Following Hilary's lead, we will also make process a cornerstone of our
+coursework. This emphasis on process is not routine in research methods
+courses (Long 2009), which often treat methods and techniques in
+isolation and leave much about how they fit together to be learned ``the
+hard way''. A common experience with statistics coursework is that
+students will learn the assumptions and requirements of various tests,
+but not how to fit them together to produce a well-conceptualized
+analysis. Thus, students working on their first research projects often
+feel personal responsibility for errors ``despite not being taught
+processes that protect against them'' (Parker 2017:2).
+
+Parker (2017) lays out three core areas for analysis development.
+Analyses should be (1) reproducible and auditable, (2) accurate, and (3)
+collaborative. She also provides a set of opinions and questions about
+each of these these categories. Projects that are both reproducible and
+auditable, for example, should be driven by executable analysis scripts
+with clearly defined dependencies. Projects that are accurate should use
+modular, tested code and should assertively test data, assumptions, and
+results. Finally, projects that are collaborative should use version
+control software for project management, should have the ability to
+track issues, and should allow for communications that can be archived
+easily.
+
+This text introduces strategies and techniques for implementing these
+opinions in data science research, with special emphasis on doing so in
+social science and geospatial projects. While these ideas appear in
+nearly every chapter, the chapter on
+\protect\hyperlink{good-enough-research-practices}{``Good Enough''
+Research Practices} pays particular attention to these concepts in
+greater detail.
+
+\subsection{Contextualizing These
+Ideas}\label{contextualizing-these-ideas}
+
+Each time I teach a research methods course, I have students with a mix
+of experiences. For some students, all of these concepts and techniques
+are new and they therefore do not have a strong conception of what it
+means to do research. For other students, particularly those with
+research experience, these ideas can directly conflict with how they
+have been taught in the past and how they work. For everyone, these
+ideas require a greater mindfulness and attention to detail than they
+are used to.
+
+Occasionally, students react strongly to these ideas. For example, these
+opinions could be interpreted as an indictment of students' own
+processes or seen as a desire to micromanage. Others could see the focus
+on process as misplaced. After all, as long as the final product looks
+good, what does it matter how organized the analyst's hard drive is (or
+isn't)? If you feel like this at any point in the semester, I can
+sympathize greatly. I remember the frustration I felt the first time I
+was told that I didn't name variables well and that my code was written
+in a way that was hard to read.
+
+What I didn't understand at the time, and what I strive to emphasize
+now, is that process cannot be separated from product. If the process is
+unclear, undefined, or disorganized, our faith in the final product
+should be diminished because these flaws limit our ability to judge its
+accuracy. Thus being ``right'' is not solely a judgement of the final
+results but also how they were obtained. This emphasis on process is
+inherently more time consuming, slower, and more deliberate than a
+slapdash approach to data analysis. Our goal is not to conduct data
+science work in the easiest way, however, it is to conduct it in the
+most robust way possible.
 
 \section{What is data science?}\label{what-is-data-science}
 
@@ -298,7 +385,7 @@ inference from our data. It is the main subject of one my courses,
 \href{https://slu-soc5050.github.io}{Quantitative Analysis}. In
 \href{https://slu-soc5650.github.io}{Introduction to GIS}, we do not
 explicitly cover much in the way of inferential statistics. However, the
-course is desinged to prepare you for a next level, Intermediate GIS
+course is designed to prepare you for a next level, Intermediate GIS
 course that covers spatial statistics.
 
 \subsection{Programming}\label{programming}
@@ -340,7 +427,7 @@ the same fundamental skills to build simple maps in \texttt{R}. We will
 extend our emphasis on visualization to ArcGIS, where we will focus on
 producing cartographically rich depictions of our data.
 
-Separetely, we will discuss the presentation of statistical data in
+Separately, we will discuss the presentation of statistical data in
 tables using \href{https://en.wikipedia.org/wiki/LaTeX}{LaTex} in
 \href{https://slu-soc5050.github.io}{Quantitative Analysis} as well as
 the producing to conference-style presentations to communicate research
@@ -380,8 +467,8 @@ and cheat-sheets, I may highlight a command by using a particular color
 to increase the visibility of the command name itself.
 
 The \texttt{typewriter\ typeface} is also used to refer to functions
-(e.g. \texttt{library()}), filenames (e.g. \texttt{mpg.csv}) or
-filepaths (e.g.
+(e.g. \texttt{library()}), file names (e.g. \texttt{mpg.csv}) or file
+paths (e.g.
 \texttt{C:\textbackslash{}Users\textbackslash{}JSmith\textbackslash{}Desktop}).
 Finally, we will use the \texttt{typewriter\ typeface} to refer to
 GitHub repositories (e.g. \texttt{Core-Documents}, the repository that
@@ -392,7 +479,8 @@ is meant to be replaced. These references will typically appear in a
 \texttt{typewriter\ typeface} since they are often part of commands. For
 example, \texttt{str(dataFrame)} (with \texttt{dataFrame}
 \emph{italicized}) indicates that you should replace the text
-\texttt{dataFrame} with the appropriate variable name from your dataset.
+\texttt{dataFrame} with the appropriate variable name from your data
+set.
 
 These publications also use a sans serif typeface to refer to areas of
 the user interface, menu items, and buttons. I cannot replicate that
@@ -459,10 +547,10 @@ be easily identified by their use of the \texttt{typewriter\ typeface}:
 \end{Highlighting}
 \end{Shaded}
 
-Examples will almost always use the dataframe \texttt{stlLead}, which
+Examples will almost always use the data frame \texttt{stlLead}, which
 comes with the \texttt{stlData} package. To open it, simply load the
 \texttt{stlData} package using the \texttt{library()} function and then
-start referencing \texttt{stlLead} anytime you need a dataframe. This
+start referencing \texttt{stlLead} anytime you need a data frame. This
 allows you to easily recreate examples by minimizing dependencies within
 your code.
 
@@ -489,9 +577,9 @@ applicable in a far wider arena.
 of Data Analysis}\label{zen-and-the-art-of-data-analysis}}
 
 One of the biggest challenges with this course can be controlling the
-anxiety that comes along with learning new skills. \texttt{R} synatx,
+anxiety that comes along with learning new skills. \texttt{R} syntax,
 GIS terms, LaTeX commands, and Markdown can seem like foreign alphabets
-at first. Debugging \texttt{R} synatx can be both challenging and a
+at first. Debugging \texttt{R} syntax can be both challenging and a
 large time suck, in part because you are not yet fluent with this
 language. Imagine trying to proofread a document written in a language
 that you only know in a cursory way but where you must find minute
@@ -515,7 +603,7 @@ also include the mental habits needed for
 \protect\hyperlink{getting-and-staying-organized}{Getting and Staying
 Organized} and strategies for \protect\hyperlink{getting-help}{Getting
 Help} as you navigate the inevitable errors that come with learning new
-analytical skills.
+analytically skills.
 
 \hypertarget{getting-and-staying-organized}{\section{Getting and Staying
 Organized}\label{getting-and-staying-organized}}
@@ -524,9 +612,9 @@ Doing data science work, and having the space to step away for a day as
 the last section suggests, requires discipline and organization.
 Similarly, computational coursework can demanding not just because it is
 complex but because the courses often have a number of moving pieces
-that you need to keep track of. Being mindful of this challenege from
-the beginning, and taking steps to plan for it, is an important part of
-this course.
+that you need to keep track of. Being mindful of this challenge from the
+beginning, and taking steps to plan for it, is an important part of this
+course.
 
 \subsection{Keeping Track of Where You
 Are}\label{keeping-track-of-where-you-are}
@@ -543,7 +631,7 @@ to-do list manager. The point is, do \emph{something}!
 
 I am fond of recommending the
 \href{http://gettingthingsdone.com}{\textbf{Getting Things Done}}
-methodology to students as part of thinking more wholistically about
+methodology to students as part of thinking more holistically about
 staying organized. The website \href{https://lifehacker.com}{Lifehacker}
 posted an
 \href{https://lifehacker.com/productivity-101-a-primer-to-the-getting-things-done-1551880955}{excellent
@@ -562,14 +650,15 @@ lists related to this course.
 \subsection{Managing Course Materials}\label{managing-course-materials}
 
 For both courses covered by this book, materials will be disseminated in
-physical and digitial form. The topic of keeping digitial materials
-organized is the subject of the next chapter. The physical handouts and
-materials that we'll give out will all come three hole punched, and you
-are expected to purchase a three-ring binder for this course. I give out
-enough handouts that, without a binder, it becomes difficult to keep
-track of where handouts are located. I have watched students spend more
-time looking for the handout than it takes to find the answer to their
-question once they have the handout itself.
+physical and digital form. The topic of keeping digital materials
+organized is the subject of the next chapter
+\protect\hyperlink{protecting-your-work}{Protecting Your Work}. The
+physical handouts and materials that we'll give out will all come three
+hole punched, and you are expected to purchase a three-ring binder for
+this course. I give out enough handouts that, without a binder, it
+becomes difficult to keep track of where handouts are located. I have
+watched students spend more time looking for the handout than it takes
+to find the answer to their question once they have the handout itself.
 
 There are two recommended ways to keep your binder tidy. One is to
 organize by lecture. There are sixteen lectures worth of handouts in
@@ -603,7 +692,8 @@ be organized thematically like so:
 \end{enumerate}
 
 Since there are approximately eight different types of handouts in each
-class, a single package of dividers should be sufficient.
+class, a single package of dividers should be sufficient for this
+approach to organizing them.
 
 I don't think that one way of organization, thematically or temporally,
 is inherently better or worse than the other. In large part it comes
@@ -673,15 +763,15 @@ particular skill is warranted first before focusing on \emph{how} to
 execute that skill
 
 Getting experience with executing tasks is the purpose of the
-\textbf{lab exercises}. These are narrlowly defined and focused on
+\textbf{lab exercises}. These are narrowly defined and focused on
 building your confidence with the specific skills introduced each week.
 Time for beginning these exercises is given at the end of each class
 meeting, and replication files will be posted on GitHub for each lab. I
 suggest that students do not look at replication files until they are
 truly stumped. Spend some time wrestling with problems and code, and
 experiment with the trouble shooting process, when the stakes are low
-and you have a saftey-net to catch you. This will prepare you to respond
-to issues on the problem sets in a more resiliant way.
+and you have a safety-net to catch you. This will prepare you to respond
+to issues on the problem sets in a more resilient way.
 
 \subsection{Problem Sets}\label{problem-sets}
 
@@ -698,8 +788,8 @@ assignments.
 \subsection{An Apple a Day}\label{an-apple-a-day}
 
 As I noted above, some degree of frustration with these courses is to be
-expected - funtions in \texttt{R} will not work as intended, for
-example, and the ambiguity of error messages can be excruicating. I
+expected - functions in \texttt{R} will not work as intended, for
+example, and the ambiguity of error messages can be excruciating. I
 suggested above that you build into your approach to the course time to
 walk away from assignments if you hit a wall. Being able to walk away
 from an assignment for a day requires excellent time management. If you
@@ -757,7 +847,7 @@ you are working off of materials for the current semester and not the
 last semester the course was taught. There are two ways in which I help
 communicate the status of course content - badges and Slack.
 
-\subsection{Badges}\label{badges}
+\hypertarget{badges}{\subsection{Badges}\label{badges}}
 
 I use badges on both the GitHub \texttt{README.md} files in individual
 lecture repositories and on individual lecture webpages to signal which
@@ -771,15 +861,17 @@ development, where badges are used to signal development status on
 
 \begin{center}\includegraphics[width=0.95\linewidth]{images/ggplot2Readme} \end{center}
 
-We can see from the first two badges that
+There are four badges in total, all of which sit under the
+\texttt{ggplot2} package name. We can see from the first two badges that
 \href{https://en.wikipedia.org/wiki/Continuous_integration}{continuous
 integration services} are used, and that \texttt{ggplot2} is only
 passing its tests on one of them. The third badge indicates that the
-built-in tests of \texttt{ggplot2} test 74\% of the package's code. We
+built-in tests for \texttt{ggplot2} test 74\% of the package's code. We
 can also see from the fourth badge that the current version of the
-software on CRAN is version 2.2.1 (as of December, 2017). Details like
-this are not critical when you are first learning to use \texttt{R}, but
-they grow more important as your data science skills progress.
+software on CRAN is version \texttt{2.2.1} (as of December, 2017).
+Details like these are not critical when you are first learning to use
+\texttt{R}, but they grow more important as your data science skills
+progress.
 
 We use the following badges for our course repositories and on the
 course websites:
@@ -787,29 +879,113 @@ course websites:
 \begin{center}\includegraphics[width=0.95\linewidth]{images/readmeBadges} \end{center}
 
 Here is an example of how the badges look on a course repository. As of
-December 2017, the \texttt{README.md} associated with the
+January 2018, the \texttt{README.md} associated with the
 \href{https://github.com/slu-soc5050/Core-Documents}{\texttt{Core-Documents}
 repository} for \href{https://slu-soc5050.github.io}{Quantitative
 Analysis} looked like this:
 
 \begin{center}\includegraphics[width=0.95\linewidth]{images/readmeBadgesEx} \end{center}
 
-We can see from the \texttt{README.md} that the contents are current for
-the Fall 2017 semester from the first badge. The second badge indicates
-that the contents have been updated since they were first released to
-students. Finally, we can also see that the last commit was made today
-(the day this screenshot was taken).
+The \texttt{README.md} badges, from left to right, represent the
+following:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{semester}: the contents are current for the Fall 2017 semester
+\item
+  \textbf{release}: the contents have been updated since they were first
+  released to students
+\item
+  \textbf{version}: the version number of the repository (see
+  \protect\hyperlink{versioning}{Versioning} below) is \texttt{v17.4.2}
+\item
+  \textbf{last commit}: the last time the repository was edited was the
+  day the screenshot was taken
+\item
+  \textbf{repo size}: the repository size is 2.46 megabytes (MB, see
+  \href{https://www.computerhope.com/issues/chspace.htm}{this article}
+  for details on what computer disk drive size measurements mean)
+\end{enumerate}
 
 Here is an example of how the badges look on a course website. As of
-December 2017, the
+January 2018, the
 \href{https://slu-soc5650.github.io/course-preview}{Course Preview page}
 for \href{https://slu-soc5650.github.io/}{GIS} looked like this:
 
 \begin{center}\includegraphics[width=0.95\linewidth]{images/webpageBadgesEx} \end{center}
 
-From these two badges, we can see that the webpage is current for the
-Spring 2018 semester and that it is the full release - no updates
-additional are planned before the content is covered by students.
+From these three badges, we can see that the webpage is current for the
+Spring 2018 semester and that it is the full release - no additional
+updates to the site are planned. Finally, we can see the date on which
+the page was last updated - December 29, 2017.
+
+\hypertarget{versioning}{\subsection{Versioning}\label{versioning}}
+
+The versioning system used on course repositories is meant to emulate
+the release system used for data science software. Software development
+increasingly takes place on a website called
+\protect\hyperlink{github.com}{GitHub.com}. GitHub includes tools for
+packaging a repository at particular points in time. The release system
+allows developers to identify how an \texttt{R} package, for instance,
+has changed over time. This is important for reproducibility. For
+instance, you can see this example of the
+\href{https://github.com/tidyverse/ggplot2/releases/tag/v2.2.0}{release
+history for \texttt{ggplot2}}:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/release} \end{center}
+
+The package's developers use the release system to document what has
+changed. We will emulate this with the \texttt{Core-Documents}, lecture,
+and \texttt{finalProject} repositories. For example, here is the release
+documentation for
+\href{https://github.com/slu-soc5650/Core-Documents}{SOC 4650/5650
+\texttt{Core-Documents} repository}:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/releaseEx} \end{center}
+
+If you want to see what has changed over the course of the semester in a
+course's repositories, you can use the release notes to compare
+different versions. These notes are also stored in the \texttt{NEWS.md}
+file for each repository. The use of both releases and a
+\texttt{NEWS.md} file is a common way to document changes on GitHub. For
+example, you can see look at the
+\href{https://github.com/tidyverse/ggplot2/blob/master/NEWS.md}{\texttt{NEWS.md}
+file for \texttt{ggplot2}}, which will mirror the
+\href{https://github.com/tidyverse/ggplot2/releases}{release notes} for
+the package.
+
+In software development,
+\href{https://en.wikipedia.org/wiki/Software_versioning}{version
+numbers} are used along with releases to make it easy for end users to
+keep track of how releases have progressed. In the picture above of the
+\texttt{ggplot2} package's \texttt{README.md} (see
+\protect\hyperlink{badges}{Badges}), one of the badges indicated the
+version of the software that was available via CRAN - \texttt{2.2.1}.
+The initial \texttt{2} is what is known as the major release number.
+Major releases typically represent large changes to the software. The
+second number, also a \texttt{2} in this case, represents the minor
+release number. Minor releases introduce fewer changes and may be aimed
+more at fixing issues. Finally, the \texttt{1} represents the patch
+release number. Patch (or maintenance) releases are aimed exclusively at
+fixing bugs and issues.
+
+For the course, version numbers will also have three parts. From left to
+right, the first pair of digits represents the year of the current
+course offering, the second pair represents whether it the development
+status is (\texttt{1}) draft, (\texttt{2}) lecture, (\texttt{3}) full,
+and (\texttt{4}) updated, and the final number represents maintenance
+changes that do not rise to a change in the development status. For
+example, \texttt{v18.1.1} would represent the initial maintenance
+release for the 2018 version of a course that is in the draft
+development stage.
+
+If you see a version number like \texttt{v18.1.1.9000} in
+\texttt{NEWS.md}, the notes will be tracking changes that have not been
+incorporated into an official release yet. The use of the \texttt{9000}
+designation follows \href{http://r-pkgs.had.co.nz/release.html}{common
+practice in the \texttt{R} community}.
 
 \subsection{Slack}\label{slack}
 
@@ -820,8 +996,10 @@ repository. The updates will look like this:
 \begin{center}\includegraphics[width=0.95\linewidth]{images/slackNews} \end{center}
 
 You will be able to scan through commit messages for updates that might
-be relevant for you. From these messages, we can see that changes were
-made to the \texttt{LICENSE} (one of the meta documents) in the
+be relevant for you. Commit messages are a core part of using Git, and
+are discussed in the \protect\hyperlink{basic-git}{Basic Git} chapter.
+From these messages, we can see that changes were made to the
+\texttt{LICENSE} (one of the meta documents) in the
 \href{https://github.com/slu-soc5650/Core-Documents}{\texttt{Core-Documents}
 repository} for \href{https://slu-soc5650.github.io/}{GIS}. We can also
 see that a change was made to the Syllabus's content for the course.
@@ -831,17 +1009,304 @@ time you check in with the course on Slack. If you see changes, sync
 your repository (if you are keeping local copies) or download the
 updated document.
 
-\chapter{Protecting Your Work}\label{protecting-your-work}
+\hypertarget{good-enough-research-practices}{\chapter{\texorpdfstring{``Good
+Enough'' Research
+Practices}{Good Enough Research Practices}}\label{good-enough-research-practices}}
 
-I believe that one of the biggest challenges to with doing computational
-work is that it requires a high degree of organization. Prior to one of
-my courses, students' approaches to file management on their computers
-are often haphazard. I am very used to seeing students' desktops or
-documents directories in various states of disarray. Perhaps that has
-worked for them in the past, but that approach (or lack thereof)
-\textbf{will} fail students in
-\href{https://slu-soc5650.github.io}{Introduction to Geographic
-Information Science (SOC 4650/5650)} and
+This section introduces some of the core concepts that support
+sociospatial data science works. The title of the chapter takes
+inspiration from a recent article titled
+\href{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{\emph{Good
+enough practices in scientific computing}} (Wilson et al. 2017). The
+authors note in their introduction that scientific computing advice can
+sometimes be both overwhelming and focused on tools that are
+inaccessible to many analysts. Their goal, and the goal of this text, is
+to de-mystify the simplest tools that enable researchers to streamline
+their workflows:
+
+\begin{quote}
+Our intended audience is researchers who are working alone or with a
+handful of collaborators on projects lasting a few days to a few months,
+and who are ready to move beyond emailing themselves a spreadsheet named
+\texttt{results-updated-3-revised.xlsx} at the end of the
+workday\ldots{}Many of our recommendations are for the benefit of the
+collaborator every researcher cares about most: their future self.
+\end{quote}
+
+I would argue that the skills they describe are useful beyond just a few
+months. Indeed, most of the skills here can dramatically improve
+students' dissertation experiences:
+
+\begin{quote}
+Most importantly, these practices make researchers more productive
+individually by enabling them to get more done in less time and with
+less pain. They also accelerate research as a whole by making
+computational work (which increasingly means all work) more
+reproducible. But progress will not happen by itself. Universities and
+funding agencies need to support training for researchers in the use of
+these tools. Such investment will improve confidence in the results of
+computational work and allow us to make more rapid progress on important
+research questions.
+\end{quote}
+
+While much of what we will talk about in this text is aimed at
+supporting your work, there are benefits that extend beyond your
+dissertation or your research projects. These benefits, which include
+developing sustainable workflows and structuring the way you interact
+with your own computer, can make everyday computing practices like
+checking email or organizing files an easier, more structured process.
+
+\section{Reproducibility}\label{reproducibility}
+
+One of the mantras of this text is an emphasis on reproducibility. The
+unifying feature of all of the ``good enough'' research practices
+discussed below is that they contribute to a more reproducible research
+product.
+
+Reproducibility is very much in vogue right now for number of reasons.
+\href{http://science.sciencemag.org/content/349/6251/aac4716}{Assessments
+of studies in psychology}\footnote{Open Science Collaboration, 2015.
+  Estimating the reproducibility of psychological science.
+  \emph{Science}, 349(6251), p.aac4716.}, for example, have found weaker
+on average effect sizes and far fewer statistically significant results
+than the initial studies reported. There have also been high profile
+instances of falsified research, including
+\href{http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html}{research
+by a graduate student at UCLA}. This particular instance of fraud was
+identified by graduate students intent on replicating the original
+study.
+
+At the same time, there is a recognition that the skills necessary for
+producing reproducible research are not being fostered in academic
+disciplines and graduate programs. Thus one of the goals of this course,
+and this \textbf{User's Guide} in particular, is to help develop a
+working knowledge of many of these skills.
+
+One challenge, however, is that reproducibility does not have a
+consistent definition. Some researchers use the term to narrowly refer
+to code that can execute without alteration on a person's computer.
+Others use it to refer to research designs that can be replicated by
+other researchers. Still others discuss reproducibility as the ability
+to obtain a similar set of results or draw similar inferences from
+identical research designs.
+
+When we talk about reproducibility in this class. We'll be primarily
+concerned with \textbf{methods reproducibility}:
+
+\begin{quote}
+the ability to implement, as exactly as possible, the experimental and
+computational procedures, with the same data and tools, to obtain the
+same results.\footnote{Goodman, S.N., Fanelli, D. and Ioannidis, J.P.,
+  2016. What does research reproducibility mean?. \emph{Science
+  translational medicine}, 8(341), pp.341ps12-341ps12.}
+\end{quote}
+
+Methods reproducibility in statistics means that other analysts have
+full access to both the original data and the steps used to render those
+original data into a final research product, such as a set of regression
+models This is increasingly seen not just a matter of good research
+methodology, but as a matter of research ethics as well. Being able to
+be transparent with research decreases the potential for cases like the
+\href{http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html}{fraudulent
+dissertation research conducted by a UCLA graduate student named Michael
+LaCour}. It was the efforts of
+\href{https://fivethirtyeight.com/features/how-two-grad-students-uncovered-michael-lacour-fraud-and-a-way-to-change-opinions-on-transgender-rights/}{two
+Stanford graduate students who wanted to reproduce LaCour's findings}
+that ultimately led to the identification of problematic work.
+
+For statistics, methods reproducibility is derived from a number of
+sources. The first source is the use of \textbf{computer code} for
+working with data. Rather than making manual changes to tabular data in
+a spreadsheet application like Microsoft Excel, computer code provides
+detailed records of each individual alterations. Code can be used
+execute tasks repeatedly, meaning that errors can be easily fixed if
+they are discovered an hour, a day, a week, or a month later. During
+this semester, we'll use \texttt{R}'s programming language to execute
+reproducible data cleaning processes.
+
+The second source of reproducibility in statistics is therefore derived
+from the \textbf{documentation} that we create to accompany our research
+products. These documents outline where our data originated, what
+specific variables mean (a codebook), what steps were taken to create
+specific maps (a research log), and how our data files are organized (a
+metadictionary).
+
+Our code can also be used as documentation if it is written using
+\href{https://en.wikipedia.org/wiki/Literate_programming}{literate
+programming} techniques. In \texttt{R}, these techniques produce well
+annotated output that ``weaves'' together code, output, and narrative
+text that describes the function of the code and the results of the
+output.
+
+The third and final primary source of reproducibility in statistics is
+derived from our \textbf{organizational approach} to our work.
+Statistics projects can require many megabytes of data spread across
+dozens of data files, scripts, and output files. A disorganized file
+system can make replicating your work difficult if not impossible. Much
+of the research practices discussed in the remainder of this section are
+aimed at supporting one or more of these three major sources of
+reproducibility.
+
+\section{Thinking in Workflows}\label{thinking-in-workflows}
+
+One way to increase the reproducibility of a project is to approach each
+and every task with purposeful organization and thoughtfulness.
+\textbf{Workflows} are the processes that we use to approach a given
+task. Think of checking your email. You (hopefully!) follow a series of
+steps when you check your email that help you organize your inbox. In
+his excellent primer \emph{The workflow of data analysis using Stata}
+(2009), Scott Long describes a structured strategy for approaching
+statistical research. In Long's model, a data analysis project consists
+of four steps: (a) data cleaning, (b) analysis, (c) presenting results,
+and (d) protecting files. This is a useful model to build upon, and one
+that we will discuss over the course of the semester.
+
+Even more useful, not just for statistical work but for any process, are
+the tasks Long lays out for each step in the data analysis workflow:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Planning
+\item
+  Organization
+\item
+  Documentation
+\item
+  Execution
+\end{enumerate}
+
+A good example of the utility of extending this logic to other workflows
+is with the problem sets. The ``typical'' approach students take with
+homework assignments is to sit down, open up their software, and start
+with question 1. Using Long's four task approach, a workflow-based
+strategy to the assignment would involve beginning by reading the
+assignment through in its entirety to develop a \textbf{plan} for
+approaching it - think about what techniques and skills are needed for
+each step. With a plan in place, you can proceed to \textbf{organizing}
+yourself for the assignment - identifying and obtaining files that you
+will need, creating dedicated directories for saving assignment data,
+and getting any necessary software documentation. After pulling together
+all of these materials, you are ready to move on to
+\textbf{documentation} - setting up your assignment code and output
+files, and (later in the course) your research log and meta-dictionary.
+Once you are set-up, you would then begin to address individual
+assignment questions as part of the \textbf{execution} task.
+
+The goal here is to approach everything you do for research or work with
+an element of mindfulness and structure about your process. This mental
+model for approaching research supports the creation of
+\textbf{reproducible} research products because we approach our work in
+a routinized, predictable, organized, and efficient manner. Thinking in
+terms of workflows also encourages a greater awareness of the complexity
+of tasks, which also helps you plan more accurately for how long a
+particular task or project will take.
+
+In reality, there will be multiple workflows that you find yourself
+navigating. You will want a structured process not just for approaching
+a large research project like the final project, but also a process for
+maintaining notes related to a specific assignment, a process for
+documenting code, a process for approaching assignments, and even a
+process for backing your data up. As you go through the text, think
+about how to best integrate these ideas into your work habits.
+
+\section{Data}\label{data-1}
+
+One of the themes in
+\href{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{\emph{Good
+enough practices in scientific computing}} (Wilson et al. 2017) is an
+emphasis on data management. One of their core messages is to ``save the
+raw data''. Particularly in GISc work, the raw data can be expansive -
+dozens of shapefiles, tabular files, and associated metadata. These
+files often come from disparate sources - city open data sites, the U.S.
+Census Bureau, state data repositories, and other federal agencies.
+Moreover, GIS data are often updated over time to reflect on-the-ground
+changes. Saving the raw data in sociospatial data science work therefore
+means not only creating a well-organized directory containing \emph{all}
+of your original data. It also means logging the source of each file,
+when it was downloaded, and (if applicable) a permanent web link to your
+data source. For that reason, we'll give you not just the course data
+but a read me file and a metadictionary that lists all of the files
+we've disseminated to you.
+
+A second message in the paper is to ``create the data you wish to see in
+the world''. The authors encourage readers to ``create the data set you
+wish you had received.'' First and foremost, this means using open and
+not proprietary data formats. For spatial data,
+\href{https://en.wikipedia.org/wiki/Shapefile}{ESRI shapefiles} are
+technically proprietary, though their standard is open. This means that
+other software applications, like \texttt{R} and QGIS can read and in
+some cases write shapefiles. For sharing spatial data, a better option
+is the \href{https://en.wikipedia.org/wiki/GeoJSON}{GeoJSON}, which is a
+plain text file format. Tabular data are best stored as \texttt{CSV}
+files, which is also a plain text file format that can be opened by a
+wide variety of applications. In contrast, common file formats like
+Microsoft Excel's \texttt{XLS} and \texttt{XLSX} are proprietary file
+packages that cannot be read as plain text and are therefore less
+desirable for storing data.
+
+\section{Plain Text}\label{plain-text}
+
+Along with creating the data we wish to see,
+\href{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{\emph{Good
+enough practices in scientific computing}} (Wilson et al. 2017)
+repeatedly emphasizes the importance of using plain text files for
+writing as well as for data. Using plain text file formats, like
+\texttt{.txt} and \texttt{.md} files, frees us from reliance on
+proprietary applications that we cannot be sure will exist in ten or
+twenty years (and are thus threats to reproducible research). They can
+also be opened on virtually any computer across a variety of operating
+systems. The authors of the article reference
+\protect\hyperlink{markdown}{Markdown} files, which a really just
+plain-text files containing special characters that can be rendered by
+websites and other applications. \protect\hyperlink{markdown}{Markdown},
+which is discussed later in this text, provides us with the best of both
+worlds. We can produce outputs with rich text like styling but that is
+saved in a plain text file container. Writing in a markup language can
+seem daunting at first, but within a few weeks I have found that most
+people can start to feel comfortable inserting markup syntax without
+significant cognitive burden.
+
+\section{Version Control}\label{version-control}
+
+One of the key emphases of both
+\href{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{\emph{Good
+enough practices in scientific computing}} (Wilson et al. 2017) and
+\href{https://peerj.com/preprints/3210/}{``opinionated analysis
+development''} is that data science work should be tracked using version
+control software. This text introduces \href{https://git-scm.com}{Git}
+in the \protect\hyperlink{basic-git}{Basic Git} chapter, though there
+are other options like \href{http://subversion.apache.org}{Subversion}
+and \href{https://www.mercurial-scm.org}{Mercurial}. Git is introduced
+because it has been widely adopted by the \texttt{R} community and
+because of the robust web tools associated with
+\href{http://github.com}{GitHub.com}. Using version control gives us a
+timeline of our work along with the ability to revert back to previous
+versions of our files. This creates a ``chain of evidence'' for our
+research process and protects us from irrevocably altering files.
+
+As the authors of
+\href{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{\emph{Good
+enough practices in scientific computing}} (Wilson et al. 2017) note,
+learning version control software can be tricky. There are two chapters
+later in this text dedicated to \href{https://git-scm.com}{Git} covering
+both \protect\hyperlink{basic-git}{Basic Git} and
+\protect\hyperlink{advanced-git}{Advanced Git} techniques. Those
+chapters also provide links to other resources and tips for using those
+tools successfully.
+
+\hypertarget{protecting-your-work}{\chapter{Protecting Your
+Work}\label{protecting-your-work}}
+
+One of the biggest challenges to with doing computational work is that
+it requires a high degree of organization. Our approaches to file
+management on computers are often haphazard, with \texttt{Documents} and
+\texttt{Downloads} folders filled with disorganized files or a
+\texttt{Desktop} covered in dozens of files. Perhaps this has worked in
+the past, but that approach (or lack thereof) \textbf{will} fail
+students in \href{https://slu-soc5650.github.io}{Introduction to
+Geographic Information Science (SOC 4650/5650)} and
 \href{https://slu-soc5050.github.io}{Quantitative Analysis: Applied
 Inferential Statistics (SOC 4930/5050)}. Moreover, if left un-checked,
 it will fail students down the road when a hard drive failure or natural
@@ -879,13 +1344,11 @@ provider \href{https://www.backblaze.com/}{Backblaze} has
 \href{https://www.backblaze.com/blog/how-long-do-disk-drives-last/}{analyzed}
 their own hard drives and found that about 5\% of drives fail within the
 first year. After four years, a quarter (25\%) of drives in their data
-center fail.
-
-Similarly, it is only a matter of time before a student's computer is
-stolen along with all of their hard work. A less likely though still
-very plausible scenario involves the destruction of a student's
-belongings (computer and thumb drive included) in a fire, car accident,
-or natural disaster.
+center fail. Similarly, it is only a matter of time before a student's
+computer is stolen along with all of their hard work. A less likely
+though still very plausible scenario involves the destruction of a
+student's belongings (computer and thumb drive included) in a fire, car
+accident, or natural disaster.
 
 Despite the likelihood that you will at some-point lose a thumb drive
 (if not during this semester than sometime down the road) and the near
@@ -896,48 +1359,15 @@ happening, I want to suggest to you that you can take some simple steps
 to sure that \emph{when} (not if) they happen, you are well prepared to
 get back to work with minimal disruption.
 
-\section{Data Management}\label{data-management}
+\hypertarget{creating-a-sustainable-file-system}{\section{Creating a
+Sustainable File System}\label{creating-a-sustainable-file-system}}
 
-One of the themes in \href{https://arxiv.org/abs/1609.00037}{``Good
-Enough Practices in Scientific Computing''}, referenced in the previous
-chapter, is an emphasis on data management. One of their core messages
-is to ``save the raw data''. Particularly in GISc work, the raw data can
-be expansive - dozens of shapefiles, tabular files, and associated
-metadata. These files often come from disparate sources - city open data
-sites, the U.S. Census Bureau, state data repositories, and other
-federal agencies. Moreover, GIS data are often updated over time to
-reflect on-the-ground changes. Saving the raw data in GISc work
-therefore means not only creating a well-organized directory containing
-\emph{all} of your original data. It also means logging the source of
-each file, when it was downloaded, and (if applicable) a permanent web
-link to your data source. For that reason, we'll give you not just the
-course data but a read me file and a metadictionary that lists all of
-the files we've disseminated to you.
-
-A second message in the paper is to ``create the data you wish to see in
-the world''. The authors encourage readers to ``create the dataset you
-wish you had received.'' First and foremost, this means using open and
-not proprietary data formats. For spatial data,
-\href{https://en.wikipedia.org/wiki/Shapefile}{ESRI shapefiles} are
-technically proprietary, though their standard is open. This means that
-other software applications, like \texttt{R} and QGIS can read and in
-some cases write shapefiles. For sharing spatial data, a better option
-is the \href{https://en.wikipedia.org/wiki/GeoJSON}{GeoJSON}, which is a
-plain text file format.
-
-Tabular data are best stored as \texttt{CSV} files, which is also a
-plain text file format that can be opened by a wide variety of
-applications. In contrast, common file formats like Microsoft Excels's
-\texttt{XLS} and \texttt{XLSX} are proprietary file packages that cannot
-be read as plain text and are therefore less desirable for storing data.
-
-\section{Creating a Sustainable File
-System}\label{creating-a-sustainable-file-system}
-
-In his excellent document \href{http://plain-text.co}{\emph{The Plain
-Person's Guide to Plain Text Social Science}}, Kieran Healy describes
-two important revolutions in computing that are currently taking place.
-One of them is the advent of mobile touch-screen devices, which he notes
+The first thing that students can do to stave off problems with lost
+files is to actively and mindfully manage their files. In his excellent
+document \href{http://plain-text.co}{\emph{The Plain Person's Guide to
+Plain Text Social Science}}, Kieran Healy describes two important
+revolutions in computing that are currently taking place. One of them is
+the advent of mobile touch-screen devices, which he notes
 
 \begin{quote}
 hide from the user both the workings of the operating system and
@@ -984,13 +1414,34 @@ or GIS courses (a good reason to avoid naming the directory
 \texttt{Stats} or \texttt{GIS}!).
 
 This single course directory should reside in \emph{one and only one}
-place. Storing it inside a sync'd directory (like Dropbox or Google
-Drive) may cause conflicts with your Git repositories. I strongly
-recommend storing your course directory on the computer that you will
-regularly do work on for the course. For some students, that will be the
-desktop computer in our lab. For others, it will their laptop computer.
-If you find yourself having to regularly switch between computers, I'll
-provide some suggestions later in this chapter.
+place. Once you have these folders set-up, I want you to an agreement
+with yourself: files for the course will \emph{only} be saved within
+this structure. Do not temporarily save files to the \texttt{Desktop},
+for example, intending to move them later. They will be forgotten. Like
+New Years resolutions, it is easy to say that you will use a file system
+but difficult to maintain that promise when stress sets in or you are
+rushed. Do \emph{everything} you can to maintain your file system.
+
+\subsection{Storing the Course
+Directory}\label{storing-the-course-directory}
+
+Storing this directory inside a sync'd directory (like Dropbox or Google
+Drive) may cause conflicts with your Git repositories. Instead, students
+for both of my courses should utilize a large sized thumb drive or an
+external hard drive for data storage (see the ``Course Onboarding''
+section of the respective course's website for additional details).
+Having data stored on an external device raises the risk of physical
+loss, but also makes it easier to move work between different computers.
+This is particularly challenging for GI Science work, where spatial data
+sources can be may megabytes in size.
+
+macOS users should make sure that the external drive is formatted using
+the ExFat file system specification so that it is readable both by their
+operating system and the Windows operating system in the computer lab.
+If you buy a new drive, you will likely have to re-format it. Directions
+for doing so are
+\href{https://support.apple.com/kb/PH22241?locale=en_US}{available from
+Apple}.
 
 \subsection{Approach Organizing
 Systematically}\label{approach-organizing-systematically}
@@ -1002,231 +1453,124 @@ number of dedicated subfolders within your course directory:
 \begin{verbatim}
 /SOC5650
   /Core-Documents
-  /Data
+  /DataLibrary
   /DoeAssignments
-  /FinalProject
-  /Labs
   /Lectures
   /Notes
-  /ProblemSets
   /Readings
-  /WeeklyPreps
-  /WeeklyRepos
 \end{verbatim}
 
 Note again how these directories are named - there are no spaces,
 special characters, and the names are deliberately short but specific.
-For a directory with two words (\texttt{FinalProject} or
-\texttt{ProblemSets}), I use what is known as camelCase to name the file
-where the second (any any subsequent) words have their first character
-capitalized. You could also use dash-case (\texttt{Core-Documents}) or
-snake\_case (\texttt{Core\_Documents}) as a naming strategy. Regardless
-of which of these approaches you take, try to use it consistently.
+For a directory with two words (e.g. \texttt{DataLibrary}), I use what
+is known as camelCase to name the file where the second (any any
+subsequent) words have their first character capitalized. You could also
+use dash-case (e.g. \texttt{Core-Documents}) or snake\_case (e.g.
+\texttt{Core\_Documents}) as a naming strategy. Regardless of which of
+these approaches you take, try to use it consistently.
 
-Once you have these folders set-up, I want you to an agreement with
-yourself: files for the course will \emph{only} be saved within this
-structure. Do not temporarily save files to the \texttt{Desktop}, for
-example, intending to move them later. They will be forgotten.
+For both of the courses that I teach, a basic file system will be made
+available for download onto your external device. See the respective
+course websites for more information about course data releases. Only
+the data release for \href{https://slu-soc5650.github.io}{Introduction
+to Geographic Information Science (SOC 4650/5650)} will contain a
+\texttt{DataLibrary} directory.
 
 \subsection{\texorpdfstring{The \texttt{Core-Documents}
 Directory}{The Core-Documents Directory}}\label{the-core-documents-directory}
 
-This directory has already been created and will be added to your file
-system during \textbf{Week 03}, when it is \textbf{cloned} from GitHub.
-
-\begin{rmdnote}
-A cloned directory is one that retains a digital link to the data stored
-on GitHub, meaning that it can be easily updated if changes are made.
-This will be explained in greater depth in Introduction to GitHub
-chapter in this text.
-\end{rmdnote}
-
-\begin{rmdwarning}
-You will not be able to push changes that you make in this directory to
-GitHub, and making other changes could cause conflicts. I suggest not
-making changes inside this repository beyond opening files for reference
-purposes.
-\end{rmdwarning}
-
 The \texttt{Core-Documents} directory is used for storing the course
 syllabus, reading list, and a sample schedule for 3600 Morrissey Hall
-for the semester.
+for the semester. You can view it online for both
+\href{https://github.com/slu-soc5050/Core-Documents}{Introduction to
+GIS} and
+\href{https://github.com/slu-soc5650/Core-Documents}{Quanitative
+Analysis}. Once we cover using Git and GitHub in class, you should
+\textbf{clone} the appropriate \texttt{Core-Documents} repository into
+your file system. If there are updates, you will want to make sure you
+\textbf{pull} them down onto your local copy of the repository. You can
+read ahead in the \protect\hyperlink{basic-git}{Basic Git} chapter for
+more information on how this works.
 
-\subsection{\texorpdfstring{The \texttt{Data}
-Directory}{The Data Directory}}\label{the-data-directory}
+You will not be able to \textbf{push} changes that you make in this
+directory to GitHub, and making other changes could cause conflicts. I
+suggest not making changes inside this repository beyond opening files
+for reference purposes.
 
-\begin{rmdwarning}
+\subsection{\texorpdfstring{The \texttt{DataLibrary}
+Directory}{The DataLibrary Directory}}\label{the-datalibrary-directory}
+
 This directory is only applicable to students in
-\href{https://slu-soc5650.github.io}{Introduction to GIS}, who will
-receive a data release at the beginning of the semester that should be
-saved here. Students in
-\href{https://slu-soc5050.github.io}{Quantitative Analysis} will receive
-most data through \texttt{R} packages and may reiceve a small amount of
-data through weekly repositories.
-\end{rmdwarning}
-
-The data directory should have copies of any original data and their
-documentation that are not disseminated to you as \texttt{R} packages.
-Most of these data are included in the initial data release, but you
-will have to add some additional data to this directory over the course
-of the semester. The data in this directory should be used as needed but
-not altered (one of the of the ``good enough'' research practices from
-the previous chapter).
+\href{https://slu-soc5650.github.io}{Introduction to GIS}, whose data
+release will contain it. It will have copies of most data not
+disseminated to you as \texttt{R} packages. The data in this directory
+should be used as needed but not altered (one of the of the
+\protect\hyperlink{good-enough-research-practices}{``Good Enough''
+Research Practices} from the next chapter).
 
 \subsection{\texorpdfstring{The \texttt{DoeAssignments}
 Directory}{The DoeAssignments Directory}}\label{the-doeassignments-directory}
 
 Like the \texttt{Core-Documents} repository, this will not be included
-in the course data release. You will add it to your file system during
-\textbf{Lab-03}. It will also have a different name - your last name
-instead of `Doe'. Once you add it, it will contain a number of
-subdirectories:
+in the course data release. Once we cover using Git and GitHub in class,
+you should \textbf{clone} the appropriate \texttt{Core-Documents}
+repository into your file system. It will also have a different name -
+your last name instead of `Doe'. Once you add it, it will contain a
+number of subdirectories:
 
 \begin{verbatim}
   /SOC5650
     /DoeAssignments
       /FinalProject
-        /Documentation
-        /Memo
-        /PaperDraft
-        /PaperFinal
-        /PosterDraft
-        /PosterFinal
 
       /Labs
         /Lab-01
         ...
-        /Lab-16
+        /Lab-15
 
+      /LecturePreps
+        /LP-01
+        ...
+        /LP-15
+        
       /ProblemSets
         /PS-01
         ...
-        /PS-10
-      
-      /WeeklyPrep
-        /WP-02
-        ...
-        /WP-16
+        /PS-08
 \end{verbatim}
 
-The \texttt{FinalProject} directory contains submission folders for each
-component of the final project. If you a registered for SOC 4650, your
-directory will look like what appears above. Students registered for SOC
-5650 will have three additional subfolders for deliverables related to
-the final paper element of the course.
-
-The \texttt{Labs}, \texttt{ProblemSets}, \texttt{WeeklyPrep} directories
-have subfolders dedicated to the individual assignments you'll have to
-submit over the course of the semester. \textbf{These directories are
-intended to store only the deliverables that are requested in each
-assignment's directions.} All other files related to each assignment
-should be stored elsewhere in your folder structure.
-
-\begin{rmdwarning}
-Unlike \texttt{Core-Documents}, you have the ability to push changes
-made here to GitHub.com. Please make sure you understand that changes
-made will be reflected, for better or worse, on the website the next
-time you complete that push.
-\end{rmdwarning}
-
-\subsection{\texorpdfstring{The \texttt{FinalProject}
-Directory}{The FinalProject Directory}}\label{the-finalproject-directory}
-
-The final project directory should be a microcosm of the larger
-directory structure, with most major directories replicated so that your
-final project files have a dedicated, organized home:
-
-\begin{verbatim}
-  /SOC5650
-    /FinalProject
-      /AnnotatedBib
-      /Data
-      /DataAnalysis
-      /Documentation
-      /Memo
-      /Notes
-      /Paper
-      /Poster
-      /Readings
-\end{verbatim}
-
-You'll notice that there are a number of new directories dedicated to
-specific aspects of the project.
-
-\begin{rmdnote}
-You will want to tailor this subdirectory's contents to match the
-specific requirements of the section you are enrolled in. This may
-entail removing certain folders - the \texttt{AnnotatedBib/} for example
-- that do not correspond to deliverables you have to complete.
-\end{rmdnote}
-
-\subsection{\texorpdfstring{The \texttt{Labs}, \texttt{ProblemSets}, and
-\texttt{WeeklyPreps}
-Directories}{The Labs, ProblemSets, and WeeklyPreps Directories}}\label{the-labs-problemsets-and-weeklypreps-directories}
-
-This directory contains subfolders for each of the sixteen lab
-assignments for this course. Save \emph{all} of the associated materials
-for each lab assignment here.
-
-\begin{verbatim}
-  /SOC5650
-    /Labs
-      /Lab-01
-      ...
-      /Lab-16
-      
-    /ProblemSets
-      /PS-01
-      ...
-      /PS-10
-      
-    /WeeklyPreps
-      /Week-01
-      ...
-      /Week-16
-\end{verbatim}
-
-These directories differ from what you save in your
-\texttt{DoeAssignments} repository. Unlike \texttt{DoeAssignments},
-which is \textbf{only} for submission files, these directories can
-contain any number of files you wish. Use each of these assignment
-folders as a place to work and experiment, and the folders under
-\texttt{DoeAssignments} as the place to submit your final versions.
-
-Each of these assignments that utilizes \texttt{R} and RStudio should
-have an R Project associated with it:
-
-\begin{verbatim}
-  /SOC5650
-    /Labs
-      /Lab-01
-        Lab-01.Rproj
-        
-      /Lab-02
-        Lab-02.Rproj
-        
-      /Lab-03
-        Lab-03.Rproj
-\end{verbatim}
-
-Using R Projects will help you keep your work organized by ensuring that
-the working directory for RStudio is correctly set every time and that
-output is always saved to the appropriate assignment directory.
+The \texttt{FinalProject} directory will not have any subfolders in it.
+You will be asked to populate it with the appropriate subdirectories
+(see \protect\hyperlink{organizing-projects}{Organizing Projects}
+below). These will be detailed in the final project instructions. The
+\texttt{Labs}, \texttt{LecturePreps}, and \texttt{ProblemSets}
+subdirectories have folders dedicated to the individual assignments
+you'll have to submit over the course of the semester. Like the
+\texttt{FinalProject} directory, you will need to populate them with the
+appropriate deliverables. These will be detailed in each assignment's
+instructions.
 
 \subsection{\texorpdfstring{The \texttt{Lectures}
 Directory}{The Lectures Directory}}\label{the-lectures-directory}
 
 This directory should contain subfolders for each of the sixteen weeks
-of the course. When we create new files during lectures, save these
-documents in the appropriate week's folder.
+of the course.
 
 \begin{verbatim}
   /SOC5650
     /Lectures
-      /Week-01
+      /Lecture-01
       ...
-      /Week-16
+      /Lecture-16
 \end{verbatim}
+
+You will need to add these subfolders each week by \textbf{cloning} them
+from GitHub.com. You will not be able to push changes that you make in
+these directories to GitHub, and making other changes could cause
+conflicts. I suggest not making changes inside this repository beyond
+opening files for reference purposes. If there is something you need to
+edit, copy it to the appropriate subdirectory of \texttt{DoeAssignments}
+and make your changes there.
 
 \subsection{\texorpdfstring{The \texttt{Notes}
 Directory}{The Notes Directory}}\label{the-notes-directory}
@@ -1240,44 +1584,233 @@ Directory}{The Readings Directory}}\label{the-readings-directory}
 
 Use this as a home for \texttt{.pdf} copies of course readings. I
 suggest creating subdirectories \emph{only} for weeks that have readings
-assigned from outside of the main texts, such as Week 01:
+assigned from outside of the main texts, such as Lecture 01:
 
 \begin{verbatim}
   /SOC5650
     /Readings
-      /Week-01
+      /Lecture-01
 \end{verbatim}
 
-\subsection{\texorpdfstring{The \texttt{WeeklyRepos}
-Directory}{The WeeklyRepos Directory}}\label{the-weeklyrepos-directory}
+\hypertarget{organizing-projects}{\section{Organizing
+Projects}\label{organizing-projects}}
 
-Clone each of the weekly repos to this directory, and sync them when
-updates are made to ensure you have the latest versions of files. By the
-end of the course, this directory should have sixteen subfolders like
-this:
+Following the excellent article
+\href{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{\emph{Good
+enough practices in scientific computing}} (Wilson et al. 2017), I
+suggest data science projects should be organized in a specific,
+standardized way. This approach serves much the same purpose as the
+previous section on
+\protect\hyperlink{creating-a-sustainable-file-system}{Creating a
+Sustainable File System} - work that is well organized is better insured
+against loss.
+
+\subsection{A Sample Project}\label{a-sample-project}
+
+Much as I suggested above that course files reside in one and only one
+place, projects should be organized similarly (with one important caveat
+below). What follows is a sample project and then descriptions of each
+element. More details about each folder (excepting \texttt{maps}) can be
+found in the article. The project below contains all of key elements of
+a small geospatial research project:
 
 \begin{verbatim}
-  /SOC5650
-    /WeeklyRepos
-      /Week-01
-      ...
-      /Week-16
+  /projectName
+    /data
+      rawData.csv
+      rawTracts.shp
+    /doc
+      joinedTracts.md
+      notebook.Rmd
+      notebook.nb.html
+      researchLog.md
+    /maps
+      map.mxd
+    /results
+      joinedTracts.shp
+      map.png
+    /src
+      script.R
+    LICENSE.md
+    projectName.Rproj
+    README.md
 \end{verbatim}
 
-\begin{rmdwarning}
-You will not be able to push changes that you make in these directories
-to GitHub, and making other changes could cause conflicts. I suggest not
-making changes inside this repository beyond opening files for reference
-purposes. If there is something you need to edit, copy it to the
-appropriate subdirectory (\texttt{Labs}, \texttt{WeeklyPreps}, etc.) and
-make local changes there.
-\end{rmdwarning}
+\subsection{Top-Level Files}\label{top-level-files}
+
+At least two files should be present in each project directory - a
+\texttt{README.md} and a \texttt{LICENSE.md}. As I noted in the previous
+chapter, both of these files should be plain-text files. Typically, they
+are formatted using \protect\hyperlink{markdown}{Markdown} syntax The
+\texttt{README} should describe your project, detail any key
+dependencies or outside data sources that might be required, and provide
+other important details like how to cite your project and what other
+online resources might be available.
+
+The \texttt{LICENSE} is a key element of open source research. This
+spells out how others may use (and not use) your work. The excellent
+guide \href{https://opensource.guide/}{The Legal Side of Open Source}
+notes:
+
+\begin{quote}
+Open source is an unusual circumstance\ldots{}because the author expects
+that others will use, modify, and share the work. But because the legal
+default is still exclusive copyright, you need a license that explicitly
+states these permissions.
+\end{quote}
+
+There are lots of different options for open source licenses, and
+\href{https://choosealicense.com}{GitHub's choose a license site} does a
+great job of explaining some of the
+\href{https://choosealicense.com/appendix/}{many options}. In the
+\texttt{R} community, many packages are made available using the
+\href{https://choosealicense.com/licenses/mit/}{MIT} or
+\href{https://choosealicense.com/licenses/gpl-3.0/}{GNU GPLv3} licenses.
+For written content, presentations, and other non-code works, the
+Creative Commons
+\href{https://choosealicense.com/licenses/cc-by-4.0/}{Attribution} and
+\href{https://choosealicense.com/licenses/cc-by-sa-4.0/}{Attribution-ShareAlike}
+licenses are both common options. For data, the
+\href{https://opendatacommons.org}{Open Data Commons} licenses are not
+discussed on GitHub's site but are options for data-specific licenses.
+Finally, large projects sometimes require
+\href{https://choosealicense.com/non-software/}{multiple licenses}. If
+you use a data-specific, code-specific, and/or content-specific mix of
+licenses, be sure to describe in the \texttt{README} which license
+applies to which element of of the project. Licensing your projects is
+another form of protecting your work. If these projects are out in the
+open, licensing ensures that your work will be used under terms that you
+are comfortable with.
+
+If the project uses \texttt{R}, an \texttt{R} project file
+(\texttt{.Rproj}) should also be saved in the top-level of the project.
+This will facilitate the top-level folder being set automatically as the
+\href{https://en.wikipedia.org/wiki/Working_directory}{working
+directory}. The working directory is the folder that \texttt{R} will
+open data from and save data to by default.
+
+\subsection{\texorpdfstring{The \texttt{data}
+Directory}{The data Directory}}\label{the-data-directory}
+
+All data sources, with a few exceptions, should be stored here. For
+instance, in the example above, a tabular data source and a raw
+shapefile are both used as part of the project. There are, however, a
+number of exceptions to this. One exception is data that has been
+packaged in an \texttt{R} package. For example, I have packaged a large
+set of tables containing historical census data to make them easier to
+work with. When these are used in projects, I do not save the tables in
+the \texttt{data} folder. Rather, I make reference to them in the
+\texttt{README} file and in other project documents.
+
+A second exception is for large geospatial data libraries, like the data
+release for my \href{https://slu-soc5650.github.io}{Introduction to
+GIS}. Given the size of these files, it is sometimes impractical to
+reproduce them multiple times across different projects. Clearly noting
+that specific files are stored on local libraries available elsewhere in
+the \texttt{README} file and in other project documents is also an
+acceptable alternative here.
+
+\subsection{\texorpdfstring{The \texttt{doc}
+Directory}{The doc Directory}}\label{the-doc-directory}
+
+The \texttt{doc} directory should be used for all text documents
+associated with the project. These might include metadata associated
+with different project data files, an interactive \texttt{R} notebook, a
+research log file, and article manuscripts. If needed, subdirectories
+within \texttt{doc} should be used to keep different files organized. In
+the example above, \texttt{joinedTracts.md} is the metadata for the
+similarly named shapefile in the \texttt{data} subdirectory. The
+\texttt{notebook} files are the interactive \texttt{R} notebook and its
+associated \texttt{html} output. Finally, the \texttt{researchLog.md} is
+used for tracking higher level progress over the course of the project.
+
+\subsection{\texorpdfstring{The \texttt{maps}
+Directory}{The maps Directory}}\label{the-maps-directory}
+
+\texttt{maps} is a deviation from
+\href{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{\emph{Good
+enough practices in scientific computing}} (Wilson et al. 2017), which
+does not envision some of the complexity of working with geospatial
+data. It should be used for storing the \texttt{.mxd} files from ArcGIS
+projects or the equivalent QGIS files if that application is being used
+instead. Illustrator files used for post-processing work should also be
+stored here if used. Remember that these files should be saved using
+relative paths to link them to data sources to limit the possibility of
+conflicts down the road.
+
+\subsection{\texorpdfstring{The \texttt{results}
+Directory}{The results Directory}}\label{the-results-directory}
+
+The \texttt{results} directory should contain any data outputs, plots,
+and map images. These might include intermediate and final versions of
+data sets as well as shapefiles and GeoJSON files created as part of the
+analysis process. In the example above, a shapefile combining both of
+the raw data sources named \texttt{joinedTracts.shp} is saved here along
+with the exported map image from the map file in the \texttt{maps}
+subdirectory. Depending on the complexity of the project, subdirectories
+within \texttt{results} might be necessary.
+
+\subsection{\texorpdfstring{The \texttt{src}
+Directory}{The src Directory}}\label{the-src-directory}
+
+For projects that rely on functions not included in packages, for
+example, or that rely on other pre-made scripts, the \texttt{src}
+subdirectory should be used for storing script files that are called by
+notebooks in \texttt{doc}.
+
+\subsection{Storing Your Project}\label{storing-your-project}
+
+There are a number of places where work can be deposited. I teach all
+students in my classes how to use \href{https://github.com}{GitHub.com}
+because it integrates directly into version control software, which I
+see as a critical component of
+\protect\hyperlink{good-enough-research-practices}{``Good Enough''
+Research Practices}. There are other options, however. For larger
+projects that may not just be on GitHub (see
+\protect\hyperlink{basic-git}{Basic Git}) but also utilize a
+collaborative writing space like Google Docs, the
+\href{https://osf.io}{Open Science Framework} is an excellent tool. It
+allows for an even wider set of version control tools to be applied to
+projects and can be used to organize work that is not easily stored on
+GitHub, like large number of pdf articles, for which version control is
+not critical.
+
+Once a research project has begun dissemination, repositories like
+\href{https://zenodo.org}{Zenodo} and
+\href{https://figshare.com}{Figshare} are designed to make open source
+data and project materials accessible and citeable. For papers
+specifically, there are a number of discipline specific archives for
+pre-prints of papers. Many journals will allow pre-prints to remain
+freely available even after more formal publication. The original
+pre-print archive, \href{https://arxiv.org}{arXiv}, is focused on the
+STEM sciences and has inspired a number of spinoffs. Many of these are
+supported by the \href{https://cos.io}{Center for Open Science}, the
+same organization that operates the \href{https://osf.io}{Open Science
+Framework} tool described above. For social scientists,
+\href{https://socopen.org/welcome/}{SocArXiv} is a growing pre-print
+repository that is part of the
+\href{https://osf.io/preprints/socarxiv}{Center for Open Science's
+pre-print network}.
+
+\subsection{Organizing Coursework}\label{organizing-coursework}
+
+For \href{https://slu-soc5650.github.io}{Introduction to Geographic
+Information Science (SOC 4650/5650)} and
+\href{https://slu-soc5050.github.io}{Quantitative Analysis: Applied
+Inferential Statistics (SOC 4930/5050)}, problem sets and the final
+project should both be organized following the general template above.
 
 \section{Backing Up Your Data}\label{backing-up-your-data}
 
-There are a number of different ways to think about backing up your
-data. The most successful backup strategies will incorporate all of
-these elements.
+All of the organization in the world cannot prevent a computer hard
+drive from failing or a natural disaster from destroying your hardware.
+Similarly, even the best organized of us lose things sometimes or
+accidentally delete files. Backing up files is therefore a critical
+piece of not just doing computational work but, in this day and age, it
+is a requisite skill for owning computer hardware. Every device you own
+including your phone can and should be backed up. There are a number of
+different ways to think about backing up your data. The most successful
+backup strategies will incorporate all of these three elements.
 
 \subsection{Bootable Backups}\label{bootable-backups}
 
@@ -1392,240 +1925,6 @@ stressful and disruptive losing your drive will be. This will likely be
 a manual task, so follow the guidance above about creating a repeating
 calendar event or to-do list task reminder.
 
-\section{Managing Multiple Devices}\label{managing-multiple-devices}
-
-If you are trying to manage your work across multiple computers, the
-task of staying organized becomes more difficult. One option is to use a
-thumb drive or external hard drive as the primary site where your course
-directory lives. That way you can save everything there and it is
-accessible by as many computers as necessary. If you decide go this
-route, it is \textbf{imperative} that you back-up your work to a
-computer or to another external drive.
-
-\begin{rmdtip}
-macOS users should make sure that the external drive is formatted using
-the ExFat file system specification so that it is readable both by their
-operating system and the Windows operating system in the computer lab.
-If you buy a new drive, you will likely have to re-format it.
-\end{rmdtip}
-
-Another option is to utilize GitHub extensively. You can create repos
-for the some of the key subdirectories referenced above, like
-\texttt{ProblemSets}, \texttt{WeeklyPreps}, and others, and keep you
-work synced between computers using the same process we use for
-submitting work. If you want to do this, make sure you get the
-\href{https://education.github.com/discount_requests/new}{student GitHub
-discount}, which will give you unlimited private repositories. That way,
-your course work will not be public facing. If you pursue this strategy,
-make sure you still have only one place for a specific file typoe - you
-do not want some problem set materials saved outside of your GitHub repo
-and some saved in it.
-
-\chapter{\texorpdfstring{``Good Enough'' Research
-Practices}{Good Enough Research Practices}}\label{good-enough-research-practices}
-
-This section introduces some of the core concepts that we will emphasize
-in this course throughout the semester. The title takes inspiration from
-a recent article titled \href{https://arxiv.org/abs/1609.00037}{``Good
-Enough Practices in Scientific Computing''}\footnote{Wilson, G., Bryan,
-  J., Cranston, K., Kitzes, J., Nederbragt, L. and Teal, T.K., 2016.
-  Good Enough Practices in Scientific Computing. \emph{arXiv preprint
-  arXiv:1609.00037.}}. The authors note in their introduction that
-scientific computing advice can sometimes be both overwhelming and
-focused on tools that are inaccessible to many analysts. Their goal, and
-the goal of this course, is to de-mystify the simplist tools that enable
-researchers to streamline their workflows:
-
-\begin{quote}
-Our intended audience is researchers who are working alone or with a
-handful of collaborators on projects lasting a few days to a few months,
-and who are ready to move beyond emailing themselves a spreadsheet named
-\texttt{results-updated-3-revised.xlsx} at the end of the
-workday\ldots{}Many of our recommendations are for the benefit of the
-collaborator every researcher cares about most: their future self.
-\end{quote}
-
-I would argue that the skills they describe are useful beyond just a few
-months. Indeed, most of the skills here can dramatically improve
-students' dissertation experiences:
-
-\begin{quote}
-Most importantly, these practices make researchers more productive
-individually by enabling them to get more done in less time and with
-less pain. They also accelerate research as a whole by making
-computational work (which increasingly means all work) more
-reproducible. But progress will not happen by itself. Universities and
-funding agencies need to support training for researchers in the use of
-these tools. Such investment will improve confidence in the results of
-computational work and allow us to make more rapid progress on important
-research questions.
-\end{quote}
-
-While much of what we will talk about in this course is aimed at
-supporting your work, there are benefits that extend beyond your
-dissertation or your research projects. These benefits, which include
-developing sustainable workflows and structuring the way you interact
-with your own computer, can make everyday computing practices like
-checking email or organizing files an easier, more structured process.
-
-\section{Reproducibility}\label{reproducibility}
-
-One of the mantras of this course is our emphasis on reproducibility.
-The unifying feature of all of the ``good enough'' research practices
-discussed below is that they contribute to a more reproducible research
-product.
-
-Reproducibility is very much in vogue right now for number of reasons.
-\href{http://science.sciencemag.org/content/349/6251/aac4716}{Assessments
-of studies in psychology}\footnote{Open Science Collaboration, 2015.
-  Estimating the reproducibility of psychological science.
-  \emph{Science}, 349(6251), p.aac4716.}, for example, have found weaker
-on average effect sizes and far fewer statistically significant results
-than the initial studies reported. There have also been high profile
-instances of falsified research, including
-\href{http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html}{research
-by a graduate student at UCLA}. This particular instance of fraud was
-identified by graduate students intent on replicating the original
-study.
-
-At the same time, there is a recognition that the skills necessary for
-producing reproducible research are not being fostered in academic
-disciplines and graduate programs. Thus one of the goals of this course,
-and this \textbf{User's Guide} in particular, is to help develop a
-working knowledge of many of these skills.
-
-One challenge, however, is that reproducibility does not have a
-consistent definition. Some researchers use the term to narrowly refer
-to code that can execute without alteration on a person's computer.
-Others use it to refer to research designs that can be replicated by
-other researchers. Still others discuss reproducibility as the ability
-to obtain a similar set of results or draw similar inferences from
-identical research designs.
-
-When we talk about reproducibility in this class. We'll be primarily
-concerned with \textbf{methods reproducibility}:
-
-\begin{quote}
-the ability to implement, as exactly as possible, the experimental and
-computational procedures, with the same data and tools, to obtain the
-same results.\footnote{Goodman, S.N., Fanelli, D. and Ioannidis, J.P.,
-  2016. What does research reproducibility mean?. \emph{Science
-  translational medicine}, 8(341), pp.341ps12-341ps12.}
-\end{quote}
-
-Methods reproducibility in statistics means that other analysts have
-full access to both the original data and the steps used to render those
-original data into a final research product, such as a set of regression
-models This is increasingly seen not just a matter of good research
-methodology, but as a matter of research ethics as well. Being able to
-be transparent with research decreases the potential for cases like the
-\href{http://nymag.com/scienceofus/2015/05/how-a-grad-student-uncovered-a-huge-fraud.html}{fraudulent
-dissertation research conducted by a UCLA graduate student named Michael
-LaCour}. It was the efforts of
-\href{https://fivethirtyeight.com/features/how-two-grad-students-uncovered-michael-lacour-fraud-and-a-way-to-change-opinions-on-transgender-rights/}{two
-Stanford graduate students who wanted to reproduce LaCour's findings}
-that ultimately led to the identification of problematic work.
-
-For statistics, methods reproducibility is derived from a number of
-sources. The first source is the use of \textbf{computer code} for
-working with data. Rather than making manual changes to tabular data in
-a spreadsheet application like Microsoft Excel, computer code provides
-detailed records of each individual alterations. Code can be used
-execute tasks repeatedly, meaning that errors can be easily fixed if
-they are discovered an hour, a day, a week, or a month later. During
-this semester, we'll use \texttt{R}'s programming language to execute
-reproducible data cleaning processes.
-
-The second source of reproducibility in statistics is therefore derived
-from the \textbf{documentation} that we create to accompany our research
-products. These documents outline where our data originated, what
-specific variables mean (a codebook), what steps were taken to create
-specific maps (a research log), and how our data files are organized (a
-metadictionary).
-
-Our code can also be used as documentation if it is written using
-\href{https://en.wikipedia.org/wiki/Literate_programming}{literate
-programming} techniques. In \texttt{R}, these techniques produce well
-annotated output that ``weaves'' together code, output, and narrative
-text that describes the function of the code and the results of the
-output.
-
-The third and final primary source of reproducibility in statistics is
-derived from our \textbf{organizational approach} to our work.
-Statistics projects can require many megabyes of data spread across
-dozens of data files, scripts, and output files. A disorganized file
-system can make replicating your work difficult if not impossible. Much
-of the research practices discussed in the remainder of this section are
-aimed at supporting one or more of these three major sources of
-reproducibility.
-
-\section{Thinking in Workflows}\label{thinking-in-workflows}
-
-One way to increase the reproducibility of a project is to approach each
-and every task with purposeful organization and thoughtfulness.
-\textbf{Workflows} are the processes that we use to approach a given
-task. Think of checking your email. You (hopefully!) follow a series of
-steps when you check your email that help you organize your inbox. In
-our reading for the first week of classes,
-\href{http://www.indiana.edu/~jslsoc/}{Scott Long}\footnote{Long, J.S.,
-  2009. \emph{The workflow of data analysis using Stata.} College
-  Station, TX: Stata Press.} describes a structured strategy for
-approaching statistical research. In Long's model, a data analysis
-project consists of four steps: (a) data cleaning, (b) analysis, (c)
-presenting results, and (d) protecting files. This is a useful model to
-build upon, and one that we will discuss over the course of the
-semester.
-
-Even more useful, not just for statistical work but for any process, are
-the tasks Long lays out for each step in the data analysis workflow:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Planning
-\item
-  Organization
-\item
-  Documentation
-\item
-  Execution
-\end{enumerate}
-
-A good example of the utility of extending this logic to other workflows
-is with the problem sets. The ``typical'' approach students take with
-homework assignments is to sit down, open up their software, and start
-with question 1. Using Long's four task approach, a workflow-based
-strategy to the assignment would involve beginning by reading the
-assignment through in its entirety to develop a \textbf{plan} for
-approaching it - think about what techniques and skills are needed for
-each step. With a plan in place, you can proceed to \textbf{organizing}
-yourself for the assignment - identifying and obtaining files that you
-will need, creating dedicated directories for saving assignment data,
-and getting any necessary software documentation. After pulling together
-all of these materials, you are ready to move on to
-\textbf{documentation} - setting up your assignment code and output
-files, and (later in the course) your research log and meta-dictionary.
-Once you are set-up, you would then begin to address individual
-assignment questions as part of the \textbf{execution} task.
-
-The goal here is to approach everything you do for research or work with
-an element of mindfulness and structure about your process. This mental
-model for approaching research supports the creation of
-\textbf{reproducible} research products because we approach our work in
-a routinized, predictable, organized, and efficient manner. Thinking in
-terms of workflows also encourages a greater awareness of the complexity
-of tasks, which also helps you plan more accurately for how long a
-particular task or project will take.
-
-In reality, there will be multiple workflows that you find yourself
-navigating. You will want a structured process not just for approaching
-a large research project like the final project, but also a process for
-maintaining notes related to a specific assignment, a process for
-documenting code, a process for approaching assignments, and even a
-process for backing your data up. As you go through the course, think
-about how to best integrate these ideas into your work habits.
-
 \hypertarget{getting-help}{\chapter{Getting Help}\label{getting-help}}
 
 One of the biggest challenges for students first learning tools like
@@ -1640,8 +1939,10 @@ not working is therefore an important part of success.
 One misconception that I think is important to confront is that data
 analysts, software engineers, and others who appear to be experts may
 indeed be very good at what they do, but they are equally skilled at
-problem solving. This \href{https://www.xkcd.com}{xkcd} comic
+problem solving. This \href{https://www.xkcd.com/627/}{xkcd comic}
 illustrates (a bit sarcastically!) the point:
+
+\begin{center}\includegraphics[width=0.75\linewidth]{images/tech_support_cheat_sheet} \end{center}
 
 Navigating challenges with data science may not be quite as easy
 following the flowchart above, but there are definitely strategies for
@@ -1914,9 +2215,9 @@ The last of the three functions above will return this error in your
 \end{Highlighting}
 \end{Shaded}
 
-With the three functions written in a \texttt{.R} script, highligh all
-seven lines of code (the three functions, both comments, and both
-whitespace lines) and copy them to your clipboard
+With the three functions written in a \texttt{.R} script, highlight all
+seven lines of code (the three functions, both comments, and both white
+space lines) and copy them to your clipboard
 (\texttt{Edit\ \textgreater{}\ Copy}). Then call the \texttt{reprex()}
 function. Markdown formatted text that weaves both the functions and
 their output together will appear in the viewer tab:
@@ -2087,7 +2388,7 @@ Well, yes, it does require some extra effort. This effort is almost
 always worth it, however. In some cases, the time it takes you to
 produce the repex leads you to the answer on your own, which is part of
 the problem solving process that this class is designed to foster. Even
-when this does not happen, making reprex informed inquries is a
+when this does not happen, making reprex informed inquires is a
 technique that you will be able to take with you at the end of the
 semester. Even if you are not working in a technical setting, being able
 to structure clear, concise questions about a process is a valuable
@@ -2123,7 +2424,7 @@ are not appropriate for Slack are those that reference specific parts of
 a problem set or the final project. However, if you are creating
 reproducible examples, your questions should not be that specific even
 if they ultimately are about a homework assignment. If you are not sure
-whether the question is appropirate or not for a public channel, or just
+whether the question is appropriate or not for a public channel, or just
 would prefer not to ask your question out in the open, feel free to send
 me a
 \href{https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs}{direct
@@ -2181,7 +2482,7 @@ pull it up on your computer or a lab computer.
 
 There are two good places to ask questions external to the course as
 well. For questions related to RStudio, R Markdown, and the
-\href{http://tidyverse.org}{tidyverse}, RStudio maintains a web forumn
+\href{http://tidyverse.org}{tidyverse}, RStudio maintains a web forum
 called \href{https://community.rstudio.com}{RStudio Community}. If you
 are posting there, you can use \texttt{reprex()} to generate Markdown
 formatted reprexs.
@@ -2216,9 +2517,700 @@ adding the \texttt{venue} argument, as in
 \texttt{reprex(venue\ =\ "so")}.
 
 Of the two sites, I find \href{https://community.rstudio.com}{RStudio
-Community} to be a friendlier place that is more relaxed thatn Stack
+Community} to be a friendlier place that is more relaxed than Stack
 Overflow and its cousins. However, Stack Exchange communities have much
 larger user bases to draw from.
+
+\part{Data Science Toolkit}\label{part-data-science-toolkit}
+
+\chapter{Opinionated Tools}\label{opinionated-tools}
+
+The \protect\hyperlink{intro}{Introduction} to this text describes
+opinionated analysis development as a key element that both
+\href{https://slu-soc5650.github.io}{Introduction to Geographic
+Information Science (SOC 4650/5650)} and
+\href{https://slu-soc5050.github.io}{Quantitative Analysis: Applied
+Inferential Statistics (SOC 4930/5050)} are built around. Parker's
+(2017) term is a reference to opinionated software, which is designed
+with a strong set of guiding principles that strongly encourages users
+to follow certain processes (Eccles 2015). When possible, we'll use
+opinionated applications or processes that support our larger goals of
+opinionated analysis development. This section introduces a number of
+the key tools that we use to accomplish data science work with social
+and spatial data.
+
+\hypertarget{markdown}{\chapter{Markdown}\label{markdown}}
+
+Markdown is a simple
+\href{https://en.wikipedia.org/wiki/Markup_language}{markup language}.
+Markup languages are used to give computer programs directions on how
+particular blocks of text should be processed. Markdown was developed in
+2004 by writer and developer \href{http://daringfireball.net}{John
+Gruber}. Gruber describes Markdown on his
+\href{http://daringfireball.net/projects/markdown/}{website}:
+
+\begin{quote}
+Markdown is intended to be as easy-to-read and easy-to-write as is
+feasible.
+\end{quote}
+
+\begin{quote}
+Readability, however, is emphasized above all else. A Markdown-formatted
+document should be publishable as-is, as plain text, without looking
+like it's been marked up with tags or formatting instructions. While
+Markdown's syntax has been influenced by several existing text-to-HTML
+filters --- including Setext, atx, Textile, reStructuredText, Grutatext,
+and EtText --- the single biggest source of inspiration for Markdown's
+syntax is the format of plain text email.
+\end{quote}
+
+\begin{quote}
+To this end, Markdown's syntax is comprised entirely of punctuation
+characters, which punctuation characters have been carefully chosen so
+as to look like what they mean. E.g., asterisks around a word actually
+look like \emph{emphasis}. Markdown lists look like, well, lists. Even
+blockquotes look like quoted passages of text, assuming you've ever used
+email\ldots{}
+\end{quote}
+
+\begin{quote}
+\ldots{}Markdown's syntax is intended for one purpose: to be used as a
+format for writing for the web.
+\end{quote}
+
+Markdown is utilized to varying degrees by many of the data science
+tools we'll use in both courses, including RStudio, GitHub, and Slack.
+In all three applications, Markdown provides a straightforward way to
+format and stylize plain text files. Markdown therefore gives us the
+best of two worlds - text files can be organized and formatted as in
+\href{https://en.wikipedia.org/wiki/WYSIWYG}{WYSIWYG} editors like
+Microsoft Word, but they remain plain text files that are accessible in
+a variety of computing environments and do not depend on proprietary
+applications.
+
+\section{Document Organization}\label{document-organization}
+
+There are two principle means for organizing Markdown documents -
+headings of varying size and paragraph breaks.
+
+\subsection{Headings}\label{headings}
+
+Markdown contains six heading levels. Headings are identified with
+\texttt{\#} symbols and a space that separates them from from the
+heading text.
+
+\textbf{Input:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{# This is the largest heading}
+\FunctionTok{## This is the second largest heading}
+\FunctionTok{### This is the third largest heading}
+\FunctionTok{#### This is the fourth largest heading}
+\FunctionTok{#### This is the second smallest heading}
+\FunctionTok{###### This is the smallest heading}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Output:}
+
+\begin{flushleft}\includegraphics[width=0.5\linewidth]{images/markdownHead} \end{flushleft}
+
+\subsection{New Paragraphs}\label{new-paragraphs}
+
+Leave a blank line between two paragraphs to create a break.
+
+\textbf{Input:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor }
+\NormalTok{incididunt ut labore et dolore magna aliqua. Quam pellentesque nec nam aliquam }
+\NormalTok{sem et tortor consequat. Auctor urna nunc id cursus metus. Eleifend mi in }
+\NormalTok{nulla posuere. Facilisis sed odio morbi quis. Nibh nisl condimentum id venenatis. }
+\NormalTok{Lectus nulla at volutpat diam ut venenatis. }
+
+\NormalTok{Pretium lectus quam id leo in vitae. Neque vitae tempus quam pellentesque nec nam }
+\NormalTok{aliquam. Curabitur gravida arcu ac tortor. Arcu risus quis varius quam quisque id }
+\NormalTok{diam. Viverra aliquet eget sit amet tellus cras adipiscing. Tellus molestie nunc }
+\NormalTok{non blandit massa enim nec. Tempus imperdiet nulla malesuada pellentesque elit eget. }
+\NormalTok{Non blandit massa enim nec. Sed risus pretium quam vulputate dignissim suspendisse }
+\NormalTok{in est ante.}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Output:}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Quam pellentesque
+nec nam aliquam sem et tortor consequat. Auctor urna nunc id cursus
+metus. Eleifend mi in nulla posuere. Facilisis sed odio morbi quis. Nibh
+nisl condimentum id venenatis. Lectus nulla at volutpat diam ut
+venenatis.
+
+Pretium lectus quam id leo in vitae. Neque vitae tempus quam
+pellentesque nec nam aliquam. Curabitur gravida arcu ac tortor. Arcu
+risus quis varius quam quisque id diam. Viverra aliquet eget sit amet
+tellus cras adipiscing. Tellus molestie nunc non blandit massa enim nec.
+Tempus imperdiet nulla malesuada pellentesque elit eget. Non blandit
+massa enim nec. Sed risus pretium quam vulputate dignissim suspendisse
+in est ante.
+
+\section{Working with Text}\label{working-with-text}
+
+Markdown provides a number of tools for working with and stylizing text.
+These include options for bold and italicized text, adding code blocks,
+quoting text, and creating bulleted and enumerated lists.
+
+\subsection{Styling Text}\label{styling-text}
+
+Text can be styled using bold and italics To create italicized text,
+wrap your text with a single asterisk \texttt{*}. To create bold text,
+wrap your text with double asterisks \texttt{**}.
+
+\textbf{Input:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{*This is an italicized sentence.*}
+
+\NormalTok{**This is a bolded sentence.**}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Output:}
+
+\emph{This is an italicized sentence.}
+
+\textbf{This is a bolded sentence.}
+
+\subsection{Quoting Text}\label{quoting-text}
+
+Quoting text (which I have used above to illustrate examples) is done
+with a greater then symbol (\texttt{\textgreater{}}).
+
+\textbf{Input:}
+
+\begin{verbatim}
+> This is quoted text.
+\end{verbatim}
+
+\textbf{Output:}
+
+\begin{quote}
+This is quoted text.
+\end{quote}
+
+\subsection{Quoting Code}\label{quoting-code}
+
+There are two types of code quotes in Markdown. In-line quotes, which
+are included in a sentence, are wrapped in single backticks:
+\textgreater{} Use the \texttt{describe} command to list variables in
+\texttt{R}
+
+To include code blocks, which are better for including the full syntax
+of particular commands and their output, use triple backticks:
+
+\begin{verbatim}
+. describe make price mpg
+
+              storage   display    value
+variable name   type    format     label      variable label
+--------------------------------------------------------------------------------
+make            str18   %-18s                 Make and Model
+price           int     %8.0gc                Price
+mpg             int     %8.0g                 Mileage (mpg)
+\end{verbatim}
+
+Note how the word `Stata' is written after the first set of triple
+backticks. This is an indicator for GitHub that the code is written in
+Stata's programming language. By including this, GitHub can apply some
+syntax highlighting to your files. This makes them easier to read.
+
+\subsection{Links}\label{links}
+
+In Markdown, adding hyperlinks is a two step process. The text that you
+want to have hyperlinked is written first and is wrapped in brackets
+\texttt{{[}{]}}. After this, you include the URL wrapped in parentheses
+\texttt{()}. This is an example of including in-line hyperlinks:
+
+\begin{quote}
+The course \href{https://github.com/slu-soc5050}{website} is hosted
+using the service \href{https://github.com}{GitHub}.
+\end{quote}
+
+\subsection{Embedding Images}\label{embedding-images}
+
+Within the directory that contains your Markdown file, create a
+subdirectory called \texttt{Output}. Save all images for a particular
+assignment there. In your main assignment Markdown file, include a
+hyperlink reference:
+
+Note how, instead of including text to be hyperlinked, we suppress this
+aspect of the syntax by using an exclamation point \texttt{!}.
+
+\subsection{Simple Lists}\label{simple-lists}
+
+Bulleted lists are indicated in Markdown using the dash \texttt{-} or a
+single asterisk \texttt{*}:
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  mean
+\item
+  median
+\item
+  mode
+\item
+  variance
+\item
+  standard deviation
+\end{itemize}
+\end{quote}
+
+Enumerated lists are created by preceding each line with the appropriate
+number:
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  calculate the mean
+\item
+  calculate the variance
+\item
+  calculate the standard deviation
+\end{enumerate}
+\end{quote}
+
+You can create more complex lists by preceding a line with two single
+spaces. You can also combine bulleted and enumerated lists when using
+this approach.
+
+\section{GitHub Markdown}\label{github-markdown}
+
+These are specific to what is called GitHub Markdown - there are some
+subtle differences in the way GitHub uses Markdown formatting.
+
+\subsection{Styling Text}\label{styling-text-1}
+
+Text can be styled using bold, italics, and strikethroughs. To create
+italicized text, wrap your text with a single asterisk \texttt{*\ *}. To
+create bold text, wrap your text with double asterisks \texttt{**\ **}.
+To create strike-through text, wrap your text with two tildes
+\texttt{\textasciitilde{}\textasciitilde{}\ \textasciitilde{}\textasciitilde{}}.
+
+\begin{quote}
+\sout{This is a sentence with strikethrough text}
+\end{quote}
+
+\subsection{Tables}\label{tables}
+
+\subsection{Task Lists}\label{task-lists}
+
+If you want to create task lists on GitHub, you can include brackets
+separated by a space before each list item \texttt{{[}\ {]}}. Completed
+tasks include an \texttt{x} in place of the space \texttt{{[}x{]}}.
+These task lists are interactive - when published on GitHub, you can
+click on the resulting checkboxes to toggle them between complete /
+incomplete.
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  {[}x{]} calculate the mean
+\item
+  {[} {]} calculate the variance
+\item
+  {[} {]} calculate the standard deviation
+\end{enumerate}
+\end{quote}
+
+\subsection{Mentioning Other GitHub
+Users}\label{mentioning-other-github-users}
+
+If you want to mention me or one of your classmates in a comment,
+include the \texttt{@} symbol before their username:
+
+\begin{quote}
+Hey \citet{chris-prener}, thanks for the feedback. I made the changes to
+lines 40 and 41.
+\end{quote}
+
+Once the document is uploaded to GitHub, the username will render as a
+hyperlink and the user will be alerted.
+
+\hypertarget{basic-git}{\chapter{Basic Git}\label{basic-git}}
+
+Much of our interaction this semester outside of class will utilize
+GitHub.com (or just ``GitHub''). GitHub is a web service that is a
+social network for programmers, developers, data scientists,
+researchers, and academics. It is also a tool for collaborating on
+projects, especially projects that involve writing code.
+
+We'll use GitHub as an alternative to Blackboard, the \emph{course
+management system} that students are typically familiar with. Course
+materials will be posted there, and GitHub's features will allow you to
+copy them and keep them updated as changes are made. You'll also use
+GitHub to submit assignments for grading, and we'll give you feedback
+and grades via GitHub as well.
+
+\section{Git Basics}\label{git-basics}
+
+\subsection{Git}\label{git}
+
+GitHub is a web application that utilizes
+\href{https://git-scm.com}{Git}:
+
+\begin{quote}
+Git is a free and open source distributed version control system
+designed to handle everything from small to very large projects with
+speed and efficiency.
+\end{quote}
+
+Essentially, Git is a project-wide system for tracking changes to files.
+Think of it as Microsoft office's track changes feature on steroids -
+every change to every file in a directory is tracked. A directory that
+has tracking enabled with Git is called a \textbf{repository} or
+``repo'' in Git-lingo.
+
+You do no need to host files online to use Git. If you have a project
+saved locally (say, a doctoral thesis), you could utilize Git to version
+control that project without ever uploading it to the Internet. However,
+Git integrates seemlessly with \textbf{remote} repositories. The most
+well-known host of remote repos is
+\protect\hyperlink{github.com}{GitHub.com}.
+
+Beyond ``repositories'', there are a few additional terms that are
+specific to Git and that are helpful to know:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Clone}: Make an identical copy of a repository on your local
+  hard drive.
+\item
+  \textbf{Commit}: Approve any changes you have made to a repository.
+\item
+  \textbf{Sync}: For cloned repositories, files that have been changed
+  need to be synced or \textbf{pushed} to GitHub.com after they are
+  committed.
+\end{itemize}
+
+For our purposes, this is just about all you need to know about Git. If
+you want to learn more, \href{https://git-scm.com/about}{Git's `About'
+page} is a great place to start.
+
+\hypertarget{github.com}{\subsection{GitHub.com}\label{github.com}}
+
+GitHub is a web service that can host projects using Git's version
+tracking. It is widely used by programmers, software developers, data
+scientists, and academics to host and collaborate projects.
+
+GitHub is an excellent way to backup files for a project since you can
+``sync'' changes made to a repository up to GitHub's servers. It is also
+an excellent way to collaborate on files with colleagues while also
+using Git's version tracking. Repositories can be either public (like
+all of the repos for our seminar) or private, which means that only
+people who have been given access to can view the contents of the repo.
+Private repos require an upgraded account, which retails for \$7/month.
+
+Students can get access to GitHub's paid services for free, however, by
+signing up for a \href{https://education.github.com}{free student
+account}. This will give you access to private repositories for as long
+as you are a student. GitHub also provides this free upgrade service to
+educators, which is how our classes have private repositories.
+
+\section{The Workflow of Git and
+GitHub}\label{the-workflow-of-git-and-github}
+
+The typical approach to versioning for many students is manual. For a
+hypothetical class response paper, it might look something like this:
+
+\begin{center}\includegraphics[width=0.5\linewidth]{images/gitFlow01} \end{center}
+
+The author made an initial copy of the paper, and then used a haphazard
+and inconsistent approach for naming subsequent copies of the paper. We
+can presume that changes were made in a linear fashion, though it is
+easy to make changes to, say, \texttt{First\ Response\ Paper\ 2.doc}
+after \texttt{First\ Response\ Paper\ 3.doc} has been created and
+edited.
+
+\subsection{Commits}\label{commits}
+
+Instead of saving copies of their hypothetical paper, a student using
+GitHub could write the paper in a single document, \textbf{commiting}
+their changes as they progress to take ``snapshots'' of their progress.
+These snapshots contain information on changes the student has made,
+tracked line-by-line. So, at each point in which a new document would
+have been created in the typical workflow, a student using GitHub would
+simply \textbf{commit} their changes:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/gitFlow02} \end{center}
+
+Git provides a number of useful features beyond simply tracking changes.
+Each commit is accompanied a \textbf{message}. These messages must have
+a short summary that appears on GitHub and can also have a longer
+description that can be used to describe in detail what changes are
+being applied with a specific commit:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/gitFlow03} \end{center}
+
+Messages, combined with the changes that are tracked, allow users to
+trace the development of a single document or an entire project
+overtime:
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/gitFlow04} \end{center}
+
+This means that, if necessary, the project can also be rolled back to an
+earlier period. Finally, users can \textbf{sync} their commits with
+GitHub.com, hosting their changes and their data in a way that protects
+them against certain types of computer failures and also allowing them
+to easily share their work with others.
+
+\subsection{More About Repositories}\label{more-about-repositories}
+
+Users of GitHub.com adhere to a couple of norms with their repositories
+that are worth knowing about. Repositories cannot have spaces in their
+names (much like objects in \texttt{R}), so the naming conventions that
+we will discuss in relation to \texttt{R} this semester all apply to
+GitHub as well!
+
+Public GitHub repositories also contain (typically) at least three core
+files:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  A \textbf{license} file - since the data is out there for public
+  consumption, it is important to think about how that data is licensed.
+  The norm among GitHub users has been to use open source licenses,
+  which let others edit and adapt your work. There are a range of
+  \href{http://choosealicense.com}{licenses} that are commonly used on
+  GitHub.
+\item
+  A \textbf{README} file - this describes the purpose and content of the
+  project.
+\item
+  A \textbf{.gitignore} file - this stops certain types of files from
+  being swept up by GitHub when a user syncs their files with a server.
+\end{enumerate}
+
+When you clone your repositories, you will be prompted to save them on
+your computer. There are a number of ways in which this process can
+introduce sources for trouble down the road. The principle way that I
+have seen students run into problems with GitHub is by storing
+repositories on cloud storage services like Dropbox or Google Drive. In
+order to avoid any issues, I advise against storing GitHub repositories
+in an area of your computer that syncs with a cloud service.
+
+\section{GitHub Issues}\label{github-issues}
+
+GitHub has a powerful tool for interaction called
+\href{https://help.github.com/articles/about-issues/}{Issues}. These can
+be accessed by opening a repository and then clicking on the ``Issues''
+tab. Issues can be ``opened'' by anyone with access to the repository.
+They allow for a conversation to occur in the form of messages posted
+within the Issue itself. Files can be attached to Issues, and the
+messages can contain Markdown formatting. Once the conversation is
+complete, issues can be marked as ``closed'', which moves them into a
+secondary view on the website so that they are archived.
+
+We'll use issues for both assignment feedback and grading. Please keep
+up with issues are they appear, and feel free to follow-up with specific
+questions about your grade or the assignment feedback in the Issue
+conversation. Once you are satisfied, please mark the issue as closed.
+
+\section{GitHub Desktop Application}\label{github-desktop-application}
+
+\href{https://desktop.github.com}{GitHub Desktop} is a tool that allows
+you to easily clone repositories hosted on GitHub, commit changes to
+them, and then sync those changes up to the website. You can also create
+new repositories, however this is not task you will have to do this
+semester. GitHub Desktop is not a fully functional desktop version of
+GitHub. For our purposes, it is important to note that the Desktop
+application will not let you easily identify when repositories have been
+updated by other users, view Wikis associated with repositories, or view
+Issues.
+
+\section{Learning More}\label{learning-more}
+
+GitHub has a
+\href{https://help.github.com/articles/good-resources-for-learning-git-and-github/}{resources
+page} with links to websites that are great for helping you learn more
+about how Git and GitHub work! The next chapter also has some additional
+GitHub and Git information.
+
+One particularly great \href{https://try.github.io/}{tutorial} walks you
+through the command line process for creating and using a git
+repository. Even if you do not want to use Git via the command line, the
+tutorial does an \emph{excellent} job of describing the logic and
+sequence behind the Git workflow.
+
+\hypertarget{advanced-git}{\chapter{Advanced Git}\label{advanced-git}}
+
+GitHub has a number of tools available for managing multiple
+contributors' work simultaneously. These tools will be useful for
+collaborating with your teammates on the final project.
+
+\section{Even More Git-lingo}\label{even-more-git-lingo}
+
+Beyond the terms introduced in the previous chapter, there are a few
+additional terms that are specific to collaborating that are helpful to
+know:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Branch}: An identical copy of the repository that is distinct
+  from the \texttt{master} copy.
+\item
+  \textbf{Checkout}: The act of switching to a new branch.
+\item
+  \textbf{Pull Request}: Request that the changes made on a branch be
+  integrated into the \texttt{master} copy.
+\end{itemize}
+
+\section{Creating Branches}\label{creating-branches}
+
+The logic behind branches is that they allow you to make modifications
+to the content of the repository without impacting the content that is
+on the \texttt{master} branch. Think of the \texttt{master} branch is
+your production data - this is what you know is good and in working
+order. If you need to experiment, say by adding new code or data
+sources, you can do this on a branch without worrying about breaking
+something in the production part of the repository.
+
+To create a new branch, navigate to the repository in question on
+GitHub.com. Just above the list of the repository's contents on the
+lefthand side of the winodw is a button that will read ``Branch:
+master''. If you pull the associated menu down, you have the ability to
+create a new branch (by typing a name into the text field) or switch
+between branches:
+
+\includegraphics[width=1\linewidth]{images/branch1}
+
+The image above shows this menu pulled down with the ficticious user
+John Snow creating a new branch on his assignments repository named
+\texttt{snowBranch}. Once the branch is created, you will automatically
+be directed to the new branch's contents. These should look identical to
+the \texttt{master} branch at this point because the branch creation
+process generates a mirror image of \texttt{master}.
+
+You can use the same pulldown menu to switch back to the \texttt{master}
+branch if needed:
+
+\includegraphics[width=1\linewidth]{images/branch2}
+
+\subsection{Working with Branches}\label{working-with-branches}
+
+Once your branch is created, you need to open up GitHub desktop and, if
+you haven't already, clone the repository you created the branch in. If
+you have already cloned the repository, you just need to \texttt{Sync}
+it so that the branch information is downloaded to your local copy of
+the repository.
+
+Once you have updated or cloned your repository, it is time to
+\textbf{checkout} the branch. This means to switch from the current
+branch (by default, the \texttt{master} branch, to your new branch). In
+GitHub Desktop, there is a button on the top toolbar that will say the
+current branch name (by default, \texttt{master}). You can click on this
+button to open a pulldown menu that will list all available branches:
+
+\includegraphics[width=1\linewidth]{images/branch3}
+
+Click on a branch to check it out. Once checked out, the files available
+to your operating system will change to reflect the contents of that
+branch!
+
+It is important that you ensure that you are always intentionally
+working on the correct branch. Any time you return to your computer to
+continue working on a branch, open up GitHub Desktop and ensure that the
+proper branch remains checked out.
+
+Branches are used just like regular repos in Git. You can commit changes
+to them and sync them with GitHub.com. I recommend commiting changes to
+branches regularly and syncing them with the remote version of the
+repository to ensure that your work is not lost.
+
+\subsection{Opening Pull Requests}\label{opening-pull-requests}
+
+When you have made changes to your branch and want to integrate them
+into the \texttt{master}, production part of your repository, it is time
+to open a \textbf{pull request}. Below, you will see that a directory
+named \texttt{ExtraWork} has been added to the \texttt{SnowAssignments}
+repository's \texttt{snowBranch}:
+
+\includegraphics[width=1\linewidth]{images/branch4}
+
+We have verified that the file is complete and ready for integration
+into the \texttt{master} branch. To do this, we need to click on the
+\texttt{New\ pull\ request} button just to the right of the
+\texttt{Branch} button above your repository contents. Make sure that
+you are opening the pull request on your branch and not on the
+\texttt{master}!
+
+\includegraphics[width=1\linewidth]{images/branch5}
+
+The \textbf{pull request} page looks very similar to GitHub's
+\textbf{Issue} feature - there is a place for a title (which will be
+autofilled for you) and for describing the contents and signifiance of
+your changes. You can optionally assign individual reviewers (such as
+your final project team members). Once you are done, click the green
+\texttt{Create\ pull\ request} button.
+
+\subsection{Evaluating Pull Requests}\label{evaluating-pull-requests}
+
+When a team member opens a \textbf{pull request}, you should see a
+notification in your news feed on the main landing page when you log
+into GitHub.com:
+
+\includegraphics[width=1\linewidth]{images/branch6}
+
+Clicking on that message (or, alternatively, selecting the
+\texttt{Pull\ Requests} tab in any repository) will take you to a page
+where you can evaluate changes that were made on your colleague's
+branch:
+
+\includegraphics[width=1\linewidth]{images/branch7}
+
+Here you can: * view files that have been changed or added, * respond to
+the pull request with a comment if you have follow-up questions, * view
+the results of GitHub's conflict check, * and choose an outcome (either
+merging - i.e.~accepting - the pull request or closing - i.e.~rejecting
+- the pull request)
+
+This is an integral step. It is part of the peer review process that
+drives open-source software and is conducted in the same spirit of peer
+review that academics use to evaluate publications. The goal here is
+provide constructive feedback about proposed additions or changes. If
+you choose to close (i.e.~reject) a pull request, give a detailed
+explanation as to why you are doing so.
+
+If you see that there are conflicts with the base (i.e. \texttt{master})
+branch, please let Chris know immediately to problem solve before any
+pull requests are accepted.
+
+If you want to accept the changes, select the green
+\texttt{Merge\ pull\ request} button. Chosing this button will open up a
+space for you to add a commit message that corresponds with accepting
+the pull request:
+
+\includegraphics[width=1\linewidth]{images/branch8}
+
+After filling out your commit message and selecting
+\texttt{Confirm\ merge}, you have one final opportunity to either roll
+back the changes (by chosing \texttt{Revert}) or make them permanent by
+chosing \texttt{Delete\ branch}.
+
+\section{Git Terminal}\label{git-terminal}
+
+T
 
 \bibliography{book.bib,packages.bib}
 

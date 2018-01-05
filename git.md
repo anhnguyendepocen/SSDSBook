@@ -32,7 +32,8 @@ Students can get access to GitHub's paid services for free, however, by signing 
 ## The Workflow of Git and GitHub
 The typical approach to versioning for many students is manual. For a hypothetical class response paper, it might look something like this:
 
-<img src="images/gitFlow01.png" width="50%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.5\linewidth]{images/gitFlow01} \end{center}
 
 The author made an initial copy of the paper, and then used a haphazard and inconsistent approach for naming subsequent copies of the paper. We can presume that changes were made in a linear fashion, though it is easy to make changes to, say, `First Response Paper 2.doc` after `First Response Paper 3.doc` has been created and edited.
 
@@ -40,15 +41,18 @@ The author made an initial copy of the paper, and then used a haphazard and inco
 
 Instead of saving copies of their hypothetical paper, a student using GitHub could write the paper in a single document, **commiting** their changes as they progress to take "snapshots" of their progress. These snapshots contain information on changes the student has made, tracked line-by-line. So, at each point in which a new document would have been created in the typical workflow, a student using GitHub would simply **commit** their changes:
 
-<img src="images/gitFlow02.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/gitFlow02} \end{center}
 
 Git provides a number of useful features beyond simply tracking changes. Each commit is accompanied a **message**. These messages must have a short summary that appears on GitHub and can also have a longer description that can be used to describe in detail what changes are being applied with a specific commit:
 
-<img src="images/gitFlow03.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/gitFlow03} \end{center}
 
 Messages, combined with the changes that are tracked, allow users to trace the development of a single document or an entire project overtime:
 
-<img src="images/gitFlow04.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/gitFlow04} \end{center}
 
 This means that, if necessary, the project can also be rolled back to an earlier period. Finally, users can **sync** their commits with GitHub.com, hosting their changes and their data in a way that protects them against certain types of computer failures and also allowing them to easily share their work with others.
 

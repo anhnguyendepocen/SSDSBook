@@ -41,7 +41,8 @@ Since there are approximately eight different types of handouts in each class, a
 I don't think that one way of organization, thematically or temporally, is inherently better or worse than the other. In large part it comes down to how *you* like to organize information. After all, learning how to process and organize information in a way that works for you is the most important takeaway here.
 
 ## Course Flow
-<img src="images/courseWorkflow.png" width="100%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=1\linewidth]{images/courseWorkflow} \end{center}
 
 Both [Quantitative Analysis](https://slu-soc5050.github.io) and [Introduction to GIS](https://slu-soc5650.github.io) follow the same weekly flow or progression. The structure of the assignments and course materials presupposes that you adhere to this progression.
 
@@ -82,17 +83,20 @@ Course content is maintained both on the respective course websites ([Quantitati
 ### Badges
 I use badges on both the GitHub `README.md` files in individual lecture repositories and on individual lecture webpages to signal which semester the content is current for and what stage of development the content is in. These badges are used not just because they are effective but as part of a more general socialization into data science software development, where badges are used to signal development status on `R` package GitHub repositories. For example, the [`ggplot2`](https://github.com/tidyverse/ggplot2) `README.md` file looks like this:
 
-<img src="images/ggplot2Readme.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/ggplot2Readme} \end{center}
 
 There are four badges in total, all of which sit under the `ggplot2` package name. We can see from the first two badges that [continuous integration services](https://en.wikipedia.org/wiki/Continuous_integration) are used, and that `ggplot2` is only passing its tests on one of them. The third badge indicates that the built-in tests for `ggplot2` test 74% of the package's code. We can also see from the fourth badge that the current version of the software on CRAN is version `2.2.1` (as of December, 2017). Details like these are not critical when you are first learning to use `R`, but they grow more important as your data science skills progress.
 
 We use the following badges for our course repositories and on the course websites:
 
-<img src="images/readmeBadges.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/readmeBadges} \end{center}
 
 Here is an example of how the badges look on a course repository. As of January 2018, the `README.md` associated with the [`Core-Documents` repository](https://github.com/slu-soc5050/Core-Documents) for [Quantitative Analysis](https://slu-soc5050.github.io) looked like this:
 
-<img src="images/readmeBadgesEx.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/readmeBadgesEx} \end{center}
 
 The `README.md` badges, from left to right, represent the following:
 
@@ -104,18 +108,21 @@ The `README.md` badges, from left to right, represent the following:
 
 Here is an example of how the badges look on a course website. As of January 2018, the [Course Preview page](https://slu-soc5650.github.io/course-preview) for [GIS](https://slu-soc5650.github.io/) looked like this:
 
-<img src="images/webpageBadgesEx.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/webpageBadgesEx} \end{center}
 
 From these three badges, we can see that the webpage is current for the Spring 2018 semester and that it is the full release - no additional updates to the site are planned. Finally, we can see the date on which the page was last updated - December 29, 2017.
 
 ### Versioning
 The versioning system used on course repositories is meant to emulate the release system used for data science software. Software development increasingly takes place on a website called [GitHub.com]. GitHub includes tools for packaging a repository at particular points in time. The release system allows developers to identify how an `R` package, for instance, has changed over time. This is important for reproducibility. For instance, you can see this example of the [release history for `ggplot2`](https://github.com/tidyverse/ggplot2/releases/tag/v2.2.0):
 
-<img src="images/release.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/release} \end{center}
 
 The package's developers use the release system to document what has changed. We will emulate this with the `Core-Documents`, lecture, and `finalProject` repositories. For example, here is the release documentation for [SOC 4650/5650 `Core-Documents` repository](https://github.com/slu-soc5650/Core-Documents): 
 
-<img src="images/releaseEx.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/releaseEx} \end{center}
 
 If you want to see what has changed over the course of the semester in a course's repositories, you can use the release notes to compare different versions. These notes are also stored in the `NEWS.md` file for each repository. The use of both releases and a `NEWS.md` file is a common way to document changes on GitHub. For example, you can see look at the [`NEWS.md` file for `ggplot2`](https://github.com/tidyverse/ggplot2/blob/master/NEWS.md), which will mirror the [release notes](https://github.com/tidyverse/ggplot2/releases) for the package. 
 
@@ -128,7 +135,8 @@ If you see a version number like `v18.1.1.9000` in `NEWS.md`, the notes will be 
 ### Slack
 The `#_news` channel in each course's Slack organization will be automatically updated with a list of commit messages for each lecture repository. The updates will look like this:
 
-<img src="images/slackNews.png" width="95%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.95\linewidth]{images/slackNews} \end{center}
 
 You will be able to scan through commit messages for updates that might be relevant for you. Commit messages are a core part of using Git, and are discussed in the [Basic Git] chapter. From these messages, we can see that changes were made to the `LICENSE` (one of the meta documents) in the [`Core-Documents` repository](https://github.com/slu-soc5650/Core-Documents) for [GIS](https://slu-soc5650.github.io/). We can also see that a change was made to the Syllabus's content for the course.
 
