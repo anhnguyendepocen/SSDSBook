@@ -147,6 +147,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.1" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>3.1</b> Reproducibility</a></li>
 <li class="chapter" data-level="3.2" data-path="thinking-in-workflows.html"><a href="thinking-in-workflows.html"><i class="fa fa-check"></i><b>3.2</b> Thinking in Workflows</a></li>
 <li class="chapter" data-level="3.3" data-path="data-1.html"><a href="data-1.html"><i class="fa fa-check"></i><b>3.3</b> Data</a></li>
+<li class="chapter" data-level="3.4" data-path="plain-text.html"><a href="plain-text.html"><i class="fa fa-check"></i><b>3.4</b> Plain Text</a></li>
+<li class="chapter" data-level="3.5" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3.5</b> Version Control</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="protecting-your-work.html"><a href="protecting-your-work.html"><i class="fa fa-check"></i><b>4</b> Protecting Your Work</a><ul>
 <li class="chapter" data-level="4.1" data-path="threats-to-our-data.html"><a href="threats-to-our-data.html"><i class="fa fa-check"></i><b>4.1</b> Threats To Our Data</a></li>
@@ -169,7 +171,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3.5" data-path="organizing-projects.html"><a href="organizing-projects.html#the-maps-directory"><i class="fa fa-check"></i><b>4.3.5</b> The <code>maps</code> Directory</a></li>
 <li class="chapter" data-level="4.3.6" data-path="organizing-projects.html"><a href="organizing-projects.html#the-results-directory"><i class="fa fa-check"></i><b>4.3.6</b> The <code>results</code> Directory</a></li>
 <li class="chapter" data-level="4.3.7" data-path="organizing-projects.html"><a href="organizing-projects.html#the-src-directory"><i class="fa fa-check"></i><b>4.3.7</b> The <code>src</code> Directory</a></li>
-<li class="chapter" data-level="4.3.8" data-path="organizing-projects.html"><a href="organizing-projects.html#organizing-coursework"><i class="fa fa-check"></i><b>4.3.8</b> Organizing Coursework</a></li>
+<li class="chapter" data-level="4.3.8" data-path="organizing-projects.html"><a href="organizing-projects.html#storing-your-project"><i class="fa fa-check"></i><b>4.3.8</b> Storing Your Project</a></li>
+<li class="chapter" data-level="4.3.9" data-path="organizing-projects.html"><a href="organizing-projects.html#organizing-coursework"><i class="fa fa-check"></i><b>4.3.9</b> Organizing Coursework</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="backing-up-your-data.html"><a href="backing-up-your-data.html"><i class="fa fa-check"></i><b>4.4</b> Backing Up Your Data</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="backing-up-your-data.html"><a href="backing-up-your-data.html#bootable-backups"><i class="fa fa-check"></i><b>4.4.1</b> Bootable Backups</a></li>
@@ -266,7 +269,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Once you have tried <a href="helping-yourself.html#helping-yourself">Helping Yourself</a> and have gone through the steps outlined in <a href="how-to-seek-help.html#how-to-seek-help">How to Seek Help</a> (i.e. made a reprex), it is time to ask your question. There are a number of different places that you can pose questions. The sections below outline these and suggest some ways to make your question most effective.</p>
 <div id="internal-venues" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Internal Venues</h3>
-<p>Within the confines of the course, the two best places to ask questions are on Slack and during office hours. When asking a question on Slack, please consider doing so in a public channel. This helps others learn from the question that you have. The only course-related questions that are not appropriate for Slack are those that reference specific parts of a problem set or the final project. However, if you are creating reproducible examples, your questions should not be that specific even if they ultimately are about a homework assignment. If you are not sure whether the question is appropirate or not for a public channel, or just would prefer not to ask your question out in the open, feel free to send me a <a href="https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs">direct message on Slack</a>.</p>
+<p>Within the confines of the course, the two best places to ask questions are on Slack and during office hours. When asking a question on Slack, please consider doing so in a public channel. This helps others learn from the question that you have. The only course-related questions that are not appropriate for Slack are those that reference specific parts of a problem set or the final project. However, if you are creating reproducible examples, your questions should not be that specific even if they ultimately are about a homework assignment. If you are not sure whether the question is appropriate or not for a public channel, or just would prefer not to ask your question out in the open, feel free to send me a <a href="https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs">direct message on Slack</a>.</p>
 <p>When you pose a question on Slack, it should contain three or four pieces of information:</p>
 <ol style="list-style-type: decimal">
 <li>The question itself - what are you hoping to get help with?</li>
@@ -286,7 +289,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="external-venues" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> External Venues</h3>
-<p>There are two good places to ask questions external to the course as well. For questions related to RStudio, R Markdown, and the <a href="http://tidyverse.org">tidyverse</a>, RStudio maintains a web forumn called <a href="https://community.rstudio.com">RStudio Community</a>. If you are posting there, you can use <code>reprex()</code> to generate Markdown formatted reprexs.</p>
+<p>There are two good places to ask questions external to the course as well. For questions related to RStudio, R Markdown, and the <a href="http://tidyverse.org">tidyverse</a>, RStudio maintains a web forum called <a href="https://community.rstudio.com">RStudio Community</a>. If you are posting there, you can use <code>reprex()</code> to generate Markdown formatted reprexs.</p>
 <p>Another place to post questions in on one of the relevant <a href="https://stackexchange.com">Stack Exchange</a> communities:</p>
 <ul>
 <li><a href="https://stackoverflow.com">Stack Overflow</a> for <code>R</code>, Git, and GitHub - post using tags like <code>[r]</code>, <code>[ggplot2]</code>, <code>[dplyr]</code>, <code>[git]</code>, <code>[github]</code>, etc.</li>
@@ -294,7 +297,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://tex.stackexchange.com">TeX</a> for LaTeX</li>
 </ul>
 <p>Before you post, search thoroughly to make sure that your question has not already been answered. Stack Exchange has strong norms about how to post appropriately. You can descriptions of what makes a good post <a href="https://codereview.stackexchange.com/help/how-to-ask">here</a> and <a href="https://stackoverflow.com/help/how-to-ask">here</a>. You can also find a description of <a href="https://stackoverflow.com/help/dont-ask">what not to ask</a>. If you are going to post on Stack Overflow, the <code>reprex()</code> function can be modified to produce well-formatted output specific to that site by adding the <code>venue</code> argument, as in <code>reprex(venue = &quot;so&quot;)</code>.</p>
-<p>Of the two sites, I find <a href="https://community.rstudio.com">RStudio Community</a> to be a friendlier place that is more relaxed thatn Stack Overflow and its cousins. However, Stack Exchange communities have much larger user bases to draw from.</p>
+<p>Of the two sites, I find <a href="https://community.rstudio.com">RStudio Community</a> to be a friendlier place that is more relaxed than Stack Overflow and its cousins. However, Stack Exchange communities have much larger user bases to draw from.</p>
 
 </div>
 </div>

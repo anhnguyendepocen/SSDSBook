@@ -98,7 +98,7 @@ Warning message:
 In mean.default(data) : argument is not numeric or logical: returning NA
 ```
 
-With the three functions written in a `.R` script, highligh all seven lines of code (the three functions, both comments, and both whitespace lines)  and copy them to your clipboard (`Edit > Copy`). Then call the `reprex()` function. Markdown formatted text that weaves both the functions and their output together will appear in the viewer tab:
+With the three functions written in a `.R` script, highlight all seven lines of code (the three functions, both comments, and both white space lines)  and copy them to your clipboard (`Edit > Copy`). Then call the `reprex()` function. Markdown formatted text that weaves both the functions and their output together will appear in the viewer tab:
 
 ```{r echo=FALSE, fig.align="center", out.width = '50%'}
 knitr::include_graphics("images/reprex.png")
@@ -183,7 +183,7 @@ For other tools we learn, such as Markdown and GitHub, you want to follow the sp
 I am 99% sure that you can! In nearly every situation I have seen students in, creating a reprex is possible. Even if the error is idiosyncratic to your computer or your data, you can absolutely clarify the context within which the error appears and minimize the amount of data, code, and other information in your `R` code or your map document. For the less than 1% of scenarios where a reprex is not possible, the process of writing a question, clarifying the context and steps you took to get there, and producing an example of the error will still make it easier for me to help you. 
 
 ### "Isn't this a lot of work?"
-Well, yes, it does require some extra effort. This effort is almost always worth it, however. In some cases, the time it takes you to produce the repex leads you to the answer on your own, which is part of the problem solving process that this class is designed to foster. Even when this does not happen, making reprex informed inquries is a technique that you will be able to take with you at the end of the semester. Even if you are not working in a technical setting, being able to structure clear, concise questions about a process is a valuable skill! 
+Well, yes, it does require some extra effort. This effort is almost always worth it, however. In some cases, the time it takes you to produce the repex leads you to the answer on your own, which is part of the problem solving process that this class is designed to foster. Even when this does not happen, making reprex informed inquires is a technique that you will be able to take with you at the end of the semester. Even if you are not working in a technical setting, being able to structure clear, concise questions about a process is a valuable skill! 
 
 Finally, creating a reprex saves you time in the long run. When I get vague questions, it often takes some experimenting on my part to reproduce the error. If you send me a question with a reproducible error, you cut out that experimentation time on my end and I can get right to answering your question. Likewise, students often come to office hours without an example of their issue ready to go and hope that I can conjure in my mind the scenario they are describing. Despite my best efforts, I am usually unable to do so and ask students to reproduce the error during office hours. If you come to office hours with a reprex, we can get to answering your question right away!
 
@@ -191,7 +191,7 @@ Finally, creating a reprex saves you time in the long run. When I get vague ques
 Once you have tried [Helping Yourself] and have gone through the steps outlined in [How to Seek Help] (i.e. made a reprex), it is time to ask your question. There are a number of different places that you can pose questions. The sections below outline these and suggest some ways to make your question most effective.
 
 ### Internal Venues
-Within the confines of the course, the two best places to ask questions are on Slack and during office hours. When asking a question on Slack, please consider doing so in a public channel. This helps others learn from the question that you have. The only course-related questions that are not appropriate for Slack are those that reference specific parts of a problem set or the final project. However, if you are creating reproducible examples, your questions should not be that specific even if they ultimately are about a homework assignment. If you are not sure whether the question is appropirate or not for a public channel, or just would prefer not to ask your question out in the open, feel free to send me a [direct message on Slack](https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs).
+Within the confines of the course, the two best places to ask questions are on Slack and during office hours. When asking a question on Slack, please consider doing so in a public channel. This helps others learn from the question that you have. The only course-related questions that are not appropriate for Slack are those that reference specific parts of a problem set or the final project. However, if you are creating reproducible examples, your questions should not be that specific even if they ultimately are about a homework assignment. If you are not sure whether the question is appropriate or not for a public channel, or just would prefer not to ask your question out in the open, feel free to send me a [direct message on Slack](https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs).
 
 When you pose a question on Slack, it should contain three or four pieces of information:
 
@@ -215,7 +215,7 @@ knitr::include_graphics("images/slackQuestion.png")
 This same general process holds for asking questions in person - come ready with a solid question, a reproducible example, and be ready to pull it up on your computer or a lab computer.
 
 ### External Venues
-There are two good places to ask questions external to the course as well. For questions related to RStudio, R Markdown, and the [tidyverse](http://tidyverse.org), RStudio maintains a web forumn called [RStudio Community](https://community.rstudio.com). If you are posting there, you can use `reprex()` to generate Markdown formatted reprexs.
+There are two good places to ask questions external to the course as well. For questions related to RStudio, R Markdown, and the [tidyverse](http://tidyverse.org), RStudio maintains a web forum called [RStudio Community](https://community.rstudio.com). If you are posting there, you can use `reprex()` to generate Markdown formatted reprexs.
 
 Another place to post questions in on one of the relevant [Stack Exchange](https://stackexchange.com) communities:
 
@@ -225,4 +225,4 @@ Another place to post questions in on one of the relevant [Stack Exchange](https
 
 Before you post, search thoroughly to make sure that your question has not already been answered. Stack Exchange has strong norms about how to post appropriately. You can descriptions of what makes a good post [here](https://codereview.stackexchange.com/help/how-to-ask) and [here](https://stackoverflow.com/help/how-to-ask). You can also find a description of [what not to ask](https://stackoverflow.com/help/dont-ask). If you are going to post on Stack Overflow, the `reprex()` function can be modified to produce well-formatted output specific to that site by adding the `venue` argument, as in `reprex(venue = "so")`.
 
-Of the two sites, I find [RStudio Community](https://community.rstudio.com) to be a friendlier place that is more relaxed thatn Stack Overflow and its cousins. However, Stack Exchange communities have much larger user bases to draw from.
+Of the two sites, I find [RStudio Community](https://community.rstudio.com) to be a friendlier place that is more relaxed than Stack Overflow and its cousins. However, Stack Exchange communities have much larger user bases to draw from.

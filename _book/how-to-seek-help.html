@@ -147,6 +147,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.1" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>3.1</b> Reproducibility</a></li>
 <li class="chapter" data-level="3.2" data-path="thinking-in-workflows.html"><a href="thinking-in-workflows.html"><i class="fa fa-check"></i><b>3.2</b> Thinking in Workflows</a></li>
 <li class="chapter" data-level="3.3" data-path="data-1.html"><a href="data-1.html"><i class="fa fa-check"></i><b>3.3</b> Data</a></li>
+<li class="chapter" data-level="3.4" data-path="plain-text.html"><a href="plain-text.html"><i class="fa fa-check"></i><b>3.4</b> Plain Text</a></li>
+<li class="chapter" data-level="3.5" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3.5</b> Version Control</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="protecting-your-work.html"><a href="protecting-your-work.html"><i class="fa fa-check"></i><b>4</b> Protecting Your Work</a><ul>
 <li class="chapter" data-level="4.1" data-path="threats-to-our-data.html"><a href="threats-to-our-data.html"><i class="fa fa-check"></i><b>4.1</b> Threats To Our Data</a></li>
@@ -169,7 +171,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3.5" data-path="organizing-projects.html"><a href="organizing-projects.html#the-maps-directory"><i class="fa fa-check"></i><b>4.3.5</b> The <code>maps</code> Directory</a></li>
 <li class="chapter" data-level="4.3.6" data-path="organizing-projects.html"><a href="organizing-projects.html#the-results-directory"><i class="fa fa-check"></i><b>4.3.6</b> The <code>results</code> Directory</a></li>
 <li class="chapter" data-level="4.3.7" data-path="organizing-projects.html"><a href="organizing-projects.html#the-src-directory"><i class="fa fa-check"></i><b>4.3.7</b> The <code>src</code> Directory</a></li>
-<li class="chapter" data-level="4.3.8" data-path="organizing-projects.html"><a href="organizing-projects.html#organizing-coursework"><i class="fa fa-check"></i><b>4.3.8</b> Organizing Coursework</a></li>
+<li class="chapter" data-level="4.3.8" data-path="organizing-projects.html"><a href="organizing-projects.html#storing-your-project"><i class="fa fa-check"></i><b>4.3.8</b> Storing Your Project</a></li>
+<li class="chapter" data-level="4.3.9" data-path="organizing-projects.html"><a href="organizing-projects.html#organizing-coursework"><i class="fa fa-check"></i><b>4.3.9</b> Organizing Coursework</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="backing-up-your-data.html"><a href="backing-up-your-data.html"><i class="fa fa-check"></i><b>4.4</b> Backing Up Your Data</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="backing-up-your-data.html"><a href="backing-up-your-data.html#bootable-backups"><i class="fa fa-check"></i><b>4.4.1</b> Bootable Backups</a></li>
@@ -303,7 +306,7 @@ data &lt;-<span class="st"> </span>mpg
 [<span class="dv">1</span>] <span class="ot">NA</span>
 Warning message<span class="op">:</span>
 In <span class="kw">mean.default</span>(data) <span class="op">:</span><span class="st"> </span>argument is not numeric or logical<span class="op">:</span><span class="st"> </span>returning <span class="ot">NA</span></code></pre></div>
-<p>With the three functions written in a <code>.R</code> script, highligh all seven lines of code (the three functions, both comments, and both whitespace lines) and copy them to your clipboard (<code>Edit &gt; Copy</code>). Then call the <code>reprex()</code> function. Markdown formatted text that weaves both the functions and their output together will appear in the viewer tab:</p>
+<p>With the three functions written in a <code>.R</code> script, highlight all seven lines of code (the three functions, both comments, and both white space lines) and copy them to your clipboard (<code>Edit &gt; Copy</code>). Then call the <code>reprex()</code> function. Markdown formatted text that weaves both the functions and their output together will appear in the viewer tab:</p>
 <p><img src="images/reprex.png" width="50%" style="display: block; margin: auto;" /></p>
 <p>It will also be available on your clipboard so that you can copy and paste it into Slack or another venue that accepts Markdown syntax (like GitHub). If your reprex contains image output, such as a plot or a map, it will be automatically uploaded to imgur and a link will be embedded in your Markdown syntax. For example, say we had a question about the following code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
@@ -374,7 +377,7 @@ data &lt;-<span class="st"> </span>mpg
 </div>
 <div id="isnt-this-a-lot-of-work" class="section level3">
 <h3><span class="header-section-number">5.2.5</span> “Isn’t this a lot of work?”</h3>
-<p>Well, yes, it does require some extra effort. This effort is almost always worth it, however. In some cases, the time it takes you to produce the repex leads you to the answer on your own, which is part of the problem solving process that this class is designed to foster. Even when this does not happen, making reprex informed inquries is a technique that you will be able to take with you at the end of the semester. Even if you are not working in a technical setting, being able to structure clear, concise questions about a process is a valuable skill!</p>
+<p>Well, yes, it does require some extra effort. This effort is almost always worth it, however. In some cases, the time it takes you to produce the repex leads you to the answer on your own, which is part of the problem solving process that this class is designed to foster. Even when this does not happen, making reprex informed inquires is a technique that you will be able to take with you at the end of the semester. Even if you are not working in a technical setting, being able to structure clear, concise questions about a process is a valuable skill!</p>
 <p>Finally, creating a reprex saves you time in the long run. When I get vague questions, it often takes some experimenting on my part to reproduce the error. If you send me a question with a reproducible error, you cut out that experimentation time on my end and I can get right to answering your question. Likewise, students often come to office hours without an example of their issue ready to go and hope that I can conjure in my mind the scenario they are describing. Despite my best efforts, I am usually unable to do so and ask students to reproduce the error during office hours. If you come to office hours with a reprex, we can get to answering your question right away!</p>
 </div>
 </div>
