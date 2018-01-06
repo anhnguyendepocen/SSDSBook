@@ -25,7 +25,7 @@
 <meta name="author" content="Christopher Prener, Ph.D.">
 
 
-<meta name="date" content="2018-01-05">
+<meta name="date" content="2018-01-06">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -213,11 +213,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7.2.3" data-path="working-with-text.html"><a href="working-with-text.html#quoting-code"><i class="fa fa-check"></i><b>7.2.3</b> Quoting Code</a></li>
 <li class="chapter" data-level="7.2.4" data-path="working-with-text.html"><a href="working-with-text.html#links"><i class="fa fa-check"></i><b>7.2.4</b> Links</a></li>
 <li class="chapter" data-level="7.2.5" data-path="working-with-text.html"><a href="working-with-text.html#embedding-images"><i class="fa fa-check"></i><b>7.2.5</b> Embedding Images</a></li>
-<li class="chapter" data-level="7.2.6" data-path="working-with-text.html"><a href="working-with-text.html#simple-lists"><i class="fa fa-check"></i><b>7.2.6</b> Simple Lists</a></li>
+<li class="chapter" data-level="7.2.6" data-path="working-with-text.html"><a href="working-with-text.html#lists"><i class="fa fa-check"></i><b>7.2.6</b> Lists</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="github-markdown.html"><a href="github-markdown.html"><i class="fa fa-check"></i><b>7.3</b> GitHub Markdown</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="github-markdown.html"><a href="github-markdown.html#styling-text-1"><i class="fa fa-check"></i><b>7.3.1</b> Styling Text</a></li>
-<li class="chapter" data-level="7.3.2" data-path="github-markdown.html"><a href="github-markdown.html#tables"><i class="fa fa-check"></i><b>7.3.2</b> Tables</a></li>
+<li class="chapter" data-level="7.3.2" data-path="github-markdown.html"><a href="github-markdown.html#simple-tables"><i class="fa fa-check"></i><b>7.3.2</b> Simple Tables</a></li>
 <li class="chapter" data-level="7.3.3" data-path="github-markdown.html"><a href="github-markdown.html#task-lists"><i class="fa fa-check"></i><b>7.3.3</b> Task Lists</a></li>
 <li class="chapter" data-level="7.3.4" data-path="github-markdown.html"><a href="github-markdown.html#mentioning-other-github-users"><i class="fa fa-check"></i><b>7.3.4</b> Mentioning Other GitHub Users</a></li>
 </ul></li>
@@ -290,34 +290,62 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="quoting-code" class="section level3">
 <h3><span class="header-section-number">7.2.3</span> Quoting Code</h3>
-<p>There are two types of code quotes in Markdown. In-line quotes, which are included in a sentence, are wrapped in single backticks: &gt; Use the <code>describe</code> command to list variables in <code>R</code></p>
+<div id="in-line-code" class="section level4">
+<h4><span class="header-section-number">7.2.3.1</span> In-Line Code</h4>
+<p>There are two types of code quotes in Markdown. In-line quotes, which are included in a sentence, are wrapped in single backticks:</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">The <span class="bn">`stlLead`</span> data contains a variable named <span class="bn">`totalPop`</span>.</code></pre></div>
+<p><strong>Output:</strong></p>
+<p>The <code>stlLead</code> data contains a variable named <code>totalPop</code>.</p>
+</div>
+<div id="code-blocks" class="section level4">
+<h4><span class="header-section-number">7.2.3.2</span> Code Blocks</h4>
 <p>To include code blocks, which are better for including the full syntax of particular commands and their output, use triple backticks:</p>
-<pre class="stata"><code>. describe make price mpg
-
-              storage   display    value
-variable name   type    format     label      variable label
---------------------------------------------------------------------------------
-make            str18   %-18s                 Make and Model
-price           int     %8.0gc                Price
-mpg             int     %8.0g                 Mileage (mpg)</code></pre>
-<p>Note how the word ‘Stata’ is written after the first set of triple backticks. This is an indicator for GitHub that the code is written in Stata’s programming language. By including this, GitHub can apply some syntax highlighting to your files. This makes them easier to read.</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">```r
+&gt;<span class="dt"> summary(stlLead$totalPop)</span>
+<span class="dt">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span class="dt">    620    2025    2912    2999    3784    7069 </span>
+<span class="dt">```</span></code></pre></div>
+<p><strong>Output:</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(stlLead<span class="op">$</span>totalPop)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    <span class="dv">620</span>    <span class="dv">2025</span>    <span class="dv">2912</span>    <span class="dv">2999</span>    <span class="dv">3784</span>    <span class="dv">7069</span> </code></pre></div>
+<p>Note how the letter ‘r’ is written after the first set of triple backticks. This is an indicator for GitHub that the code is written in <code>R</code>’s programming language. By including this, GitHub can apply some syntax highlighting to your files. This makes them easier to read.</p>
+</div>
 </div>
 <div id="links" class="section level3">
 <h3><span class="header-section-number">7.2.4</span> Links</h3>
 <p>In Markdown, adding hyperlinks is a two step process. The text that you want to have hyperlinked is written first and is wrapped in brackets <code>[]</code>. After this, you include the URL wrapped in parentheses <code>()</code>. This is an example of including in-line hyperlinks:</p>
-<blockquote>
-<p>The course <a href="https://github.com/slu-soc5050">website</a> is hosted using the service <a href="https://github.com">GitHub</a>.</p>
-</blockquote>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">The <span class="ot">[Sociospatial Data Science book](http://chris-prener.github.io/SSDSBook/)</span> is hosted using the service <span class="ot">[GitHub](https://github.com)</span>.</code></pre></div>
+<p><strong>Output:</strong></p>
+<p>The <a href="http://chris-prener.github.io/SSDSBook/">Sociospatial Data Science book</a> is hosted using the service <a href="https://github.com">GitHub</a>.</p>
 </div>
 <div id="embedding-images" class="section level3">
 <h3><span class="header-section-number">7.2.5</span> Embedding Images</h3>
-<p>Within the directory that contains your Markdown file, create a subdirectory called <code>Output</code>. Save all images for a particular assignment there. In your main assignment Markdown file, include a hyperlink reference:</p>
-<p>Note how, instead of including text to be hyperlinked, we suppress this aspect of the syntax by using an exclamation point <code>!</code>.</p>
+<p>Images can be embedded in Markdown documents with syntax that is nearly identical to how <a href="working-with-text.html#links">Links</a> were inserted, except that text in the brackets can be omitted. You will add an <code>!</code> to the beginning of the syntax, and use a URL to an image in the link:</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">![](http://slu-soc5650.github.io/images/logo.png)</code></pre></div>
+<p><strong>Output:</strong></p>
+<div class="figure">
+<img src="http://slu-soc5650.github.io/images/logo.png" />
+
 </div>
-<div id="simple-lists" class="section level3">
-<h3><span class="header-section-number">7.2.6</span> Simple Lists</h3>
+<p>You can replace the URL to an image with a path within a repository organized as suggested in <a href="organizing-projects.html#organizing-projects">Organizing Projects</a> - <code>![](results/map1.png)</code>. The path can be as long as necessary if there are additional directories - <code>![](results/maps/firstDraft/map1.png)</code>.</p>
+</div>
+<div id="lists" class="section level3">
+<h3><span class="header-section-number">7.2.6</span> Lists</h3>
+<div id="bulleted-lists" class="section level4">
+<h4><span class="header-section-number">7.2.6.1</span> Bulleted Lists</h4>
 <p>Bulleted lists are indicated in Markdown using the dash <code>-</code> or a single asterisk <code>*</code>:</p>
-<blockquote>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">- <span class="fl">mean</span>
+<span class="fl">- median</span>
+<span class="fl">- mode</span>
+<span class="fl">* variance</span>
+<span class="fl">* standard deviation</span></code></pre></div>
+<p><strong>Output:</strong></p>
 <ul>
 <li>mean</li>
 <li>median</li>
@@ -325,16 +353,45 @@ mpg             int     %8.0g                 Mileage (mpg)</code></pre>
 <li>variance</li>
 <li>standard deviation</li>
 </ul>
-</blockquote>
+</div>
+<div id="enumerated-lists" class="section level4">
+<h4><span class="header-section-number">7.2.6.2</span> Enumerated Lists</h4>
 <p>Enumerated lists are created by preceding each line with the appropriate number:</p>
-<blockquote>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">1. <span class="fl">calculate the mean</span>
+<span class="fl">2. calculate the variance</span>
+<span class="fl">3. calculate the standard deviation</span></code></pre></div>
+<p><strong>Output:</strong></p>
 <ol style="list-style-type: decimal">
 <li>calculate the mean</li>
 <li>calculate the variance</li>
 <li>calculate the standard deviation</li>
 </ol>
-</blockquote>
-<p>You can create more complex lists by preceding a line with two single spaces. You can also combine bulleted and enumerated lists when using this approach.</p>
+</div>
+<div id="nested-lists" class="section level4">
+<h4><span class="header-section-number">7.2.6.3</span> Nested Lists</h4>
+<p>You can create more complex lists by preceding a line with four single spaces. You can also combine bulleted and enumerated lists when using this approach.</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">1. <span class="fl">create a basemap</span>
+<span class="fl">    * add street centerlines and the city boundary</span>
+<span class="fl">    * use a light hue for the centerline</span>
+<span class="fl">2. add points for incidents</span>
+<span class="fl">    * use red points for fire incidents</span>
+<span class="fl">    * use blue points for EMS incidents</span></code></pre></div>
+<p><strong>Output:</strong></p>
+<ol style="list-style-type: decimal">
+<li>create a basemap
+<ul>
+<li>add street centerlines and the city boundary</li>
+<li>use a light hue for the centerline</li>
+</ul></li>
+<li>add points for incidents
+<ul>
+<li>use red points for fire incidents</li>
+<li>use blue points for EMS incidents</li>
+</ul></li>
+</ol>
+</div>
 </div>
 </div>
             </section>

@@ -1,7 +1,7 @@
 --- 
 title: "Sociospatial Data Science"
 author: "Christopher Prener, Ph.D."
-date: "2018-01-05"
+date: "2018-01-06"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -13,8 +13,7 @@ description: "This a companion text for Christopher Prener's research methods co
 
 # Preface {-}
 
-
-\begin{center}\includegraphics[width=0.4\linewidth]{images/SSDSBookBanner} \end{center}
+<img src="images/SSDSBookBanner.png" width="40%" style="display: block; margin: auto;" />
 
 This text is a companion text for both of my research methods courses at [Saint Louis University](https://slu.edu):
 
