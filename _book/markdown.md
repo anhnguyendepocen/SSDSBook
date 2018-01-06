@@ -12,6 +12,10 @@ Markdown is a simple [markup language](https://en.wikipedia.org/wiki/Markup_lang
 
 Markdown is utilized to varying degrees by many of the data science tools we'll use in both courses, including RStudio, GitHub, and Slack. In all three applications, Markdown provides a straightforward way to format and stylize plain text files. Markdown therefore gives us the best of two worlds - text files can be organized and formatted as in [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) editors like Microsoft Word, but they remain plain text files that are accessible in a variety of computing environments and do not depend on proprietary applications.
 
+Markdown's simplicity is sometimes also identified as a weakness - it lacks the full fledged control of html or LaTeX, for example. However, for research documentation, the bells, whistles, and fine-grained control of something like LaTeX are unnecessary. Long-term portability is a far more important characteristic, and Markdown excels in this area. 
+
+Markdown files are really just plain-text files, which are usually identified as `.txt` files. However, when they contain Markdown syntax, we want to name them as `.md` files. Most applications will continue to recognize `.md` files as plain-text files. However, certain desktop applications like RStudio and some websites like [GitHub.com](https://github.com) recognize the `.md` file extension and will "render" the Markdown syntax into formatted output. When you create Markdown files in an application like RStudio, make sure to save them with the `.md` file extension!
+
 ## Document Organization
 There are two principle means for organizing Markdown documents - headings of varying size and paragraph breaks.
 
@@ -29,8 +33,7 @@ Markdown contains six heading levels. Headings are identified with `#` symbols a
 ```
 
 **Output:**
-
-\begin{flushleft}\includegraphics[width=0.5\linewidth]{images/markdownHead} \end{flushleft}
+<img src="images/markdownHead.png" width="50%" style="display: block; margin: auto auto auto 0;" />
 
 ### New Paragraphs
 Leave a blank line between two paragraphs to create a break.
@@ -89,73 +92,186 @@ Quoting text (which I have used above to illustrate examples) is done with a gre
 > This is quoted text.
 
 ### Quoting Code
+#### In-Line Code
 There are two types of code quotes in Markdown. In-line quotes, which are included in a sentence, are wrapped in single backticks:
-> Use the `describe` command to list variables in `R`
 
+**Input:**
+````markdown
+The `stlLead` data contains a variable named `totalPop`.
+````
+
+**Output:**
+
+The `stlLead` data contains a variable named `totalPop`.
+
+#### Code Blocks
 To include code blocks, which are better for including the full syntax of particular commands and their output, use triple backticks:
 
-```Stata
-. describe make price mpg
+**Input:**
+````markdown
+```r
+> summary(stlLead$totalPop)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    620    2025    2912    2999    3784    7069 
+```
+````
 
-              storage   display    value
-variable name   type    format     label      variable label
---------------------------------------------------------------------------------
-make            str18   %-18s                 Make and Model
-price           int     %8.0gc                Price
-mpg             int     %8.0g                 Mileage (mpg)
+**Output:**
+```r
+> summary(stlLead$totalPop)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    620    2025    2912    2999    3784    7069 
 ```
 
-Note how the word 'Stata' is written after the first set of triple backticks. This is an indicator for GitHub that the code is written in Stata's programming language. By including this, GitHub can apply some syntax highlighting to your files. This makes them easier to read.
+Note how the letter 'r' is written after the first set of triple backticks. This is an indicator for GitHub that the code is written in `R`'s programming language. By including this, GitHub can apply some syntax highlighting to your files. This makes them easier to read.
 
 ### Links
 In Markdown, adding hyperlinks is a two step process. The text that you want to have hyperlinked is written first and is wrapped in brackets `[]`. After this, you include the URL wrapped in parentheses `()`. This is an example of including in-line hyperlinks:
 
-> The course [website](https://github.com/slu-soc5050) is hosted using the service [GitHub](https://github.com).
+**Input:**
+```markdown
+The [Sociospatial Data Science book](http://chris-prener.github.io/SSDSBook/) is hosted using the service [GitHub](https://github.com).
+```
+
+**Output:**
+
+The [Sociospatial Data Science book](http://chris-prener.github.io/SSDSBook/) is hosted using the service [GitHub](https://github.com).
 
 ### Embedding Images
-Within the directory that contains your Markdown file, create a subdirectory called `Output`. Save all images for a particular assignment there. In your main assignment Markdown file, include a hyperlink reference:
+Images can be embedded in Markdown documents with syntax that is nearly identical to how [Links] were inserted, except that text in the brackets can be omitted. You will add an `!` to the beginning of the syntax, and use a URL to an image in the link:
 
+**Input:**
+```markdown
+![](http://slu-soc5650.github.io/images/logo.png)
+```
 
+**Output:**
 
-Note how, instead of including text to be hyperlinked, we suppress this aspect of the syntax by using an exclamation point `!`.
+![](http://slu-soc5650.github.io/images/logo.png)
 
-### Simple Lists
+You can replace the URL to an image with a path within a repository organized as suggested in [Organizing Projects] - `![](results/map1.png)`. The path can be as long as necessary if there are additional directories - `![](results/maps/firstDraft/map1.png)`.
+
+### Lists
+#### Bulleted Lists
 Bulleted lists are indicated in Markdown using the dash `-` or a single asterisk `*`:
 
-> - mean
-> - median
-> - mode
-> * variance
-> * standard deviation
+**Input:**
+```markdown
+- mean
+- median
+- mode
+* variance
+* standard deviation
+```
 
+**Output:**
+
+- mean
+- median
+- mode
+* variance
+* standard deviation
+
+#### Enumerated Lists
 Enumerated lists are created by preceding each line with the appropriate number:
 
-> 1. calculate the mean
-> 2. calculate the variance
-> 3. calculate the standard deviation
+**Input:**
+```markdown
+1. calculate the mean
+2. calculate the variance
+3. calculate the standard deviation
+```
 
-You can create more complex lists by preceding a line with two single spaces. You can also combine bulleted and enumerated lists when using this approach.
+**Output:**
+
+1. calculate the mean
+2. calculate the variance
+3. calculate the standard deviation
+
+#### Nested Lists
+You can create more complex lists by preceding a line with four single spaces. You can also combine bulleted and enumerated lists when using this approach.
+
+**Input:**
+```markdown
+1. create a basemap
+    * add street centerlines and the city boundary
+    * use a light hue for the centerline
+2. add points for incidents
+    * use red points for fire incidents
+    * use blue points for EMS incidents
+```
+
+**Output:**
+
+1. create a basemap
+    * add street centerlines and the city boundary
+    * use a light hue for the centerline
+2. add points for incidents
+    * use red points for fire incidents
+    * use blue points for EMS incidents
+
 
 ## GitHub Markdown
-These are specific to what is called GitHub Markdown - there are some subtle differences in the way GitHub uses Markdown formatting.
+Markdown's original syntax has been augmented numerous times since it was first released. Users sometimes call these different ["flavors"](https://github.com/commonmark/CommonMark/wiki/Markdown-Flavors) of Markdown. One key flavor of Markdown to be familiar with is GitHub Markdown, which adds a number of additional syntax features to the base syntax discussed in the previous two sections.
 
 ### Styling Text
-Text can be styled using bold, italics, and strikethroughs. To create italicized text, wrap your text with a single asterisk `* *`. To create bold text, wrap your text with double asterisks `** **`. To create strike-through text, wrap your text with two tildes `~~ ~~`.
+Strikethrough text can be useful for indicating that a particular comment or piece of information is no longer relevant while also preserving that text in the document. Strikethrough text can be created by wrapping your text with two tildes `~~ ~~`:
 
-> ~~This is a sentence with strikethrough text~~
+**Input:**
+```markdown
+~~This is a sentence with strikethrough text.~~
+```
 
-### Tables
+**Output:**
+
+~~This is a sentence with strikethrough text.~~
+
+### Simple Tables
+Tables can be created using a combination of pipe (`|`) and dash (`-`) characters. The dashes are used to separate the header row from the data rows, and there must be at least three dashes per column. The spacing is not required, mis-aligned text in the rows should not prevent the table from rendering nicely. However, I do think that well spaced tables are easier to edit down the road.
+
+**Input:**
+```markdown
+| `id` | `name` | `value` |
+| ---- | ------ | ------- |
+| 1    | ham    | 23      |
+| 2    | eggs   | 18      |
+| 3    | spam   | 6       |
+```
+
+**Output:**
+
+| `id` | `name` | `value` |
+| ---- | ------ | ------- |
+| 1    | ham    | 23      |
+| 2    | eggs   | 18      |
+| 3    | spam   | 6       |
 
 ### Task Lists
-If you want to create task lists on GitHub, you can include brackets separated by a space before each list item `[ ]`. Completed tasks include an `x` in place of the space `[x]`.  These task lists are interactive - when published on GitHub, you can click on the resulting checkboxes to toggle them between complete / incomplete.
+If you want to create task lists on GitHub, you can include brackets separated by a space before each list item `[ ]`. Completed tasks include an `x` in place of the space `[x]`.  These task lists are interactive - when published on GitHub in **Issues** (see [Basic Git]) and **Pull Requests** (see [Advanced Git]), you can click on the resulting checkboxes to toggle them between complete / incomplete.
 
-> 1. [x] calculate the mean
-> 2. [ ] calculate the variance
-> 3. [ ] calculate the standard deviation
+**Input:**
+```markdown
+1. [x] calculate the mean
+2. [ ] calculate the variance
+3. [ ] calculate the standard deviation
+```
+
+**Output in Static Markdown Doc:**
+<img src="images/checkboxStatic.png" width="35%" style="display: block; margin: auto auto auto 0;" />
+
+**Output in Issue or Pull Request:**
+<img src="images/checkboxDynamic.png" width="35%" style="display: block; margin: auto auto auto 0;" />
+
 
 ### Mentioning Other GitHub Users
-If you want to mention me or one of your classmates in a comment, include the `@` symbol before their username:
+If you want to mention me or one of your classmates in a comment, include the `@` symbol before their username. Once the document is uploaded to GitHub, the username will render as a hyperlink and the user will be alerted.
 
-> Hey @chris-prener, thanks for the feedback. I made the changes to lines 40 and 41.
+**Input:**
+```markdown
+Hey @chris-prener, thanks for the feedback. I made the changes to lines 40 and 41.
+```
 
-Once the document is uploaded to GitHub, the username will render as a hyperlink and the user will be alerted.
+**Output:**
+
+Hey `@chris-prener`, thanks for the feedback. I made the changes to lines 40 and 41.
+

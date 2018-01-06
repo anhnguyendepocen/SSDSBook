@@ -25,7 +25,7 @@
 <meta name="author" content="Christopher Prener, Ph.D.">
 
 
-<meta name="date" content="2018-01-05">
+<meta name="date" content="2018-01-06">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -213,11 +213,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7.2.3" data-path="working-with-text.html"><a href="working-with-text.html#quoting-code"><i class="fa fa-check"></i><b>7.2.3</b> Quoting Code</a></li>
 <li class="chapter" data-level="7.2.4" data-path="working-with-text.html"><a href="working-with-text.html#links"><i class="fa fa-check"></i><b>7.2.4</b> Links</a></li>
 <li class="chapter" data-level="7.2.5" data-path="working-with-text.html"><a href="working-with-text.html#embedding-images"><i class="fa fa-check"></i><b>7.2.5</b> Embedding Images</a></li>
-<li class="chapter" data-level="7.2.6" data-path="working-with-text.html"><a href="working-with-text.html#simple-lists"><i class="fa fa-check"></i><b>7.2.6</b> Simple Lists</a></li>
+<li class="chapter" data-level="7.2.6" data-path="working-with-text.html"><a href="working-with-text.html#lists"><i class="fa fa-check"></i><b>7.2.6</b> Lists</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="github-markdown.html"><a href="github-markdown.html"><i class="fa fa-check"></i><b>7.3</b> GitHub Markdown</a><ul>
 <li class="chapter" data-level="7.3.1" data-path="github-markdown.html"><a href="github-markdown.html#styling-text-1"><i class="fa fa-check"></i><b>7.3.1</b> Styling Text</a></li>
-<li class="chapter" data-level="7.3.2" data-path="github-markdown.html"><a href="github-markdown.html#tables"><i class="fa fa-check"></i><b>7.3.2</b> Tables</a></li>
+<li class="chapter" data-level="7.3.2" data-path="github-markdown.html"><a href="github-markdown.html#simple-tables"><i class="fa fa-check"></i><b>7.3.2</b> Simple Tables</a></li>
 <li class="chapter" data-level="7.3.3" data-path="github-markdown.html"><a href="github-markdown.html#task-lists"><i class="fa fa-check"></i><b>7.3.3</b> Task Lists</a></li>
 <li class="chapter" data-level="7.3.4" data-path="github-markdown.html"><a href="github-markdown.html#mentioning-other-github-users"><i class="fa fa-check"></i><b>7.3.4</b> Mentioning Other GitHub Users</a></li>
 </ul></li>
@@ -266,35 +266,69 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="github-markdown" class="section level2">
 <h2><span class="header-section-number">7.3</span> GitHub Markdown</h2>
-<p>These are specific to what is called GitHub Markdown - there are some subtle differences in the way GitHub uses Markdown formatting.</p>
+<p>Markdown’s original syntax has been augmented numerous times since it was first released. Users sometimes call these different <a href="https://github.com/commonmark/CommonMark/wiki/Markdown-Flavors">“flavors”</a> of Markdown. One key flavor of Markdown to be familiar with is GitHub Markdown, which adds a number of additional syntax features to the base syntax discussed in the previous two sections.</p>
 <div id="styling-text-1" class="section level3">
 <h3><span class="header-section-number">7.3.1</span> Styling Text</h3>
-<p>Text can be styled using bold, italics, and strikethroughs. To create italicized text, wrap your text with a single asterisk <code>* *</code>. To create bold text, wrap your text with double asterisks <code>** **</code>. To create strike-through text, wrap your text with two tildes <code>~~ ~~</code>.</p>
-<blockquote>
-<p><del>This is a sentence with strikethrough text</del></p>
-</blockquote>
+<p>Strikethrough text can be useful for indicating that a particular comment or piece of information is no longer relevant while also preserving that text in the document. Strikethrough text can be created by wrapping your text with two tildes <code>~~ ~~</code>:</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">~~This is a sentence with strikethrough text.~~</code></pre></div>
+<p><strong>Output:</strong></p>
+<p><del>This is a sentence with strikethrough text.</del></p>
 </div>
-<div id="tables" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> Tables</h3>
+<div id="simple-tables" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> Simple Tables</h3>
+<p>Tables can be created using a combination of pipe (<code>|</code>) and dash (<code>-</code>) characters. The dashes are used to separate the header row from the data rows, and there must be at least three dashes per column. The spacing is not required, mis-aligned text in the rows should not prevent the table from rendering nicely. However, I do think that well spaced tables are easier to edit down the road.</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">| <span class="bn">`id`</span> | <span class="bn">`name`</span> | <span class="bn">`value`</span> |
+| ---- | ------ | ------- |
+| 1    | ham    | 23      |
+| 2    | eggs   | 18      |
+| 3    | spam   | 6       |</code></pre></div>
+<p><strong>Output:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th><code>id</code></th>
+<th><code>name</code></th>
+<th><code>value</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>ham</td>
+<td>23</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>eggs</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>spam</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="task-lists" class="section level3">
 <h3><span class="header-section-number">7.3.3</span> Task Lists</h3>
-<p>If you want to create task lists on GitHub, you can include brackets separated by a space before each list item <code>[ ]</code>. Completed tasks include an <code>x</code> in place of the space <code>[x]</code>. These task lists are interactive - when published on GitHub, you can click on the resulting checkboxes to toggle them between complete / incomplete.</p>
-<blockquote>
-<ol style="list-style-type: decimal">
-<li>[x] calculate the mean</li>
-<li>[ ] calculate the variance</li>
-<li>[ ] calculate the standard deviation</li>
-</ol>
-</blockquote>
+<p>If you want to create task lists on GitHub, you can include brackets separated by a space before each list item <code>[ ]</code>. Completed tasks include an <code>x</code> in place of the space <code>[x]</code>. These task lists are interactive - when published on GitHub in <strong>Issues</strong> (see <a href="basic-git.html#basic-git">Basic Git</a>) and <strong>Pull Requests</strong> (see <a href="advanced-git.html#advanced-git">Advanced Git</a>), you can click on the resulting checkboxes to toggle them between complete / incomplete.</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">1. <span class="fl">[x] calculate the mean</span>
+<span class="fl">2. [ ] calculate the variance</span>
+<span class="fl">3. [ ] calculate the standard deviation</span></code></pre></div>
+<p><strong>Output in Static Markdown Doc:</strong> <img src="images/checkboxStatic.png" width="35%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><strong>Output in Issue or Pull Request:</strong> <img src="images/checkboxDynamic.png" width="35%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
 <div id="mentioning-other-github-users" class="section level3">
 <h3><span class="header-section-number">7.3.4</span> Mentioning Other GitHub Users</h3>
-<p>If you want to mention me or one of your classmates in a comment, include the <code>@</code> symbol before their username:</p>
-<blockquote>
-<p>Hey <span class="citation">(<span class="citeproc-not-found" data-reference-id="chris-prener"><strong>???</strong></span>)</span>, thanks for the feedback. I made the changes to lines 40 and 41.</p>
-</blockquote>
-<p>Once the document is uploaded to GitHub, the username will render as a hyperlink and the user will be alerted.</p>
+<p>If you want to mention me or one of your classmates in a comment, include the <code>@</code> symbol before their username. Once the document is uploaded to GitHub, the username will render as a hyperlink and the user will be alerted.</p>
+<p><strong>Input:</strong></p>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">Hey @chris-prener, thanks for the feedback. I made the changes to lines 40 and 41.</code></pre></div>
+<p><strong>Output:</strong></p>
+<p>Hey <code>@chris-prener</code>, thanks for the feedback. I made the changes to lines 40 and 41.</p>
 
 </div>
 </div>

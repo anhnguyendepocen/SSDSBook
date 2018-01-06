@@ -14,15 +14,13 @@ The logic behind branches is that they allow you to make modifications to the co
 
 To create a new branch, navigate to the repository in question on GitHub.com. Just above the list of the repository's contents on the lefthand side of the winodw is a button that will read "Branch: master". If you pull the associated menu down, you have the ability to create a new branch (by typing a name into the text field) or switch between branches:
 
-
-\includegraphics[width=1\linewidth]{images/branch1} 
+<img src="images/branch1.png" width="100%" />
 
 The image above shows this menu pulled down with the ficticious user John Snow creating a new branch on his assignments repository named `snowBranch`. Once the branch is created, you will automatically be directed to the new branch's contents. These should look identical to the `master` branch at this point because the branch creation process generates a mirror image of `master`.
 
 You can use the same pulldown menu to switch back to the `master` branch if needed:
 
-
-\includegraphics[width=1\linewidth]{images/branch2} 
+<img src="images/branch2.png" width="100%" />
 
 ### Working with Branches
 
@@ -30,8 +28,7 @@ Once your branch is created, you need to open up GitHub desktop and, if you have
 
 Once you have updated or cloned your repository, it is time to **checkout** the branch. This means to switch from the current branch (by default, the `master` branch, to your new branch). In GitHub Desktop, there is a button on the top toolbar that will say the current branch name (by default, `master`). You can click on this button to open a pulldown menu that will list all available branches:
 
-
-\includegraphics[width=1\linewidth]{images/branch3} 
+<img src="images/branch3.png" width="100%" />
 
 Click on a branch to check it out. Once checked out, the files available to your operating system will change to reflect the contents of that branch!
 
@@ -43,26 +40,22 @@ Branches are used just like regular repos in Git. You can commit changes to them
 
 When you have made changes to your branch and want to integrate them into the `master`, production part of your repository, it is time to open a **pull request**. Below, you will see that a directory named `ExtraWork` has been added to the `SnowAssignments` repository's `snowBranch`:
 
-
-\includegraphics[width=1\linewidth]{images/branch4} 
+<img src="images/branch4.png" width="100%" />
 
 We have verified that the file is complete and ready for integration into the `master` branch. To do this, we need to click on the `New pull request` button just to the right of the `Branch` button above your repository contents. Make sure that you are opening the pull request on your branch and not on the `master`!
 
-
-\includegraphics[width=1\linewidth]{images/branch5} 
+<img src="images/branch5.png" width="100%" />
 
 The **pull request** page looks very similar to GitHub's **Issue** feature - there is a place for a title (which will be autofilled for you) and for describing the contents and signifiance of your changes. You can optionally assign individual reviewers (such as your final project team members). Once you are done, click the green `Create pull request` button.
 
 ### Evaluating Pull Requests
 When a team member opens a **pull request**, you should see a notification in your news feed on the main landing page when you log into GitHub.com:
 
-
-\includegraphics[width=1\linewidth]{images/branch6} 
+<img src="images/branch6.png" width="100%" />
 
 Clicking on that message (or, alternatively, selecting the `Pull Requests` tab in any repository) will take you to a page where you can evaluate changes that were made on your colleague's branch:
 
-
-\includegraphics[width=1\linewidth]{images/branch7} 
+<img src="images/branch7.png" width="100%" />
 
 Here you can:
 *  view files that have been changed or added,
@@ -76,8 +69,7 @@ If you see that there are conflicts with the base (i.e. `master`) branch, please
 
 If you want to accept the changes, select the green `Merge pull request` button. Chosing this button will open up a space for you to add a commit message that corresponds with accepting the pull request:
 
-
-\includegraphics[width=1\linewidth]{images/branch8} 
+<img src="images/branch8.png" width="100%" />
 
 After filling out your commit message and selecting `Confirm merge`, you have one final opportunity to either roll back the changes (by chosing `Revert`) or make them permanent by chosing `Delete branch`.
 

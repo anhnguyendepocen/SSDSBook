@@ -201,15 +201,9 @@ Cloud backup services like [Backblaze](https://www.backblaze.com) or [Crashplan]
 ### A Workflow for Backups
 Just as we need a workflow for approaching file management, it is also important to establish a routine for backups. With backups, the most successful workflows are those that require next to no effort on your part. If you primarily use a desktop, this can be as simple as leaving two external hard drives plugged into your computer since most backup software can be set to run automatically. If you have tasks that require you to manually do something (plug an external hard drive into your computer, for instance), create a reminder for yourself on a paper calendar or a digital calendar or to-do list application.
 
-\begin{rmdtip}
-I gave a presentation on workflows for backing data up as part of the
-\href{https://slu-dss.github.io}{Data Science Seminar} series at
-\href{https://slu.edu}{Saint Louis University}. You can easily view the
-slides from that presentation on
-\href{https://speakerdeck.com/chrisprener/protecting-your-data}{Speaker
-Deck}, and you can download the session's materials from
-\href{https://github.com/slu-dss/protectData}{GitHub}.
-\end{rmdtip}
+<div class="rmdtip">
+<p>I gave a presentation on workflows for backing data up as part of the <a href="https://slu-dss.github.io">Data Science Seminar</a> series at <a href="https://slu.edu">Saint Louis University</a>. You can easily view the slides from that presentation on <a href="https://speakerdeck.com/chrisprener/protecting-your-data">Speaker Deck</a>, and you can download the session's materials from <a href="https://github.com/slu-dss/protectData">GitHub</a>.</p>
+</div>
 
 For this course in particular, it is *imperative* that you backup the data on your flash drive. A number of possibilities exist for accomplishing this:
 
