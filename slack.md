@@ -1,6 +1,6 @@
 # Slack
 
-One of the three core areas for analysis development identified by Parker (2017) is collaboration. Data science work often occurs in teams, sometimes remotely, and building a skillset in working collaboratively from the outset is important. This chapter will not focus on the soft skills required for working as part of a team. Rather, we'll focus on some of the technical tools that are useful for facilitating this work. One of the more common tools used today in data science, research, software development, and other technical settings is the service [Slack](https://slack.com). At its core, Slack is a messaging tool designed to keep people in touch with one another.
+One of the three core areas for analysis development identified by Parker (2017) is collaboration. Data science work often occurs in teams, sometimes remotely, and building a skillset in working collaboratively from the outset is important. This chapter will not focus on the soft skills required for working as part of a team. Rather, we'll focus on some of the technical tools that are useful for facilitating this work. One of the more common tools used today in data science, research, software development, and other technical settings is the service [Slack](https://slack.com). At its core, Slack is a messaging tool designed to keep people in touch with one another. The following sections introduce some basic Slack functions. You can also use [Slack's knowledge base for users](https://get.slack.help/hc/en-us/categories/200111606), which has a wealth of information for using Slack and adjusting the various settings described here.
 
 ## Slack Basics
 Slack is organized into **workspaces**, which are dedicated organizations that are independent from each other. This means that you have individual login credentials (username and password) for each Slack workspace. The image below is of a Slack workspace for [Introduction to Geographic Information Science (SOC 4650/5650)](https://slu-soc5650.github.io). We will discuss some of the individual elements of this image below.
@@ -10,7 +10,10 @@ Slack is organized into **workspaces**, which are dedicated organizations that a
 ### Channels
 **Channels** are found on the lefthand sidebar of a Slack **workspace**. Channels with a `#` sign are public, and those with a lock symbol are private. Slack workspaces are typically organized around channels that are dedicated to a specific topic or project. For the courses that I teach, there are dedicated helpdesk channels for some of the various tools that the course introduces as well as for coursework and assignments. For example, the `#helpdesk-slack` channel is open in the image above. Messages from individual users or updates appear in the main window. You can see messages from myself and another user in the image above.
 
-To post a new message, use the field at the bottom of the main window that contains the placeholder text (visible in the image) "Message #helpdesk-slack". Click on the field and begin typing your message. You can click on the `@` icon to tag individuals using their user names, or use the channel's name - `#helpdesk-slack` - to notify all users. The smily face icon allows you to use emojis in your message. Messages can be composed using a flavor of Markdown (see the next section [Markdown in Slack]). Emojis will appear as text in a new message like `:smiley:` after they are selected. A newly composed message looks like this:
+### New Messages
+To post a new message, use the field at the bottom of the main window that contains the placeholder text (visible in the image) "Message #helpdesk-slack". Click on the field and begin typing your message. You can click on the `@` icon to tag individuals using their user names, or use the channel's name - `#helpdesk-slack` - to notify all users. Using the channel name hashtag in your initial message to a channel can help speed up people's response, particularly if they have reduced the frequency of notifications.
+
+The smily face icon allows you to use emojis in your message. Messages can be composed using a flavor of Markdown (see the next section [Markdown in Slack]). Emojis will appear as text in a new message like `:smiley:` after they are selected. A newly composed message looks like this:
 
 <img src="images/slackMessage.png" width="95%" style="display: block; margin: auto;" />
 
@@ -18,8 +21,58 @@ To send a message, use the `Enter` or `Return` key. Once sent, that message will
 
 <img src="images/slackMessageSent.png" width="95%" style="display: block; margin: auto;" />
 
+### Editing Messages
+
+To edit a message after it has been sent, hover your mouse over the message (or push your thumb down on the message and hold if you are on mobile). Doing so will bring up a menu of options. These are what the desktop options look like:
+
+<img src="images/slackMessageOpts.png" width="95%" style="display: block; margin: auto;" />
+
+Four buttons will appear on the desktop when you hover over the message. The furthest right, with three small dots, can be selected to reveal a menu with a number of options, including editing the message. Use this if you want to correct a typo or clarify a point.
+
+### Responding to Messages
+
+The image above also shows options for responding to messages. All four of the icons that appear when you hover over the messages with your mouse on desktop contain response options. The first icon from the left allows you to add an emoji reaction to a message. The second icon from the left allows you to to create a threaded response to the message. In the image below, you can see both the "thumbs up" reaction to the message as well as the visual indicator that a reply to the message has been posted:
+
+<img src="images/slackMessageReact.png" width="95%" style="display: block; margin: auto;" />
+
+When you click on the reply, it will open a righthand sidebar that will contain the original message and any responses:
+
+<img src="images/slackMessageThread.png" width="60%" style="display: block; margin: auto;" />
+
+Use threaded replies if the answer is longer than a few words and requires intricate detail. If you want to add a reply on mobile, tap a message with your thumb and select Start a thread.
+
+### Sharing Messages
+
+If you want to refer to a previous message, there are two options. In the image under [Editing Messages], the third icon from the left (found by hovering the mouse over the message on desktop) allows you to share the original message's content. When you click on the share button, a dialogue box will open that will optionally allow you to add your own message as well. This is not a requirement, however.
+
+<img src="images/slackMessageShare.png" width="75%" style="display: block; margin: auto;" />
+
+Once you hit the Share button, the shared message will be re-posted in the thread. Shared messages appear similarly to quotes in [Markdown], with a vertical grey colored line on the left side of the message:
+
+<img src="images/slackMessageShared.png" width="95%" style="display: block; margin: auto;" />
+
+You can also click on the same icon with three dots (see the image under [Editing Messages]) and select Copy Link, which will add a hyperlink to your clipboard that you can add to a post. 
+
+### Direct Messages
+Direct messages are messages can be accessed only by the participants. Direct message channels are useful for reaching out directly to other individuals to have private conversations. You can start a new direct message by clicking on the plus icon to the right of the Direct Messages heading (see the first image in this chapter). Messages are authored using the same means as in public and private channels (see [Channels] above as well as [Markdown in Slack]). 
+
+I ask that questions about Problem Sets that are specific be addressed as direct messages first. For all other questions, I encourage students to use the public channels so that we can learn collectively from each other's experiences. If you are not sure whether or not a question is appropriate for a public channel or would prefer to not ask the question publicly, feel free to use a direct message!
+
+## Settings
+Slack has a number of ways to adjust its settings and its preferences. In many cases, there are multiple ways to adjust the same setting. What follows is a guide for quick ways to address some of the most common settings.
+
+### Main Toolbar
+Across the top of the screen, there will be a toolbar with access to settings about the workgroup, your profile, and specific channels. The toolbar looks like this:
+
+<img src="images/slackToolbar.png" width="95%" style="display: block; margin: auto;" />
+
+You can search a channel (helpful if you are looking for information about a specific topic or issue) using the search field in the menu bar along the top of the main window. 
+
+### Notifications
+Notifications can be adjusted either on a channel by channel basis or for all channels in a workspace. To adjust settings for a specific channel, you can click on the 
+
 ### Channel Preferences
-You can search a channel (helpful if you are looking for information about a specific topic or issue) using the search field in the menu bar along the top of the main window. Information and preferences for individual channels can be accessed by clicking on the info icon along the top of the main window. For instance, I will sometimes "pin" posts so that they can be accessed later. You can see a list of pinned items by pulling down the Pinned Items menu.
+Information and preferences for individual channels can be accessed by clicking on the info icon along the top of the main window. For instance, I will sometimes "pin" posts so that they can be accessed later. You can see a list of pinned items by pulling down the Pinned Items menu.
 
 These preferences include the ability to adjust the notifications for both desktop and mobile on a channel by channel basis. To adjust notifications for a channel:
 
@@ -30,16 +83,11 @@ These preferences include the ability to adjust the notifications for both deskt
 
 The Notification Preferences window for the `#helpdesk-slack` channel looks like this:
 
-<img src="images/slackNotifications.png" width="95%" style="display: block; margin: auto;" />
+<img src="images/slackNotifications.png" width="75%" style="display: block; margin: auto;" />
 
-If you do not want to set notifications on a channel by channel basis, you can set workspace-wide notification preferences by following the `Account Preferences` link in this window (see [Preferences] below). I do warn students, however, that Slack is our primary means of communication and muting or reducing notifications puts more of an onus on students to mindfully check-in on channel activity on a regular basis.
+If you do not want to set notifications on a channel by channel basis, you can set workspace-wide notification preferences by following the `Account Preferences` link in this window (see [Preferences] below). I do warn students, however, that Slack is our primary means of communication and muting or reducing notifications puts more of an onus on students to mindfully check-in on channel activity on a regular basis. I would not reduce notifications, for instance, on the `#_news` channel. 
 
-### Direct Messages
-Direct messages are messages can be accessed only by the participants. Direct message channels are useful for reaching out directly to other individuals to have private conversations. You can start a new direct message by clicking on the plus icon to the right of the Direct Messages heading (see the first image in this chapter). Messages are authored using the same means as in public and private channels (see [Channels] above as well as [Markdown in Slack]). 
-
-I ask that questions about Problem Sets that are specific be addressed as direct messages first. For all other questions, I encourage students to use the public channels so that we can learn collectively from each other's experiences. If you are not sure whether or not a question is appropriate for a public channel or would prefer to not ask the question publicly, feel free to use a direct message!
-
-### Preferences
+### General Preferences
 The Preferences window can be used to adjust settings that control your Slack workspace. These include how your sidebar is organized, how "mark as read" functions, and how notifications for all channels work by default. You can access the Preferences from the main menu, which is available by clicking on the workspace name:
 
 <img src="images/slackMenu.png" width="95%" style="display: block; margin: auto;" />
@@ -50,7 +98,7 @@ The Notifications tab can be used to set global defaults for notifications:
 
 You can use this window to create additional notifications for when specific keywords appear. For example, if you wanted to be notified if any mentions of the `ggplot2` package appear in a Slack channel, you could add "ggplot2" as a keyword. This window also allows you to adjust your do not disturb settings and the sounds that are played when new messages are posted while you are online.
 
-### Profile
+### Profile Settings
 Profile settings, like your name, display name, timezone, and other items can be edited as well. You can access them by selecting Profile & Account from the main menu, which is available by clicking on the workspace name:
 
 <img src="images/slackProfileMenu.png" width="95%" style="display: block; margin: auto;" />
@@ -70,9 +118,6 @@ To make more fine-grained changes to your account for this Slack workspace, clic
 <img src="images/slackAccount.png" width="95%" style="display: block; margin: auto;" />
 
 Many of the changes that can be made in other places can also be made here. Additionally, you can adjust Two-Factor Authentication security settings here as well.
-
-### Getting Additional Help
-If you have additional questions about how to use Slack, I recommend checking out the next sections in this chapter. Additionally, you can use [Slack's knowledge base for users](https://get.slack.help/hc/en-us/categories/200111606). It has a wealth of information for using Slack and adjusting the various settings described above.
 
 ## Markdown in Slack
 Slack uses a simplified ["flavor"](https://github.com/commonmark/CommonMark/wiki/Markdown-Flavors) of Markdown. All of the available Markdown syntax characters are included below. 
@@ -120,10 +165,18 @@ To include code blocks, which are better for including the full syntax of partic
 **Output:**
 <img src="images/slackMdBlock.png" width="95%" style="display: block; margin: auto;" />
 
-Note that we do not include the name of the language that the code is written in, as we do in standard Markdown. Slack does not include syntax highlighting and it will instead include any text written on the same line of the top row of backticks as output.
+Note that we do not include the name of the language that the code is written in, as we do in standard Markdown. Slack does not include syntax highlighting and it will instead include any text written on the same line of the top row of backticks as output. If the code block is more than a few lines long, however, I suggest looking at other options for posting code (see next section on [Posting Text and Code]).
 
 ## Posting Text and Code
 The
+
+### Adding Code Snippets
+
+
+### Adding Attachments
+
+
+### Adding Longer Posts
 
 ## Slack Applications
 
