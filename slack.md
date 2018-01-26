@@ -1,6 +1,6 @@
 # Slack
 
-One of the three core areas for analysis development identified by Parker (2017) is collaboration. Data science work often occurs in teams, sometimes remotely, and building a skillset in working collaboratively from the outset is important. This chapter will not focus on the soft skills required for working as part of a team. Rather, we'll focus on some of the technical tools that are useful for facilitating this work. One of the more common tools used today in data science, research, software development, and other technical settings is the service [Slack](https://slack.com). At its core, Slack is a messaging tool designed to keep people in touch with one another. The following sections introduce some basic Slack functions. You can also use [Slack's knowledge base for users](https://get.slack.help/hc/en-us/categories/200111606), which has a wealth of information for using Slack and adjusting the various settings described here.
+One of the three core areas for analysis development identified by Parker (2017) is collaboration. Data science work often occurs in teams, sometimes remotely, and building a skill set in working collaboratively from the outset is important. This chapter will not focus on the soft skills required for working as part of a team. Rather, we'll focus on some of the technical tools that are useful for facilitating this work. One of the more common tools used today in data science, research, software development, and other technical settings is the service [Slack](https://slack.com). At its core, Slack is a messaging tool designed to keep people in touch with one another. The following sections introduce some basic Slack functions. You can also use [Slack's knowledge base for users](https://get.slack.help/hc/en-us/categories/200111606), which has a wealth of information for using Slack and adjusting the various settings described here.
 
 ## Slack Basics
 Slack is organized into **workspaces**, which are dedicated organizations that are independent from each other. This means that you have individual login credentials (username and password) for each Slack workspace. The image below is of a Slack workspace for [Introduction to Geographic Information Science (SOC 4650/5650)](https://slu-soc5650.github.io). We will discuss some of the individual elements of this image below.
@@ -8,12 +8,12 @@ Slack is organized into **workspaces**, which are dedicated organizations that a
 <img src="images/slackOverview.png" width="95%" style="display: block; margin: auto;" />
 
 ### Channels
-**Channels** are found on the lefthand sidebar of a Slack **workspace**. Channels with a `#` sign are public, and those with a lock symbol are private. Slack workspaces are typically organized around channels that are dedicated to a specific topic or project. For the courses that I teach, there are dedicated helpdesk channels for some of the various tools that the course introduces as well as for coursework and assignments. For example, the `#helpdesk-slack` channel is open in the image above. Messages from individual users or updates appear in the main window. You can see messages from myself and another user in the image above.
+**Channels** are found on the left-hand sidebar of a Slack **workspace**. Channels with a `#` sign are public, and those with a lock symbol are private. Slack workspaces are typically organized around channels that are dedicated to a specific topic or project. For the courses that I teach, there are dedicated helpdesk channels for some of the various tools that the course introduces as well as for coursework and assignments. For example, the `#helpdesk-slack` channel is open in the image above. Messages from individual users or updates appear in the main window. You can see messages from myself and another user in the image above.
 
 ### New Messages
 To post a new message, use the field at the bottom of the main window that contains the placeholder text (visible in the image) "Message #helpdesk-slack". Click on the field and begin typing your message. You can click on the `@` icon to tag individuals using their user names, or use the channel's name - `#helpdesk-slack` - to notify all users. Using the channel name hashtag in your initial message to a channel can help speed up people's response, particularly if they have reduced the frequency of notifications.
 
-The smily face icon allows you to use emojis in your message. Messages can be composed using a flavor of Markdown (see the next section [Markdown in Slack]). Emojis will appear as text in a new message like `:smiley:` after they are selected. A newly composed message looks like this:
+The smiley face icon allows you to use emojis in your message. Messages can be composed using a flavor of Markdown (see the next section [Markdown in Slack]). Emojis will appear as text in a new message like `:smiley:` after they are selected. A newly composed message looks like this:
 
 <img src="images/slackMessage.png" width="95%" style="display: block; margin: auto;" />
 
@@ -35,7 +35,7 @@ The image above also shows options for responding to messages. All four of the i
 
 <img src="images/slackMessageReact.png" width="95%" style="display: block; margin: auto;" />
 
-When you click on the reply, it will open a righthand sidebar that will contain the original message and any responses:
+When you click on the reply, it will open a right-hand sidebar that will contain the original message and any responses:
 
 <img src="images/slackMessageThread.png" width="60%" style="display: block; margin: auto;" />
 
@@ -123,7 +123,7 @@ Many of the changes that can be made in other places can also be made here. Addi
 Slack uses a simplified ["flavor"](https://github.com/commonmark/CommonMark/wiki/Markdown-Flavors) of Markdown. All of the available Markdown syntax characters are included below. 
 
 ### Styling Text
-Text can be styled using bold and italics To create bold text, wrap your text with a single pair of asterisks `*text*`. To create bold text, wrap your text with a single pair of underscores `_text_`. Strikethrough text can be created by wrapping your text with a single pair of tildes `~text~`.
+Text can be styled using bold and italics To create bold text, wrap your text with a single pair of asterisks `*text*`. To create bold text, wrap your text with a single pair of underscores `_text_`. Strike through text can be created by wrapping your text with a single pair of tildes `~text~`.
 
 **Input:**
 <img src="images/slackMdStyleIn.png" width="95%" style="display: block; margin: auto;" />
@@ -131,7 +131,7 @@ Text can be styled using bold and italics To create bold text, wrap your text wi
 **Output:**
 <img src="images/slackMdStyle.png" width="95%" style="display: block; margin: auto;" />
 
-Note that the use of single astericks is frustratingly non-standard for Markdown. In the original Markdown spec (see [Markdown]), `*text*` was reserved for italicized text. Here it is used for bold, and an underscore is used for italicized. This inconsistency [has not gone unnoticed](https://daringfireball.net/linked/2015/11/05/markdown-strikethrough-slack) by Markdown's creator, John Gruber, who tweeted this in 2015:
+Note that the use of single asterisks is frustratingly non-standard for Markdown. In the original Markdown spec (see [Markdown]), `*text*` was reserved for italicized text. Here it is used for bold, and an underscore is used for italicized. This inconsistency [has not gone unnoticed](https://daringfireball.net/linked/2015/11/05/markdown-strikethrough-slack) by Markdown's creator, John Gruber, who tweeted this in 2015:
 
 <div align="center"><blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/vhgalvao?ref_src=twsrc%5Etfw">@vhgalvao</a> Like I said, Slack has its collective head up its ass regarding text formatting.</p>&mdash; John Gruber (@gruber) <a href="https://twitter.com/gruber/status/662451994720911360?ref_src=twsrc%5Etfw">November 6, 2015</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
@@ -168,16 +168,29 @@ To include code blocks, which are better for including the full syntax of partic
 Note that we do not include the name of the language that the code is written in, as we do in standard Markdown. Slack does not include syntax highlighting and it will instead include any text written on the same line of the top row of backticks as output. If the code block is more than a few lines long, however, I suggest looking at other options for posting code (see next section on [Posting Text and Code]).
 
 ## Posting Text and Code
-The
+To post longer code snippets or text files, you can click on the plus icon on the left side of box where messages are composed:
 
-### Adding Code Snippets
+<img src="images/slackUpload.png" width="95%" style="display: block; margin: auto;" />
 
+If you want to upload a file, like an image, text document, or really any other file type, chose the "Your computer" option. You will be taken to a window to find the document on your computer, and then given the option to add a comment while posting it. I usually use this space to describe the contents of the document I am uploading. 
 
-### Adding Attachments
+If you want to add a longer block of code, select "Code or text snippet". Selecting this will bring up a window that allows you to:
 
+1. Give the snippet a title,
+2. select the language the snippet is written in (including an option for `R`),
+3. add the code,
+4. and optionally add a comment.
 
-### Adding Longer Posts
+A completed version of this window looks like this:
 
-## Slack Applications
+<img src="images/slackSnippetCreate.png" width="75%" style="display: block; margin: auto;" />
 
+When you are ready to post the snippet, click the "Create Snippet" button. A completed snippet will then be posted on Slack:
 
+<img src="images/slackSnippet.png" width="95%" style="display: block; margin: auto;" />
+
+Hovering your mouse over the message will bring up options to expand the snippet, download it, and edit it (if you are the creator):
+
+<img src="images/slackSnippetEdit.png" width="95%" style="display: block; margin: auto;" />
+
+You will also have the option to respond, add emojis, and share these posts - just like any other message on Slack!
